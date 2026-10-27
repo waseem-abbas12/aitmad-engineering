@@ -1,0 +1,90 @@
+/**
+ * Aitmad Engineering - Design Tokens
+ * Spec: Sections 2, 3, 4
+ */
+
+:root {
+  /* Brand Primary: Deep Pine */
+  --pine-900: #0A2622;
+  --pine-800: #0E3B36; /* Main brand color */
+  --pine-700: #14504A;
+  --pine-500: #2B7A70;
+  --pine-100: #DCEBE8;
+
+  /* Brand Secondary: Brushed Copper */
+  --copper-600: #A36B43;
+  --copper-500: #BC8458; /* Accent support color */
+  --copper-300: #DDB791;
+  --copper-100: #F3E6D8;
+
+  /* Neutrals */
+  --ink: #0B1311;
+  --graphite: #26302E;
+  --steel: #6F7B78;
+  --steel-light: #9DA8A5;
+  --stone: #D9D6CE;
+  --stone-light: #ECEAE4;
+  --ivory: #F6F3EE; /* Main light background */
+  --white: #FFFFFF;
+
+  /* Transparent Tints & Overlays */
+  --pine-overlay: rgba(10, 38, 34, 0.45);
+  --pine-overlay-heavy: rgba(10, 38, 34, 0.88);
+  --border-light: var(--stone);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-dark-hover: rgba(188, 132, 88, 0.4);
+
+  /* Typography Stacks */
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-heading: 'Sora', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-urdu-heading: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Urdu Typesetting', serif;
+  --font-urdu-body: 'Noto Naskh Arabic', Tahoma, sans-serif;
+
+  /* Font Scales */
+  --text-h1: clamp(2.6rem, 5.5vw, 5.2rem);
+  --text-h2: clamp(2rem, 3.8vw, 3.2rem);
+  --text-h3: clamp(1.35rem, 2.2vw, 1.75rem);
+  --text-h4: 1.25rem;
+  --text-lead: 1.15rem;
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.8rem;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Container Widths */
+  --container-max: 1240px;
+  --container-bleed: 1440px;
+  --container-pad: 24px;
+  --container-pad-desktop: 48px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-btn: 6px;
+  --radius-input: 6px;
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(10, 38, 34, 0.06);
+  --shadow-card: 0 10px 30px rgba(10, 38, 34, 0.08);
+  --shadow-hover: 0 18px 44px rgba(10, 38, 34, 0.16);
+  --shadow-dropdown: 0 20px 48px rgba(10, 38, 34, 0.25);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-base: 0.35s var(--ease-out);
+  --transition-slow: 0.6s var(--ease-out);
+}

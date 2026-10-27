@@ -1,0 +1,798 @@
+/**
+ * Aitmad Engineering - Pages & Sections Specific CSS
+ * Spec: Sections 6, 7, 8
+ */
+
+/* ==========================================================================
+   6.1 Hero Section
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: clamp(640px, 100vh, 1080px);
+  display: flex;
+  align-items: center;
+  background-color: var(--pine-900);
+  overflow: hidden;
+  color: var(--ivory);
+  padding-top: 84px;
+}
+
+#hero-3d-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.hero-fallback-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: 1;
+}
+
+.hero-fallback-bg.active {
+  opacity: 0.35;
+  animation: ken-burns 20s infinite alternate ease-in-out;
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(10, 38, 34, 0.4) 0%, rgba(10, 38, 34, 0.85) 75%, rgba(10, 38, 34, 0.98) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 680px;
+  padding-block: var(--space-12);
+}
+
+.hero-title {
+  color: var(--ivory);
+  margin-bottom: var(--space-6);
+  line-height: 1.15;
+}
+
+.hero-title .copper-accent {
+  color: var(--copper-300);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title .copper-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--copper-500);
+  animation: draw-line 1.2s ease-out 0.4s both;
+}
+
+@keyframes draw-line {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.hero-subtitle {
+  font-size: var(--text-lead);
+  color: var(--steel-light);
+  line-height: 1.65;
+  margin-bottom: var(--space-8);
+  max-width: 580px;
+}
+
+.hero-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+/* Bottom Glass Bar (Spec 6.1) */
+.hero-glass-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background: rgba(10, 38, 34, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-dark);
+  padding-block: 16px;
+}
+
+.hero-glass-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-stats-row {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat-val {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--copper-300);
+}
+
+.hero-stat-lbl {
+  font-size: 0.75rem;
+  color: var(--steel-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--steel-light);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.scroll-line {
+  width: 32px;
+  height: 2px;
+  background: var(--copper-500);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--ivory);
+  animation: scroll-ping 2s infinite ease-in-out;
+}
+
+@keyframes scroll-ping {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* ==========================================================================
+   6.3 About Preview Section (Ivory)
+   ========================================================================== */
+.about-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .about-preview-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}
+
+.about-img-wrap {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.about-img-wrap img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.since-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--pine-800);
+  color: var(--ivory);
+  border: 1px solid var(--border-dark);
+  padding: 16px 24px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+html[dir="rtl"] .since-badge {
+  right: auto;
+  left: 24px;
+}
+
+.since-badge-num {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--copper-300);
+  display: block;
+  line-height: 1;
+}
+
+.since-badge-lbl {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--steel-light);
+}
+
+.checklist {
+  list-style: none;
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: var(--text-body);
+}
+
+.checklist-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--pine-100);
+  color: var(--pine-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   6.4 Stats Section (Pine-800 with Blueprint Grid)
+   ========================================================================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .stat-card:not(:last-child) {
+    border-right: 1px solid var(--border-dark);
+  }
+
+  html[dir="rtl"] .stat-card:not(:last-child) {
+    border-right: none;
+    border-left: 1px solid var(--border-dark);
+  }
+}
+
+.stat-card {
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 700;
+  color: var(--ivory);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-number span.copper-plus {
+  color: var(--copper-500);
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  color: var(--steel-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   6.7 Why Aitmad Section (Pine-800)
+   ========================================================================== */
+.why-aitmad-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .why-aitmad-grid {
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-16);
+  }
+
+  .why-sticky-col {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+  }
+}
+
+.why-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.why-feature-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--border-dark);
+  position: relative;
+}
+
+.why-num {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--copper-300);
+  opacity: 0.45;
+  line-height: 1;
+  min-width: 60px;
+}
+
+.why-feature-content h3 {
+  color: var(--ivory);
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+.why-feature-content p {
+  color: var(--steel-light);
+  font-size: var(--text-sm);
+}
+
+/* ==========================================================================
+   6.8 Process Timeline Section (Ivory)
+   ========================================================================== */
+.timeline-container {
+  position: relative;
+  margin-top: var(--space-12);
+}
+
+.timeline-track-svg {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .timeline-track-svg {
+    display: block;
+  }
+}
+
+.timeline-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 640px) {
+  .timeline-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline-steps-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--stone);
+  color: var(--pine-800);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-node:hover .timeline-dot,
+.timeline-node.active .timeline-dot {
+  background: var(--copper-500);
+  border-color: var(--copper-500);
+  color: var(--ink);
+  transform: scale(1.1);
+}
+
+.timeline-step-title {
+  font-size: 1.1rem;
+  color: var(--pine-800);
+  margin-bottom: 6px;
+}
+
+.timeline-step-desc {
+  font-size: 0.85rem;
+  color: var(--steel);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   6.9 Featured Project Spotlight (Full-Bleed)
+   ========================================================================== */
+.spotlight-section {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--ivory);
+  overflow: hidden;
+}
+
+.spotlight-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 38, 34, 0.95) 0%, rgba(10, 38, 34, 0.75) 50%, rgba(10, 38, 34, 0.4) 100%);
+}
+
+html[dir="rtl"] .spotlight-overlay {
+  background: linear-gradient(to left, rgba(10, 38, 34, 0.95) 0%, rgba(10, 38, 34, 0.75) 50%, rgba(10, 38, 34, 0.4) 100%);
+}
+
+.spotlight-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding-block: var(--space-12);
+}
+
+.spotlight-facts {
+  display: flex;
+  gap: 24px;
+  margin-block: var(--space-6);
+  padding-block: var(--space-4);
+  border-block: 1px solid var(--border-dark);
+}
+
+.spotlight-fact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.spotlight-fact-val {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--copper-300);
+}
+
+.spotlight-fact-lbl {
+  font-size: 0.75rem;
+  color: var(--steel-light);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   6.10 Testimonials Slider (White)
+   ========================================================================== */
+.testimonials-wrapper {
+  position: relative;
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+  padding-block: var(--space-8);
+}
+
+.testimonial-quote-icon {
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--copper-500);
+  opacity: 0.7;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-serif);
+}
+
+.testimonial-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  color: var(--pine-800);
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+  font-style: italic;
+}
+
+.testimonial-author {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--pine-800);
+}
+
+.testimonial-org {
+  font-size: 0.85rem;
+  color: var(--steel);
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: var(--space-8);
+}
+
+.testimonial-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--stone);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.testimonial-dot.active {
+  background: var(--copper-500);
+  transform: scale(1.3);
+}
+
+.testimonial-nav-btn {
+  background: transparent;
+  border: 1px solid var(--stone);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--pine-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.testimonial-nav-btn:hover {
+  background: var(--pine-800);
+  color: var(--ivory);
+  border-color: var(--pine-800);
+}
+
+/* ==========================================================================
+   Project Detail Template (Spec 7.4)
+   ========================================================================== */
+.project-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  margin-top: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .project-detail-layout {
+    grid-template-columns: 360px 1fr;
+    gap: var(--space-16);
+  }
+
+  .project-sticky-panel {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+}
+
+.fact-panel-card {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-card);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.fact-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fact-table tr {
+  border-bottom: 1px solid var(--stone-light);
+}
+
+.fact-table tr:last-child {
+  border-bottom: none;
+}
+
+.fact-table th {
+  text-align: left;
+  padding: 12px 0;
+  font-size: 0.85rem;
+  color: var(--steel);
+  font-weight: 500;
+}
+
+html[dir="rtl"] .fact-table th {
+  text-align: right;
+}
+
+.fact-table td {
+  text-align: right;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  color: var(--pine-800);
+  font-weight: 600;
+}
+
+html[dir="rtl"] .fact-table td {
+  text-align: left;
+}
+
+.project-story-block {
+  margin-bottom: var(--space-8);
+}
+
+.project-story-block h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--pine-800);
+}
+
+.masonry-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: var(--space-8);
+}
+
+.gallery-item {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Technical Specs Table (Spec 7.2) */
+.specs-table-wrapper {
+  overflow-x: auto;
+  margin-block: var(--space-8);
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--stone);
+}
+
+.specs-table th, .specs-table td {
+  padding: 16px 20px;
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+html[dir="rtl"] .specs-table th, 
+html[dir="rtl"] .specs-table td {
+  text-align: right;
+}
+
+.specs-table th {
+  background: var(--pine-800);
+  color: var(--ivory);
+  font-weight: 600;
+}
+
+.specs-table tr:nth-child(even) td {
+  background: var(--ivory);
+}
+
+.specs-table td {
+  border-bottom: 1px solid var(--stone);
+  color: var(--ink);
+}
+
+/* Page Banner / Hero (50vh) */
+.page-banner {
+  background-color: var(--pine-900);
+  padding-top: 140px;
+  padding-bottom: 64px;
+  position: relative;
+  overflow: hidden;
+  color: var(--ivory);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--steel-light);
+  margin-bottom: 16px;
+}
+
+.breadcrumbs a {
+  color: var(--steel-light);
+}
+
+.breadcrumbs a:hover {
+  color: var(--copper-300);
+}

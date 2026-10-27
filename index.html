@@ -1,1679 +1,862 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" id="htmlRoot">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aitmaad Engineering (اعتماد انجینئرنگ) | Ultra-Precision Steel & Architectural Infrastructure</title>
-  <meta name="description" content="Pakistan's premier engineering firm specializing in Pre-Engineered Steel Buildings (PEB), Architectural Tensile Canopies, Controlled Cold Storage, and Heavy Industrial EPC.">
-  
-  <!-- Preconnect Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Noto+Nastaliq+Urdu:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- Three.js CDN for Interactive 3D WebGL Structural Canvas -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <title>Aitmad Engineering | Pre-Engineered Steel Buildings & Industrial Construction Pakistan</title>
+  <meta name="description" content="Aitmad Engineering is Pakistan's premier designer, fabricator and erector of Pre-Engineered Buildings (PEB), structural steel, high-bay warehouses, and industrial sheds. Built on trust, engineered in steel.">
+  <meta name="keywords" content="PEB Pakistan, pre-engineered buildings Lahore, structural steel Karachi, warehouse construction, industrial shed fabrication, standing seam roof, cold storage builder">
+  <meta name="author" content="Aitmad Engineering (Pvt.) Ltd.">
+  <link rel="canonical" href="https://aitmadengineering.com/">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              navy: '#060D1F',       // Ultra-deep structural obsidian navy
-              dark: '#0F172A',       // Executive slate dark
-              slate: '#334155',      // Body secondary
-              muted: '#64748B',      // Technical annotations
-              blue: '#1D4ED8',       // Signature Royal Structural Cobalt Blue
-              blueHover: '#1E40AF',
-              cyan: '#0284C7',       // Architectural Blueprint Cyan
-              cyanGlow: '#00F0FF',
-              ice: '#F0F6FF',        // Crisp ice tint
-              border: '#E2E8F0',     // Hairline technical border
-            },
-            cadBlueprint: {
-              bg: '#071633',
-              grid: '#0D275A',
-              line: '#00E5FF',
-            }
-          },
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Outfit"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-            urdu: ['"Noto Nastaliq Urdu"', 'serif']
-          }
-        }
-      }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aitmadengineering.com/">
+  <meta property="og:title" content="Aitmad Engineering | Built on Trust. Engineered in Steel.">
+  <meta property="og:description" content="Top-tier pre-engineered steel buildings, structural steel fabrication, and turnkey industrial warehousing across Pakistan.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aitmad Engineering | Pre-Engineered Steel Buildings">
+  <meta name="twitter:description" content="Pakistan's trusted industrial steel building specialists.">
+
+  <!-- Favicon / Theme -->
+  <meta name="theme-color" content="#0E3B36">
+
+  <!-- CSS Layers -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <!-- JSON-LD Structured Data (Spec 10) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Aitmad Engineering (Pvt.) Ltd.",
+    "alternateName": "اعتماد انجینئرنگ",
+    "url": "https://aitmadengineering.com",
+    "logo": "https://aitmadengineering.com/assets/logo.svg",
+    "description": "Pre-engineered steel building specialists, structural steel fabrication, and turnkey industrial construction across Pakistan.",
+    "foundingDate": "1998",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 42-A, Sundar Industrial Estate",
+      "addressLocality": "Lahore",
+      "addressRegion": "Punjab",
+      "postalCode": "54000",
+      "addressCountry": "PK"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+92-42-35789000",
+      "contactType": "customer service",
+      "areaServed": "PK",
+      "availableLanguage": ["English", "Urdu"]
     }
+  }
   </script>
-
-  <style>
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #F8FAFC; }
-    ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: #1D4ED8; }
-
-    /* Technical Architectural Grid Pattern */
-    .bg-grid-tech {
-      background-size: 36px 36px;
-      background-image: 
-        linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
-    }
-
-    /* Luxury Elevation & Interactive Hover */
-    .luxe-card {
-      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .luxe-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px -4px rgba(29, 78, 216, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
-      border-color: #1D4ED8;
-    }
-
-    /* 3D Canvas Background Container */
-    #threeCanvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.65;
-    }
-
-    /* CAD Blueprint Active Mode Overrides */
-    .blueprint-mode {
-      background-color: #061530 !important;
-      color: #F8FAFC !important;
-    }
-    .blueprint-mode .bg-white {
-      background-color: #0B1938 !important;
-      border-color: rgba(0, 240, 255, 0.3) !important;
-      color: #FFFFFF !important;
-    }
-    .blueprint-mode .text-brand-navy {
-      color: #FFFFFF !important;
-    }
-    .blueprint-mode .text-brand-slate, .blueprint-mode .text-brand-muted {
-      color: #94A3B8 !important;
-    }
-    .blueprint-mode .bg-grid-tech {
-      background-image: 
-        linear-gradient(to right, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0, 240, 255, 0.1) 1px, transparent 1px) !important;
-    }
-    .blueprint-mode .blueprint-filter-img {
-      filter: sepia(100%) hue-rotate(170deg) saturate(320%) contrast(125%) brightness(0.9) !important;
-    }
-  </style>
 </head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-<body class="bg-[#FAFCFF] text-brand-dark font-sans selection:bg-brand-blue selection:text-white transition-colors duration-500 relative">
+  <!-- Scroll Progress Bar (Spec 5.5) -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 
-  <!-- ========================================================================= -->
-  <!-- TECHNICAL TELEMETRY TOP BAR -->
-  <!-- ========================================================================= -->
-  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-18 py-3">
-        
-        <!-- Brand Identity & Urdu Seal -->
-        <a href="#" class="flex items-center gap-3.5 group">
-          <div class="relative w-11 h-11 rounded-xl bg-gradient-to-br from-brand-blue via-brand-cyan to-brand-navy p-[1.5px] shadow-md shadow-brand-blue/20 group-hover:shadow-brand-blue/35 transition-all duration-300">
-            <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center relative overflow-hidden">
-              <!-- Technical Truss Icon -->
-              <svg class="w-6 h-6 text-brand-blue group-hover:scale-110 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <path d="M2 20h20M7 20v-8m5 8V4m5 16v-8M2 20L12 4l10 16" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M7 12l5-8 5 8" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
-              </svg>
-            </div>
-          </div>
+  <!-- Custom Cursor Elements (Spec 5.5) -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
 
-          <div class="flex flex-col">
-            <div class="flex items-center gap-2">
-              <span class="font-display font-black text-xl tracking-tight text-brand-navy">AITMAAD</span>
-              <span class="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-brand-blue/10 text-brand-blue border border-brand-blue/20">ENGINEERING</span>
-            </div>
-            <span class="font-urdu text-xs text-brand-muted tracking-normal font-bold">اعتماد انجینئرنگ سروسز پاکستان</span>
-          </div>
-        </a>
+  <!-- Preloader Screen (Spec 5.5) -->
+  <div class="preloader" id="site-preloader">
+    <svg class="preloader-svg" viewBox="0 0 100 100">
+      <!-- Outer Frame -->
+      <path class="preloader-path" d="M 20 30 L 20 20 L 30 20 M 70 20 L 80 20 L 80 30 M 80 70 L 80 80 L 70 80 M 30 80 L 20 80 L 20 70" stroke="#BC8458" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <!-- I-Beam Mark -->
+      <path class="preloader-path" d="M 30 32 L 70 32 M 50 32 L 50 68 M 30 68 L 70 68" stroke="#DDB791" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="preloader-text">AITMAD ENGINEERING</div>
+  </div>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8 text-xs font-mono tracking-wider uppercase text-brand-slate font-bold">
-          <a href="#services" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
-            <span class="text-brand-blue font-bold">01.</span> Capabilities
-          </a>
-          <a href="#estimator" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
-            <span class="text-brand-blue font-bold">02.</span> CAD Estimator
-          </a>
-          <a href="#comparison" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
-            <span class="text-brand-blue font-bold">03.</span> PEB vs RCC
-          </a>
-          <a href="#portfolio" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
-            <span class="text-brand-blue font-bold">04.</span> Deployments
-          </a>
-          <a href="#contact" class="hover:text-brand-blue transition-colors flex items-center gap-1.5">
-            <span class="text-brand-blue font-bold">05.</span> Contact
-          </a>
-        </nav>
-
-        <!-- Right Tools: Dual CAD Mode Toggle & Urgent WhatsApp -->
-        <div class="flex items-center gap-3.5">
-          
-          <!-- INNOVATIVE FEATURE: CAD BLUEPRINT MODE SWITCH -->
-          <button id="blueprintToggleBtn" class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-300 bg-slate-50 hover:bg-slate-100 text-brand-dark text-xs font-mono font-bold transition-all shadow-xs" title="Toggle Technical CAD Blueprint View">
-            <svg class="w-3.5 h-3.5 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <path d="M3 9h18M9 21V9M15 21V9"/>
-            </svg>
-            <span id="blueprintBtnLabel" class="hidden sm:inline">CAD BLUEPRINT: OFF</span>
-          </button>
-
-          <!-- WhatsApp Direct RFQ Dispatch -->
-          <a href="https://wa.me/923008472911?text=Hello%20Aitmaad%20Engineering%2C%20I%20would%20like%20to%20discuss%20a%20turnkey%20PEB%20%2F%20Industrial%20project." target="_blank" rel="noopener" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-blue hover:bg-brand-blueHover text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-brand-blue/20 hover:scale-[1.02] active:scale-95 transition-all">
-            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.777.817 2.796.817 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.77-5.768-5.772zm3.387 8.243c-.145.411-.836.764-1.162.813-.327.049-.757.069-2.311-.532-1.849-.714-3.041-2.583-3.133-2.707-.093-.124-.748-.997-.748-1.902 0-.904.471-1.349.638-1.534.167-.186.365-.232.486-.232.122 0 .243.002.348.007.112.006.262-.042.411.316.155.373.53 1.29.576 1.383.046.093.076.202.015.326-.061.124-.092.202-.183.311-.091.109-.193.243-.275.326-.092.093-.188.194-.081.378.107.184.476.786 1.021 1.272.702.626 1.294.82 1.478.912.184.092.292.077.4-.047.108-.124.463-.541.586-.727.123-.186.246-.155.413-.093.167.062 1.058.499 1.24.591.182.093.303.14.349.217.046.077.046.45-.099.861z"/></svg>
-            <span>+92 300 8472911</span>
-          </a>
-
-          <!-- Mobile Hamburger -->
-          <button id="mobileToggleBtn" class="lg:hidden p-2 rounded-lg text-brand-dark hover:text-brand-blue border border-slate-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          </button>
+  <!-- 5.1 Global Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Aitmad Engineering Home">
+        <svg class="logo-mark" viewBox="0 0 48 48" fill="none">
+          <path d="M 4 12 L 4 4 L 12 4 M 36 4 L 44 4 L 44 12 M 44 36 L 44 44 L 36 44 M 12 44 L 4 44 L 4 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 12 14 L 36 14 M 24 14 L 24 34 M 12 34 L 36 34" stroke="#F6F3EE" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-brand">AITMAD</span>
+          <span class="logo-sub">ENGINEERING</span>
         </div>
+      </a>
 
-      </div>
-    </div>
+      <!-- Desktop Nav (Spec 5.1) -->
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active" data-i18n="nav_home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/about.html" class="nav-link" data-i18n="nav_about">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/services.html" class="nav-link" data-i18n="nav_services">
+              <span>Services</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <!-- 6 Services Dropdown -->
+            <ul class="nav-dropdown">
+              <li><a href="pages/service-peb.html" class="dropdown-link">Pre-Engineered Buildings (PEB)</a></li>
+              <li><a href="pages/service-structural-steel.html" class="dropdown-link">Structural Steel Fabrication</a></li>
+              <li><a href="pages/service-warehouses.html" class="dropdown-link">Warehouses & Cold Storage</a></li>
+              <li><a href="pages/service-factories.html" class="dropdown-link">Factories & Industrial Sheds</a></li>
+              <li><a href="pages/service-roofing.html" class="dropdown-link">Roofing, Cladding & Insulation</a></li>
+              <li><a href="pages/service-consultancy.html" class="dropdown-link">Design & BIM Consultancy</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="pages/projects.html" class="nav-link" data-i18n="nav_projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/process.html" class="nav-link" data-i18n="nav_process">Process</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/why-aitmad.html" class="nav-link" data-i18n="nav_why_aitmad">Why Aitmad</a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/contact.html" class="nav-link" data-i18n="nav_contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-    <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-6 space-y-4">
-      <a href="#services" class="mobile-nav block text-sm font-mono uppercase text-brand-dark hover:text-brand-blue">01. Capabilities</a>
-      <a href="#estimator" class="mobile-nav block text-sm font-mono uppercase text-brand-dark hover:text-brand-blue">02. CAD Estimator</a>
-      <a href="#comparison" class="mobile-nav block text-sm font-mono uppercase text-brand-dark hover:text-brand-blue">03. PEB vs RCC</a>
-      <a href="#portfolio" class="mobile-nav block text-sm font-mono uppercase text-brand-dark hover:text-brand-blue">04. Master Portfolio</a>
-      <a href="#contact" class="mobile-nav block text-sm font-mono uppercase text-brand-dark hover:text-brand-blue">05. Executive Consultation</a>
-      <div class="pt-4 border-t border-slate-200 flex flex-col gap-2">
-        <a href="https://wa.me/923008472911" target="_blank" class="w-full py-3 rounded-xl bg-brand-blue text-white text-center font-bold font-mono text-xs uppercase tracking-wider">
-          Direct WhatsApp: 0300-8472911
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="tel:+924235789000" class="header-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="nav_phone_label">+92 42 3578 9000</span>
         </a>
+
+        <!-- Language Switcher Toggle -->
+        <button class="lang-toggle-btn" aria-label="Toggle language between English and Urdu">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>اردو</span>
+        </button>
+
+        <a href="pages/contact.html" class="btn btn-primary btn-sm">
+          <span data-i18n="nav_quote_btn">Request a Quote</span>
+          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="mobile-nav-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- ========================================================================= -->
-  <!-- HERO WITH REAL-TIME 3D WEBGL STRUCTURAL STEEL CANVAS -->
-  <!-- ========================================================================= -->
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white bg-grid-tech pt-8 pb-16">
-    
-    <!-- INTERACTIVE 3D WEBGL STRUCTURAL STEEL CANVAS -->
-    <canvas id="threeCanvas"></canvas>
+  <!-- 5.2 Mobile Menu Overlay -->
+  <div class="mobile-menu" aria-label="Mobile Navigation">
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-menu-link active" data-i18n="nav_home">Home</a></li>
+      <li><a href="pages/about.html" class="mobile-menu-link" data-i18n="nav_about">About Us</a></li>
+      <li>
+        <a href="pages/services.html" class="mobile-menu-link" data-i18n="nav_services">Our Services</a>
+        <ul class="mobile-menu-sublinks">
+          <li><a href="pages/service-peb.html">Pre-Engineered Buildings</a></li>
+          <li><a href="pages/service-structural-steel.html">Structural Steel Fabrication</a></li>
+          <li><a href="pages/service-warehouses.html">Warehouses & Cold Storage</a></li>
+          <li><a href="pages/service-factories.html">Factories & Industrial Sheds</a></li>
+          <li><a href="pages/service-roofing.html">Roofing & Insulation</a></li>
+          <li><a href="pages/service-consultancy.html">Design & BIM Consultancy</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/projects.html" class="mobile-menu-link" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="pages/process.html" class="mobile-menu-link" data-i18n="nav_process">Process</a></li>
+      <li><a href="pages/why-aitmad.html" class="mobile-menu-link" data-i18n="nav_why_aitmad">Why Aitmad</a></li>
+      <li><a href="pages/contact.html" class="mobile-menu-link" data-i18n="nav_contact">Contact</a></li>
+    </ul>
 
-    <!-- Subtle Ambient Radial Glows -->
-    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-brand-blue/8 via-brand-cyan/6 to-transparent blur-[120px] pointer-events-none"></div>
+    <div class="mobile-menu-footer">
+      <a href="tel:+924235789000" style="color: var(--copper-300); font-size: 1.1rem; font-weight: 600; display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +92 42 3578 9000
+      </a>
+      <a href="pages/contact.html" class="btn btn-primary" style="width: 100%;">
+        <span data-i18n="nav_quote_btn">Request a Quote</span>
+      </a>
+    </div>
+  </div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left Hero Content -->
-        <div class="lg:col-span-7 space-y-6">
-          
-          <!-- Live Telemetry Pill -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-brand-blue/20 bg-brand-blue/5 text-brand-blue font-mono text-xs font-bold tracking-wider uppercase">
-            <span class="w-2 h-2 rounded-full bg-brand-blue animate-ping"></span>
-            <span>AISC & ASTM A572 GRADE 50 CERTIFIED STRUCTURAL STEEL</span>
-          </div>
+  <main id="main-content">
+    <!-- 6.1 Hero Section (100vh with 3D Steel Portal Frame) -->
+    <section class="hero-section bg-blueprint" aria-label="Hero Section">
+      <!-- Three.js 3D Canvas -->
+      <div id="hero-3d-canvas"></div>
 
-          <!-- Main Bold Headline (Clean Geometric Outfit Font) -->
-          <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-brand-navy tracking-tight leading-[1.08]">
-            Architectural Precision.<br>
-            <span class="text-brand-blue">
-              Structural Permanence.
-            </span>
-          </h1>
+      <!-- Fallback Background for Reduced Motion or Non-WebGL -->
+      <div class="hero-fallback-bg" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80');"></div>
+      <div class="hero-vignette"></div>
 
-          <!-- Urdu Calligraphic Subtitle -->
-          <p class="font-urdu text-lg sm:text-xl text-brand-slate leading-relaxed font-bold border-l-4 border-brand-blue pl-4 py-1">
-            صنعتی اور تعمیراتی انفراسٹرکچر کے لیے پاکستان کا سب سے جدید اور پائیدار پری انجینئرڈ اسٹیل سسٹم
-          </p>
+      <div class="container hero-content">
+        <span class="eyebrow" data-i18n="hero_eyebrow">Steel Building Specialists</span>
+        <h1 class="hero-title">
+          <span data-i18n="hero_title_part1">Structures built on </span>
+          <span class="copper-accent" data-i18n="hero_title_accent">trust</span>
+          <span data-i18n="hero_title_part2">, engineered to last.</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero_sub">
+          Pre-engineered buildings, structural steel, and turnkey industrial warehousing across Pakistan. Designed with precision, fabricated with care.
+        </p>
 
-          <!-- Descriptive Body -->
-          <p class="text-sm sm:text-base text-brand-slate leading-relaxed max-w-2xl font-normal">
-            Aitmaad Engineering designs, fabricates, and erects turnkey Pre-Engineered Steel Buildings (PEB), architectural PTFE/PVDF tensile fabric structures, sub-zero PIR cold chain facilities, and heavy industrial plant infrastructure across Pakistan.
-          </p>
-
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-3">
-            <a href="#estimator" class="px-8 py-4 rounded-xl bg-brand-blue hover:bg-brand-blueHover text-white font-bold font-mono text-xs uppercase tracking-wider shadow-lg shadow-brand-blue/25 hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3">
-              <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-              <span>Launch 2D CAD Estimator</span>
-            </a>
-
-            <a href="#portfolio" class="px-8 py-4 rounded-xl border border-slate-300 hover:border-brand-blue bg-white hover:bg-slate-50 text-brand-navy font-mono text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xs">
-              <span>View Master Deployments</span>
-              <svg class="w-4 h-4 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-          </div>
-
-          <!-- Proof KPI Strip -->
-          <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-200 font-mono">
-            <div>
-              <div class="text-2xl sm:text-3xl font-black text-brand-blue font-display">2.8M+</div>
-              <div class="text-[11px] text-brand-muted font-bold uppercase">Sq. Ft. Fabricated</div>
-            </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-black text-brand-navy font-display">180+</div>
-              <div class="text-[11px] text-brand-muted font-bold uppercase">Turnkey Projects</div>
-            </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-black text-brand-blue font-display">40%</div>
-              <div class="text-[11px] text-brand-muted font-bold uppercase">Faster Build Cycle</div>
-            </div>
-            <div>
-              <div class="text-2xl sm:text-3xl font-black text-brand-navy font-display">25-Yr</div>
-              <div class="text-[11px] text-brand-muted font-bold uppercase">Structural Warranty</div>
-            </div>
-          </div>
-
+        <div class="hero-btn-group">
+          <a href="pages/contact.html" class="btn btn-primary">
+            <span data-i18n="hero_cta_quote">Request a Quote</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="pages/projects.html" class="btn btn-secondary-dark">
+            <span data-i18n="hero_cta_projects">Explore Projects</span>
+          </a>
         </div>
+      </div>
 
-        <!-- Right Hero Interactive Visual & Telemetry Card -->
-        <div class="lg:col-span-5 relative">
-          
-          <div class="rounded-2xl bg-white border border-slate-200 luxe-card p-4 sm:p-5 space-y-4">
-            
-            <!-- Header of the HUD card -->
-            <div class="flex items-center justify-between border-b border-slate-100 pb-3 font-mono text-xs">
-              <div class="flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-blue animate-pulse"></span>
-                <span class="text-brand-navy font-bold uppercase">LIVE CAD TELEMETRY</span>
-              </div>
-              <span class="text-brand-blue font-bold text-[11px]">SYS-OK: 60fps</span>
+      <!-- Bottom Glass Bar (Spec 6.1) -->
+      <div class="hero-glass-bar">
+        <div class="container hero-glass-inner">
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <span class="hero-stat-val" data-i18n="hero_stat_years">25+ Years</span>
+              <span class="hero-stat-lbl" data-i18n="hero_stat_years_lbl">Industry Leadership</span>
             </div>
-
-            <!-- Main Hero Image Frame -->
-            <div class="relative h-64 sm:h-72 rounded-xl overflow-hidden bg-slate-900 group">
-              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80" alt="Turnkey Logistics Shed Pakistan" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
-
-              <!-- Overlaid CAD Dimension Badges -->
-              <div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/75 backdrop-blur-md border border-white/20 text-[10px] font-mono font-bold text-white">
-                CLEAR-SPAN: 48 METERS
-              </div>
-              <div class="absolute top-3 right-3 px-2 py-1 rounded bg-brand-blue text-[10px] font-mono font-bold text-white">
-                STATUS: OPERATIONAL
-              </div>
-
-              <div class="absolute bottom-3 left-3 right-3 text-white">
-                <div class="text-[10px] font-mono text-cyan-300 tracking-wider">SUNDAR INDUSTRIAL ESTATE, LAHORE</div>
-                <div class="text-sm font-bold font-display">120,000 Sq. Ft. Fast-Track Logistics Hub</div>
-              </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-val" data-i18n="hero_stat_projects">500+ Projects</span>
+              <span class="hero-stat-lbl" data-i18n="hero_stat_projects_lbl">Nationwide Handed Over</span>
             </div>
-
-            <!-- Live Engineering Spec Matrix -->
-            <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200 font-mono text-center text-xs">
-              <div>
-                <span class="text-[10px] text-brand-muted block uppercase font-bold">Wind Resistance</span>
-                <span class="font-bold text-brand-navy">160 km/h</span>
-              </div>
-              <div class="border-x border-slate-200">
-                <span class="text-[10px] text-brand-muted block uppercase font-bold">Seismic Zone</span>
-                <span class="font-bold text-brand-blue">Zone 2B / 4</span>
-              </div>
-              <div>
-                <span class="text-[10px] text-brand-muted block uppercase font-bold">Live Roof Load</span>
-                <span class="font-bold text-brand-navy">0.57 kN/m²</span>
-              </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-val" data-i18n="hero_stat_delivery">100%</span>
+              <span class="hero-stat-lbl" data-i18n="hero_stat_delivery_lbl">On-Time Handover</span>
             </div>
+          </div>
 
-            <!-- Quick Link -->
-            <div class="flex items-center justify-between text-xs font-mono pt-1">
-              <span class="text-brand-slate font-medium">Need structural calculation for your site?</span>
-              <a href="#estimator" class="text-brand-blue font-bold hover:underline flex items-center gap-1">
-                Draw Frame &rarr;
+          <div class="scroll-indicator">
+            <span data-i18n="scroll_down">Scroll</span>
+            <div class="scroll-line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.2 Trust Strip (Ivory Background, Infinite Marquee) -->
+    <section class="section bg-ivory" style="padding-block: var(--space-8); border-bottom: 1px solid var(--stone);" aria-label="Trusted Clients">
+      <div class="container" style="text-align: center; margin-bottom: var(--space-6);">
+        <p style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--steel); font-weight: 600;" data-i18n="trusted_by_heading">
+          Trusted by Pakistan's Leading Industrial Enterprises
+        </p>
+      </div>
+
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <!-- Client Brand Marks (Text SVG Logos in Grayscale) -->
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">FALCON LOGISTICS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">CRESCENT TEXTILES</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">AGROPRIME EXPORTS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">INDUS HEAVY INDUSTRIES</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">MEDIX PHARMACEUTICALS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">NISHAT PACKAGING</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">ENGRO LOGISTICS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">KOHINOOR ENERGY</span></div>
+        </div>
+        <!-- Duplicated track for seamless infinite marquee -->
+        <div class="marquee-track" aria-hidden="true">
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">FALCON LOGISTICS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">CRESCENT TEXTILES</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">AGROPRIME EXPORTS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">INDUS HEAVY INDUSTRIES</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">MEDIX PHARMACEUTICALS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">NISHAT PACKAGING</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">ENGRO LOGISTICS</span></div>
+          <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--pine-800);">KOHINOOR ENERGY</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.3 About Preview (Ivory) -->
+    <section class="section bg-ivory" aria-label="About Aitmad Preview">
+      <div class="container">
+        <div class="about-preview-grid">
+          <!-- Image with Copper Corner Brackets & Floating Badge -->
+          <div class="corner-frame about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80" alt="Aitmad Engineering Steel Erection Facility" loading="lazy">
+            <div class="since-badge">
+              <span class="since-badge-num" data-i18n="since_year">1998</span>
+              <span class="since-badge-lbl" data-i18n="since_label">Engineering Trust</span>
+            </div>
+          </div>
+
+          <!-- Narrative Content -->
+          <div class="about-content">
+            <span class="eyebrow" data-i18n="about_eyebrow">Our Heritage & Foundation</span>
+            <h2 data-i18n="about_h2" style="margin-bottom: var(--space-4);">A Name Clients Rely On For Industrial Steel</h2>
+            <p data-i18n="about_p1">
+              Founded on the bedrock of uncompromised engineering integrity, Aitmad Engineering has grown into one of Pakistan's foremost pre-engineered steel construction companies. We build for industrialists whose operations demand millimeter precision.
+            </p>
+            <p data-i18n="about_p2">
+              From sprawling textile sheds and computerized logistics hubs to cold storage facilities and high-load crane structures, our in-house engineering and fabrication lines deliver certainty at every stage.
+            </p>
+
+            <ul class="checklist">
+              <li class="checklist-item">
+                <div class="checklist-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span data-i18n="about_check_1"><strong>Engineering-Led:</strong> In-house STAAD & Tekla LOD 400 design teams</span>
+              </li>
+              <li class="checklist-item">
+                <div class="checklist-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span data-i18n="about_check_2"><strong>Transparent Pricing:</strong> Detailed tonnage BOQ with zero hidden costs</span>
+              </li>
+              <li class="checklist-item">
+                <div class="checklist-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span data-i18n="about_check_3"><strong>On-Time Handover:</strong> Sequence-controlled fabrication and rapid erection</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: var(--space-6);">
+              <a href="pages/about.html" class="link-text">
+                <span data-i18n="about_cta_story">Explore Our Full Story</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
-
           </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- CLIENT LOGO MARQUEE / REPUTATION BAR -->
-  <!-- ========================================================================= -->
-  <section class="border-y border-slate-200 bg-slate-50/80 py-8 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-[10px] sm:text-xs font-mono uppercase tracking-[0.25em] text-brand-muted font-bold mb-6">
-        Structural Partners & Enterprise Clients Across Pakistan
-      </p>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center font-mono">
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-xs text-brand-dark font-bold text-sm tracking-widest hover:border-brand-blue transition-all">
-          PEPSICO
-          <span class="block text-[9px] text-brand-muted font-normal">Distribution Hubs</span>
-        </div>
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-xs text-brand-dark font-bold text-sm tracking-widest hover:border-brand-blue transition-all">
-          DHA LAHORE
-          <span class="block text-[9px] text-brand-muted font-normal">Tensile Canopies</span>
-        </div>
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-xs text-brand-dark font-bold text-sm tracking-widest hover:border-brand-blue transition-all">
-          FAISAL MOVERS
-          <span class="block text-[9px] text-brand-muted font-normal">Fleet Terminal Sheds</span>
-        </div>
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-xs text-brand-dark font-bold text-sm tracking-widest hover:border-brand-blue transition-all">
-          PAK SUZUKI
-          <span class="block text-[9px] text-brand-muted font-normal">Vendor Assembly Bay</span>
-        </div>
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-xs text-brand-dark font-bold text-sm tracking-widest hover:border-brand-blue transition-all">
-          PORT QASIM
-          <span class="block text-[9px] text-brand-muted font-normal">Bonded Warehouses</span>
-        </div>
-        <div class="p-3.5 rounded-xl border border-slate-200 bg-white shadow-xs text-brand-dark font-bold text-sm tracking-widest hover:border-brand-blue transition-all">
-          ENGRO CORP
-          <span class="block text-[9px] text-brand-muted font-normal">Cold Chain Facilities</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================================================= -->
-  <!-- CORE CAPABILITIES (CRISP LUXURY WHITE ARCHITECTURAL CARDS) -->
-  <!-- ========================================================================= -->
-  <section id="services" class="py-24 bg-white relative bg-grid-tech">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Title (Outfit Font) -->
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-blue/20 bg-brand-blue/5 text-brand-blue font-mono text-xs font-bold uppercase tracking-wider">
-          ENGINEERING PILLARS
+    <!-- 6.4 Stats (Pine-800 with Blueprint Grid) -->
+    <section class="section bg-blueprint-pine-800" aria-label="Key Performance Statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">
+              <span data-target="520">0</span><span class="copper-plus">+</span>
+            </div>
+            <div class="stat-label" data-i18n="stat_completed">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">
+              <span data-target="12.4">0</span><span class="copper-plus">M+</span>
+            </div>
+            <div class="stat-label" data-i18n="stat_sqft">Sq. Ft. Constructed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">
+              <span data-target="26">0</span><span class="copper-plus">+</span>
+            </div>
+            <div class="stat-label" data-i18n="stat_experience">Years of Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">
+              <span data-target="280">0</span><span class="copper-plus">+</span>
+            </div>
+            <div class="stat-label" data-i18n="stat_clients">Clients Served</div>
+          </div>
         </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
-          Structural & Architectural Divisions
-        </h2>
-        <p class="text-brand-slate text-sm font-normal">
-          Engineered with computerized STAAD.Pro and ETABS finite element modeling according to AISC 360-16 and MBMA standards.
-        </p>
       </div>
+    </section>
 
-      <!-- Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Service 1: PEB -->
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 flex flex-col justify-between luxe-card group overflow-hidden">
-          <div class="space-y-4">
-            <div class="h-44 rounded-xl overflow-hidden relative bg-slate-900">
-              <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=800&q=80" alt="Pre-Engineered Building Shed" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded bg-brand-navy text-white text-[10px] font-mono font-bold">
-                PEB STEEL
-              </span>
-            </div>
-
-            <h3 class="font-display font-bold text-lg text-brand-navy group-hover:text-brand-blue transition-colors">
-              Pre-Engineered Buildings (PEB)
-            </h3>
-
-            <p class="text-xs text-brand-slate leading-relaxed font-normal">
-              Clear-span factory sheds, multi-story steel structures, high-bay automated logistics centers, and heavy crane bays built with ASTM A572 Grade 50 steel.
-            </p>
-
-            <ul class="space-y-1.5 pt-3 border-t border-slate-100 text-xs font-mono text-brand-dark font-medium">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>Spans up to 60+ meters</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>Heavy Crane (5T to 50T)</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-5 mt-4 border-t border-slate-100">
-            <a href="#estimator" class="text-xs font-mono text-brand-blue font-bold hover:underline flex items-center justify-between">
-              <span>Calculate PEB Cost</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
+    <!-- 6.5 Services (White Background, 3x2 Grid) -->
+    <section class="section bg-white" aria-label="Services Section">
+      <div class="container">
+        <div style="max-width: 640px; margin-bottom: var(--space-12);">
+          <span class="eyebrow" data-i18n="services_eyebrow">Core Capabilities</span>
+          <h2 data-i18n="services_h2" style="margin-bottom: 12px;">Specialized Steel Solutions</h2>
+          <p data-i18n="services_sub" style="color: var(--steel);">
+            From parametric pre-engineered frames to heavy industrial pipe racks and insulated building envelopes.
+          </p>
         </div>
 
-        <!-- Service 2: Sandwich Panels -->
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 flex flex-col justify-between luxe-card group overflow-hidden">
-          <div class="space-y-4">
-            <div class="h-44 rounded-xl overflow-hidden relative bg-slate-900">
-              <img src="https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=800&q=80" alt="Insulated Sandwich Panels" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded bg-brand-navy text-white text-[10px] font-mono font-bold">
-                THERMAL ENVELOPE
-              </span>
-            </div>
-
-            <h3 class="font-display font-bold text-lg text-brand-navy group-hover:text-brand-blue transition-colors">
-              PIR / PU Sandwich Panels
-            </h3>
-
-            <p class="text-xs text-brand-slate leading-relaxed font-normal">
-              Fire-retardant B1-grade Polyisocyanurate (PIR) and Rockwool insulated wall and roof panels for optimal temperature insulation and acoustic control.
-            </p>
-
-            <ul class="space-y-1.5 pt-3 border-t border-slate-100 text-xs font-mono text-brand-dark font-medium">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>Thickness: 50mm to 150mm</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>Fire Rating: 60-120 mins</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-5 mt-4 border-t border-slate-100">
-            <a href="#estimator" class="text-xs font-mono text-brand-blue font-bold hover:underline flex items-center justify-between">
-              <span>Panel Specs & Price</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service 3: Cold Storage -->
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 flex flex-col justify-between luxe-card group overflow-hidden">
-          <div class="space-y-4">
-            <div class="h-44 rounded-xl overflow-hidden relative bg-slate-900">
-              <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="Industrial Cold Storage Chiller" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded bg-brand-navy text-white text-[10px] font-mono font-bold">
-                COLD CHAIN
-              </span>
-            </div>
-
-            <h3 class="font-display font-bold text-lg text-brand-navy group-hover:text-brand-blue transition-colors">
-              Controlled Cold Storage
-            </h3>
-
-            <p class="text-xs text-brand-slate leading-relaxed font-normal">
-              Turnkey agro-industrial chillers (-5°C to +15°C) and blast freezers (-35°C) with Bitzer German refrigeration compressor racks and airtight dock shelters.
-            </p>
-
-            <ul class="space-y-1.5 pt-3 border-t border-slate-100 text-xs font-mono text-brand-dark font-medium">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>Sub-Zero Hermetic Seals</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>Agro Mango / Meat Export</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-5 mt-4 border-t border-slate-100">
-            <a href="#estimator" class="text-xs font-mono text-brand-blue font-bold hover:underline flex items-center justify-between">
-              <span>Size Cold Facility</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Service 4: Tensile Structures -->
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 flex flex-col justify-between luxe-card group overflow-hidden">
-          <div class="space-y-4">
-            <div class="h-44 rounded-xl overflow-hidden relative bg-slate-900">
-              <img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=800&q=80" alt="Tensile Canopy Architecture" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded bg-brand-navy text-white text-[10px] font-mono font-bold">
-                TENSILE & CIVIL
-              </span>
-            </div>
-
-            <h3 class="font-display font-bold text-lg text-brand-navy group-hover:text-brand-blue transition-colors">
-              Tensile Canopies & Civil EPC
-            </h3>
-
-            <p class="text-xs text-brand-slate leading-relaxed font-normal">
-              Architectural PVDF membrane canopies, stadium tensile roofs, laser-screed FM2 super-flat industrial concrete flooring, and turnkey civil foundations.
-            </p>
-
-            <ul class="space-y-1.5 pt-3 border-t border-slate-100 text-xs font-mono text-brand-dark font-medium">
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>PVDF Membrane (Ferrari/Mehler)</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-blue"></span>
-                <span>FM2 Jointless Flooring</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="pt-5 mt-4 border-t border-slate-100">
-            <a href="#estimator" class="text-xs font-mono text-brand-blue font-bold hover:underline flex items-center justify-between">
-              <span>Tensile Canopy Quote</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- WORLD-FIRST: INTERACTIVE 2D HTML5 CANVAS STRUCTURAL GENERATOR -->
-  <!-- ========================================================================= -->
-  <section id="estimator" class="py-24 bg-slate-50 relative border-y border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Header (Outfit Font) -->
-      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-blue/20 bg-brand-blue/5 text-brand-blue font-mono text-xs font-bold uppercase tracking-wider">
-          LIVE COMPUTATIONAL ENGINE
-        </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
-          Interactive 2D CAD Structural Estimator
-        </h2>
-        <p class="text-brand-slate text-sm font-normal">
-          Adjust the covered area and clear-span below. Watch the HTML5 Canvas redraw the PEB structural portal frame and calculate live steel tonnage, timeline, and budget.
-        </p>
-      </div>
-
-      <!-- Main Estimator Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
-        <!-- Left: Interactive Controls -->
-        <div class="lg:col-span-7 rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
-          
-          <!-- Step 1: Project Type Selector -->
-          <div class="space-y-3">
-            <label class="block text-xs font-mono uppercase tracking-wider text-brand-navy font-bold">
-              1. Select Structural Typology:
-            </label>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-mono text-xs">
-              <button class="project-type-btn active p-3 rounded-xl border-2 border-brand-blue bg-brand-blue/5 text-brand-blue font-bold text-center transition-all cursor-pointer" data-type="PEB Warehouse" data-rate="3200" data-span="36">
-                PEB Shed
-                <span class="block text-[10px] text-brand-muted font-normal">Factory / Depot</span>
-              </button>
-              <button class="project-type-btn p-3 rounded-xl border border-slate-200 bg-slate-50 text-brand-slate hover:text-brand-navy hover:border-slate-300 text-center transition-all cursor-pointer" data-type="Insulated Cold Storage" data-rate="4400" data-span="28">
-                Cold Storage
-                <span class="block text-[10px] text-brand-muted font-normal">Chiller / Freezer</span>
-              </button>
-              <button class="project-type-btn p-3 rounded-xl border border-slate-200 bg-slate-50 text-brand-slate hover:text-brand-navy hover:border-slate-300 text-center transition-all cursor-pointer" data-type="Heavy Crane Bay" data-rate="3900" data-span="45">
-                Crane Bay
-                <span class="block text-[10px] text-brand-muted font-normal">25T Gantry Crane</span>
-              </button>
-              <button class="project-type-btn p-3 rounded-xl border border-slate-200 bg-slate-50 text-brand-slate hover:text-brand-navy hover:border-slate-300 text-center transition-all cursor-pointer" data-type="Tensile Canopy" data-rate="2600" data-span="24">
-                Tensile Canopy
-                <span class="block text-[10px] text-brand-muted font-normal">PVDF Fabric Roof</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Step 2: Covered Area Slider -->
-          <div class="space-y-3 pt-4 border-t border-slate-200">
-            <div class="flex items-center justify-between font-mono">
-              <label class="text-xs uppercase tracking-wider text-brand-navy font-bold">
-                2. Covered Floor Area (Sq. Ft.):
-              </label>
-              <div class="flex items-center gap-2">
-                <input type="number" id="areaInput" value="30000" min="5000" max="250000" step="1000" class="w-28 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-300 text-brand-blue font-mono font-bold text-sm text-right focus:outline-none focus:border-brand-blue">
-                <span class="text-xs text-brand-muted font-bold">sq ft</span>
-              </div>
-            </div>
-
-            <!-- Range Slider -->
-            <input type="range" id="areaSlider" min="5000" max="200000" step="2500" value="30000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-blue">
-            
-            <div class="flex justify-between text-[10px] font-mono text-brand-muted">
-              <span>5,000 Sq. Ft.</span>
-              <span>50,000 Sq. Ft.</span>
-              <span>100,000 Sq. Ft.</span>
-              <span>200,000+ Sq. Ft.</span>
-            </div>
-          </div>
-
-          <!-- Step 3: Envelope Spec Toggle -->
-          <div class="space-y-3 pt-4 border-t border-slate-200">
-            <label class="block text-xs font-mono uppercase tracking-wider text-brand-navy font-bold">
-              3. Structural Envelope Specification:
-            </label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
-              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 cursor-pointer">
-                <input type="radio" name="envelopeSpec" value="Single Skin Corrugated 0.5mm" class="accent-brand-blue">
-                <span class="text-brand-slate font-medium">Single Skin (0.5mm)</span>
-              </label>
-              <label class="flex items-center gap-2.5 p-3 rounded-xl border-2 border-brand-blue bg-brand-blue/5 cursor-pointer">
-                <input type="radio" name="envelopeSpec" value="50mm PIR Sandwich Panel" checked class="accent-brand-blue">
-                <span class="text-brand-blue font-bold">50mm PIR Panel</span>
-              </label>
-              <label class="flex items-center gap-2.5 p-3 rounded-xl border border-slate-200 bg-slate-50 hover:border-slate-300 cursor-pointer">
-                <input type="radio" name="envelopeSpec" value="100mm Cold Storage Panel" class="accent-brand-blue">
-                <span class="text-brand-slate font-medium">100mm Cold PIR</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Client Quick Info for WhatsApp Payload -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200">
+        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6);">
+          <!-- 1. PEB -->
+          <article class="service-card">
             <div>
-              <label class="block text-[10px] font-mono uppercase text-brand-muted font-bold mb-1">Your Name</label>
-              <input type="text" id="estimatorName" placeholder="e.g. Tariq Mehmood" class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-brand-navy text-xs font-mono focus:border-brand-blue focus:outline-none">
+              <div class="service-card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10v11M15 10v11"/></svg>
+              </div>
+              <h3>Pre-Engineered Buildings (PEB)</h3>
+              <p>Custom tapered portal frames engineered for cost efficiency, seismic resilience, and column-free clear spans up to 90 meters.</p>
             </div>
+            <a href="pages/service-peb.html" class="link-text" data-i18n="learn_more">Learn more</a>
+          </article>
+
+          <!-- 2. Structural Steel -->
+          <article class="service-card">
             <div>
-              <label class="block text-[10px] font-mono uppercase text-brand-muted font-bold mb-1">Project City</label>
-              <input type="text" id="estimatorCity" placeholder="e.g. Lahore / Karachi" class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-brand-navy text-xs font-mono focus:border-brand-blue focus:outline-none">
+              <div class="service-card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 22h16M2 7h20M12 2v20M7 7l5 15M17 7l-5 15"/></svg>
+              </div>
+              <h3>Structural Steel Fabrication & Erection</h3>
+              <p>Heavy plate girders, pipe racks, and multi-tier platforms built to AISC and AWS D1.1 standards for processing industries.</p>
             </div>
+            <a href="pages/service-structural-steel.html" class="link-text" data-i18n="learn_more">Learn more</a>
+          </article>
+
+          <!-- 3. Warehouses & Cold Storage -->
+          <article class="service-card">
             <div>
-              <label class="block text-[10px] font-mono uppercase text-brand-muted font-bold mb-1">Phone Number</label>
-              <input type="text" id="estimatorPhone" placeholder="0300-XXXXXXX" class="w-full px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-brand-navy text-xs font-mono focus:border-brand-blue focus:outline-none">
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Live Canvas Structural Drawer & BOQ Card -->
-        <div class="lg:col-span-5 space-y-6">
-          
-          <!-- Live 2D HTML5 Canvas Drawing Window -->
-          <div class="rounded-2xl bg-white border border-slate-200 p-4 relative overflow-hidden shadow-sm">
-            <div class="flex items-center justify-between font-mono text-[11px] mb-2 pb-2 border-b border-slate-100">
-              <span class="text-brand-blue flex items-center gap-1.5 font-bold">
-                <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
-                LIVE 2D PORTAL FRAME CAD
-              </span>
-              <span id="canvasSpanBadge" class="text-brand-slate font-mono font-bold">SPAN: 36.0m</span>
-            </div>
-
-            <!-- The Interactive Canvas -->
-            <div class="relative w-full h-48 bg-cadBlueprint-bg rounded-xl overflow-hidden border border-slate-800 flex items-center justify-center">
-              <canvas id="structuralCanvas" width="500" height="200" class="w-full h-full block"></canvas>
-            </div>
-
-            <div class="flex justify-between items-center text-[10px] font-mono text-brand-muted pt-2 font-medium">
-              <span>ASTM A572 Gr. 50 Tapered I-Sections</span>
-              <span class="text-brand-blue font-bold">Scale: 1:200 Real-Time</span>
-            </div>
-          </div>
-
-          <!-- Computational Output Summary Card -->
-          <div class="rounded-2xl bg-white border border-slate-200 p-6 space-y-4 shadow-sm">
-            
-            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
-              <span class="text-xs font-mono uppercase tracking-wider text-brand-muted font-bold">Estimated Budget Range</span>
-              <span class="px-2 py-0.5 rounded bg-brand-blue/10 text-brand-blue border border-brand-blue/20 text-[10px] font-mono font-bold">
-                TURNKEY EPC
-              </span>
-            </div>
-
-            <div class="py-2">
-              <div id="costEstimate" class="font-display font-black text-3xl sm:text-4xl text-brand-navy">
-                PKR 96.0M - 110.4M
+              <div class="service-card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg>
               </div>
-              <p class="text-[11px] text-brand-muted font-mono mt-1">
-                Inclusive of Primary Structural Steel, Anchor Bolts, PIR Envelope & Installation
-              </p>
+              <h3>Warehouses & Cold Storage</h3>
+              <p>High-bay logistics distribution centers and sub-zero cold stores with FM2 flatness floor coordination and continuous PIR insulation.</p>
             </div>
+            <a href="pages/service-warehouses.html" class="link-text" data-i18n="learn_more">Learn more</a>
+          </article>
 
-            <!-- Engineering Specs Output -->
-            <div class="grid grid-cols-2 gap-3 py-2 border-y border-slate-100 font-mono text-xs">
-              <div>
-                <span class="text-[10px] text-brand-muted block uppercase font-bold">Steel Tonnage</span>
-                <span id="summaryTonnage" class="font-bold text-brand-blue">~150 - 170 Metric Tons</span>
+          <!-- 4. Factories & Sheds -->
+          <article class="service-card">
+            <div>
+              <div class="service-card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 20V10M12 20V4M6 20v-6M2 20h20"/></svg>
               </div>
-              <div>
-                <span class="text-[10px] text-brand-muted block uppercase font-bold">Foundation Volume</span>
-                <span id="summaryConcrete" class="font-bold text-brand-navy">~340 m³ Concrete</span>
-              </div>
-              <div>
-                <span class="text-[10px] text-brand-muted block uppercase font-bold">Fabrication & Erection</span>
-                <span id="summaryTimeline" class="font-bold text-brand-blue">60 - 80 Days</span>
-              </div>
-              <div>
-                <span class="text-[10px] text-brand-muted block uppercase font-bold">Design Standard</span>
-                <span class="font-bold text-brand-navy">AISC 360 / MBMA</span>
-              </div>
+              <h3>Factories & Industrial Sheds</h3>
+              <p>Heavy manufacturing plants engineered for overhead cranes, automated assembly lines, vibration isolation, and ridge ventilation.</p>
             </div>
+            <a href="pages/service-factories.html" class="link-text" data-i18n="learn_more">Learn more</a>
+          </article>
 
-            <!-- Direct Dispatch Button -->
-            <button id="dispatchWhatsAppBtn" class="w-full py-4 rounded-xl bg-brand-blue hover:bg-brand-blueHover text-white font-bold font-mono text-xs uppercase tracking-wider shadow-lg shadow-brand-blue/25 hover:scale-[1.01] active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer">
-              <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.777.817 2.796.817 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.77-5.768-5.772zm3.387 8.243c-.145.411-.836.764-1.162.813-.327.049-.757.069-2.311-.532-1.849-.714-3.041-2.583-3.133-2.707-.093-.124-.748-.997-.748-1.902 0-.904.471-1.349.638-1.534.167-.186.365-.232.486-.232.122 0 .243.002.348.007.112.006.262-.042.411.316.155.373.53 1.29.576 1.383.046.093.076.202.015.326-.061.124-.092.202-.183.311-.091.109-.193.243-.275.326-.092.093-.188.194-.081.378.107.184.476.786 1.021 1.272.702.626 1.294.82 1.478.912.184.092.292.077.4-.047.108-.124.463-.541.586-.727.123-.186.246-.155.413-.093.167.062 1.058.499 1.24.591.182.093.303.14.349.217.046.077.046.45-.099.861z"/></svg>
-              <span>Dispatch BOQ to Chief Engineer via WhatsApp</span>
-            </button>
+          <!-- 5. Roofing & Cladding -->
+          <article class="service-card">
+            <div>
+              <div class="service-card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <h3>Roofing, Cladding & Insulation</h3>
+              <p>360° mechanical lock standing seam roofing with zero fastener penetrations, Zincalume profiles, and B1 fire-rated insulated panels.</p>
+            </div>
+            <a href="pages/service-roofing.html" class="link-text" data-i18n="learn_more">Learn more</a>
+          </article>
 
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- TESLA-STYLE BENCHMARK: PRE-ENGINEERED STEEL (PEB) VS CONVENTIONAL RCC -->
-  <!-- ========================================================================= -->
-  <section id="comparison" class="py-24 bg-white relative bg-grid-tech">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-blue/20 bg-brand-blue/5 text-brand-blue font-mono text-xs font-bold uppercase tracking-wider">
-          FINANCIAL & ENGINEERING BENCHMARK
-        </div>
-        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
-          Why Modern Industry Chooses Aitmaad PEB Over Conventional RCC
-        </h2>
-        <p class="text-brand-slate text-sm font-normal">
-          A direct comparison between high-tensile steel engineering and outdated concrete columns.
-        </p>
-      </div>
-
-      <!-- Comparative Matrix Table -->
-      <div class="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left font-mono text-xs">
-            <thead>
-              <tr class="border-b border-slate-200 bg-slate-50">
-                <th class="p-4 sm:p-5 text-brand-navy font-bold uppercase tracking-wider w-1/4">Key Engineering Metric</th>
-                <th class="p-4 sm:p-5 text-brand-muted font-bold uppercase tracking-wider w-3/8">Conventional Concrete (RCC)</th>
-                <th class="p-4 sm:p-5 text-brand-blue font-bold uppercase tracking-wider w-3/8 bg-brand-ice border-l border-brand-blue/20">Aitmaad PEB Steel Solution</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              
-              <!-- Metric 1: Timeline -->
-              <tr class="hover:bg-slate-50/50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-brand-navy">Construction Speed</td>
-                <td class="p-4 sm:p-5 text-brand-slate">
-                  Slow (8 - 14 Months). Wet curing, shuttering delays, weather sensitive.
-                </td>
-                <td class="p-4 sm:p-5 text-brand-blue font-bold bg-brand-ice border-l border-brand-blue/20 flex items-center gap-2">
-                  <svg class="w-4 h-4 text-brand-blue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                  <span>40% - 60% Faster. Completed in 60 - 90 Days.</span>
-                </td>
-              </tr>
-
-              <!-- Metric 2: Clear-Span -->
-              <tr class="hover:bg-slate-50/50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-brand-navy">Unobstructed Clear-Span</td>
-                <td class="p-4 sm:p-5 text-brand-slate">
-                  Limited to 10 - 15 meters. Internal columns block logistics forklifts and automation.
-                </td>
-                <td class="p-4 sm:p-5 text-brand-blue font-bold bg-brand-ice border-l border-brand-blue/20 flex items-center gap-2">
-                  <svg class="w-4 h-4 text-brand-blue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                  <span>Up to 60+ Meters Clear-Span with zero internal columns.</span>
-                </td>
-              </tr>
-
-              <!-- Metric 3: Seismic Safety -->
-              <tr class="hover:bg-slate-50/50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-brand-navy">Seismic Performance</td>
-                <td class="p-4 sm:p-5 text-brand-slate">
-                  Brittle and heavy. Higher risk of catastrophic shear fracture in earthquakes.
-                </td>
-                <td class="p-4 sm:p-5 text-brand-blue font-bold bg-brand-ice border-l border-brand-blue/20 flex items-center gap-2">
-                  <svg class="w-4 h-4 text-brand-blue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                  <span>High Ductility. Absorbs dynamic cyclic earthquake energy.</span>
-                </td>
-              </tr>
-
-              <!-- Metric 4: Foundation Weight -->
-              <tr class="hover:bg-slate-50/50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-brand-navy">Dead Load & Foundation</td>
-                <td class="p-4 sm:p-5 text-brand-slate">
-                  Immense mass (2400 kg/m³). Requires expensive deep pile foundations.
-                </td>
-                <td class="p-4 sm:p-5 text-brand-blue font-bold bg-brand-ice border-l border-brand-blue/20 flex items-center gap-2">
-                  <svg class="w-4 h-4 text-brand-blue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                  <span>50% Lighter dead load = 30% saving on foundation civil works.</span>
-                </td>
-              </tr>
-
-              <!-- Metric 5: Relocation & Scrap Value -->
-              <tr class="hover:bg-slate-50/50 transition-colors">
-                <td class="p-4 sm:p-5 font-bold text-brand-navy">Relocation & Salvage</td>
-                <td class="p-4 sm:p-5 text-brand-slate">
-                  Zero salvage value. Costly demolition and landfill waste.
-                </td>
-                <td class="p-4 sm:p-5 text-brand-blue font-bold bg-brand-ice border-l border-brand-blue/20 flex items-center gap-2">
-                  <svg class="w-4 h-4 text-brand-blue shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                  <span>100% Bolted Structure. Can be dismantled, expanded, or relocated.</span>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
+          <!-- 6. Consultancy & BIM -->
+          <article class="service-card">
+            <div>
+              <div class="service-card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
+              </div>
+              <h3>Design, Engineering & Consultancy</h3>
+              <p>Parametric structural analysis in STAAD.Pro and Tekla LOD 400 detailing, yielding 12-22% steel tonnage savings through value engineering.</p>
+            </div>
+            <a href="pages/service-consultancy.html" class="link-text" data-i18n="learn_more">Learn more</a>
+          </article>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- MASTER INDUSTRIAL PORTFOLIO (WITH DETAILED CAD CASE MODAL) -->
-  <!-- ========================================================================= -->
-  <section id="portfolio" class="py-24 bg-slate-50 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header with Category Tabs -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-        <div class="space-y-3">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-blue/20 bg-brand-blue/5 text-brand-blue font-mono text-xs font-bold uppercase tracking-wider">
-            DEPLOYED SITES
+    <!-- 6.6 Featured Projects (Ivory Background, Filterable Editorial Grid) -->
+    <section class="section bg-ivory" aria-label="Featured Projects Portfolio">
+      <div class="container">
+        <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: var(--space-8);">
+          <div>
+            <span class="eyebrow" data-i18n="projects_eyebrow">Our Portfolio</span>
+            <h2 data-i18n="projects_h2">Built Across Pakistan</h2>
+            <p data-i18n="projects_sub" style="color: var(--steel);">
+              Explore our landmark industrial, commercial, and agricultural steel infrastructure projects.
+            </p>
           </div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
-            Master Industrial Deployments
+
+          <!-- Filter Chips (Spec 6.6) -->
+          <div class="filter-bar" id="home-project-filters">
+            <button class="filter-chip active" data-filter="All" data-i18n="filter_all">All Projects</button>
+            <button class="filter-chip" data-filter="Industrial" data-i18n="filter_industrial">Industrial</button>
+            <button class="filter-chip" data-filter="Warehouse" data-i18n="filter_warehouse">Warehouse</button>
+            <button class="filter-chip" data-filter="Commercial" data-i18n="filter_commercial">Commercial</button>
+            <button class="filter-chip" data-filter="Agricultural" data-i18n="filter_agricultural">Agricultural</button>
+            <button class="filter-chip" data-filter="Institutional" data-i18n="filter_institutional">Institutional</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Editorial Grid (Spec 6.6) -->
+        <div class="projects-grid" id="featured-projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6);">
+          <!-- Cards populated via projects.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-12);">
+          <a href="pages/projects.html" class="btn btn-secondary-light">
+            <span data-i18n="view_all_projects">View All Projects</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.7 Why Aitmad (Pine-800 Section) -->
+    <section class="section bg-pine-800" aria-label="Why Aitmad Advantages">
+      <div class="container">
+        <div class="why-aitmad-grid">
+          <!-- Left Sticky Header -->
+          <div class="why-sticky-col">
+            <span class="eyebrow" style="color: var(--copper-300);" data-i18n="why_eyebrow">The Aitmad Advantage</span>
+            <h2 class="text-ivory" style="margin-bottom: 16px;" data-i18n="why_h2">Why Leading Industrialists Choose Aitmad</h2>
+            <p class="text-steel-light" style="line-height: 1.7;" data-i18n="why_sub">
+              We understand that industrial buildings are significant capital investments. Here is why Pakistan's top corporations trust us with their critical assets.
+            </p>
+            <div style="margin-top: 32px;">
+              <a href="pages/why-aitmad.html" class="btn btn-primary btn-sm">
+                <span>View Certifications & Safety Protocol</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right 6 Stacked Feature Rows -->
+          <div class="why-feature-list">
+            <div class="why-feature-row">
+              <span class="why-num">01</span>
+              <div class="why-feature-content">
+                <h3 data-i18n="why_1_title">Engineering Excellence</h3>
+                <p data-i18n="why_1_desc">Every structure is designed using STAAD.Pro and detailed to Tekla LOD 400, eliminating on-site conflicts and optimizing steel weight without sacrificing structural safety margins.</p>
+              </div>
+            </div>
+
+            <div class="why-feature-row">
+              <span class="why-num">02</span>
+              <div class="why-feature-content">
+                <h3 data-i18n="why_2_title">Quality Certified Steel</h3>
+                <p data-i18n="why_2_desc">We exclusively source certified ASTM A572 Grade 50 high-tensile steel plate and hot-dip galvanized components, backed by comprehensive Mill Test Certificates.</p>
+              </div>
+            </div>
+
+            <div class="why-feature-row">
+              <span class="why-num">03</span>
+              <div class="why-feature-content">
+                <h3 data-i18n="why_3_title">On-Time Delivery Guarantee</h3>
+                <p data-i18n="why_3_desc">Our automated submerged arc welding lines and sequenced logistics ensure materials arrive on site exactly when erection teams are ready.</p>
+              </div>
+            </div>
+
+            <div class="why-feature-row">
+              <span class="why-num">04</span>
+              <div class="why-feature-content">
+                <h3 data-i18n="why_4_title">Safety First Protocol</h3>
+                <p data-i18n="why_4_desc">Zero-compromise HSE policies, certified crane riggers, daily toolbox talks, and full personal protective compliance ensure safe sites with over 2 million safe man-hours.</p>
+              </div>
+            </div>
+
+            <div class="why-feature-row">
+              <span class="why-num">05</span>
+              <div class="why-feature-content">
+                <h3 data-i18n="why_5_title">Customized Parametric Design</h3>
+                <p data-i18n="why_5_desc">No cookie-cutter sheds. We engineer clear spans, bay spacings, crane brackets, and door clearances customized specifically around your machinery layout.</p>
+              </div>
+            </div>
+
+            <div class="why-feature-row">
+              <span class="why-num">06</span>
+              <div class="why-feature-content">
+                <h3 data-i18n="why_6_title">After-Sales & Warranty Support</h3>
+                <p data-i18n="why_6_desc">We stand behind every bolt. Receive a formal 10-year structural integrity warranty and dedicated annual preventative inspection teams.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.8 Process (Ivory Background, 6-Step Timeline) -->
+    <section class="section bg-ivory" aria-label="Systematic Process">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin-inline: auto; margin-bottom: var(--space-8);">
+          <span class="eyebrow" data-i18n="process_eyebrow">Systematic Execution</span>
+          <h2 data-i18n="process_h2">Our 6-Step Engineered Process</h2>
+          <p data-i18n="process_sub" style="color: var(--steel);">
+            A transparent, milestone-driven pathway from preliminary concept to turnkey facility handover.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-steps-grid">
+            <div class="timeline-node">
+              <div class="timeline-dot">1</div>
+              <h3 class="timeline-step-title" data-i18n="step_1_title">01. Consultation</h3>
+              <p class="timeline-step-desc" data-i18n="step_1_desc">Site assessment, architectural coordination, and operational requirement analysis.</p>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-dot">2</div>
+              <h3 class="timeline-step-title" data-i18n="step_2_title">02. Design & BIM</h3>
+              <p class="timeline-step-desc" data-i18n="step_2_desc">Parametric structural calculation, Tekla 3D modeling, and anchor bolt setting plans.</p>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-dot">3</div>
+              <h3 class="timeline-step-title" data-i18n="step_3_title">03. Fabrication</h3>
+              <p class="timeline-step-desc" data-i18n="step_3_desc">CNC plasma cutting, automatic submerged arc welding, and Sa 2.5 blast cleaning.</p>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-dot">4</div>
+              <h3 class="timeline-step-title" data-i18n="step_4_title">04. Delivery</h3>
+              <p class="timeline-step-desc" data-i18n="step_4_desc">Sequenced logistics and staged transport directly to your project site.</p>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-dot">5</div>
+              <h3 class="timeline-step-title" data-i18n="step_5_title">05. Erection</h3>
+              <p class="timeline-step-desc" data-i18n="step_5_desc">Certified crane riggers, torque-checked HSFG bolting, and standing seam roof seaming.</p>
+            </div>
+
+            <div class="timeline-node">
+              <div class="timeline-dot">6</div>
+              <h3 class="timeline-step-title" data-i18n="step_6_title">06. Handover</h3>
+              <p class="timeline-step-desc" data-i18n="step_6_desc">Final laser alignment verification, leak testing, and formal warranty documentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-8);">
+          <a href="pages/process.html" class="link-text">
+            <span>Learn More About Quality Control & Deliverables</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6.9 Featured Project Spotlight (Full-Bleed Parallax) -->
+    <section class="spotlight-section" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80');" aria-label="Project of the Year Spotlight">
+      <div class="spotlight-overlay"></div>
+      <div class="container">
+        <div class="spotlight-content">
+          <span class="eyebrow" style="color: var(--copper-300);" data-i18n="spotlight_eyebrow">Project Spotlight</span>
+          <h2 class="text-ivory" style="font-size: clamp(2rem, 3.5vw, 2.8rem); margin-bottom: 12px;" data-i18n="spotlight_title">
+            National Logistics Park & Distribution Hub
           </h2>
-        </div>
+          <p class="text-steel-light" data-i18n="spotlight_desc">
+            A 145,000 sq. ft. clear-span distribution center featuring 64-meter column-free spans, laser-screed FM2 floors, and airtight thermal envelopes.
+          </p>
 
-        <!-- Filter Buttons -->
-        <div class="flex items-center gap-2 font-mono text-xs">
-          <button class="filter-btn active px-4 py-2 rounded-xl bg-brand-blue text-white font-bold transition-all shadow-xs cursor-pointer" data-filter="all">
-            All Projects
-          </button>
-          <button class="filter-btn px-4 py-2 rounded-xl border border-slate-200 bg-white text-brand-slate hover:text-brand-navy transition-all cursor-pointer" data-filter="logistics">
-            Logistics & PEB
-          </button>
-          <button class="filter-btn px-4 py-2 rounded-xl border border-slate-200 bg-white text-brand-slate hover:text-brand-navy transition-all cursor-pointer" data-filter="coldchain">
-            Cold Storage
-          </button>
-          <button class="filter-btn px-4 py-2 rounded-xl border border-slate-200 bg-white text-brand-slate hover:text-brand-navy transition-all cursor-pointer" data-filter="industrial">
-            Heavy Industry
-          </button>
+          <div class="spotlight-facts">
+            <div class="spotlight-fact-item">
+              <span class="spotlight-fact-val">145,000</span>
+              <span class="spotlight-fact-lbl">Sq. Ft. Area</span>
+            </div>
+            <div class="spotlight-fact-item">
+              <span class="spotlight-fact-val">64 Meters</span>
+              <span class="spotlight-fact-lbl">Clear Span</span>
+            </div>
+            <div class="spotlight-fact-item">
+              <span class="spotlight-fact-val">6 Months</span>
+              <span class="spotlight-fact-lbl">Execution</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <a href="pages/project.html?slug=national-logistics-distribution-hub" class="btn btn-primary">
+              <span data-i18n="read_case_study">Read the Case Study</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Project 1 -->
-        <div class="project-item rounded-2xl bg-white border border-slate-200 overflow-hidden luxe-card group transition-all duration-300" data-category="logistics">
-          <div class="h-60 relative overflow-hidden bg-slate-900">
-            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Textile Export Logistics Hub" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/75 backdrop-blur-md text-xs font-mono font-bold text-white border border-white/10">
-              120,000 SQ. FT.
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-brand-blue text-white text-xs font-mono font-bold">
-              Lahore
-            </span>
-          </div>
-          <div class="p-6 space-y-3">
-            <h3 class="font-display font-bold text-lg text-brand-navy group-hover:text-brand-blue transition-colors">
-              Textile Export Mega Logistics Hub
-            </h3>
-            <p class="text-xs text-brand-slate leading-relaxed font-normal">
-              Clear-span 48m warehouse with 12 hydraulic dock levelers, FM2 jointless industrial concrete floor, and 50mm PIR roof sandwich panels.
-            </p>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
-              <span class="text-brand-muted font-medium">Timeline: 65 Days</span>
-              <button onclick="openProjectModal('Textile Export Mega Logistics Hub', '120,000 Sq. Ft.', 'Sundar Industrial Estate, Lahore', '48m Clear-Span PEB Frame with 12 automated dock levelers and ASTM A572 Grade 50 steel columns.', 'Completed in 65 Days')" class="text-brand-blue font-bold hover:underline cursor-pointer">
-                View Case Specs &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
+    <!-- 6.10 Testimonials Slider (White Background) -->
+    <section class="section bg-white" aria-label="Client Testimonials">
+      <div class="container">
+        <div class="testimonials-wrapper">
+          <div class="testimonial-quote-icon">“</div>
+          <span class="eyebrow" data-i18n="testimonials_eyebrow">Client Endorsements</span>
+          <h2 data-i18n="testimonials_h2" style="margin-bottom: var(--space-8);">Voices of Industrial Trust</h2>
 
-        <!-- Project 2 -->
-        <div class="project-item rounded-2xl bg-white border border-slate-200 overflow-hidden luxe-card group transition-all duration-300" data-category="coldchain">
-          <div class="h-60 relative overflow-hidden bg-slate-900">
-            <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="Controlled Cold Storage" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/75 backdrop-blur-md text-xs font-mono font-bold text-white border border-white/10">
-              42,000 SQ. FT.
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-brand-blue text-white text-xs font-mono font-bold">
-              Multan Corridor
-            </span>
-          </div>
-          <div class="p-6 space-y-3">
-            <h3 class="font-display font-bold text-lg text-brand-navy group-hover:text-brand-blue transition-colors">
-              Controlled Atmosphere Mango Export Cold Chain
-            </h3>
-            <p class="text-xs text-brand-slate leading-relaxed font-normal">
-              Hermetic cold facility engineered with 100mm high-density PIR panels, dual Bitzer German refrigeration racks, and dehumidification chambers.
-            </p>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
-              <span class="text-brand-muted font-medium">Timeline: 70 Days</span>
-              <button onclick="openProjectModal('Controlled Atmosphere Mango Export Cold Chain', '42,000 Sq. Ft.', 'Multan Bypass Corridor', 'Turnkey Cold Storage with dual Bitzer rack refrigeration, hermetic sliding doors, and cleanroom coating.', 'Completed in 70 Days')" class="text-brand-blue font-bold hover:underline cursor-pointer">
-                View Case Specs &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
+          <!-- Dynamic Slides Container -->
+          <div id="testimonial-slider-container"></div>
 
-        <!-- Project 3 -->
-        <div class="project-item rounded-2xl bg-white border border-slate-200 overflow-hidden luxe-card group transition-all duration-300" data-category="industrial">
-          <div class="h-60 relative overflow-hidden bg-slate-900">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Heavy Manufacturing Shed" class="blueprint-filter-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/75 backdrop-blur-md text-xs font-mono font-bold text-white border border-white/10">
-              95,000 SQ. FT.
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-brand-blue text-white text-xs font-mono font-bold">
-              Sundar, Lahore
-            </span>
-          </div>
-          <div class="p-6 space-y-3">
-            <h3 class="font-display font-bold text-lg text-brand-navy group-hover:text-brand-blue transition-colors">
-              Automotive Component Assembly Plant
-            </h3>
-            <p class="text-xs text-brand-slate leading-relaxed font-normal">
-              Multi-bay structural steel building engineered for dual 25-ton overhead traveling cranes, laser-screed FM2 flooring, and MEP ducting.
-            </p>
-            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-mono">
-              <span class="text-brand-muted font-medium">Timeline: 80 Days</span>
-              <button onclick="openProjectModal('Automotive Component Assembly Plant', '95,000 Sq. Ft.', 'Sundar Industrial Estate, Lahore', 'Heavy industrial plant designed for 25-ton overhead crane runways, structural mezzanines, and FM2 flooring.', 'Completed in 80 Days')" class="text-brand-blue font-bold hover:underline cursor-pointer">
-                View Case Specs &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- TECHNICAL RFQ SUBMISSION & EXECUTIVE CONTACT -->
-  <!-- ========================================================================= -->
-  <section id="contact" class="py-24 bg-white border-t border-slate-200 relative bg-grid-tech">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left: RFQ Submission Form -->
-        <div class="lg:col-span-7 rounded-2xl bg-white border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
-          <div class="space-y-2">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-blue/20 bg-brand-blue/5 text-brand-blue font-mono text-xs font-bold uppercase tracking-wider">
-              OFFICIAL PROPOSAL REQUEST
-            </div>
-            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-brand-navy tracking-tight">
-              Request a Technical BOQ & Proposal
-            </h3>
-            <p class="text-xs text-brand-slate font-mono">
-              Our structural engineers will analyze your site drawings and provide a stamped quotation within 24 hours.
-            </p>
-          </div>
-
-          <form id="rfqForm" class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-mono uppercase text-brand-navy mb-1.5 font-bold">Client / Company Name *</label>
-                <input type="text" id="rfqName" required placeholder="e.g. Atlas Logistics Pvt Ltd" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-brand-navy font-mono text-xs focus:border-brand-blue focus:outline-none">
-              </div>
-              <div>
-                <label class="block text-xs font-mono uppercase text-brand-navy mb-1.5 font-bold">Contact Number / WhatsApp *</label>
-                <input type="tel" id="rfqPhone" required placeholder="+92 300 XXXXXXX" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-brand-navy font-mono text-xs focus:border-brand-blue focus:outline-none">
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-mono uppercase text-brand-navy mb-1.5 font-bold">Project Location (City / Industrial Estate)</label>
-                <input type="text" id="rfqCity" placeholder="e.g. Sundar Industrial Estate, Lahore" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-brand-navy font-mono text-xs focus:border-brand-blue focus:outline-none">
-              </div>
-              <div>
-                <label class="block text-xs font-mono uppercase text-brand-navy mb-1.5 font-bold">Estimated Covered Area (Sq. Ft.)</label>
-                <input type="text" id="rfqArea" placeholder="e.g. 50,000 Sq. Ft." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-brand-navy font-mono text-xs focus:border-brand-blue focus:outline-none">
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-mono uppercase text-brand-navy mb-1.5 font-bold">Project Scope & Structural Requirements</label>
-              <textarea id="rfqMessage" rows="3" placeholder="Describe clear span requirements, crane load capacity (if any), insulation thickness, or special site conditions..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-brand-navy font-mono text-xs focus:border-brand-blue focus:outline-none"></textarea>
-            </div>
-
-            <button type="submit" class="w-full py-4 rounded-xl bg-brand-blue hover:bg-brand-blueHover text-white font-bold font-mono text-xs uppercase tracking-wider shadow-md shadow-brand-blue/20 transition-all cursor-pointer">
-              <span id="rfqBtnText">Submit Engineering Inquiry &rarr;</span>
+          <!-- Controls -->
+          <div class="testimonial-controls">
+            <button class="testimonial-nav-btn" id="testimonial-prev" aria-label="Previous Testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-
-            <div id="rfqSuccessMsg" class="hidden p-3 rounded-xl bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-mono text-center font-bold">
-              ✓ Inquiry recorded! Connecting you directly to WhatsApp Chief Engineer...
-            </div>
-          </form>
-        </div>
-
-        <!-- Right: Corporate Credentials & Headquarters -->
-        <div class="lg:col-span-5 space-y-6 font-mono text-xs">
-          
-          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
-            <h4 class="font-display font-bold text-lg text-brand-navy">Headquarters & Fabrication Works</h4>
-            
-            <div class="space-y-3 text-brand-slate">
-              <div class="flex items-start gap-3">
-                <span class="text-brand-blue text-base">📍</span>
-                <div>
-                  <strong class="text-brand-navy block">Corporate Office:</strong>
-                  Office #304, Al-Hafeez Heights, Main Boulevard, Gulberg III, Lahore, Pakistan.
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <span class="text-brand-blue text-base">🏭</span>
-                <div>
-                  <strong class="text-brand-navy block">Fabrication Facility:</strong>
-                  Plot 14-B, Sector 3, Sundar Industrial Estate, Raiwind Road, Lahore.
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <span class="text-brand-blue text-base">⚓</span>
-                <div>
-                  <strong class="text-brand-navy block">South Regional Base:</strong>
-                  Downstream Industrial Zone, Port Qasim, Karachi.
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <span class="text-brand-blue text-base">📞</span>
-                <div>
-                  <strong class="text-brand-navy block">Direct Lines:</strong>
-                  +92 300 8472911 (Mobile / WhatsApp)<br>
-                  +92 42 35911477 (Head Office Landline)
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3">
-                <span class="text-brand-blue text-base">✉️</span>
-                <div>
-                  <strong class="text-brand-navy block">Technical Email:</strong>
-                  info@aitmaadengineering.com | waseem@aitmaad.pk
-                </div>
-              </div>
-            </div>
+            <div id="testimonial-dots" style="display: flex; gap: 8px;"></div>
+            <button class="testimonial-nav-btn" id="testimonial-next" aria-label="Next Testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
           </div>
-
-          <!-- Accreditations & Standards Seal -->
-          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
-            <h5 class="text-brand-muted uppercase tracking-widest font-bold text-[10px]">ENGINEERING ACCREDITATIONS</h5>
-            <div class="grid grid-cols-2 gap-2 text-[11px] text-brand-navy font-bold">
-              <div class="p-2.5 rounded bg-white border border-slate-200">PEC Registered (C-1)</div>
-              <div class="p-2.5 rounded bg-white border border-slate-200">AISC 360-16 Certified</div>
-              <div class="p-2.5 rounded bg-white border border-slate-200">ISO 9001:2015 QMS</div>
-              <div class="p-2.5 rounded bg-white border border-slate-200">MBMA Code Compliant</div>
-            </div>
-          </div>
-
         </div>
-
       </div>
+    </section>
 
+    <!-- 6.11 Final CTA (Pine-900 with Blueprint Grid) -->
+    <section class="section bg-blueprint" aria-label="Request a Quote CTA">
+      <div class="container" style="text-align: center; max-width: 760px;">
+        <span class="eyebrow" style="color: var(--copper-300);" data-i18n="hero_eyebrow">Steel Building Specialists</span>
+        <h2 class="text-ivory" style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin-bottom: 16px;" data-i18n="cta_h2">
+          Let's Build Something That Lasts.
+        </h2>
+        <p class="text-steel-light" style="font-size: 1.15rem; line-height: 1.7; margin-bottom: var(--space-8);" data-i18n="cta_sub">
+          Tell us about your project dimensions, location, and operational requirements. Our senior structural engineers respond with preliminary estimates within 24 hours.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+          <a href="pages/contact.html" class="btn btn-primary">
+            <span data-i18n="hero_cta_quote">Request a Quote</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/924235789000?text=Hello%20Aitmad%20Engineering,%20I%20am%20inquiring%20about%20a%20steel%20building%20project." target="_blank" rel="noopener" class="btn btn-secondary-dark" style="color: #25D366; border-color: rgba(37, 211, 102, 0.4);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.968.828 2.796.828 3.182 0 5.769-2.587 5.769-5.766.001-3.182-2.585-5.781-5.769-5.781zm3.385 8.163c-.145.411-.836.784-1.184.832-.349.05-.79.071-2.285-.547-1.782-.738-2.92-2.56-3.009-2.678-.089-.118-.718-.956-.718-1.82 0-.865.452-1.291.613-1.467.161-.176.353-.22.47-.22.119 0 .237.001.341.006.111.005.259-.042.404.307.149.359.509 1.242.553 1.332.045.09.074.195.015.313-.059.12-.089.194-.176.297-.089.103-.187.23-.267.31-.089.088-.182.184-.078.362.103.178.461.761.99 1.232.68.607 1.254.795 1.432.884.179.088.283.074.388-.045.105-.118.452-.526.572-.705.12-.18.239-.15.401-.09.162.059 1.026.484 1.203.573.177.089.295.133.339.208.045.074.045.43-.1 1.002z"/></svg>
+            <span data-i18n="cta_whatsapp">Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5.4 Site Footer -->
+  <footer class="site-footer bg-blueprint" role="contentinfo">
+    <!-- CTA Strip -->
+    <div class="footer-cta-strip">
+      <div class="container footer-cta-inner">
+        <div>
+          <h3 class="footer-cta-title">Planning a Steel Building?</h3>
+          <p class="footer-cta-sub">Talk directly with our registered senior structural engineers.</p>
+        </div>
+        <a href="pages/contact.html" class="btn btn-primary btn-sm">
+          <span>Request Detailed Estimate</span>
+          <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
-  </section>
 
-  <!-- ========================================================================= -->
-  <!-- FOOTER -->
-  <!-- ========================================================================= -->
-  <footer class="border-t border-slate-200 bg-white py-10 text-xs font-mono text-brand-muted">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        &copy; 2026 Aitmaad Engineering Services (Pvt) Ltd. All Rights Reserved.
+    <!-- Main 4 Columns -->
+    <div class="container footer-main">
+      <div class="footer-grid">
+        <!-- Col 1: About & Logo -->
+        <div>
+          <a href="index.html" class="site-logo" style="margin-bottom: 20px;">
+            <svg class="logo-mark" viewBox="0 0 48 48" fill="none">
+              <path d="M 4 12 L 4 4 L 12 4 M 36 4 L 44 4 L 44 12 M 44 36 L 44 44 L 36 44 M 12 44 L 4 44 L 4 36" stroke="#BC8458" stroke-width="2" stroke-linecap="round"/>
+              <path d="M 12 14 L 36 14 M 24 14 L 24 34 M 12 34 L 36 34" stroke="#F6F3EE" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">
+              <span class="logo-brand">AITMAD</span>
+              <span class="logo-sub">ENGINEERING</span>
+            </div>
+          </a>
+          <p style="color: var(--steel-light); font-size: 0.88rem; line-height: 1.65; max-width: 320px;" data-i18n="footer_tagline">
+            Built on Trust. Engineered in Steel. Delivering Pakistan's premier pre-engineered buildings and industrial steel infrastructure since 1998.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.54a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube Channel">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.82.42a2.5 2.5 0 0 0-1.76 1.77A26.38 26.38 0 0 0 2 12a26.38 26.38 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.74 19 12 19 12 19s6.26 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77A26.38 26.38 0 0 0 22 12a26.38 26.38 0 0 0-.42-4.81zM10 15V9l5.2 3L10 15z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_quick_links">Quick Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="pages/about.html" data-i18n="nav_about">About Aitmad</a></li>
+            <li><a href="pages/projects.html" data-i18n="nav_projects">Project Gallery</a></li>
+            <li><a href="pages/process.html" data-i18n="nav_process">Our Process</a></li>
+            <li><a href="pages/why-aitmad.html" data-i18n="nav_why_aitmad">Why Aitmad</a></li>
+            <li><a href="pages/contact.html" data-i18n="nav_contact">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_services">Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="pages/service-peb.html">Pre-Engineered Buildings</a></li>
+            <li><a href="pages/service-structural-steel.html">Structural Steelwork</a></li>
+            <li><a href="pages/service-warehouses.html">Warehouses & Cold Storage</a></li>
+            <li><a href="pages/service-factories.html">Factories & Industrial Sheds</a></li>
+            <li><a href="pages/service-roofing.html">Roofing & Insulation</a></li>
+            <li><a href="pages/service-consultancy.html">Design & BIM Modeling</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_contact_info">Headquarters & Plant</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Plot 42-A, Sundar Industrial Estate, Raiwind Road, Lahore, Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+92 42 3578 9000 / +92 300 8456789</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>inquiries@aitmadengineering.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Mon - Sat: 8:30 AM - 6:00 PM (Friday break: 1:00 PM - 2:30 PM)</span>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-6">
-        <a href="#services" class="hover:text-brand-blue transition-colors">Capabilities</a>
-        <a href="#estimator" class="hover:text-brand-blue transition-colors">Estimator</a>
-        <a href="#portfolio" class="hover:text-brand-blue transition-colors">Portfolio</a>
-        <a href="#contact" class="hover:text-brand-blue transition-colors">Contact</a>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          © 2026 Aitmad Engineering (Pvt.) Ltd. <span data-i18n="footer_rights">All Rights Reserved. Engineered with Pride in Pakistan.</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="pages/privacy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="pages/contact.html">Terms of Engagement</a>
+          <span>•</span>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- ========================================================================= -->
-  <!-- FLOATING WHATSAPP BUTTON (ALWAYS ON SCREEN) -->
-  <!-- ========================================================================= -->
-  <a href="https://wa.me/923008472911?text=Hello%20Aitmaad%20Engineering%2C%20I%20am%20interested%20in%20an%20industrial%20construction%20project." target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-brand-blue hover:bg-brand-blueHover text-white flex items-center justify-center shadow-xl shadow-brand-blue/30 hover:scale-110 active:scale-95 transition-all duration-300" title="Contact Chief Engineer on WhatsApp">
-    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.584 1.777.817 2.796.817 3.18 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.77-5.768-5.772zm3.387 8.243c-.145.411-.836.764-1.162.813-.327.049-.757.069-2.311-.532-1.849-.714-3.041-2.583-3.133-2.707-.093-.124-.748-.997-.748-1.902 0-.904.471-1.349.638-1.534.167-.186.365-.232.486-.232.122 0 .243.002.348.007.112.006.262-.042.411.316.155.373.53 1.29.576 1.383.046.093.076.202.015.326-.061.124-.092.202-.183.311-.091.109-.193.243-.275.326-.092.093-.188.194-.081.378.107.184.476.786 1.021 1.272.702.626 1.294.82 1.478.912.184.092.292.077.4-.047.108-.124.463-.541.586-.727.123-.186.246-.155.413-.093.167.062 1.058.499 1.24.591.182.093.303.14.349.217.046.077.046.45-.099.861z"/></svg>
+  <!-- Floating WhatsApp Button (Spec 5.5) -->
+  <a href="https://wa.me/924235789000?text=Hello%20Aitmad%20Engineering,%20I%20would%20like%20to%20discuss%20a%20steel%20building%20project." 
+     class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chat with Aitmad Engineering on WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.968.828 2.796.828 3.182 0 5.769-2.587 5.769-5.766.001-3.182-2.585-5.781-5.769-5.781zm3.385 8.163c-.145.411-.836.784-1.184.832-.349.05-.79.071-2.285-.547-1.782-.738-2.92-2.56-3.009-2.678-.089-.118-.718-.956-.718-1.82 0-.865.452-1.291.613-1.467.161-.176.353-.22.47-.22.119 0 .237.001.341.006.111.005.259-.042.404.307.149.359.509 1.242.553 1.332.045.09.074.195.015.313-.059.12-.089.194-.176.297-.089.103-.187.23-.267.31-.089.088-.182.184-.078.362.103.178.461.761.99 1.232.68.607 1.254.795 1.432.884.179.088.283.074.388-.045.105-.118.452-.526.572-.705.12-.18.239-.15.401-.09.162.059 1.026.484 1.203.573.177.089.295.133.339.208.045.074.045.43-.1 1.002z"/>
+    </svg>
   </a>
 
-  <!-- ========================================================================= -->
-  <!-- TECHNICAL PROJECT CASE MODAL (POPUPS ON CASE CLICK) -->
-  <!-- ========================================================================= -->
-  <div id="projectModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-    <div class="bg-white border border-slate-200 rounded-2xl max-w-xl w-full p-6 sm:p-8 space-y-5 relative shadow-2xl">
-      <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-800 p-2 cursor-pointer">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+  <!-- Back to Top Button (Spec 5.5) -->
+  <button class="back-to-top" id="back-to-top-btn" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
 
-      <div class="space-y-1">
-        <span class="text-brand-blue font-mono text-xs font-bold uppercase tracking-wider">PROJECT CASE TELEMETRY</span>
-        <h3 id="modalTitle" class="font-display font-bold text-xl sm:text-2xl text-brand-navy">Project Case Title</h3>
-      </div>
-
-      <div class="grid grid-cols-2 gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200 font-mono text-xs">
-        <div>
-          <span class="text-brand-muted text-[10px] block uppercase font-bold">Covered Area</span>
-          <span id="modalArea" class="font-bold text-brand-navy">120,000 Sq. Ft.</span>
-        </div>
-        <div>
-          <span class="text-brand-muted text-[10px] block uppercase font-bold">Location</span>
-          <span id="modalLocation" class="font-bold text-brand-blue">Lahore, Pakistan</span>
-        </div>
-        <div>
-          <span class="text-brand-muted text-[10px] block uppercase font-bold">Timeline</span>
-          <span id="modalTimeline" class="font-bold text-brand-navy">65 Days</span>
-        </div>
-        <div>
-          <span class="text-brand-muted text-[10px] block uppercase font-bold">Structural Steel Grade</span>
-          <span class="font-bold text-brand-blue">ASTM A572 Gr. 50</span>
-        </div>
-      </div>
-
-      <div class="space-y-2">
-        <h4 class="text-xs font-mono uppercase text-brand-navy font-bold">Engineering Scope & Deliverables:</h4>
-        <p id="modalScope" class="text-xs text-brand-slate font-normal leading-relaxed">Scope description details go here...</p>
-      </div>
-
-      <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
-        <button onclick="closeProjectModal()" class="px-5 py-2.5 rounded-xl border border-slate-300 text-brand-slate hover:text-black text-xs font-mono cursor-pointer">
-          Close Window
-        </button>
-        <a id="modalWhatsAppLink" href="#" target="_blank" class="px-5 py-2.5 rounded-xl bg-brand-blue text-white font-bold font-mono text-xs uppercase tracking-wider flex items-center gap-2 hover:bg-brand-blueHover transition-all">
-          <span>Inquire About Similar Project &rarr;</span>
-        </a>
-      </div>
+  <!-- Cookie Notice (Spec 5.5) -->
+  <div class="cookie-banner" id="cookie-notice" role="dialog" aria-label="Cookie Consent Notice">
+    <p>
+      We use technical cookies to save your language preference and ensure optimal performance. No third-party ad tracking is conducted.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn btn-primary btn-sm" id="cookie-accept-btn">Accept & Close</button>
     </div>
   </div>
 
-  <!-- ========================================================================= -->
-  <!-- HIGH-PERFORMANCE JAVASCRIPT: THREE.JS 3D WEBGL ENGINE & CAD LOGIC -->
-  <!-- ========================================================================= -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      
-      // -------------------------------------------------------------
-      // 1. THREE.JS INTERACTIVE 3D WEBGL STRUCTURAL STEEL ENGINE
-      // -------------------------------------------------------------
-      const canvas3D = document.getElementById('threeCanvas');
-      if (canvas3D && typeof THREE !== 'undefined') {
-        const heroSection = canvas3D.parentElement;
-        
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(45, heroSection.clientWidth / heroSection.clientHeight, 1, 1000);
-        camera.position.set(0, 20, 95);
-
-        const renderer = new THREE.WebGLRenderer({ canvas: canvas3D, alpha: true, antialias: true });
-        renderer.setSize(heroSection.clientWidth, heroSection.clientHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-        // Group containing the 3D structural steel elements
-        const structureGroup = new THREE.Group();
-        scene.add(structureGroup);
-
-        // 3D Space Frame Geodesic / Truss Geometry
-        const trussGeo = new THREE.IcosahedronGeometry(35, 2);
-        
-        // Wireframe structural lines (Cobalt Blue & Cyan)
-        const wireframeGeo = new THREE.WireframeGeometry(trussGeo);
-        const wireframeMat = new THREE.LineBasicMaterial({
-          color: 0x1D4ED8, // Royal Cobalt Blue
-          transparent: true,
-          opacity: 0.35,
-          linewidth: 1.5
-        });
-        const wireframeMesh = new THREE.LineSegments(wireframeGeo, wireframeMat);
-        structureGroup.add(wireframeMesh);
-
-        // Structural Nodes (Glowing Connection Points)
-        const pointsMat = new THREE.PointsMaterial({
-          color: 0x0284C7, // Cyan
-          size: 2.2,
-          transparent: true,
-          opacity: 0.8
-        });
-        const pointsMesh = new THREE.Points(trussGeo, pointsMat);
-        structureGroup.add(pointsMesh);
-
-        // Secondary Outer Hexagonal Wave Ring (Ground Plane Grid)
-        const planeGeo = new THREE.PlaneGeometry(160, 160, 16, 16);
-        const planeWireGeo = new THREE.WireframeGeometry(planeGeo);
-        const planeWireMat = new THREE.LineBasicMaterial({
-          color: 0x3B82F6,
-          transparent: true,
-          opacity: 0.15
-        });
-        const groundGrid = new THREE.LineSegments(planeWireGeo, planeWireMat);
-        groundGrid.rotation.x = -Math.PI / 2.3;
-        groundGrid.position.y = -22;
-        structureGroup.add(groundGrid);
-
-        // Mouse Parallax Interaction
-        let mouseX = 0;
-        let mouseY = 0;
-        let targetX = 0;
-        let targetY = 0;
-        const windowHalfX = window.innerWidth / 2;
-        const windowHalfY = window.innerHeight / 2;
-
-        document.addEventListener('mousemove', (e) => {
-          mouseX = (e.clientX - windowHalfX) * 0.0008;
-          mouseY = (e.clientY - windowHalfY) * 0.0008;
-        });
-
-        // Resize handler
-        window.addEventListener('resize', () => {
-          const w = heroSection.clientWidth;
-          const h = heroSection.clientHeight;
-          camera.aspect = w / h;
-          camera.updateProjectionMatrix();
-          renderer.setSize(w, h);
-        });
-
-        // 60fps Animation Loop
-        function animate() {
-          requestAnimationFrame(animate);
-
-          targetX += (mouseX - targetX) * 0.05;
-          targetY += (mouseY - targetY) * 0.05;
-
-          structureGroup.rotation.y += 0.0025;
-          structureGroup.rotation.x = targetY * 1.5;
-          structureGroup.rotation.z = targetX * 1.5;
-
-          renderer.render(scene, camera);
-        }
-        animate();
-      }
-
-      // -------------------------------------------------------------
-      // 2. INNOVATIVE CAD BLUEPRINT MODE TOGGLE
-      // -------------------------------------------------------------
-      const htmlRoot = document.getElementById('htmlRoot');
-      const blueprintToggleBtn = document.getElementById('blueprintToggleBtn');
-      const blueprintBtnLabel = document.getElementById('blueprintBtnLabel');
-      let isBlueprint = false;
-
-      if (blueprintToggleBtn) {
-        blueprintToggleBtn.addEventListener('click', () => {
-          isBlueprint = !isBlueprint;
-          if (isBlueprint) {
-            htmlRoot.classList.add('blueprint-mode');
-            blueprintBtnLabel.textContent = 'CAD BLUEPRINT: ON';
-            blueprintToggleBtn.classList.add('bg-cyan-500', 'text-black');
-            blueprintToggleBtn.classList.remove('bg-slate-50', 'text-slate-700');
-          } else {
-            htmlRoot.classList.remove('blueprint-mode');
-            blueprintBtnLabel.textContent = 'CAD BLUEPRINT: OFF';
-            blueprintToggleBtn.classList.remove('bg-cyan-500', 'text-black');
-            blueprintToggleBtn.classList.add('bg-slate-50', 'text-slate-700');
-          }
-          drawPortalFrame();
-        });
-      }
-
-      // -------------------------------------------------------------
-      // 3. MOBILE MENU TOGGLE
-      // -------------------------------------------------------------
-      const mobileToggleBtn = document.getElementById('mobileToggleBtn');
-      const mobileDrawer = document.getElementById('mobileDrawer');
-      const mobileNavs = document.querySelectorAll('.mobile-nav');
-
-      if (mobileToggleBtn && mobileDrawer) {
-        mobileToggleBtn.addEventListener('click', () => {
-          mobileDrawer.classList.toggle('hidden');
-        });
-        mobileNavs.forEach(nav => {
-          nav.addEventListener('click', () => {
-            mobileDrawer.classList.add('hidden');
-          });
-        });
-      }
-
-      // -------------------------------------------------------------
-      // 4. LIVE HTML5 CANVAS 2D PORTAL FRAME CAD DRAWER
-      // -------------------------------------------------------------
-      const canvas = document.getElementById('structuralCanvas');
-      const ctx = canvas.getContext('2d');
-      const canvasSpanBadge = document.getElementById('canvasSpanBadge');
-
-      let currentSpanMeters = 36;
-      let currentRatePerSqFt = 3200;
-      let currentProjectType = 'PEB Warehouse';
-
-      function drawPortalFrame() {
-        if (!canvas || !ctx) return;
-        const w = canvas.width;
-        const h = canvas.height;
-
-        ctx.clearRect(0, 0, w, h);
-
-        // Grid lines in canvas
-        ctx.strokeStyle = 'rgba(0, 240, 255, 0.15)';
-        ctx.lineWidth = 1;
-        const step = 20;
-        for (let x = 0; x < w; x += step) {
-          ctx.beginPath();
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, h);
-          ctx.stroke();
-        }
-        for (let y = 0; y < h; y += step) {
-          ctx.beginPath();
-          ctx.moveTo(0, y);
-          ctx.lineTo(w, y);
-          ctx.stroke();
-        }
-
-        // Base ground line
-        const groundY = h - 25;
-        ctx.strokeStyle = '#00F0FF';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(30, groundY);
-        ctx.lineTo(w - 30, groundY);
-        ctx.stroke();
-
-        // Frame coordinates
-        const leftColX = 70;
-        const rightColX = w - 70;
-        const eaveY = groundY - 110;
-        const apexX = (leftColX + rightColX) / 2;
-        const apexY = groundY - 155;
-
-        // Draw Left Column (Tapered)
-        ctx.strokeStyle = '#00F0FF';
-        ctx.fillStyle = 'rgba(0, 240, 255, 0.15)';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(leftColX, groundY);
-        ctx.lineTo(leftColX + 8, groundY);
-        ctx.lineTo(leftColX + 16, eaveY);
-        ctx.lineTo(leftColX - 8, eaveY);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.fill();
-
-        // Draw Right Column (Tapered)
-        ctx.beginPath();
-        ctx.moveTo(rightColX, groundY);
-        ctx.lineTo(rightColX - 8, groundY);
-        ctx.lineTo(rightColX - 16, eaveY);
-        ctx.lineTo(rightColX + 8, eaveY);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.fill();
-
-        // Draw Left Rafter
-        ctx.beginPath();
-        ctx.moveTo(leftColX - 8, eaveY);
-        ctx.lineTo(apexX, apexY);
-        ctx.lineTo(apexX, apexY + 12);
-        ctx.lineTo(leftColX + 16, eaveY + 10);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.fill();
-
-        // Draw Right Rafter
-        ctx.beginPath();
-        ctx.moveTo(rightColX + 8, eaveY);
-        ctx.lineTo(apexX, apexY);
-        ctx.lineTo(apexX, apexY + 12);
-        ctx.lineTo(rightColX - 16, eaveY + 10);
-        ctx.closePath();
-        ctx.stroke();
-        ctx.fill();
-
-        // Draw Crane Runway Gantry Bracket (if PEB or Crane Bay)
-        if (currentProjectType.includes('PEB') || currentProjectType.includes('Crane')) {
-          const craneY = eaveY + 45;
-          ctx.fillStyle = '#FFD700';
-          ctx.strokeStyle = '#FFD700';
-          ctx.lineWidth = 1.5;
-
-          // Left bracket
-          ctx.fillRect(leftColX + 10, craneY, 15, 6);
-          // Right bracket
-          ctx.fillRect(rightColX - 25, craneY, 15, 6);
-
-          // Crane bridge dashed line
-          ctx.setLineDash([4, 4]);
-          ctx.beginPath();
-          ctx.moveTo(leftColX + 25, craneY + 3);
-          ctx.lineTo(rightColX - 25, craneY + 3);
-          ctx.stroke();
-          ctx.setLineDash([]);
-
-          // Crane Trolley in center
-          ctx.fillStyle = '#00F0FF';
-          ctx.fillRect(apexX - 12, craneY - 6, 24, 10);
-          ctx.beginPath();
-          ctx.moveTo(apexX, craneY + 4);
-          ctx.lineTo(apexX, craneY + 18);
-          ctx.stroke();
-          ctx.font = 'bold 9px monospace';
-          ctx.fillText('25T', apexX - 8, craneY - 9);
-        }
-
-        // Draw Roof Z-Purlins
-        ctx.fillStyle = '#67E8F9';
-        const numPurlins = 5;
-        for (let i = 1; i <= numPurlins; i++) {
-          const ratio = i / (numPurlins + 1);
-          // Left purlin
-          const pxL = leftColX - 8 + (apexX - (leftColX - 8)) * ratio;
-          const pyL = eaveY + (apexY - eaveY) * ratio;
-          ctx.fillRect(pxL - 2, pyL - 4, 4, 4);
-
-          // Right purlin
-          const pxR = rightColX + 8 + (apexX - (rightColX + 8)) * ratio;
-          const pyR = eaveY + (apexY - eaveY) * ratio;
-          ctx.fillRect(pxR - 2, pyR - 4, 4, 4);
-        }
-
-        // CAD Dimension Annotation (Span)
-        ctx.strokeStyle = '#38BDF8';
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(leftColX, groundY + 12);
-        ctx.lineTo(rightColX, groundY + 12);
-        ctx.stroke();
-
-        ctx.font = '10px "JetBrains Mono", monospace';
-        ctx.fillStyle = '#38BDF8';
-        ctx.textAlign = 'center';
-        ctx.fillText(`CLEAR SPAN: ${currentSpanMeters}m (ASTM A572)`, apexX, groundY + 22);
-
-        // Eave height annotation
-        ctx.fillText('EAVE: 9.5m', leftColX - 35, eaveY + 50);
-      }
-
-      // -------------------------------------------------------------
-      // 5. INTERACTIVE ESTIMATOR CONTROLS & CALCULATIONS
-      // -------------------------------------------------------------
-      const areaSlider = document.getElementById('areaSlider');
-      const areaInput = document.getElementById('areaInput');
-      const costEstimateEl = document.getElementById('costEstimate');
-      const summaryTonnageEl = document.getElementById('summaryTonnage');
-      const summaryConcreteEl = document.getElementById('summaryConcrete');
-      const summaryTimelineEl = document.getElementById('summaryTimeline');
-      const typeButtons = document.querySelectorAll('.project-type-btn');
-      const dispatchBtn = document.getElementById('dispatchWhatsAppBtn');
-
-      function calculateEstimator() {
-        const area = parseInt(areaInput.value, 10) || 30000;
-        const baseCost = area * currentRatePerSqFt;
-        const maxCost = baseCost * 1.15;
-
-        const minM = (baseCost / 1000000).toFixed(1);
-        const maxM = (maxCost / 1000000).toFixed(1);
-
-        costEstimateEl.textContent = `PKR ${minM}M - ${maxM}M`;
-
-        // Metric Tonnage based on area (~4.8 to 5.5 kg/sqft)
-        const tonMin = Math.round((area * 4.8) / 1000);
-        const tonMax = Math.round((area * 5.5) / 1000);
-        summaryTonnageEl.textContent = `~${tonMin} - ${tonMax} Metric Tons`;
-
-        // Foundation volume (~1 m³ per 85 sq ft)
-        const concreteM3 = Math.round(area / 85);
-        summaryConcreteEl.textContent = `~${concreteM3} m³ Concrete`;
-
-        // Project timeline in days
-        let days = 50;
-        if (area > 35000) days = 70;
-        if (area > 70000) days = 95;
-        if (area > 120000) days = 120;
-        summaryTimelineEl.textContent = `${days} - ${days + 20} Days`;
-
-        canvasSpanBadge.textContent = `SPAN: ${currentSpanMeters}.0m`;
-        drawPortalFrame();
-      }
-
-      if (areaSlider && areaInput) {
-        areaSlider.addEventListener('input', (e) => {
-          areaInput.value = e.target.value;
-          calculateEstimator();
-        });
-        areaInput.addEventListener('input', (e) => {
-          areaSlider.value = e.target.value;
-          calculateEstimator();
-        });
-      }
-
-      typeButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          typeButtons.forEach(b => {
-            b.classList.remove('active', 'border-2', 'border-brand-blue', 'bg-brand-blue/5', 'text-brand-blue');
-            b.classList.add('border', 'border-slate-200', 'bg-slate-50', 'text-brand-slate');
-          });
-          btn.classList.add('active', 'border-2', 'border-brand-blue', 'bg-brand-blue/5', 'text-brand-blue');
-          btn.classList.remove('border', 'border-slate-200', 'bg-slate-50', 'text-brand-slate');
-
-          currentRatePerSqFt = parseInt(btn.dataset.rate, 10);
-          currentProjectType = btn.dataset.type;
-          currentSpanMeters = parseInt(btn.dataset.span, 10) || 36;
-          calculateEstimator();
-        });
-      });
-
-      // WhatsApp Direct RFQ Dispatch
-      if (dispatchBtn) {
-        dispatchBtn.addEventListener('click', () => {
-          const area = areaInput.value || '30000';
-          const name = document.getElementById('estimatorName').value.trim() || 'Executive Client';
-          const city = document.getElementById('estimatorCity').value.trim() || 'Pakistan';
-          const phone = document.getElementById('estimatorPhone').value.trim() || 'N/A';
-          const specRadio = document.querySelector('input[name="envelopeSpec"]:checked');
-          const spec = specRadio ? specRadio.value : '50mm PIR Panel';
-          const estimate = costEstimateEl.textContent;
-          const tonnage = summaryTonnageEl.textContent;
-          const timeline = summaryTimelineEl.textContent;
-
-          const message = `*AITMAAD ENGINEERING - 2D CAD ESTIMATOR INQUIRY*\n` +
-            `━━━━━━━━━━━━━━━━━━━━━━\n` +
-            `👤 *Client Name:* ${name}\n` +
-            `📍 *Project City:* ${city}\n` +
-            `📞 *Phone / WA:* ${phone}\n` +
-            `🏗️ *Typology:* ${currentProjectType}\n` +
-            `📐 *Covered Area:* ${parseInt(area).toLocaleString()} Sq. Ft.\n` +
-            `📏 *Clear Span:* ${currentSpanMeters} Meters\n` +
-            `🛡️ *Envelope Spec:* ${spec}\n` +
-            `⚖️ *Estimated Tonnage:* ${tonnage}\n` +
-            `⏱️ *Target Erection:* ${timeline}\n` +
-            `💰 *Budget Range:* ${estimate}\n` +
-            `━━━━━━━━━━━━━━━━━━━━━━\n` +
-            `Please share the formal structural drawings & proposal.`;
-
-          const waUrl = `https://wa.me/923008472911?text=${encodeURIComponent(message)}`;
-          window.open(waUrl, '_blank');
-        });
-      }
-
-      // -------------------------------------------------------------
-      // 6. PORTFOLIO FILTER TABS
-      // -------------------------------------------------------------
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const projectItems = document.querySelectorAll('.project-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          filterBtns.forEach(b => {
-            b.classList.remove('active', 'bg-brand-blue', 'text-white');
-            b.classList.add('border', 'border-slate-200', 'bg-white', 'text-brand-slate');
-          });
-          btn.classList.add('active', 'bg-brand-blue', 'text-white');
-          btn.classList.remove('border', 'border-slate-200', 'bg-white', 'text-brand-slate');
-
-          const filter = btn.dataset.filter;
-          projectItems.forEach(item => {
-            if (filter === 'all' || item.dataset.category === filter) {
-              item.classList.remove('hidden');
-            } else {
-              item.classList.add('hidden');
-            }
-          });
-        });
-      });
-
-      // -------------------------------------------------------------
-      // 7. RFQ FORM SUBMISSION HANDLER
-      // -------------------------------------------------------------
-      const rfqForm = document.getElementById('rfqForm');
-      const rfqSuccessMsg = document.getElementById('rfqSuccessMsg');
-      const rfqBtnText = document.getElementById('rfqBtnText');
-
-      if (rfqForm) {
-        rfqForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const name = document.getElementById('rfqName').value.trim();
-          const phone = document.getElementById('rfqPhone').value.trim();
-          const city = document.getElementById('rfqCity').value.trim() || 'N/A';
-          const area = document.getElementById('rfqArea').value.trim() || 'N/A';
-          const msg = document.getElementById('rfqMessage').value.trim() || 'Please share detailed quotation.';
-
-          rfqBtnText.textContent = 'Transmitting Telemetry...';
-
-          setTimeout(() => {
-            rfqBtnText.textContent = 'Proposal Dispatched!';
-            rfqSuccessMsg.classList.remove('hidden');
-
-            const payload = `*AITMAAD ENGINEERING - FORMAL RFQ*\n` +
-              `━━━━━━━━━━━━━━━━━━━━━━\n` +
-              `👤 *Name:* ${name}\n` +
-              `📞 *Contact:* ${phone}\n` +
-              `📍 *Location:* ${city}\n` +
-              `📐 *Area:* ${area}\n` +
-              `📝 *Scope:* ${msg}\n` +
-              `━━━━━━━━━━━━━━━━━━━━━━\n` +
-              `Requesting formal engineering review.`;
-
-            const waUrl = `https://wa.me/923008472911?text=${encodeURIComponent(payload)}`;
-            window.open(waUrl, '_blank');
-            rfqForm.reset();
-            setTimeout(() => {
-              rfqBtnText.textContent = 'Submit Engineering Inquiry →';
-            }, 5000);
-          }, 600);
-        });
-      }
-
-      // Initial Canvas Render
-      calculateEstimator();
-    });
-
-    // -------------------------------------------------------------
-    // 8. TECHNICAL PROJECT MODAL WINDOW
-    // -------------------------------------------------------------
-    function openProjectModal(title, area, location, scope, timeline) {
-      document.getElementById('modalTitle').textContent = title;
-      document.getElementById('modalArea').textContent = area;
-      document.getElementById('modalLocation').textContent = location;
-      document.getElementById('modalScope').textContent = scope;
-      document.getElementById('modalTimeline').textContent = timeline;
-
-      const waMsg = `Hello Aitmaad Engineering, I reviewed your project '${title}' in ${location} and would like to consult on a similar turnkey build.`;
-      document.getElementById('modalWhatsAppLink').href = `https://wa.me/923008472911?text=${encodeURIComponent(waMsg)}`;
-
-      document.getElementById('projectModal').classList.remove('hidden');
-    }
-
-    function closeProjectModal() {
-      document.getElementById('projectModal').classList.add('hidden');
-    }
-  </script>
-
+  <!-- Three.js CDN (Pinned Version r128 per Spec 10) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Main ES Module -->
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

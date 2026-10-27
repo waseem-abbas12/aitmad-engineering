@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <!-- Open Corner Architectural Registration Frame -->
+  <path d="M 6 16 L 6 6 L 16 6" stroke="#BC8458" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 46 6 L 56 6 L 56 16" stroke="#BC8458" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 56 46 L 56 56 L 46 56" stroke="#BC8458" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 16 56 L 6 56 L 6 46" stroke="#BC8458" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Steel I-Beam Cross Section Mark -->
+  <g transform="translate(15, 15)">
+    <!-- Top Flange -->
+    <rect x="2" y="2" width="28" height="5" rx="1" fill="#BC8458"/>
+    <!-- Central Web -->
+    <rect x="13.5" y="7" width="5" height="18" fill="#F6F3EE"/>
+    <!-- Bottom Flange -->
+    <rect x="2" y="25" width="28" height="5" rx="1" fill="#BC8458"/>
+  </g>
+
+  <!-- Typography Wordmark -->
+  <text x="76" y="32" font-family="'Sora', 'Manrope', -apple-system, sans-serif" font-size="22" font-weight="700" letter-spacing="0.22em" fill="#F6F3EE">AITMAD</text>
+  <text x="76.5" y="48" font-family="'Sora', 'Manrope', -apple-system, sans-serif" font-size="9" font-weight="600" letter-spacing="0.38em" fill="#BC8458">ENGINEERING</text>
+  <text x="238" y="30" font-family="'Noto Nastaliq Urdu', serif" font-size="12" fill="#DDB791">اعتماد انجینئرنگ</text>
+</svg>
