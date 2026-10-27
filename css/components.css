@@ -234,6 +234,13 @@ html[dir="rtl"] .dropdown-link:hover {
   border-color: var(--copper-500);
 }
 
+@media (max-width: 540px) {
+  .header-actions .btn-sm {
+    display: none;
+  }
+}
+
+
 /* Mobile Hamburger Toggle */
 .mobile-nav-toggle {
   display: flex;

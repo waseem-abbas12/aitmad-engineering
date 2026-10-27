@@ -120,6 +120,12 @@ img, svg {
   }
 }
 
+@media (max-width: 480px) {
+  :root {
+    --container-pad: 16px;
+  }
+}
+
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -132,6 +138,38 @@ img, svg {
     padding-inline: var(--container-pad-desktop);
   }
 }
+
+/* Responsive Grid Utilities (Spec 9) */
+.grid-3col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 .container-bleed {
   width: 100%;

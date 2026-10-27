@@ -105,6 +105,18 @@
   margin-bottom: var(--space-12);
 }
 
+@media (max-width: 640px) {
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: var(--space-8);
+  }
+  .hero-btn-group .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
 /* Bottom Glass Bar (Spec 6.1) */
 .hero-glass-bar {
   position: absolute;
@@ -160,6 +172,35 @@
   letter-spacing: 0.12em;
 }
 
+@media (max-width: 768px) {
+  .hero-glass-bar {
+    position: relative;
+    padding-block: 14px;
+    background: rgba(10, 38, 34, 0.95);
+  }
+  .hero-glass-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-stat-val {
+    font-size: 1rem;
+  }
+  .hero-stat-lbl {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+  }
+  .scroll-indicator {
+    display: none;
+  }
+}
+
 .scroll-line {
   width: 32px;
   height: 2px;
@@ -184,6 +225,7 @@
   50% { left: 100%; }
   100% { left: 100%; }
 }
+
 
 /* ==========================================================================
    6.3 About Preview Section (Ivory)
@@ -796,3 +838,95 @@ html[dir="rtl"] .specs-table td {
 .breadcrumbs a:hover {
   color: var(--copper-300);
 }
+
+/* ==========================================================================
+   Responsive Page Layout Classes
+   ========================================================================== */
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contact-layout-grid {
+    grid-template-columns: 1fr 1.35fr;
+    gap: 48px;
+  }
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .form-row-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.process-step-card {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .process-step-card {
+    padding: 40px;
+    grid-template-columns: 100px 1fr;
+    gap: 32px;
+  }
+}
+
+.process-meta-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  background: var(--ivory);
+  padding: 20px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--stone);
+}
+
+@media (min-width: 600px) {
+  .process-meta-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.safety-record-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .safety-record-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-feature-row {
+    gap: 16px;
+  }
+  .why-num {
+    font-size: 2.2rem;
+    min-width: 44px;
+  }
+  .why-feature-content h3 {
+    font-size: 1.15rem;
+  }
+}
+
