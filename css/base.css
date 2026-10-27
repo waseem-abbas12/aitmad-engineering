@@ -18,6 +18,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--ivory);
   color: var(--ink);
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
