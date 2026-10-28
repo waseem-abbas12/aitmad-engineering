@@ -58,25 +58,24 @@ All colors are controlled in **`css/tokens.css`**:
 
 ```css
 :root {
-  /* Main Color: Deep Pine */
-  --pine-900: #0A2622;
-  --pine-800: #0E3B36; /* Main brand surface */
-  --pine-700: #14504A;
-  --pine-500: #2B7A70;
-  --pine-100: #DCEBE8;
+  /* Main Dark: Deep Obsidian & Carbon Black (Matching official logo) */
+  --black-950: #04080B;
+  --black-900: #071218; /* Master logo dark background */
+  --black-800: #0B131A; /* Main brand dark surface */
+  --black-700: #121D26; /* Elevated dark card surface */
 
-  /* Support Accent: Brushed Copper */
-  --copper-600: #A36B43;
-  --copper-500: #BC8458; /* Primary button and numbers */
-  --copper-300: #DDB791;
+  /* Brand Accent: Signal / Engineering Red */
+  --red-600: #D0171F;   /* Primary button hover */
+  --red-500: #EE1C25;   /* Official brand red from logo */
+  --red-400: #FF3B30;   /* Active highlights */
 
   /* Light Neutrals */
-  --ivory: #F6F3EE;      /* Main light background */
-  --white: #FFFFFF;      /* Card background */
+  --ivory: #F8F9FA;      /* Main light background */
+  --white: #FFFFFF;      /* Pure white cards & containers */
 }
 ```
 
-- To change the accent copper or pine tone, simply adjust the hex code in `css/tokens.css`. The whole site updates instantly.
+- To adjust any brand colors, simply edit `css/tokens.css`. The whole site updates instantly across all 16 pages.
 
 ---
 

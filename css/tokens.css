@@ -1,38 +1,59 @@
 /**
  * Aitmad Engineering - Design Tokens
  * Spec: Sections 2, 3, 4
+ * Brand Theme: Industrial Black, White, and Signal Red
  */
 
 :root {
-  /* Brand Primary: Deep Pine */
-  --pine-900: #0A2622;
-  --pine-800: #0E3B36; /* Main brand color */
-  --pine-700: #14504A;
-  --pine-500: #2B7A70;
-  --pine-100: #DCEBE8;
+  /* Brand Primary: Deep Obsidian & Carbon Black (Sampled directly from official logo) */
+  --black-950: #04080B;
+  --black-900: #071218; /* Master logo dark background */
+  --black-800: #0B131A; /* Main brand dark surface */
+  --black-700: #121D26; /* Elevated dark card surface */
+  --black-600: #1B2834; /* Structural steel borders */
+  --black-500: #293847;
 
-  /* Brand Secondary: Brushed Copper */
-  --copper-600: #A36B43;
-  --copper-500: #BC8458; /* Accent support color */
-  --copper-300: #DDB791;
-  --copper-100: #F3E6D8;
+  /* Brand Accent: Signal / Engineering Red (Exact logo red) */
+  --red-800: #9B0E14;
+  --red-700: #B81119;
+  --red-600: #D0171F; /* Primary button hover */
+  --red-500: #EE1C25; /* Official brand red */
+  --red-400: #FF3B30; /* Highlight / active state */
+  --red-300: #FFA29E;
+  --red-100: #FDE8E9; /* Subtle red badge background */
+  --red-glow: rgba(238, 28, 37, 0.32);
+  --red-glow-subtle: rgba(238, 28, 37, 0.12);
 
-  /* Neutrals */
-  --ink: #0B1311;
-  --graphite: #26302E;
-  --steel: #6F7B78;
-  --steel-light: #9DA8A5;
-  --stone: #D9D6CE;
-  --stone-light: #ECEAE4;
-  --ivory: #F6F3EE; /* Main light background */
+  /* Legacy & Architectural Aliases (seamless theme conversion) */
+  --pine-900: var(--black-900);
+  --pine-800: var(--black-800);
+  --pine-700: var(--black-700);
+  --pine-500: var(--red-500);
+  --pine-100: #EBF1F5;
+
+  --copper-600: var(--red-700);
+  --copper-500: var(--red-500);
+  --copper-300: var(--red-400);
+  --copper-100: var(--red-100);
+
+  /* Neutrals: Industrial Whites & Technical Grays */
+  --ink: #071218;
+  --graphite: #1F2937;
+  --steel: #4B5563;
+  --steel-light: #9CA3AF;
+  --stone: #E5E7EB;
+  --stone-light: #F3F4F6;
+  --ivory: #F8F9FA; /* Crisp architectural white background */
   --white: #FFFFFF;
 
   /* Transparent Tints & Overlays */
-  --pine-overlay: rgba(10, 38, 34, 0.45);
-  --pine-overlay-heavy: rgba(10, 38, 34, 0.88);
+  --pine-overlay: rgba(7, 18, 24, 0.65);
+  --pine-overlay-heavy: rgba(7, 18, 24, 0.94);
+  --dark-overlay: rgba(7, 18, 24, 0.65);
+  --dark-overlay-heavy: rgba(7, 18, 24, 0.94);
   --border-light: var(--stone);
   --border-dark: rgba(255, 255, 255, 0.12);
-  --border-dark-hover: rgba(188, 132, 88, 0.4);
+  --border-dark-hover: rgba(238, 28, 37, 0.65);
 
   /* Typography Stacks */
   --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
@@ -69,18 +90,19 @@
   --container-pad: 24px;
   --container-pad-desktop: 48px;
 
-  /* Border Radius */
+  /* Border Radius (Crisp Industrial Engineering Precision) */
   --radius-sm: 4px;
   --radius-btn: 6px;
   --radius-input: 6px;
-  --radius-card: 12px;
+  --radius-card: 10px;
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 4px 12px rgba(10, 38, 34, 0.06);
-  --shadow-card: 0 10px 30px rgba(10, 38, 34, 0.08);
-  --shadow-hover: 0 18px 44px rgba(10, 38, 34, 0.16);
-  --shadow-dropdown: 0 20px 48px rgba(10, 38, 34, 0.25);
+  --shadow-sm: 0 4px 12px rgba(7, 18, 24, 0.08);
+  --shadow-card: 0 10px 30px rgba(7, 18, 24, 0.10);
+  --shadow-hover: 0 18px 44px rgba(7, 18, 24, 0.22);
+  --shadow-dropdown: 0 20px 48px rgba(7, 18, 24, 0.35);
+  --shadow-red: 0 8px 24px rgba(238, 28, 37, 0.35);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);

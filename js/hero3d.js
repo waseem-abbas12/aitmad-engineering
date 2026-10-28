@@ -44,7 +44,7 @@ export class Hero3DScene {
 
       // Scene
       this.scene = new THREE.Scene();
-      this.scene.fog = new THREE.FogExp2(0x0A2622, 0.018);
+      this.scene.fog = new THREE.FogExp2(0x071218, 0.018);
 
       // Camera
       this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
@@ -60,23 +60,23 @@ export class Hero3DScene {
       this.container.appendChild(this.renderer.domElement);
 
       // Lights
-      const ambientLight = new THREE.AmbientLight(0x14504A, 1.2);
+      const ambientLight = new THREE.AmbientLight(0x1B2834, 1.4);
       this.scene.add(ambientLight);
 
-      // Warm Key Light (Copper accent warmth)
-      const keyLight = new THREE.DirectionalLight(0xBC8458, 2.2);
+      // Warm Key Light (Brand Red accent warmth)
+      const keyLight = new THREE.DirectionalLight(0xEE1C25, 2.0);
       keyLight.position.set(20, 30, 20);
       this.scene.add(keyLight);
 
-      // Cool Fill Light (Deep Pine petrol cool)
-      const fillLight = new THREE.DirectionalLight(0x2B7A70, 1.5);
+      // Cool Fill Light (Industrial architectural white)
+      const fillLight = new THREE.DirectionalLight(0xF8F9FA, 1.6);
       fillLight.position.set(-20, 15, -15);
       this.scene.add(fillLight);
 
-      // Ground Blueprint Grid
-      const gridHelper = new THREE.GridHelper(60, 30, 0xBC8458, 0x14504A);
+      // Ground Blueprint Grid (Red major lines, dark steel minor lines)
+      const gridHelper = new THREE.GridHelper(60, 30, 0xEE1C25, 0x1B2834);
       gridHelper.position.y = -0.05;
-      gridHelper.material.opacity = 0.25;
+      gridHelper.material.opacity = 0.28;
       gridHelper.material.transparent = true;
       this.scene.add(gridHelper);
 
@@ -106,17 +106,17 @@ export class Hero3DScene {
     this.structureGroup = new THREE.Group();
     this.scene.add(this.structureGroup);
 
-    // Steel Beam Material (Dark brushed metallic with copper edge highlights)
+    // Steel Beam Material (Brushed heavy carbon steel with metallic reflections)
     const steelMaterial = new THREE.MeshStandardMaterial({
-      color: 0x1A2E2B,
-      metalness: 0.85,
-      roughness: 0.35
+      color: 0x182028,
+      metalness: 0.88,
+      roughness: 0.3
     });
 
     const copperJointMaterial = new THREE.MeshStandardMaterial({
-      color: 0xBC8458,
+      color: 0xEE1C25,
       metalness: 0.9,
-      roughness: 0.25
+      roughness: 0.22
     });
 
     // Portal Frame Dimensions

@@ -284,8 +284,8 @@ html[dir="rtl"] .corner-frame::after {
 
 /* Selection */
 ::selection {
-  background-color: var(--pine-700);
-  color: var(--ivory);
+  background-color: var(--red-500);
+  color: #FFFFFF;
 }
 
 /* Custom Scrollbar */
@@ -295,16 +295,16 @@ html[dir="rtl"] .corner-frame::after {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--pine-900);
+  background: var(--black-950);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--pine-700);
+  background: var(--black-600);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--copper-500);
+  background: var(--red-500);
 }
 
 /* Utility Colors & Text */
