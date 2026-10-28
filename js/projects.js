@@ -5,6 +5,14 @@
 
 import { projects } from '../data/projects.js';
 
+export function resolveAssetPath(path) {
+  if (!path || path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
+    return path;
+  }
+  const isPagesDir = window.location.pathname.includes('/pages/');
+  return isPagesDir ? `../${path}` : path;
+}
+
 export class ProjectsManager {
   constructor() {
     this.projects = projects;
@@ -15,10 +23,89 @@ export class ProjectsManager {
   }
 
   init() {
+    this.initShowcaseSlider();
     this.initHomeGrid();
     this.initProjectsPage();
     this.initProjectDetailPage();
     this.initLightbox();
+  }
+
+  // Swipe-Style Draggable Project Showcase Slider
+  initShowcaseSlider() {
+    const track = document.getElementById('project-showcase-track');
+    const prevBtn = document.getElementById('showcase-prev-btn');
+    const nextBtn = document.getElementById('showcase-next-btn');
+    if (!track) return;
+
+    const isPagesDir = window.location.pathname.includes('/pages/');
+
+    track.innerHTML = this.projects.map(p => {
+      const detailHref = isPagesDir ? `project.html?slug=${p.slug}` : `pages/project.html?slug=${p.slug}`;
+      const imgSrc = resolveAssetPath(p.cover);
+      return `
+        <a href="${detailHref}" class="showcase-card" aria-label="${p.title}">
+          <div class="showcase-card-img-wrap">
+            <img class="showcase-card-img" src="${imgSrc}" alt="${p.title}" loading="lazy">
+          </div>
+          <div class="showcase-card-body">
+            <div class="showcase-card-chips">
+              <span class="showcase-chip red">${p.category}</span>
+              <span class="showcase-chip">${p.span}</span>
+            </div>
+            <h3 class="showcase-card-title">${p.title}</h3>
+            <p class="showcase-card-desc">${p.overview.substring(0, 115)}...</p>
+            <div class="showcase-card-footer">
+              <span>📍 ${p.location}</span>
+              <span style="color: var(--red-500); font-weight: 700;">Explore Specs →</span>
+            </div>
+          </div>
+        </a>
+      `;
+    }).join('');
+
+    // Navigation buttons
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const cardWidth = track.querySelector('.showcase-card')?.offsetWidth || 350;
+        track.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const cardWidth = track.querySelector('.showcase-card')?.offsetWidth || 350;
+        track.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+      });
+    }
+
+    // Grab & Drag functionality
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      track.classList.add('active-drag');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener('mouseleave', () => {
+      isDown = false;
+      track.classList.remove('active-drag');
+    });
+
+    track.addEventListener('mouseup', () => {
+      isDown = false;
+      track.classList.remove('active-drag');
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.6;
+      track.scrollLeft = scrollLeft - walk;
+    });
   }
 
   // Home Page Featured Projects Grid (Spec 6.6)
@@ -123,7 +210,7 @@ export class ProjectsManager {
       card.href = detailHref;
 
       card.innerHTML = `
-        <img class="project-card-img" src="${p.cover}" alt="${p.title}" loading="lazy">
+        <img class="project-card-img" src="${resolveAssetPath(p.cover)}" alt="${p.title}" loading="lazy">
         <div class="project-card-overlay">
           <span class="project-card-badge">${p.category}</span>
           <h3 class="project-card-title">${p.title}</h3>
@@ -244,8 +331,8 @@ export class ProjectsManager {
                 <h3 style="margin-bottom: 16px;">Project Visuals</h3>
                 <div class="masonry-gallery" id="project-gallery-masonry">
                   ${project.gallery.map((imgUrl, i) => `
-                    <div class="gallery-item" data-index="${i}" data-src="${imgUrl}">
-                      <img src="${imgUrl}" alt="${project.title} detail photo" loading="lazy">
+                    <div class="gallery-item" data-index="${i}" data-src="${resolveAssetPath(imgUrl)}">
+                      <img src="${resolveAssetPath(imgUrl)}" alt="${project.title} detail photo" loading="lazy">
                     </div>
                   `).join('')}
                 </div>

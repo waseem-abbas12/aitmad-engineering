@@ -16,11 +16,11 @@ export const projects = [
     duration: "6 Months",
     client: "Falcon Logistics Group",
     scope: ["Engineering & Structural Design", "PEB Fabrication", "Laser-Screed Floor", "Erection & Cladding"],
-    cover: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-1-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-1.webp",
+      "assets/projects/project-7.webp",
+      "assets/projects/project-11.webp"
     ],
     overview: "A landmark multi-bay pre-engineered logistics terminal built to withstand seismic Zone 2B criteria while maximizing column-free storage space for automated high-bay racking systems.",
     challenge: "The client required complete clear spans of 64 meters without intermediate columns to facilitate 3-tier reach trucks, with a tight handover window before the regional harvest season.",
@@ -40,10 +40,11 @@ export const projects = [
     duration: "7 Months",
     client: "Crescent Textile Mills Ltd.",
     scope: ["PEB Fabrication", "Roof Truss System", "Vibration Damping", "HVAC Duct Support"],
-    cover: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-2-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-2.webp",
+      "assets/projects/project-8.webp",
+      "assets/projects/project-12.webp"
     ],
     overview: "Massive industrial production facility accommodating 240 high-speed air-jet looms requiring absolute humidity control and structural vibration dampening.",
     challenge: "High operational vibration and heavy roof loadings for centralized air conditioning units and humidification ducts.",
@@ -63,9 +64,11 @@ export const projects = [
     duration: "4.5 Months",
     client: "AgroPrime Export Conglomerate",
     scope: ["Structural Steel", "PIR Insulated Panels", "Thermal Break Base Detailing", "Turnkey Erection"],
-    cover: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-3-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-3.webp",
+      "assets/projects/project-9.webp",
+      "assets/projects/project-13.webp"
     ],
     overview: "State-of-the-art controlled-atmosphere cold storage facility maintaining temperatures down to -25°C for citrus and mango exports.",
     challenge: "Preventing thermal bridging through steel columns and eliminating vapor barrier condensation in extreme summer ambient temperatures.",
@@ -85,9 +88,11 @@ export const projects = [
     duration: "5 Months",
     client: "Indus Heavy Industries",
     scope: ["Structural Steelwork", "30-Ton EOT Crane Girders", "Heavy Foundations", "Cladding"],
-    cover: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-4-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-4.webp",
+      "assets/projects/project-10.webp",
+      "assets/projects/project-14.webp"
     ],
     overview: "Heavy industrial plant equipped with two 30-ton electric overhead traveling (EOT) crane runways spanning 180 meters.",
     challenge: "Managing massive dynamic fatigue loads from dual simultaneous crane operations without lateral displacement.",
@@ -107,9 +112,11 @@ export const projects = [
     duration: "4 Months",
     client: "Pak German Motors",
     scope: ["Architectural PEB", "Curtain Wall Integration", "Mezzanine Floor", "Erection"],
-    cover: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-5-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-5.webp",
+      "assets/projects/project-13.webp",
+      "assets/projects/project-1.webp"
     ],
     overview: "A sleek, contemporary steel structure integrating expansive glass curtain walling and a 20,000 sq. ft. composite mezzanine for automotive parts inventory.",
     challenge: "Combining industrial steel strength with aesthetic showroom elegance and seamless glass facade transitions.",
@@ -129,9 +136,11 @@ export const projects = [
     duration: "8 Months",
     client: "Federal Sports Directorate",
     scope: ["Curved Space Frame", "Acoustic Insulation", "Fire Retardant Coating", "Seismic Engineering"],
-    cover: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-6-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-6.webp",
+      "assets/projects/project-14.webp",
+      "assets/projects/project-2.webp"
     ],
     overview: "Mega clear span indoor arena accommodating 4,000 spectators with acoustic dampening and unobstructed viewing angles.",
     challenge: "Massive 72-meter span requiring lightweight yet ultra-rigid spatial truss engineering.",
@@ -151,9 +160,11 @@ export const projects = [
     duration: "3.5 Months",
     client: "EcoAgro Farms Ltd.",
     scope: ["Galvanized Light Gauge PEB", "Insulated Roof", "Tunnel Ventilation Framework"],
-    cover: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-7-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-7.webp",
+      "assets/projects/project-3.webp",
+      "assets/projects/project-11.webp"
     ],
     overview: "Four environmentally controlled, biosecure poultry production sheds with anti-corrosion galvanized coatings.",
     challenge: "High ammonia vapor corrosion risks and requirement for rapid, repeatable erection.",
@@ -173,9 +184,11 @@ export const projects = [
     duration: "5 Months",
     client: "Medix International Pharmaceuticals",
     scope: ["Cleanroom Ready PEB", "Walkable Ceiling Trusses", "Epoxy Coated Steel", "Turnkey Erection"],
-    cover: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=80",
+    cover: "assets/projects/project-8-thumb.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80"
+      "assets/projects/project-8.webp",
+      "assets/projects/project-4.webp",
+      "assets/projects/project-12.webp"
     ],
     overview: "WHO-GMP compliant pharmaceutical plant featuring heavy-duty walkable ceiling trusses to support dedicated HVAC air handlers.",
     challenge: "Strict deflection limits (L/500) and zero particle trap framing inside cleanroom envelopes.",
