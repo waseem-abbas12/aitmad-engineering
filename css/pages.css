@@ -16,14 +16,14 @@
   background-color: var(--pine-900);
   overflow: hidden;
   color: var(--ivory);
-  padding-top: clamp(80px, 9vh, 96px);
+  padding-top: 84px;
   padding-bottom: 0;
 }
 
 @media (max-width: 768px) {
   .hero-section {
     min-height: auto;
-    padding-top: 72px;
+    padding-top: 64px;
     padding-bottom: 0;
   }
 }
@@ -68,14 +68,14 @@
 .hero-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(7, 18, 24, 0.45) 0%, rgba(7, 18, 24, 0.85) 75%, rgba(7, 18, 24, 0.98) 100%);
+  background: radial-gradient(circle at 50% 50%, rgba(7, 18, 24, 0.12) 0%, rgba(7, 18, 24, 0.38) 65%, rgba(7, 18, 24, 0.62) 100%);
   z-index: 2;
   pointer-events: none;
 }
 
 @media (max-width: 768px) {
   .hero-vignette {
-    background: radial-gradient(circle at 50% 35%, rgba(7, 18, 24, 0.42) 0%, rgba(7, 18, 24, 0.78) 65%, rgba(7, 18, 24, 0.94) 100%);
+    background: radial-gradient(circle at 50% 40%, rgba(7, 18, 24, 0.18) 0%, rgba(7, 18, 24, 0.42) 65%, rgba(7, 18, 24, 0.65) 100%);
   }
 }
 
@@ -86,7 +86,7 @@
   align-items: center;
   position: relative;
   z-index: 3;
-  padding-block: clamp(20px, 3.5vh, 40px);
+  padding-block: clamp(14px, 2.2vh, 26px);
   width: 100%;
 }
 

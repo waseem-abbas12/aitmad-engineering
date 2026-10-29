@@ -31,7 +31,7 @@
 @media (max-width: 768px) {
   .site-header {
     height: 64px;
-    background-color: rgba(7, 18, 24, 0.98);
+    background-color: rgba(7, 18, 24, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-dark);
