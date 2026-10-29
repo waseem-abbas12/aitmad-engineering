@@ -82,6 +82,17 @@
   color: var(--copper-300);
   position: relative;
   display: inline-block;
+  background: linear-gradient(120deg, #DDAA77 0%, #FFF5EA 35%, #B87333 70%, #E8B98A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: metallic-shimmer 6s linear infinite;
+}
+
+@keyframes metallic-shimmer {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
 }
 
 .hero-title .copper-accent::after {
@@ -91,13 +102,20 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: var(--copper-500);
-  animation: draw-line 1.2s ease-out 0.4s both;
+  background: linear-gradient(90deg, var(--copper-500), #F5EBE1, var(--copper-500));
+  background-size: 200% 100%;
+  animation: draw-line 1.2s ease-out 0.4s both, shimmer-bar 3s linear 1.8s infinite;
+  box-shadow: 0 0 10px rgba(184, 115, 51, 0.6);
 }
 
 @keyframes draw-line {
   from { width: 0; }
   to { width: 100%; }
+}
+
+@keyframes shimmer-bar {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .hero-subtitle {

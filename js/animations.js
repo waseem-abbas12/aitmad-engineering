@@ -145,7 +145,7 @@ export class AnimationEngine {
   initMagneticCardTilt() {
     if (window.matchMedia('(hover: none) or (pointer: coarse)').matches) return;
 
-    const tiltCards = document.querySelectorAll('.bento-card, .showcase-card, .project-card, .service-card');
+    const tiltCards = document.querySelectorAll('.bento-card, .showcase-card, .project-card, .service-card, .review-card');
     tiltCards.forEach(card => {
       const setRotateX = window.gsap.quickTo(card, 'rotationX', { duration: 0.4, ease: 'power2.out' });
       const setRotateY = window.gsap.quickTo(card, 'rotationY', { duration: 0.4, ease: 'power2.out' });

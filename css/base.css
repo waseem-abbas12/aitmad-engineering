@@ -380,6 +380,21 @@ html[dir="rtl"] .corner-frame::after {
   transform: scale(1);
 }
 
+/* Luxury Metallic Shimmer Text Effect */
+.shimmer-text, .text-shimmer {
+  background: linear-gradient(120deg, var(--copper-400) 0%, #FFFFFF 35%, var(--copper-500) 70%, var(--copper-300) 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: metallic-shimmer-sweep 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  display: inline-block;
+}
+
+@keyframes metallic-shimmer-sweep {
+  0% { background-position: 250% center; }
+  60%, 100% { background-position: -50% center; }
+}
+
 /* Stagger Children */
 .reveal-stagger > * {
   opacity: 0;
@@ -393,6 +408,8 @@ html[dir="rtl"] .corner-frame::after {
 .reveal-stagger.is-revealed > *:nth-child(4) { transition-delay: 0.26s; opacity: 1; transform: translateY(0); }
 .reveal-stagger.is-revealed > *:nth-child(5) { transition-delay: 0.33s; opacity: 1; transform: translateY(0); }
 .reveal-stagger.is-revealed > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-revealed > *:nth-child(7) { transition-delay: 0.47s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-revealed > *:nth-child(8) { transition-delay: 0.54s; opacity: 1; transform: translateY(0); }
 
 /* Live Status Beacon */
 .live-beacon {
