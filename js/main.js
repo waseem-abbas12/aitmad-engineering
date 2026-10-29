@@ -23,6 +23,7 @@ class AitmadApp {
     this.initCustomCursor();
     this.initCookieNotice();
     this.initCounters();
+    this.initWordRotator();
     this.initTestimonialSlider();
     this.initAccordions();
     this.initCardTilt();
@@ -256,6 +257,52 @@ class AitmadApp {
     };
 
     requestAnimationFrame(update);
+  }
+
+  // Dynamic Rotating Keyword Animation for Hero Headline
+  initWordRotator() {
+    const el = document.querySelector('.hero-rotating-word');
+    if (!el) return;
+
+    let currentIndex = 0;
+    const defaultEnWords = ["trust", "precision", "strength", "integrity", "excellence"];
+    const defaultUrWords = ["اعتماد", "معیار", "مضبوطی", "امانت داری", "برتری"];
+
+    const getWordList = () => {
+      const isUr = document.documentElement.getAttribute('lang') === 'ur' || document.documentElement.getAttribute('dir') === 'rtl';
+      return isUr ? defaultUrWords : defaultEnWords;
+    };
+
+    const rotate = () => {
+      const words = getWordList();
+      currentIndex = (currentIndex + 1) % words.length;
+      const nextWord = words[currentIndex];
+
+      el.classList.add('word-exit');
+
+      setTimeout(() => {
+        el.textContent = nextWord;
+        el.classList.remove('word-exit');
+        el.classList.add('word-enter');
+
+        // Force reflow
+        void el.offsetWidth;
+
+        el.classList.remove('word-enter');
+      }, 350);
+    };
+
+    let intervalId = setInterval(rotate, 2800);
+
+    // Reset rotation on language switch
+    window.addEventListener('aitmad:langchange', () => {
+      clearInterval(intervalId);
+      currentIndex = 0;
+      const words = getWordList();
+      el.textContent = words[0];
+      el.classList.remove('word-exit', 'word-enter');
+      intervalId = setInterval(rotate, 2800);
+    });
   }
 
   // Continuous Reviews Marquee (Spec 6.10: Infinite Dynamic Ticker, Pause on Hover)
