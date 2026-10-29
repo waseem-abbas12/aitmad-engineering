@@ -8,6 +8,8 @@ import { Hero3DScene } from './hero3d.js';
 import { ProjectsManager } from './projects.js';
 import { QuoteFormHandler } from './forms.js';
 import { testimonials } from '../data/testimonials.js';
+import { AnimationEngine } from './animations.js';
+
 
 class AitmadApp {
   constructor() {
@@ -381,7 +383,11 @@ class AitmadApp {
     // Quote Form Handler
     new QuoteFormHandler('quote-request-form');
     new QuoteFormHandler('contact-quote-form');
+
+    // GSAP Animation Engine
+    new AnimationEngine();
   }
+
 }
 
 // Instantiate on DOMContentLoaded

@@ -10,6 +10,38 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
+
+  <!-- Tailwind CSS CDN & Brand Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#071218',
+              surface: '#0B131A',
+              card: '#121D26',
+              border: 'rgba(255, 255, 255, 0.12)',
+              red: '#EE1C25',
+              'red-hover': '#D0171F'
+            }
+          },
+          fontFamily: {
+            heading: ['Sora', 'Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- GSAP 3.12.5 & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
   <style>
     .contact-form-card {
       background: var(--white);
