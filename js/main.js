@@ -258,68 +258,72 @@ class AitmadApp {
     requestAnimationFrame(update);
   }
 
-  // Testimonials Slider (Spec 6.10: 7s autoplay, pause on hover)
+  // Continuous Reviews Marquee (Spec 6.10: Infinite Dynamic Ticker, Pause on Hover)
   initTestimonialSlider() {
-    const sliderContainer = document.getElementById('testimonial-slider-container');
-    if (!sliderContainer) return;
+    const track1 = document.getElementById('reviews-marquee-track-1');
+    const track2 = document.getElementById('reviews-marquee-track-2');
+    const wrapper = document.getElementById('reviews-marquee-wrapper');
 
-    sliderContainer.innerHTML = '';
-    testimonials.forEach((t, i) => {
-      const slide = document.createElement('div');
-      slide.className = `testimonial-slide ${i === 0 ? 'active' : ''}`;
-      slide.innerHTML = `
-        <p class="testimonial-text">"${t.quote}"</p>
-        <h4 class="testimonial-author">${t.author}</h4>
-        <div class="testimonial-org">${t.designation}, ${t.company} (${t.location})</div>
-      `;
-      sliderContainer.appendChild(slide);
-    });
-
-    const slides = sliderContainer.querySelectorAll('.testimonial-slide');
-    const dotsContainer = document.getElementById('testimonial-dots');
-    if (dotsContainer) {
-      dotsContainer.innerHTML = '';
-      slides.forEach((_, idx) => {
-        const dot = document.createElement('button');
-        dot.className = `testimonial-dot ${idx === 0 ? 'active' : ''}`;
-        dot.setAttribute('aria-label', `Go to testimonial ${idx + 1}`);
-        dot.addEventListener('click', () => goToSlide(idx));
-        dotsContainer.appendChild(dot);
+    if (!track1) {
+      const legacyContainer = document.getElementById('testimonial-slider-container');
+      if (!legacyContainer) return;
+      legacyContainer.innerHTML = '';
+      testimonials.forEach((t, i) => {
+        const slide = document.createElement('div');
+        slide.className = `testimonial-slide ${i === 0 ? 'active' : ''}`;
+        slide.innerHTML = `
+          <p class="testimonial-text">"${t.quote}"</p>
+          <h4 class="testimonial-author">${t.author}</h4>
+          <div class="testimonial-org">${t.designation}, ${t.company} (${t.location})</div>
+        `;
+        legacyContainer.appendChild(slide);
       });
+      return;
     }
 
-    let currentIndex = 0;
-    let timer = null;
-
-    const goToSlide = (index) => {
-      slides[currentIndex].classList.remove('active');
-      if (dotsContainer) dotsContainer.children[currentIndex].classList.remove('active');
-
-      currentIndex = (index + slides.length) % slides.length;
-
-      slides[currentIndex].classList.add('active');
-      if (dotsContainer) dotsContainer.children[currentIndex].classList.add('active');
+    const renderCard = (t) => {
+      const stars = '★'.repeat(t.rating || 5);
+      const initials = t.initials || t.author.split(' ').map(n => n[0]).slice(0, 2).join('');
+      return `
+        <div class="review-card">
+          <div class="review-card-header">
+            <div class="review-stars" aria-label="${t.rating || 5} out of 5 stars">${stars}</div>
+            <span class="review-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Verified Client
+            </span>
+          </div>
+          <p class="review-quote">"${t.quote}"</p>
+          <div class="review-card-footer">
+            <div class="review-avatar">${initials}</div>
+            <div class="review-meta">
+              <h4 class="review-author">${t.author}</h4>
+              <p class="review-org">${t.designation}, <strong>${t.company}</strong></p>
+              <span class="review-location-chip">📍 ${t.location}</span>
+            </div>
+          </div>
+        </div>
+      `;
     };
 
-    const nextSlide = () => goToSlide(currentIndex + 1);
-    const prevSlide = () => goToSlide(currentIndex - 1);
+    const reviewsHtml = testimonials.map(renderCard).join('');
+    track1.innerHTML = reviewsHtml;
+    if (track2) {
+      track2.innerHTML = reviewsHtml;
+    }
 
-    const prevBtn = document.getElementById('testimonial-prev');
-    const nextBtn = document.getElementById('testimonial-next');
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    // Touch support for mobile pause/resume
+    if (wrapper) {
+      wrapper.addEventListener('touchstart', () => {
+        const tracks = wrapper.querySelectorAll('.reviews-marquee-track');
+        tracks.forEach(t => t.style.animationPlayState = 'paused');
+      }, { passive: true });
 
-    const startAuto = () => {
-      timer = setInterval(nextSlide, 7000);
-    };
-
-    const stopAuto = () => {
-      clearInterval(timer);
-    };
-
-    sliderContainer.parentElement.addEventListener('mouseenter', stopAuto);
-    sliderContainer.parentElement.addEventListener('mouseleave', startAuto);
-    startAuto();
+      wrapper.addEventListener('touchend', () => {
+        const tracks = wrapper.querySelectorAll('.reviews-marquee-track');
+        tracks.forEach(t => t.style.animationPlayState = 'running');
+      }, { passive: true });
+    }
   }
 
   // Accordion Expand/Collapse (Spec 7.2)

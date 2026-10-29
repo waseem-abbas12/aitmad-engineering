@@ -30,16 +30,18 @@ export class ProjectsManager {
     this.initLightbox();
   }
 
-  // Swipe-Style Draggable Project Showcase Slider
+  // Continuous Auto-Scrolling Project Showcase Marquee
   initShowcaseSlider() {
-    const track = document.getElementById('project-showcase-track');
+    const track1 = document.getElementById('project-showcase-track');
+    const track2 = document.getElementById('project-showcase-track-dup');
     const prevBtn = document.getElementById('showcase-prev-btn');
     const nextBtn = document.getElementById('showcase-next-btn');
-    if (!track) return;
+    const container = document.getElementById('showcase-slider-container');
+    if (!track1) return;
 
     const isPagesDir = window.location.pathname.includes('/pages/');
 
-    track.innerHTML = this.projects.map(p => {
+    const cardsHtml = this.projects.map(p => {
       const detailHref = isPagesDir ? `project.html?slug=${p.slug}` : `pages/project.html?slug=${p.slug}`;
       const imgSrc = resolveAssetPath(p.cover);
       return `
@@ -71,51 +73,58 @@ export class ProjectsManager {
       `;
     }).join('');
 
+    track1.innerHTML = cardsHtml;
+    if (track2) {
+      track2.innerHTML = cardsHtml;
+    }
 
+    const getAllTracks = () => document.querySelectorAll('#showcase-slider-container .showcase-track');
 
-    // Navigation buttons
+    // Prev Button: Reverse marquee flow temporarily
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        const cardWidth = track.querySelector('.showcase-card')?.offsetWidth || 350;
-        track.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+        const tracks = getAllTracks();
+        tracks.forEach(t => {
+          t.style.animationDirection = 'reverse';
+          t.style.animationDuration = '28s';
+        });
+        setTimeout(() => {
+          tracks.forEach(t => {
+            t.style.animationDirection = 'normal';
+            t.style.animationDuration = '65s';
+          });
+        }, 5000);
       });
     }
+
+    // Next Button: Fast-forward marquee flow temporarily
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
-        const cardWidth = track.querySelector('.showcase-card')?.offsetWidth || 350;
-        track.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+        const tracks = getAllTracks();
+        tracks.forEach(t => {
+          t.style.animationDirection = 'normal';
+          t.style.animationDuration = '18s';
+        });
+        setTimeout(() => {
+          tracks.forEach(t => {
+            t.style.animationDuration = '65s';
+          });
+        }, 4000);
       });
     }
 
-    // Grab & Drag functionality
-    let isDown = false;
-    let startX = 0;
-    let scrollLeft = 0;
+    // Mobile touch pause & resume support
+    if (container) {
+      container.addEventListener('touchstart', () => {
+        const tracks = getAllTracks();
+        tracks.forEach(t => t.style.animationPlayState = 'paused');
+      }, { passive: true });
 
-    track.addEventListener('mousedown', (e) => {
-      isDown = true;
-      track.classList.add('active-drag');
-      startX = e.pageX - track.offsetLeft;
-      scrollLeft = track.scrollLeft;
-    });
-
-    track.addEventListener('mouseleave', () => {
-      isDown = false;
-      track.classList.remove('active-drag');
-    });
-
-    track.addEventListener('mouseup', () => {
-      isDown = false;
-      track.classList.remove('active-drag');
-    });
-
-    track.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - track.offsetLeft;
-      const walk = (x - startX) * 1.6;
-      track.scrollLeft = scrollLeft - walk;
-    });
+      container.addEventListener('touchend', () => {
+        const tracks = getAllTracks();
+        tracks.forEach(t => t.style.animationPlayState = 'running');
+      }, { passive: true });
+    }
   }
 
   // Home Page Featured Projects Grid (Spec 6.6)

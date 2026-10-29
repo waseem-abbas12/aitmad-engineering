@@ -564,28 +564,31 @@
     <!-- 6.6 Featured Projects & Swipe-Style Showcase -->
     <section class="section bg-ivory" aria-label="Featured Projects Portfolio">
       <div class="container">
-        <!-- Swipe-Style Draggable Showcase Header & Controls -->
+        <!-- Continuous Auto-Scrolling Project Marquee Header & Controls -->
         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
           <div>
             <span class="eyebrow" data-i18n="projects_eyebrow">Interactive Portfolio</span>
             <h2 data-i18n="projects_h2">Featured Real Executions</h2>
-            <p style="color: var(--steel); max-width: 580px; margin-bottom: 0;">
-              Drag or swipe through our landmark industrial terminals, cold stores, and heavy structural steel facilities across Pakistan.
+            <p style="color: var(--steel); max-width: 620px; margin-bottom: 0;">
+              Live Showcase • Auto-scrolling across Pakistan's landmark industrial terminals, cold stores, and structural steel facilities. (Hover card to pause)
             </p>
           </div>
           <div style="display: flex; gap: 12px; align-items: center;">
-            <button class="showcase-nav-btn" id="showcase-prev-btn" aria-label="Previous Project">
+            <button class="showcase-nav-btn" id="showcase-prev-btn" aria-label="Reverse Flow" title="Reverse Marquee Flow">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-            <button class="showcase-nav-btn" id="showcase-next-btn" aria-label="Next Project">
+            <button class="showcase-nav-btn" id="showcase-next-btn" aria-label="Fast-Forward Flow" title="Fast-Forward Marquee">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
         </div>
 
-        <!-- Draggable Horizontal Track (Populated with real photos via projects.js) -->
-        <div class="showcase-slider-container">
+        <!-- Continuous Auto-Scrolling Marquee Track (Populated with real photos via projects.js) -->
+        <div class="showcase-slider-container" id="showcase-slider-container">
           <div class="showcase-track" id="project-showcase-track">
+            <!-- Injected by ProjectsManager.initShowcaseSlider() -->
+          </div>
+          <div class="showcase-track" id="project-showcase-track-dup" aria-hidden="true">
             <!-- Injected by ProjectsManager.initShowcaseSlider() -->
           </div>
         </div>
@@ -794,27 +797,27 @@
       </div>
     </section>
 
-    <!-- 6.10 Testimonials Slider (White Background) -->
-    <section class="section bg-white" aria-label="Client Testimonials">
-      <div class="container">
-        <div class="testimonials-wrapper">
-          <div class="testimonial-quote-icon">“</div>
-          <span class="eyebrow" data-i18n="testimonials_eyebrow">Client Endorsements</span>
-          <h2 data-i18n="testimonials_h2" style="margin-bottom: var(--space-8);">Voices of Industrial Trust</h2>
+    <!-- 6.10 Client Reviews Marquee (Infinite Dynamic Ticker) -->
+    <section class="section bg-white" aria-label="Client Reviews & Endorsements" style="overflow: hidden; padding-top: var(--space-16); padding-bottom: var(--space-16);">
+      <div class="container" style="text-align: center; margin-bottom: var(--space-8);">
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(184, 115, 51, 0.1); padding: 6px 16px; border-radius: 999px; margin-bottom: 14px; border: 1px solid rgba(184, 115, 51, 0.25);">
+          <div style="color: #F59E0B; font-size: 0.95rem; letter-spacing: 2px;">★★★★★</div>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--pine-800); text-transform: uppercase; letter-spacing: 0.08em;">5.0 / 5.0 Rated by Pakistan's Industrial Titans</span>
+        </div>
+        <span class="eyebrow" data-i18n="testimonials_eyebrow" style="display: block;">Client Endorsements</span>
+        <h2 data-i18n="testimonials_h2" style="margin-bottom: 12px;">Voices of Industrial Trust</h2>
+        <p style="color: var(--steel); max-width: 620px; margin-inline: auto; font-size: 1.05rem; line-height: 1.6;">
+          Real feedback from C-level executives, chief engineers, and project directors whose critical steel facilities were delivered turnkey by Aitmad. (Hover card to pause)
+        </p>
+      </div>
 
-          <!-- Dynamic Slides Container -->
-          <div id="testimonial-slider-container"></div>
-
-          <!-- Controls -->
-          <div class="testimonial-controls">
-            <button class="testimonial-nav-btn" id="testimonial-prev" aria-label="Previous Testimonial">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <div id="testimonial-dots" style="display: flex; gap: 8px;"></div>
-            <button class="testimonial-nav-btn" id="testimonial-next" aria-label="Next Testimonial">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
-          </div>
+      <!-- Dynamic Reviews Continuous Marquee -->
+      <div class="reviews-marquee-wrapper" id="reviews-marquee-wrapper">
+        <div class="reviews-marquee-track" id="reviews-marquee-track-1">
+          <!-- Injected dynamically via testimonials.js in main.js -->
+        </div>
+        <div class="reviews-marquee-track" id="reviews-marquee-track-2" aria-hidden="true">
+          <!-- Injected dynamically via testimonials.js in main.js -->
         </div>
       </div>
     </section>

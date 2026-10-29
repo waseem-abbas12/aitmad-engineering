@@ -1254,50 +1254,54 @@ html[dir="rtl"] .project-card-hover-action {
   left: 20px;
 }
 
-/* Swipe-Style Draggable Showcase Carousel */
+/* Continuous Auto-Scrolling Project Showcase Marquee */
 .showcase-slider-container {
   position: relative;
   width: 100%;
   overflow: hidden;
-  padding: 12px 0 32px;
+  user-select: none;
+  display: flex;
+  padding: 12px 0 28px;
+  mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
 }
 
 .showcase-track {
   display: flex;
   gap: 24px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding: 8px 4px 20px;
-  cursor: grab;
-  user-select: none;
+  flex-shrink: 0;
+  padding-right: 24px;
+  animation: showcase-marquee-scroll 65s linear infinite;
+  will-change: transform;
 }
 
-.showcase-track::-webkit-scrollbar {
-  height: 6px;
+.showcase-slider-container:hover .showcase-track {
+  animation-play-state: paused;
 }
 
-.showcase-track::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
+@keyframes showcase-marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-.showcase-track::-webkit-scrollbar-thumb {
-  background: var(--red-500);
-  border-radius: 4px;
-}
-
-.showcase-track.active-drag {
-  cursor: grabbing;
-  scroll-behavior: auto;
+html[dir="rtl"] @keyframes showcase-marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .showcase-card {
-  flex: 0 0 calc(33.333% - 16px);
-  min-width: 320px;
-  max-width: 420px;
-  scroll-snap-align: start;
+  flex: 0 0 360px;
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
   border-radius: 18px;
   background: var(--black-800);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1307,6 +1311,7 @@ html[dir="rtl"] .project-card-hover-action {
   transition: transform 0.4s var(--ease-out), border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .showcase-card:hover {
@@ -1416,8 +1421,10 @@ html[dir="rtl"] .project-card-hover-action {
 
 @media (max-width: 900px) {
   .showcase-card {
-    flex: 0 0 75%;
-    min-width: 280px;
+    flex: 0 0 320px;
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
   }
 }
 
@@ -1426,14 +1433,14 @@ html[dir="rtl"] .project-card-hover-action {
     padding: 8px 0 20px;
   }
   .showcase-track {
-    gap: 14px;
-    padding: 6px 16px 18px;
-    scroll-padding: 0 16px;
+    gap: 16px;
+    padding-right: 16px;
   }
   .showcase-card {
-    flex: 0 0 86vw;
-    min-width: 250px;
-    max-width: 320px;
+    flex: 0 0 290px;
+    width: 290px;
+    min-width: 290px;
+    max-width: 290px;
     border-radius: 14px;
   }
   .showcase-card-body {
