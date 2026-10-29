@@ -46,26 +46,31 @@ export class ProjectsManager {
         <a href="${detailHref}" class="showcase-card" aria-label="${p.title}">
           <div class="showcase-card-img-wrap">
             <img class="showcase-card-img" src="${imgSrc}" alt="${p.title}" loading="lazy">
-            <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px; z-index: 2;">
-              <span class="live-beacon"><span class="live-beacon-dot"></span> Completed</span>
+            <div class="project-card-badges">
+              <span class="project-card-badge red">${p.category}</span>
+              <span class="live-beacon"><span class="live-beacon-dot"></span> Certified</span>
+            </div>
+            <div class="project-card-zoom-btn" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
             </div>
           </div>
           <div class="showcase-card-body">
-            <div class="showcase-card-chips">
-              <span class="showcase-chip red">${p.category}</span>
-              <span class="showcase-chip">Span: ${p.span}</span>
-              <span class="showcase-chip">Steel: ${p.steelTonnage}</span>
-            </div>
             <h3 class="showcase-card-title">${p.title}</h3>
-            <p class="showcase-card-desc">${p.overview.substring(0, 115)}...</p>
+            <p class="showcase-card-desc">${p.overview.substring(0, 100)}...</p>
+            <div class="project-card-meta-chips">
+              <span class="meta-chip">📍 ${p.location.split(',')[0]}</span>
+              <span class="meta-chip">📏 ${p.span}</span>
+              <span class="meta-chip">⚖️ ${p.steelTonnage}</span>
+            </div>
             <div class="showcase-card-footer">
-              <span>📍 ${p.location}</span>
+              <span style="font-size: 0.8rem; color: #9CA3AF;">Handover: ${p.year}</span>
               <span style="color: var(--red-500); font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">Explore Specs →</span>
             </div>
           </div>
         </a>
       `;
     }).join('');
+
 
 
     // Navigation buttons
@@ -119,7 +124,7 @@ export class ProjectsManager {
     const filterContainer = document.getElementById('home-project-filters');
     if (!gridContainer) return;
 
-    this.renderCards(gridContainer, 6, true);
+    this.renderCards(gridContainer, 6, false);
 
     if (filterContainer) {
       filterContainer.addEventListener('click', (e) => {
@@ -130,10 +135,11 @@ export class ProjectsManager {
         chip.classList.add('active');
 
         this.currentFilter = chip.getAttribute('data-filter') || 'All';
-        this.renderCards(gridContainer, 6, true);
+        this.renderCards(gridContainer, 6, false);
       });
     }
   }
+
 
   // Full Projects Listing Page (Spec 7.3)
   initProjectsPage() {
@@ -215,23 +221,31 @@ export class ProjectsManager {
       card.href = detailHref;
 
       card.innerHTML = `
-        <img class="project-card-img" src="${resolveAssetPath(p.cover)}" alt="${p.title}" loading="lazy">
-        <div class="project-card-overlay">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-            <span class="project-card-badge">${p.category}</span>
+        <div class="project-card-img-wrap">
+          <img class="project-card-img" src="${resolveAssetPath(p.cover)}" alt="${p.title}" loading="lazy">
+          <div class="project-card-badges">
+            <span class="project-card-badge red">${p.category}</span>
             <span class="live-beacon"><span class="live-beacon-dot"></span> Certified</span>
           </div>
+          <div class="project-card-zoom-btn" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+          </div>
+        </div>
+        <div class="project-card-body">
           <h3 class="project-card-title">${p.title}</h3>
+          <p class="project-card-desc">${p.overview.substring(0, 105)}...</p>
           <div class="project-card-meta-chips">
-            <span class="meta-chip">📍 ${p.location}</span>
+            <span class="meta-chip">📍 ${p.location.split(',')[0]}</span>
             <span class="meta-chip">📐 ${p.area}</span>
             <span class="meta-chip">⚖️ ${p.steelTonnage}</span>
           </div>
-        </div>
-        <div class="project-card-hover-action" aria-label="View Project">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <div class="project-card-footer">
+            <span>View Detailed Specs</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
         </div>
       `;
+
 
 
       container.appendChild(card);
