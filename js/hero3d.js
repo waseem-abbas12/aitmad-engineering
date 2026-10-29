@@ -118,17 +118,19 @@ export class Hero3DScene {
     this.structureGroup = new THREE.Group();
     this.scene.add(this.structureGroup);
 
-    // Steel Beam Material (Brushed heavy carbon steel with metallic reflections)
+    // Steel Beam Material (Brushed heavy carbon steel with crisp highlights)
     const steelMaterial = new THREE.MeshStandardMaterial({
-      color: 0x182028,
-      metalness: 0.88,
-      roughness: 0.3
+      color: 0x3A4D5F,
+      metalness: 0.75,
+      roughness: 0.35
     });
 
     const copperJointMaterial = new THREE.MeshStandardMaterial({
       color: 0xEE1C25,
-      metalness: 0.9,
-      roughness: 0.22
+      metalness: 0.85,
+      roughness: 0.2,
+      emissive: 0xEE1C25,
+      emissiveIntensity: 0.35
     });
 
     // Portal Frame Dimensions
@@ -236,8 +238,8 @@ export class Hero3DScene {
       delay: index * 0.04,
       progress: 0
     };
-    mesh.position.y = mesh.userData.startY;
-    mesh.visible = false;
+    mesh.position.y = targetY;
+    mesh.visible = true;
     this.members.push(mesh);
   }
 

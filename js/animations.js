@@ -40,10 +40,9 @@ export class AnimationEngine {
     const subtitle = heroContent.querySelector('.hero-subtitle');
     const bullets = heroContent.querySelector('.hero-bullets');
     const btnGroup = heroContent.querySelector('.hero-btn-group');
-    const metricDock = heroContent.querySelector('.hero-metric-dock');
     const scrollCue = document.querySelector('.hero-scroll-cue');
 
-    const elements = [badge, eyebrow, title, subtitle, bullets, btnGroup, metricDock].filter(Boolean);
+    const elements = [badge, eyebrow, title, subtitle, bullets, btnGroup].filter(Boolean);
 
     window.gsap.set(elements, { autoAlpha: 0, y: 28 });
     if (scrollCue) window.gsap.set(scrollCue, { autoAlpha: 0, y: 15 });
@@ -117,7 +116,7 @@ export class AnimationEngine {
 
   // 3. GSAP Physics-Based Numeric Counters
   initGSAPCounters() {
-    const statCards = document.querySelectorAll('.stat-card [data-target]');
+    const statCards = document.querySelectorAll('[data-target]');
     if (statCards.length === 0) return;
 
     statCards.forEach(el => {
@@ -127,11 +126,11 @@ export class AnimationEngine {
 
       window.gsap.to(counter, {
         value: target,
-        duration: 2.2,
+        duration: 2.0,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: el,
-          start: 'top 88%',
+          start: 'top 95%',
           once: true
         },
         onUpdate: () => {

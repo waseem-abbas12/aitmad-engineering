@@ -216,6 +216,9 @@ class AitmadApp {
 
   // Animated Stats Counters (Spec 6.4: 1.8s ease-out)
   initCounters() {
+    // If GSAP is loaded, AnimationEngine handles physics counters
+    if (typeof window.gsap !== 'undefined') return;
+
     const targets = document.querySelectorAll('[data-target]');
     if (targets.length === 0) return;
 
