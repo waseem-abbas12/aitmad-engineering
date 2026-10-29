@@ -18,6 +18,7 @@ export const translations = {
 
     // Hero
     hero_eyebrow: "Steel Building Specialists",
+    hero_live_badge: "Pakistan's #1 Certified PEB & Structural Steel Specialists",
     hero_title_part1: "Structures built on ",
     hero_title_accent: "trust",
     hero_title_part2: ", engineered to last.",
@@ -159,6 +160,7 @@ export const translations = {
 
     // Hero
     hero_eyebrow: "اسٹیل بلڈنگ کے ماہرین",
+    hero_live_badge: "پاکستان میں PEB اور اسٹرکچرل اسٹیل کی نمبر 1 مصدقہ کمپنی",
     hero_title_part1: "تعمیر ",
     hero_title_accent: "اعتماد",
     hero_title_part2: " پر، انجینئرنگ فولاد میں۔",

@@ -34,13 +34,15 @@ export class AnimationEngine {
 
     const tl = window.gsap.timeline({ delay: 0.2 });
 
+    const badge = heroContent.querySelector('.hero-badge-wrap');
     const eyebrow = heroContent.querySelector('.eyebrow');
     const title = heroContent.querySelector('.hero-title');
     const subtitle = heroContent.querySelector('.hero-subtitle');
     const btnGroup = heroContent.querySelector('.hero-btn-group');
+    const trustChips = heroContent.querySelector('.hero-trust-chips');
     const glassBar = document.querySelector('.hero-glass-bar');
 
-    const elements = [eyebrow, title, subtitle, btnGroup].filter(Boolean);
+    const elements = [badge, eyebrow, title, subtitle, btnGroup, trustChips].filter(Boolean);
 
     window.gsap.set(elements, { autoAlpha: 0, y: 28 });
     if (glassBar) window.gsap.set(glassBar, { autoAlpha: 0, y: 20 });
