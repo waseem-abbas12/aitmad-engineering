@@ -108,6 +108,9 @@
     <div class="preloader-text" style="color: var(--steel-light); letter-spacing: 0.32em; font-size: 0.78rem;">BUILT ON TRUST • ENGINEERED IN STEEL</div>
   </div>
 
+  <!-- Global 3D Ambient Engineering Depth & Structural Coordinates Backdrop -->
+  <div class="global-3d-ambient-grid" aria-hidden="true"></div>
+
   <!-- 5.1 Global Site Header -->
   <header class="site-header" role="banner">
     <div class="container header-container">
@@ -299,15 +302,15 @@
               <div class="bim-specs-overlay">
                 <div class="bim-spec-pill">
                   <span class="bim-spec-label">Clear Span</span>
-                  <span class="bim-spec-val">36.0 M</span>
+                  <span class="bim-spec-val"><span class="counter-val" data-target="36">0</span>.0 M</span>
                 </div>
                 <div class="bim-spec-pill">
                   <span class="bim-spec-label">Eave Height</span>
-                  <span class="bim-spec-val">10.5 M</span>
+                  <span class="bim-spec-val"><span class="counter-val" data-target="10.5">0</span> M</span>
                 </div>
                 <div class="bim-spec-pill">
                   <span class="bim-spec-label">Design Wind</span>
-                  <span class="bim-spec-val">160 km/h</span>
+                  <span class="bim-spec-val"><span class="counter-val" data-target="160">0</span> km/h</span>
                 </div>
                 <div class="bim-spec-pill">
                   <span class="bim-spec-label">Steel Standard</span>
@@ -467,7 +470,7 @@
           <div class="corner-frame about-img-wrap">
             <img src="assets/projects/project-1.webp" alt="Aitmad Engineering High-Tolerance Steel Structure Erection" loading="lazy">
             <div class="since-badge">
-              <span class="since-badge-num" data-i18n="since_year">10+</span>
+              <span class="since-badge-num"><span class="counter-val" data-target="10">0</span>+</span>
               <span class="since-badge-lbl" data-i18n="since_label">Years Excellence</span>
             </div>
           </div>
@@ -522,25 +525,25 @@
         <div class="stats-grid reveal-stagger">
           <div class="stat-card">
             <div class="stat-number">
-              <span data-target="100">0</span><span class="copper-plus">+</span>
+              <span class="counter-val" data-target="100">0</span><span class="copper-plus">+</span>
             </div>
             <div class="stat-label" data-i18n="stat_completed">Projects Delivered</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">
-              <span data-target="3.5">0</span><span class="copper-plus">M+</span>
+              <span class="counter-val" data-target="3.5">0</span><span class="copper-plus">M+</span>
             </div>
             <div class="stat-label" data-i18n="stat_sqft">Sq. Ft. Constructed</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">
-              <span data-target="10">0</span><span class="copper-plus">+</span>
+              <span class="counter-val" data-target="10">0</span><span class="copper-plus">+</span>
             </div>
             <div class="stat-label" data-i18n="stat_experience">Years of Experience</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">
-              <span data-target="80">0</span><span class="copper-plus">+</span>
+              <span class="counter-val" data-target="80">0</span><span class="copper-plus">+</span>
             </div>
             <div class="stat-label" data-i18n="stat_clients">Clients Served</div>
           </div>
@@ -838,61 +841,144 @@
       </div>
     </section>
 
-    <!-- 6.8 Process (Ivory Background, 6-Step Timeline) -->
-    <section class="section bg-ivory" aria-label="Systematic Process">
+    <!-- 6.8 Process (Industrial Engineering Construction Pathway) -->
+    <section class="section process-pathway-section" aria-label="Systematic Process">
       <div class="container">
-        <div style="text-align: center; max-width: 680px; margin-inline: auto; margin-bottom: var(--space-8);">
-          <span class="eyebrow" data-i18n="process_eyebrow">Systematic Execution</span>
-          <h2 data-i18n="process_h2">Our 6-Step Engineered Process</h2>
-          <p data-i18n="process_sub" style="color: var(--steel);">
-            A transparent, milestone-driven pathway from preliminary concept to turnkey facility handover.
+        <div style="text-align: center; max-width: 720px; margin-inline: auto; margin-bottom: clamp(36px, 5vw, 60px);">
+          <span class="eyebrow" data-i18n="process_eyebrow" style="color: var(--red-500); font-weight: 700;">Systematic Execution</span>
+          <h2 data-i18n="process_h2" style="color: #FFFFFF; font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 800; margin-bottom: 14px;">
+            Our 6-Step Engineered Pathway
+          </h2>
+          <p data-i18n="process_sub" style="color: #CBD5E1; font-size: 1.05rem; line-height: 1.6;">
+            A transparent, sequence-controlled construction highway from initial topography survey to certified facility handover.
           </p>
         </div>
 
-        <div class="timeline-container">
-          <div class="timeline-steps-grid">
-            <div class="timeline-node">
-              <div class="timeline-dot">1</div>
-              <h3 class="timeline-step-title" data-i18n="step_1_title">01. Consultation</h3>
-              <p class="timeline-step-desc" data-i18n="step_1_desc">Site assessment, architectural coordination, and operational requirement analysis.</p>
+        <!-- Interactive Winding Construction Pathway -->
+        <div class="process-path-wrapper">
+          <!-- Ambient SVG Glowing Path for Desktop -->
+          <svg class="process-path-svg desktop-only" viewBox="0 0 1140 480" fill="none" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#EE1C25" stop-opacity="0.8"/>
+                <stop offset="50%" stop-color="#DDAA77" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#EE1C25" stop-opacity="0.8"/>
+              </linearGradient>
+              <filter id="pathGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+            <path d="M 180,100 L 570,100 L 960,100 C 1080,100 1080,380 960,380 L 570,380 L 180,380" 
+                  stroke="rgba(255, 255, 255, 0.12)" stroke-width="4" stroke-dasharray="8 8" fill="none"/>
+            <path class="animated-path-flow" d="M 180,100 L 570,100 L 960,100 C 1080,100 1080,380 960,380 L 570,380 L 180,380" 
+                  stroke="url(#pathGradient)" stroke-width="3" fill="none" filter="url(#pathGlow)"/>
+          </svg>
+
+          <!-- 6 Pathway Step Pods in 2 Rows -->
+          <div class="pathway-grid">
+            <!-- STEP 01 -->
+            <div class="pathway-card pathway-step-1">
+              <div class="pathway-card-header">
+                <div class="pathway-badge-pulse">
+                  <span class="pathway-num">01</span>
+                </div>
+                <span class="pathway-phase-tag">Feasibility</span>
+              </div>
+              <h3 class="pathway-title" data-i18n="step_1_title">Site Consultation & Survey</h3>
+              <p class="pathway-desc" data-i18n="step_1_desc">Site topography survey, soil test coordination, building orientation & operational clearance planning.</p>
+              <ul class="pathway-deliverables">
+                <li><strong style="color: var(--copper-300);">✓</strong> Topography survey report</li>
+                <li><strong style="color: var(--copper-300);">✓</strong> Conceptual layout & sizing</li>
+              </ul>
             </div>
 
-            <div class="timeline-node">
-              <div class="timeline-dot">2</div>
-              <h3 class="timeline-step-title" data-i18n="step_2_title">02. Design & BIM</h3>
-              <p class="timeline-step-desc" data-i18n="step_2_desc">Parametric structural calculation, Tekla 3D modeling, and anchor bolt setting plans.</p>
+            <!-- STEP 02 -->
+            <div class="pathway-card pathway-step-2">
+              <div class="pathway-card-header">
+                <div class="pathway-badge-pulse">
+                  <span class="pathway-num">02</span>
+                </div>
+                <span class="pathway-phase-tag">Engineering</span>
+              </div>
+              <h3 class="pathway-title" data-i18n="step_2_title">Parametric BIM & Design</h3>
+              <p class="pathway-desc" data-i18n="step_2_desc">STAAD.Pro structural calculation, Tekla LOD 400 3D detailing, and anchor bolt setting plans.</p>
+              <ul class="pathway-deliverables">
+                <li><strong style="color: var(--copper-300);">✓</strong> Tekla LOD 400 3D model</li>
+                <li><strong style="color: var(--copper-300);">✓</strong> PEC-certified calculations</li>
+              </ul>
             </div>
 
-            <div class="timeline-node">
-              <div class="timeline-dot">3</div>
-              <h3 class="timeline-step-title" data-i18n="step_3_title">03. Fabrication</h3>
-              <p class="timeline-step-desc" data-i18n="step_3_desc">CNC plasma cutting, automatic submerged arc welding, and Sa 2.5 blast cleaning.</p>
+            <!-- STEP 03 -->
+            <div class="pathway-card pathway-step-3">
+              <div class="pathway-card-header">
+                <div class="pathway-badge-pulse">
+                  <span class="pathway-num">03</span>
+                </div>
+                <span class="pathway-phase-tag">Fabrication</span>
+              </div>
+              <h3 class="pathway-title" data-i18n="step_3_title">Automated CNC Fabrication</h3>
+              <p class="pathway-desc" data-i18n="step_3_desc">CNC plasma profiling, submerged arc beam welding, automated purlin roll-forming & Sa 2.5 shot-blasting.</p>
+              <ul class="pathway-deliverables">
+                <li><strong style="color: var(--copper-300);">✓</strong> Mill test certified steel</li>
+                <li><strong style="color: var(--copper-300);">✓</strong> Ultrasonic weld checks</li>
+              </ul>
             </div>
 
-            <div class="timeline-node">
-              <div class="timeline-dot">4</div>
-              <h3 class="timeline-step-title" data-i18n="step_4_title">04. Delivery</h3>
-              <p class="timeline-step-desc" data-i18n="step_4_desc">Sequenced logistics and staged transport directly to your project site.</p>
+            <!-- STEP 04 -->
+            <div class="pathway-card pathway-step-4">
+              <div class="pathway-card-header">
+                <div class="pathway-badge-pulse">
+                  <span class="pathway-num">04</span>
+                </div>
+                <span class="pathway-phase-tag">Logistics</span>
+              </div>
+              <h3 class="pathway-title" data-i18n="step_4_title">Sequenced Site Delivery</h3>
+              <p class="pathway-desc" data-i18n="step_4_desc">Component-coded logistics matched exactly to mobile crane arrival, preventing jobsite storage clutter.</p>
+              <ul class="pathway-deliverables">
+                <li><strong style="color: var(--copper-300);">✓</strong> Erection-sequence trailer loading</li>
+                <li><strong style="color: var(--copper-300);">✓</strong> Real-time delivery dispatch</li>
+              </ul>
             </div>
 
-            <div class="timeline-node">
-              <div class="timeline-dot">5</div>
-              <h3 class="timeline-step-title" data-i18n="step_5_title">05. Erection</h3>
-              <p class="timeline-step-desc" data-i18n="step_5_desc">Certified crane riggers, torque-checked HSFG bolting, and standing seam roof seaming.</p>
+            <!-- STEP 05 -->
+            <div class="pathway-card pathway-step-5">
+              <div class="pathway-card-header">
+                <div class="pathway-badge-pulse">
+                  <span class="pathway-num">05</span>
+                </div>
+                <span class="pathway-phase-tag">Erection</span>
+              </div>
+              <h3 class="pathway-title" data-i18n="step_5_title">Rapid Certified Erection</h3>
+              <p class="pathway-desc" data-i18n="step_5_desc">Certified crane riggers, torque-checked Grade 8.8 HSFG bolting, and 360° standing seam roof locking.</p>
+              <ul class="pathway-deliverables">
+                <li><strong style="color: var(--copper-300);">✓</strong> Calibrated torque verification</li>
+                <li><strong style="color: var(--copper-300);">✓</strong> 30% faster installation</li>
+              </ul>
             </div>
 
-            <div class="timeline-node">
-              <div class="timeline-dot">6</div>
-              <h3 class="timeline-step-title" data-i18n="step_6_title">06. Handover</h3>
-              <p class="timeline-step-desc" data-i18n="step_6_desc">Final laser alignment verification, leak testing, and formal warranty documentation.</p>
+            <!-- STEP 06 -->
+            <div class="pathway-card pathway-step-6">
+              <div class="pathway-card-header">
+                <div class="pathway-badge-pulse">
+                  <span class="pathway-num">06</span>
+                </div>
+                <span class="pathway-phase-tag">Handover</span>
+              </div>
+              <h3 class="pathway-title" data-i18n="step_6_title">Testing & Turnkey Handover</h3>
+              <p class="pathway-desc" data-i18n="step_6_desc">Final laser plumb line testing, standing seam leak trials, and formal 10-year structural warranty handover.</p>
+              <ul class="pathway-deliverables">
+                <li><strong style="color: var(--copper-300);">✓</strong> Formal 10-year warranty pack</li>
+                <li><strong style="color: var(--copper-300);">✓</strong> As-built BIM documentation</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: var(--space-8);">
-          <a href="pages/process.html" class="link-text">
-            <span>Learn More About Quality Control & Deliverables</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div style="text-align: center; margin-top: clamp(32px, 5vw, 56px);">
+          <a href="pages/process.html" class="btn btn-secondary-dark">
+            <span>Explore Complete Quality Control Protocol</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
@@ -913,15 +999,15 @@
 
           <div class="spotlight-facts">
             <div class="spotlight-fact-item">
-              <span class="spotlight-fact-val">145,000</span>
+              <span class="spotlight-fact-val"><span class="counter-val" data-target="145000">0</span></span>
               <span class="spotlight-fact-lbl">Sq. Ft. Area</span>
             </div>
             <div class="spotlight-fact-item">
-              <span class="spotlight-fact-val">64 Meters</span>
+              <span class="spotlight-fact-val"><span class="counter-val" data-target="64">0</span> Meters</span>
               <span class="spotlight-fact-lbl">Clear Span</span>
             </div>
             <div class="spotlight-fact-item">
-              <span class="spotlight-fact-val">6 Months</span>
+              <span class="spotlight-fact-val"><span class="counter-val" data-target="6">0</span> Months</span>
               <span class="spotlight-fact-lbl">Execution</span>
             </div>
           </div>

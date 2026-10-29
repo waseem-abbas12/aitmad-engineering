@@ -134,11 +134,12 @@ export class AnimationEngine {
     statCards.forEach(el => {
       const target = parseFloat(el.getAttribute('data-target'));
       const isDecimal = target % 1 !== 0;
+      const isLarge = target >= 1000;
       const counter = { value: 0 };
 
       window.gsap.to(counter, {
         value: target,
-        duration: 2.0,
+        duration: isLarge ? 2.4 : 1.8,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: el,
@@ -146,10 +147,16 @@ export class AnimationEngine {
           once: true
         },
         onUpdate: () => {
-          el.innerText = isDecimal ? counter.value.toFixed(1) : Math.floor(counter.value);
+          if (isLarge) {
+            el.innerText = Math.floor(counter.value).toLocaleString('en-US');
+          } else if (isDecimal) {
+            el.innerText = counter.value.toFixed(1);
+          } else {
+            el.innerText = Math.floor(counter.value);
+          }
         },
         onComplete: () => {
-          el.innerText = target;
+          el.innerText = isLarge ? Math.round(target).toLocaleString('en-US') : (isDecimal ? target.toFixed(1) : target);
         }
       });
     });

@@ -36,13 +36,13 @@
   --copper-300: var(--red-400);
   --copper-100: var(--red-100);
 
-  /* Neutrals: Industrial Whites & Technical Grays */
-  --ink: #071218;
-  --graphite: #1F2937;
-  --steel: #4B5563;
-  --steel-light: #9CA3AF;
-  --stone: #E5E7EB;
-  --stone-light: #F3F4F6;
+  /* Neutrals: Industrial Whites & Technical Grays (WCAG AAA High Contrast) */
+  --ink: #04080B;
+  --graphite: #0F172A;
+  --steel: #334155; /* Deeper contrast for light backgrounds */
+  --steel-light: #E2E8F0; /* Razor-sharp contrast on dark backgrounds */
+  --stone: #CBD5E1;
+  --stone-light: #F1F5F9;
   --ivory: #F8F9FA; /* Crisp architectural white background */
   --white: #FFFFFF;
 

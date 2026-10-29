@@ -54,22 +54,21 @@ html[dir="rtl"] .font-heading {
   line-height: 1.8;
 }
 
-/* Headings */
+/* Headings (WCAG High Contrast) */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--pine-800);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.015em;
+  color: var(--black-950);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
   overflow-wrap: break-word;
   word-break: break-word;
 }
 
-
-h1 { font-size: var(--text-h1); }
-h2 { font-size: var(--text-h2); }
-h3 { font-size: var(--text-h3); }
-h4 { font-size: var(--text-h4); }
+h1 { font-size: var(--text-h1); font-weight: 800; }
+h2 { font-size: var(--text-h2); font-weight: 800; }
+h3 { font-size: var(--text-h3); font-weight: 700; }
+h4 { font-size: var(--text-h4); font-weight: 700; }
 
 .font-serif {
   font-family: var(--font-serif);
@@ -78,10 +77,36 @@ h4 { font-size: var(--text-h4); }
 
 p {
   margin-bottom: 1.25rem;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 p:last-child {
   margin-bottom: 0;
+}
+
+/* Global High-Contrast Inversion for Dark Sections */
+.bg-blueprint h1, .bg-blueprint h2, .bg-blueprint h3,
+.bg-pine-900 h1, .bg-pine-900 h2, .bg-pine-900 h3,
+.bg-pine-800 h1, .bg-pine-800 h2, .bg-pine-800 h3,
+.bg-blueprint-pine-800 h1, .bg-blueprint-pine-800 h2, .bg-blueprint-pine-800 h3,
+.hero-section h1, .hero-section h2, .hero-section h3,
+.spotlight-section h1, .spotlight-section h2, .spotlight-section h3 {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.bg-blueprint p,
+.bg-pine-900 p,
+.bg-pine-800 p,
+.bg-blueprint-pine-800 p,
+.hero-section p,
+.spotlight-section p {
+  color: #F1F5F9 !important;
+  font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 a {
@@ -96,20 +121,55 @@ img, svg {
   height: auto;
 }
 
+/* Global 3D Ambient Engineering Grid & Structural Particles Layer */
+.global-3d-ambient-grid {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 12% 18%, rgba(238, 28, 37, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 88% 68%, rgba(184, 115, 51, 0.04) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 72px 72px, 72px 72px;
+}
+
+.global-3d-ambient-grid::after {
+  content: '';
+  position: absolute;
+  inset: -30%;
+  background-image: 
+    radial-gradient(2px 2px at 36px 36px, rgba(238, 28, 37, 0.3), transparent),
+    radial-gradient(2px 2px at 108px 108px, rgba(255, 255, 255, 0.22), transparent);
+  background-size: 144px 144px;
+  animation: ambient-3d-drift 80s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes ambient-3d-drift {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-50px) rotate(0.8deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
 /* Blueprint Grid Background Motif (Spec 4) */
 .bg-blueprint {
   background-color: var(--pine-900);
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
 .bg-blueprint-pine-800 {
   background-color: var(--pine-800);
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
@@ -310,14 +370,14 @@ html[dir="rtl"] .corner-frame::after {
   background: var(--red-500);
 }
 
-/* Utility Colors & Text */
-.text-ivory { color: var(--ivory) !important; }
-.text-pine-800 { color: var(--pine-800) !important; }
-.text-pine-500 { color: var(--pine-500) !important; }
+/* Utility Colors & Text (High Contrast) */
+.text-ivory { color: #FFFFFF !important; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); }
+.text-pine-800 { color: var(--black-900) !important; font-weight: 700; }
+.text-pine-500 { color: var(--red-500) !important; }
 .text-copper { color: var(--copper-500) !important; }
 .text-copper-300 { color: var(--copper-300) !important; }
-.text-steel { color: var(--steel) !important; }
-.text-steel-light { color: var(--steel-light) !important; }
+.text-steel { color: #334155 !important; }
+.text-steel-light { color: #E2E8F0 !important; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); }
 
 .bg-ivory { background-color: var(--ivory); }
 .bg-white { background-color: var(--white); }

@@ -241,7 +241,8 @@ class AitmadApp {
   runCounter(el) {
     const target = parseFloat(el.getAttribute('data-target'));
     const isDecimal = target % 1 !== 0;
-    const duration = 1800;
+    const isLarge = target >= 1000;
+    const duration = isLarge ? 2400 : 1800;
     const start = performance.now();
 
     const update = (now) => {
@@ -249,13 +250,20 @@ class AitmadApp {
       const progress = Math.min(elapsed / duration, 1);
       // Ease out quartic
       const ease = 1 - Math.pow(1 - progress, 4);
-      const current = isDecimal ? (target * ease).toFixed(1) : Math.floor(target * ease);
+      let current;
+      if (isLarge) {
+        current = Math.floor(target * ease).toLocaleString('en-US');
+      } else if (isDecimal) {
+        current = (target * ease).toFixed(1);
+      } else {
+        current = Math.floor(target * ease);
+      }
       el.innerText = current;
 
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
-        el.innerText = target;
+        el.innerText = isLarge ? Math.round(target).toLocaleString('en-US') : (isDecimal ? target.toFixed(1) : target);
       }
     };
 

@@ -918,71 +918,190 @@ html[dir="rtl"] .since-badge {
   display: none;
 }
 
-@media (min-width: 1024px) {
-  .timeline-track-svg {
-    display: block;
+/* ==========================================================================
+   6.8 Construction Pathway Roadmap (Unique Winding Step Highway)
+   ========================================================================== */
+.process-pathway-section {
+  background: var(--pine-900);
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(238, 28, 37, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(184, 115, 51, 0.08) 0%, transparent 40%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(60px, 8vw, 100px);
+}
+
+.process-path-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
+.process-path-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.animated-path-flow {
+  stroke-dasharray: 20 10;
+  animation: path-flow-dash 30s linear infinite;
+}
+
+@keyframes path-flow-dash {
+  to {
+    stroke-dashoffset: -1000;
   }
 }
 
-.timeline-steps-grid {
+.pathway-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px 32px;
   position: relative;
   z-index: 2;
 }
 
-@media (min-width: 640px) {
-  .timeline-steps-grid {
+@media (max-width: 991px) {
+  .pathway-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 }
 
-@media (min-width: 1024px) {
-  .timeline-steps-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: var(--space-4);
+@media (max-width: 640px) {
+  .pathway-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-left: 20px;
+    border-left: 2px dashed rgba(238, 28, 37, 0.4);
   }
 }
 
-.timeline-node {
+.pathway-card {
+  background: rgba(11, 22, 30, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px 22px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
   position: relative;
+  overflow: hidden;
 }
 
-.timeline-dot {
-  width: 48px;
-  height: 48px;
+.pathway-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red-500), var(--copper-500), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.pathway-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(238, 28, 37, 0.6);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 24px rgba(238, 28, 37, 0.2);
+}
+
+.pathway-card:hover::before {
+  opacity: 1;
+}
+
+.pathway-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.pathway-badge-pulse {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--stone);
-  color: var(--pine-800);
-  font-family: var(--font-heading);
-  font-weight: 700;
+  background: linear-gradient(135deg, var(--red-500), #9B0E14);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--space-4);
-  transition: all var(--transition-base);
-  box-shadow: var(--shadow-sm);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  box-shadow: 0 0 16px rgba(238, 28, 37, 0.5);
+  position: relative;
 }
 
-.timeline-node:hover .timeline-dot,
-.timeline-node.active .timeline-dot {
-  background: var(--copper-500);
-  border-color: var(--copper-500);
-  color: var(--ink);
-  transform: scale(1.1);
+.pathway-badge-pulse::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(238, 28, 37, 0.5);
+  animation: beacon-pulse-red 2.5s infinite ease-in-out;
 }
 
-.timeline-step-title {
-  font-size: 1.1rem;
-  color: var(--pine-800);
-  margin-bottom: 6px;
+.pathway-phase-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--copper-300);
+  background: rgba(184, 115, 51, 0.12);
+  border: 1px solid rgba(184, 115, 51, 0.3);
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 
-.timeline-step-desc {
+.pathway-title {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #FFFFFF !important;
+  margin-bottom: 10px;
+  letter-spacing: -0.015em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.pathway-desc {
+  font-size: 0.88rem;
+  color: #CBD5E1 !important;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.pathway-deliverables {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: #E2E8F0;
+}
+
+.pathway-deliverables li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
   font-size: 0.85rem;
   color: var(--steel);
   line-height: 1.5;
