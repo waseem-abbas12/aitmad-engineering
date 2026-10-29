@@ -5,6 +5,8 @@
  */
 
 :root {
+  color-scheme: only light;
+
   /* Brand Primary: Deep Obsidian & Carbon Black (Sampled directly from official logo) */
   --black-950: #04080B;
   --black-900: #071218; /* Master logo dark background */

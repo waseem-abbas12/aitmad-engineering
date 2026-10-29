@@ -16,6 +16,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color-scheme: only light;
   background-color: var(--ivory);
   color: var(--ink);
   overflow-x: hidden;
@@ -86,13 +87,15 @@ p:last-child {
   margin-bottom: 0;
 }
 
-/* Global High-Contrast Inversion for Dark Sections */
+/* Global High-Contrast Rules for Dark Sections */
 .bg-blueprint h1, .bg-blueprint h2, .bg-blueprint h3,
 .bg-pine-900 h1, .bg-pine-900 h2, .bg-pine-900 h3,
 .bg-pine-800 h1, .bg-pine-800 h2, .bg-pine-800 h3,
 .bg-blueprint-pine-800 h1, .bg-blueprint-pine-800 h2, .bg-blueprint-pine-800 h3,
 .hero-section h1, .hero-section h2, .hero-section h3,
-.spotlight-section h1, .spotlight-section h2, .spotlight-section h3 {
+.spotlight-section h1, .spotlight-section h2, .spotlight-section h3,
+.bento-card-title,
+.stat-number {
   color: #FFFFFF !important;
   font-weight: 800 !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
@@ -103,10 +106,23 @@ p:last-child {
 .bg-pine-800 p,
 .bg-blueprint-pine-800 p,
 .hero-section p,
-.spotlight-section p {
+.spotlight-section p,
+.bento-card-desc {
   color: #F1F5F9 !important;
   font-weight: 400;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Explicit High-Contrast for Light Sections */
+.bg-ivory h1, .bg-ivory h2, .bg-ivory h3,
+.bg-white h1, .bg-white h2, .bg-white h3 {
+  color: var(--black-950) !important;
+  font-weight: 800 !important;
+}
+
+.bg-ivory p, .bg-white p {
+  color: #1E293B !important;
+  font-weight: 450;
 }
 
 a {

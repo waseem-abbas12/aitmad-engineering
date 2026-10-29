@@ -31,13 +31,16 @@
 @media (max-width: 768px) {
   .site-header {
     height: 64px;
-    background-color: rgba(7, 18, 24, 0.85);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(7, 18, 24, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-dark);
+    box-shadow: none;
   }
   .site-header.scrolled {
     height: 60px;
+    background-color: rgba(7, 18, 24, 0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -1926,27 +1929,59 @@ html[dir="rtl"] .accordion-header {
     padding-bottom: 64px;
   }
 
-  /* Elevate floating whatsapp and back to top so they don't collide */
+  /* Hide duplicate floating WhatsApp on mobile as the sticky bottom bar already has a direct WhatsApp action */
   .floating-whatsapp {
+    display: none !important;
+  }
+
+  .back-to-top {
     bottom: 74px !important;
     right: 16px !important;
-    width: 48px !important;
-    height: 48px !important;
+    width: 42px !important;
+    height: 42px !important;
+    z-index: 890;
   }
-  html[dir="rtl"] .floating-whatsapp {
+  html[dir="rtl"] .back-to-top {
     right: auto !important;
     left: 16px !important;
   }
 
-  .back-to-top {
-    bottom: 130px !important;
-    right: 18px !important;
-    width: 40px !important;
-    height: 40px !important;
+  /* Compact Sleek Cookie Notice above mobile bottom bar */
+  .cookie-banner {
+    bottom: 68px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-width: calc(100% - 24px) !important;
+    padding: 12px 14px !important;
+    background-color: rgba(7, 18, 24, 0.96) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 12px !important;
+    z-index: 920 !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6) !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 10px !important;
   }
-  html[dir="rtl"] .back-to-top {
-    right: auto !important;
-    left: 18px !important;
+
+  .cookie-banner p {
+    font-size: 0.74rem !important;
+    line-height: 1.35 !important;
+    color: #F1F5F9 !important;
+    margin: 0 !important;
+  }
+
+  .cookie-actions {
+    flex-shrink: 0;
+  }
+
+  .cookie-actions .btn {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
   }
 
   .mobile-bar-btn {
