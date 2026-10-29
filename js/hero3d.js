@@ -48,37 +48,47 @@ export class Hero3DScene {
 
       // Camera
       const isMobile = width < 768;
-      this.camera = new THREE.PerspectiveCamera(isMobile ? 55 : 45, width / height, 0.1, 1000);
-      const camDist = isMobile ? 36 : 28;
-      this.camera.position.set(isMobile ? 14 : 22, isMobile ? 18 : 14, camDist);
-      this.camera.lookAt(0, isMobile ? 2 : 4, 0);
+      this.isMobile = isMobile;
+      this.camera = new THREE.PerspectiveCamera(isMobile ? 65 : 45, width / height, 0.1, 1000);
+      const camDist = isMobile ? 22 : 28;
+      const camX = isMobile ? 8 : 22;
+      const camY = isMobile ? 12 : 14;
+      this.camera.position.set(camX, camY, camDist);
+      this.camera.lookAt(0, isMobile ? 3.5 : 4.5, 0);
 
       // Renderer
-      this.renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true, powerPreference: 'high-performance' });
+      this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
       this.renderer.setSize(width, height);
-      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 2 : 2));
       this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      this.renderer.toneMappingExposure = 1.1;
+      this.renderer.toneMappingExposure = isMobile ? 1.4 : 1.1;
       this.container.appendChild(this.renderer.domElement);
 
       // Lights
-      const ambientLight = new THREE.AmbientLight(0x1B2834, 1.4);
+      const ambientLight = new THREE.AmbientLight(0x2A3B4D, isMobile ? 2.2 : 1.4);
       this.scene.add(ambientLight);
 
       // Warm Key Light (Brand Red accent warmth)
-      const keyLight = new THREE.DirectionalLight(0xEE1C25, 2.0);
+      const keyLight = new THREE.DirectionalLight(0xEE1C25, isMobile ? 3.2 : 2.0);
       keyLight.position.set(20, 30, 20);
       this.scene.add(keyLight);
 
       // Cool Fill Light (Industrial architectural white)
-      const fillLight = new THREE.DirectionalLight(0xF8F9FA, 1.6);
+      const fillLight = new THREE.DirectionalLight(0xF8F9FA, isMobile ? 2.4 : 1.6);
       fillLight.position.set(-20, 15, -15);
       this.scene.add(fillLight);
 
+      // Mobile Rim Light for crisp silhouette
+      if (isMobile) {
+        const rimLight = new THREE.DirectionalLight(0x4FA8FF, 1.8);
+        rimLight.position.set(0, -10, -20);
+        this.scene.add(rimLight);
+      }
+
       // Ground Blueprint Grid (Red major lines, dark steel minor lines)
-      const gridHelper = new THREE.GridHelper(60, 30, 0xEE1C25, 0x1B2834);
+      const gridHelper = new THREE.GridHelper(60, 30, 0xEE1C25, 0x22364A);
       gridHelper.position.y = -0.05;
-      gridHelper.material.opacity = 0.28;
+      gridHelper.material.opacity = isMobile ? 0.45 : 0.28;
       gridHelper.material.transparent = true;
       this.scene.add(gridHelper);
 
@@ -250,7 +260,8 @@ export class Hero3DScene {
     const width = this.container.clientWidth;
     const height = this.container.clientHeight;
     const isMobile = width < 768;
-    this.camera.fov = isMobile ? 55 : 45;
+    this.isMobile = isMobile;
+    this.camera.fov = isMobile ? 65 : 45;
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(width, height);
@@ -275,15 +286,18 @@ export class Hero3DScene {
 
     // Slow ambient rotation of structure
     if (this.structureGroup) {
-      this.structureGroup.rotation.y = elapsed * 0.06;
+      this.structureGroup.rotation.y = elapsed * 0.07;
       this.structureGroup.position.x = this.mouse.x * 1.5;
       this.structureGroup.position.z = this.mouse.y * 1.5;
     }
 
-    // Camera micro-movement
-    this.camera.position.x = 22 + this.mouse.x * 3;
-    this.camera.position.y = 14 + this.mouse.y * 2;
-    this.camera.lookAt(0, 4.5, 0);
+    // Camera micro-movement according to device
+    const baseX = this.isMobile ? 8 : 22;
+    const baseY = this.isMobile ? 12 : 14;
+    const lookY = this.isMobile ? 3.5 : 4.5;
+    this.camera.position.x = baseX + this.mouse.x * 2.5;
+    this.camera.position.y = baseY + this.mouse.y * 1.8;
+    this.camera.lookAt(0, lookY, 0);
 
     // Assembly drop-in animation
     this.members.forEach((m) => {
