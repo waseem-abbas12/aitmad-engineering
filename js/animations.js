@@ -29,10 +29,10 @@ export class AnimationEngine {
 
   // 1. Hero Cinematic Entrance Timeline
   initHeroCinematic() {
-    const heroContent = document.querySelector('.hero-content');
+    const heroContent = document.querySelector('.hero-main-col') || document.querySelector('.hero-content');
     if (!heroContent) return;
 
-    const tl = window.gsap.timeline({ delay: 0.2 });
+    const tl = window.gsap.timeline({ delay: 0.15 });
 
     const badge = heroContent.querySelector('.hero-badge-wrap');
     const eyebrow = heroContent.querySelector('.eyebrow');
@@ -40,20 +40,32 @@ export class AnimationEngine {
     const subtitle = heroContent.querySelector('.hero-subtitle');
     const bullets = heroContent.querySelector('.hero-bullets');
     const btnGroup = heroContent.querySelector('.hero-btn-group');
+    const bimCard = document.querySelector('.hero-bim-card');
     const scrollCue = document.querySelector('.hero-scroll-cue');
 
     const elements = [badge, eyebrow, title, subtitle, bullets, btnGroup].filter(Boolean);
 
-    window.gsap.set(elements, { autoAlpha: 0, y: 28 });
+    window.gsap.set(elements, { autoAlpha: 0, y: 24 });
+    if (bimCard) window.gsap.set(bimCard, { autoAlpha: 0, y: 24, scale: 0.98 });
     if (scrollCue) window.gsap.set(scrollCue, { autoAlpha: 0, y: 15 });
 
     tl.to(elements, {
       autoAlpha: 1,
       y: 0,
-      duration: 0.95,
-      stagger: 0.14,
+      duration: 0.85,
+      stagger: 0.12,
       ease: 'power3.out'
     });
+
+    if (bimCard) {
+      tl.to(bimCard, {
+        autoAlpha: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.85,
+        ease: 'power3.out'
+      }, '-=0.5');
+    }
 
     if (scrollCue) {
       tl.to(scrollCue, {

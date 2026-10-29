@@ -12,21 +12,19 @@
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: var(--pine-900);
   overflow: hidden;
   color: var(--ivory);
-  padding-top: 76px;
-  padding-bottom: 40px;
+  padding-top: clamp(80px, 9vh, 96px);
+  padding-bottom: 0;
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding-top: 66px;
-    padding-bottom: 24px;
-    justify-content: center;
+    min-height: auto;
+    padding-top: 72px;
+    padding-bottom: 0;
   }
 }
 
@@ -81,30 +79,193 @@
   }
 }
 
-.hero-content {
+/* 2-Column Hero Main Flex & Grid */
+.hero-container-flex {
+  flex: 1;
+  display: flex;
+  align-items: center;
   position: relative;
   z-index: 3;
-  max-width: 740px;
-  padding-block: var(--space-8);
-  margin-top: auto;
-  margin-bottom: auto;
+  padding-block: clamp(20px, 3.5vh, 40px);
+  width: 100%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.hero-main-col {
+  position: relative;
+  max-width: 680px;
 }
 
 @media (max-width: 768px) {
-  .hero-content {
-    padding-block: var(--space-6) var(--space-4);
+  .hero-main-col {
     text-align: left;
+    padding-bottom: 12px;
   }
-  html[dir="rtl"] .hero-content {
+  html[dir="rtl"] .hero-main-col {
     text-align: right;
   }
 }
 
+.hero-visual-col {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .hero-visual-col {
+    display: none;
+  }
+}
+
+/* Modern High-Tech BIM Console Card */
+.hero-bim-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(7, 18, 24, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px 22px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), 0 0 24px rgba(238, 28, 37, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.hero-bim-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(238, 28, 37, 0.35);
+}
+
+.bim-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bim-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #F8FAFC;
+  text-transform: uppercase;
+}
+
+.bim-live-beacon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  animation: beacon-pulse 2s infinite ease-in-out;
+}
+
+.bim-rotate-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  color: var(--copper-300);
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.bim-specs-overlay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.bim-spec-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: background 0.3s ease;
+}
+
+.bim-spec-pill:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.bim-spec-label {
+  font-size: 0.68rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.bim-spec-val {
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+}
+
+.bim-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.74rem;
+}
+
+.bim-status-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #94A3B8;
+}
+
+.bim-status-text svg {
+  color: var(--red-500);
+}
+
+.bim-inspect-link {
+  color: var(--copper-300);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.bim-inspect-link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
 .hero-title {
   color: var(--ivory);
-  margin-bottom: clamp(14px, 2.5vw, 24px);
+  margin-bottom: clamp(12px, 2vw, 20px);
   line-height: 1.1;
-  font-size: clamp(2.4rem, 6.8vw, 4.8rem);
+  font-size: clamp(2.3rem, 6vw, 4.4rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   text-wrap: balance;
@@ -112,7 +273,7 @@
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 2.35rem;
+    font-size: 2.15rem;
     line-height: 1.15;
     letter-spacing: -0.02em;
   }
@@ -181,9 +342,9 @@
 }
 
 .hero-subtitle {
-  font-size: clamp(0.96rem, 1.8vw, 1.15rem);
+  font-size: clamp(0.94rem, 1.6vw, 1.1rem);
   color: #E2E8F0;
-  line-height: 1.6;
+  line-height: 1.55;
   margin-bottom: 14px;
   max-width: 620px;
   font-weight: 400;
@@ -192,8 +353,8 @@
 
 @media (max-width: 480px) {
   .hero-subtitle {
-    font-size: 0.92rem;
-    line-height: 1.55;
+    font-size: 0.9rem;
+    line-height: 1.5;
     margin-bottom: 12px;
   }
 }
@@ -203,8 +364,8 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: clamp(20px, 3.5vw, 32px);
+  gap: 7px;
+  margin-bottom: clamp(18px, 3vw, 26px);
   max-width: 600px;
 }
 
@@ -212,7 +373,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: clamp(0.84rem, 1.4vw, 0.94rem);
+  font-size: clamp(0.82rem, 1.3vw, 0.92rem);
   color: #F8FAFC;
   line-height: 1.4;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
@@ -234,11 +395,11 @@
 
 @media (max-width: 640px) {
   .hero-bullets {
-    gap: 7px;
-    margin-bottom: 18px;
+    gap: 6px;
+    margin-bottom: 16px;
   }
   .hero-bullet-item {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     line-height: 1.35;
     gap: 8px;
   }
@@ -253,12 +414,12 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
-  margin-bottom: clamp(24px, 4vw, 42px);
+  margin-bottom: 0;
 }
 
 .hero-btn-group .btn,
 .hero-whatsapp-btn {
-  padding: 11px 20px;
+  padding: 10px 18px;
   font-size: 0.82rem;
   border-radius: 999px;
   letter-spacing: 0.05em;
@@ -269,7 +430,7 @@
 }
 
 .hero-badge-wrap {
-  margin-bottom: clamp(14px, 2.5vw, 24px);
+  margin-bottom: clamp(12px, 2vw, 18px);
 }
 
 .hero-live-pill {
@@ -283,7 +444,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 16px rgba(238, 28, 37, 0.15);
   padding: 6px 16px;
   border-radius: 999px;
-  font-size: clamp(0.74rem, 1.3vw, 0.84rem);
+  font-size: clamp(0.72rem, 1.2vw, 0.82rem);
   font-weight: 600;
   color: #FFFFFF;
   letter-spacing: 0.04em;
@@ -323,16 +484,18 @@
 }
 
 /* ==========================================================================
-   6.2 Hero Metric Ribbon (Industry Benchmark Counter Bar)
+   6.2 Hero Metric Ribbon (Docked Seamlessly At Hero Base)
    ========================================================================== */
 .hero-metric-ribbon {
-  background: #0B161E;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding-block: 28px;
+  background: rgba(7, 18, 24, 0.94);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-block: 20px;
   position: relative;
   z-index: 10;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .ribbon-grid {
@@ -345,13 +508,13 @@
 .ribbon-item {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex: 1;
 }
 
 .ribbon-num {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
   font-weight: 800;
   color: #FFFFFF;
   line-height: 1;
@@ -369,14 +532,14 @@
 }
 
 .ribbon-title {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 700;
   color: #F8FAFC;
   line-height: 1.25;
 }
 
 .ribbon-sub {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: #94A3B8;
   line-height: 1.35;
   margin-top: 2px;
@@ -384,7 +547,7 @@
 
 .ribbon-divider {
   width: 1px;
-  height: 44px;
+  height: 40px;
   background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.15), transparent);
 }
 

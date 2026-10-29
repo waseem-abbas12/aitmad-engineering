@@ -49,8 +49,8 @@ export const translations = {
     about_check_2: "Transparent Pricing: Detailed tonnage BOQ with zero hidden costs",
     about_check_3: "On-Time Handover: Sequence-controlled fabrication and rapid erection",
     about_cta_story: "Explore Our Full Story",
-    since_year: "1998",
-    since_label: "Engineering Trust",
+    since_year: "10+",
+    since_label: "Years of Trust",
 
     // Stats
     stat_completed: "Projects Completed",
@@ -142,7 +142,7 @@ export const translations = {
     form_success_msg: "Thank you for reaching out to Aitmad Engineering. Our senior project engineering director will review your specifications and contact you within 24 business hours.",
 
     // Footer
-    footer_tagline: "Built on Trust. Engineered in Steel. Delivering Pakistan's premier pre-engineered buildings and industrial steel infrastructure since 1998.",
+    footer_tagline: "Built on Trust. Engineered in Steel. Delivering Pakistan's premier pre-engineered buildings and industrial steel infrastructure with 10+ years of engineering excellence.",
     footer_quick_links: "Quick Navigation",
     footer_services: "Our Services",
     footer_contact_info: "Headquarters & Plant",
@@ -194,8 +194,8 @@ export const translations = {
     about_check_2: "شفاف قیمتیں: وزن اور مٹیریل کی مکمل تفصیل، کوئی پوشیدہ اخراجات نہیں",
     about_check_3: "بروقت ترسیل: جدید فیکٹری فیبریکیشن اور تیز ترین تنصیب",
     about_cta_story: "ہماری مکمل کہانی پڑھیں",
-    since_year: "1998",
-    since_label: "سنگِ بنیاد",
+    since_year: "10+",
+    since_label: "سالہ بے مثال اعتماد",
 
     // Stats
     stat_completed: "مکمل شدہ منصوبے",
@@ -287,7 +287,7 @@ export const translations = {
     form_success_msg: "اعتماد انجینئرنگ سے رابطہ کرنے کا شکریہ۔ ہمارے چیف انجینئر جلد آپ سے رابطہ فرمائیں گے۔",
 
     // Footer
-    footer_tagline: "تعمیر اعتماد پر، انجینئرنگ فولاد میں۔ 1998 سے پاکستان بھر میں معیاری اسٹیل اسٹرکچرز کی تعمیر کا رہنما نام۔",
+    footer_tagline: "تعمیر اعتماد پر، انجینئرنگ فولاد میں۔ 10 سال سے زائد عرصے سے پاکستان بھر میں معیاری اسٹیل اسٹرکچرز کی تعمیر کا رہنما نام۔",
     footer_quick_links: "فوری لنکس",
     footer_services: "ہماری خدمات",
     footer_contact_info: "ہیڈ آفس اور فیکٹری",
