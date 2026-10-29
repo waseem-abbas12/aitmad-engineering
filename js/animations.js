@@ -39,13 +39,13 @@ export class AnimationEngine {
     const title = heroContent.querySelector('.hero-title');
     const subtitle = heroContent.querySelector('.hero-subtitle');
     const btnGroup = heroContent.querySelector('.hero-btn-group');
-    const trustChips = heroContent.querySelector('.hero-trust-chips');
-    const glassBar = document.querySelector('.hero-glass-bar');
+    const metricDock = heroContent.querySelector('.hero-metric-dock');
+    const scrollCue = document.querySelector('.hero-scroll-cue');
 
-    const elements = [badge, eyebrow, title, subtitle, btnGroup, trustChips].filter(Boolean);
+    const elements = [badge, eyebrow, title, subtitle, btnGroup, metricDock].filter(Boolean);
 
     window.gsap.set(elements, { autoAlpha: 0, y: 28 });
-    if (glassBar) window.gsap.set(glassBar, { autoAlpha: 0, y: 20 });
+    if (scrollCue) window.gsap.set(scrollCue, { autoAlpha: 0, y: 15 });
 
     tl.to(elements, {
       autoAlpha: 1,
@@ -55,8 +55,8 @@ export class AnimationEngine {
       ease: 'power3.out'
     });
 
-    if (glassBar) {
-      tl.to(glassBar, {
+    if (scrollCue) {
+      tl.to(scrollCue, {
         autoAlpha: 1,
         y: 0,
         duration: 0.8,
