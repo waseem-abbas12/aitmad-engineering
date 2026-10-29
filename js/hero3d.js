@@ -47,14 +47,16 @@ export class Hero3DScene {
       this.scene.fog = new THREE.FogExp2(0x071218, 0.018);
 
       // Camera
-      this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-      this.camera.position.set(22, 14, 28);
-      this.camera.lookAt(0, 4, 0);
+      const isMobile = width < 768;
+      this.camera = new THREE.PerspectiveCamera(isMobile ? 55 : 45, width / height, 0.1, 1000);
+      const camDist = isMobile ? 36 : 28;
+      this.camera.position.set(isMobile ? 14 : 22, isMobile ? 18 : 14, camDist);
+      this.camera.lookAt(0, isMobile ? 2 : 4, 0);
 
       // Renderer
-      this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+      this.renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true, powerPreference: 'high-performance' });
       this.renderer.setSize(width, height);
-      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
       this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
       this.renderer.toneMappingExposure = 1.1;
       this.container.appendChild(this.renderer.domElement);
@@ -247,6 +249,8 @@ export class Hero3DScene {
     if (!this.container || !this.renderer) return;
     const width = this.container.clientWidth;
     const height = this.container.clientHeight;
+    const isMobile = width < 768;
+    this.camera.fov = isMobile ? 55 : 45;
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(width, height);
