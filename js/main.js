@@ -14,7 +14,9 @@ class AitmadApp {
     this.initPreloader();
     this.initHeader();
     this.initMobileMenu();
+    this.initScrollReveal();
     this.initScrollProgress();
+
     this.initBackToTop();
     this.initCustomCursor();
     this.initCookieNotice();
@@ -98,8 +100,33 @@ class AitmadApp {
     });
   }
 
+  // Scroll Reveal Animations (Phase 2 Animation System)
+  initScrollReveal() {
+    const revealElements = document.querySelectorAll('.reveal-up, .reveal-scale, .reveal-stagger');
+    if (revealElements.length === 0) return;
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+    } else {
+      revealElements.forEach(el => el.classList.add('is-revealed'));
+    }
+  }
+
   // Scroll Progress Bar (Spec 5.5)
   initScrollProgress() {
+
     const progressBar = document.getElementById('scroll-progress-bar');
     if (!progressBar) return;
 
@@ -199,10 +226,11 @@ class AitmadApp {
           }
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
 
     statCards.forEach(c => observer.observe(c));
   }
+
 
   runCounter(el) {
     const target = parseFloat(el.getAttribute('data-target'));
@@ -316,28 +344,30 @@ class AitmadApp {
     });
   }
 
-  // Card 3D Tilt on Desktop (Spec 6.5, 8: max 4 degrees)
+  // Card 3D Tilt on Desktop (Spec 6.5, 8: subtle 3.5 degrees)
   initCardTilt() {
     if (window.matchMedia('(hover: none) or (pointer: coarse)').matches) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    document.querySelectorAll('.service-card').forEach(card => {
+    const cards = document.querySelectorAll('.service-card, .bento-card, .showcase-card, .project-card');
+    cards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left - rect.width / 2;
         const y = e.clientY - rect.top - rect.height / 2;
 
-        const tiltX = -(y / (rect.height / 2)) * 4;
-        const tiltY = (x / (rect.width / 2)) * 4;
+        const tiltX = -(y / (rect.height / 2)) * 3.5;
+        const tiltY = (x / (rect.width / 2)) * 3.5;
 
-        card.style.transform = `perspective(800px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px)`;
+        card.style.transform = `perspective(900px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) translateY(-5px)`;
       });
 
       card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0)';
+        card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)';
       });
     });
   }
+
 
   initModules() {
     // 3D Hero Scene

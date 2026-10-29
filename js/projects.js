@@ -46,22 +46,27 @@ export class ProjectsManager {
         <a href="${detailHref}" class="showcase-card" aria-label="${p.title}">
           <div class="showcase-card-img-wrap">
             <img class="showcase-card-img" src="${imgSrc}" alt="${p.title}" loading="lazy">
+            <div style="position: absolute; top: 12px; left: 12px; display: flex; gap: 6px; z-index: 2;">
+              <span class="live-beacon"><span class="live-beacon-dot"></span> Completed</span>
+            </div>
           </div>
           <div class="showcase-card-body">
             <div class="showcase-card-chips">
               <span class="showcase-chip red">${p.category}</span>
-              <span class="showcase-chip">${p.span}</span>
+              <span class="showcase-chip">Span: ${p.span}</span>
+              <span class="showcase-chip">Steel: ${p.steelTonnage}</span>
             </div>
             <h3 class="showcase-card-title">${p.title}</h3>
             <p class="showcase-card-desc">${p.overview.substring(0, 115)}...</p>
             <div class="showcase-card-footer">
               <span>📍 ${p.location}</span>
-              <span style="color: var(--red-500); font-weight: 700;">Explore Specs →</span>
+              <span style="color: var(--red-500); font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">Explore Specs →</span>
             </div>
           </div>
         </a>
       `;
     }).join('');
+
 
     // Navigation buttons
     if (prevBtn) {
@@ -212,18 +217,22 @@ export class ProjectsManager {
       card.innerHTML = `
         <img class="project-card-img" src="${resolveAssetPath(p.cover)}" alt="${p.title}" loading="lazy">
         <div class="project-card-overlay">
-          <span class="project-card-badge">${p.category}</span>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span class="project-card-badge">${p.category}</span>
+            <span class="live-beacon"><span class="live-beacon-dot"></span> Certified</span>
+          </div>
           <h3 class="project-card-title">${p.title}</h3>
-          <div class="project-card-meta">
-            <span>${p.location}</span>
-            <span>•</span>
-            <span>${p.area}</span>
+          <div class="project-card-meta-chips">
+            <span class="meta-chip">📍 ${p.location}</span>
+            <span class="meta-chip">📐 ${p.area}</span>
+            <span class="meta-chip">⚖️ ${p.steelTonnage}</span>
           </div>
         </div>
         <div class="project-card-hover-action" aria-label="View Project">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       `;
+
 
       container.appendChild(card);
     });

@@ -18,6 +18,14 @@
   padding-top: 84px;
 }
 
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 76px;
+    padding-bottom: 20px;
+  }
+}
+
 #hero-3d-canvas {
   position: absolute;
   inset: 0;
@@ -25,7 +33,9 @@
   height: 100%;
   z-index: 1;
   pointer-events: none;
+  touch-action: pan-y;
 }
+
 
 .hero-fallback-bg {
   position: absolute;
@@ -328,6 +338,16 @@ html[dir="rtl"] .since-badge {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-8);
 }
+
+@media (max-width: 640px) {
+  .stats-grid {
+    gap: 14px;
+  }
+  .stat-card {
+    padding: 14px 8px;
+  }
+}
+
 
 @media (min-width: 1024px) {
   .stats-grid {

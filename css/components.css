@@ -28,6 +28,19 @@
   box-shadow: 0 8px 24px rgba(7, 18, 24, 0.4);
 }
 
+@media (max-width: 768px) {
+  .site-header {
+    height: 64px;
+    background-color: rgba(7, 18, 24, 0.98);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-dark);
+  }
+  .site-header.scrolled {
+    height: 60px;
+  }
+}
+
 .header-container {
   height: 100%;
   display: flex;
@@ -35,6 +48,14 @@
   justify-content: space-between;
   gap: var(--space-4);
 }
+
+@media (max-width: 480px) {
+  .header-container {
+    gap: 8px;
+    padding-inline: 14px;
+  }
+}
+
 
 /* Logo (UI/UX Optimized) */
 .site-logo {
@@ -333,7 +354,9 @@ html[dir="rtl"] .dropdown-link:hover {
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  background-color: var(--pine-900);
+  background-color: rgba(7, 18, 24, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -342,13 +365,15 @@ html[dir="rtl"] .dropdown-link:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 100px 32px 40px;
+  padding: 84px 24px 36px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
-  transition: opacity var(--transition-base), transform var(--transition-base), visibility var(--transition-base);
+  transform: translateY(-16px);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
 
 .mobile-menu.active {
   opacity: 1;
@@ -430,13 +455,32 @@ html[dir="rtl"] .mobile-menu-sublinks {
   white-space: nowrap;
 }
 
-/* Primary Button (Spec 5.3 - Signal Red CTA) */
+/* Primary Button (Spec 5.3 - Signal Red CTA with Shimmer Reflection) */
 .btn-primary {
   background-color: var(--red-500);
   color: var(--white);
   border-color: var(--red-500);
   font-weight: 700;
   box-shadow: 0 4px 14px var(--red-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(30deg);
+  transition: all 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-primary:hover::after {
+  left: 130%;
 }
 
 .btn-primary:hover {
@@ -446,6 +490,7 @@ html[dir="rtl"] .mobile-menu-sublinks {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px var(--red-glow);
 }
+
 
 .btn-primary .btn-arrow {
   transition: transform var(--transition-fast);
@@ -1126,6 +1171,30 @@ html[dir="rtl"] .cookie-banner {
   gap: 6px;
 }
 
+.project-card-meta-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #F3F4F6;
+  background: rgba(7, 18, 24, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 3px 8px;
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
 .project-card-hover-action {
   position: absolute;
   top: 20px;
@@ -1321,8 +1390,36 @@ html[dir="rtl"] .project-card-hover-action {
 
 @media (max-width: 900px) {
   .showcase-card {
-    flex: 0 0 85%;
+    flex: 0 0 75%;
     min-width: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .showcase-slider-container {
+    padding: 8px 0 20px;
+  }
+  .showcase-track {
+    gap: 14px;
+    padding: 6px 16px 18px;
+    scroll-padding: 0 16px;
+  }
+  .showcase-card {
+    flex: 0 0 86vw;
+    min-width: 250px;
+    max-width: 320px;
+    border-radius: 14px;
+  }
+  .showcase-card-body {
+    padding: 16px;
+  }
+  .showcase-card-title {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  .showcase-card-desc {
+    font-size: 0.82rem;
+    margin-bottom: 14px;
   }
 }
 
@@ -1363,6 +1460,30 @@ html[dir="rtl"] .project-card-hover-action {
   .bento-card.col-4,
   .bento-card.col-6 {
     grid-column: span 12;
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-grid {
+    gap: 16px;
+    margin-top: var(--space-4);
+  }
+  .bento-card {
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+  .bento-card-title {
+    font-size: 1.25rem;
+  }
+  .bento-card-desc {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+  .bento-icon-badge {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    margin-bottom: 14px;
   }
 }
 
@@ -1427,6 +1548,27 @@ html[dir="rtl"] .project-card-hover-action {
   gap: 10px;
   margin-bottom: var(--space-8);
   align-items: center;
+}
+
+@media (max-width: 640px) {
+  .filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-chip {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
 }
 
 .filter-chip {
@@ -1671,3 +1813,155 @@ html[dir="rtl"] .accordion-header {
 .accordion-item.active .accordion-body {
   padding-bottom: 20px;
 }
+
+/* ==========================================================================
+   Mobile Bottom Quick Action Bar (App-like UX)
+   ========================================================================== */
+.mobile-bottom-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    background: rgba(7, 18, 24, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    z-index: 950;
+    padding: 6px 10px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.45);
+    padding-bottom: max(6px, env(safe-area-inset-bottom));
+  }
+
+  /* Body bottom padding so content and footer are not hidden */
+  body {
+    padding-bottom: 64px;
+  }
+
+  /* Elevate floating whatsapp and back to top so they don't collide */
+  .floating-whatsapp {
+    bottom: 74px !important;
+    right: 16px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+  html[dir="rtl"] .floating-whatsapp {
+    right: auto !important;
+    left: 16px !important;
+  }
+
+  .back-to-top {
+    bottom: 130px !important;
+    right: 18px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  html[dir="rtl"] .back-to-top {
+    right: auto !important;
+    left: 18px !important;
+  }
+
+  .mobile-bar-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    color: #9CA3AF;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    flex: 1;
+    padding: 4px 2px;
+    border-radius: 8px;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .mobile-bar-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.2;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-bar-btn:active, .mobile-bar-btn.active {
+    color: var(--white);
+    transform: scale(0.96);
+  }
+
+  .mobile-bar-btn:hover {
+    color: var(--white);
+  }
+
+  .mobile-bar-btn.quote-btn {
+    background: var(--red-500);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 9px 12px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px var(--red-glow);
+    flex: 1.4;
+    flex-direction: row;
+    gap: 6px;
+    font-size: 0.78rem;
+  }
+
+  .mobile-bar-btn.quote-btn:active {
+    background: var(--red-600);
+    transform: scale(0.97);
+  }
+}
+
+/* ==========================================================================
+   Industrial Text Ticker Strip (Phase 2 Animation System)
+   ========================================================================== */
+.industrial-ticker {
+  background: var(--black-900);
+  border-block: 1px solid rgba(238, 28, 37, 0.28);
+  padding: 14px 0;
+  overflow: hidden;
+  display: flex;
+  user-select: none;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-shrink: 0;
+  animation: ticker-scroll 28s linear infinite;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.ticker-dot {
+  color: var(--red-500);
+  font-size: 1.25rem;
+  display: inline-block;
+  line-height: 1;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+html[dir="rtl"] @keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+
