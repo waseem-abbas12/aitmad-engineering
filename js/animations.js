@@ -38,11 +38,12 @@ export class AnimationEngine {
     const eyebrow = heroContent.querySelector('.eyebrow');
     const title = heroContent.querySelector('.hero-title');
     const subtitle = heroContent.querySelector('.hero-subtitle');
+    const bullets = heroContent.querySelector('.hero-bullets');
     const btnGroup = heroContent.querySelector('.hero-btn-group');
     const metricDock = heroContent.querySelector('.hero-metric-dock');
     const scrollCue = document.querySelector('.hero-scroll-cue');
 
-    const elements = [badge, eyebrow, title, subtitle, btnGroup, metricDock].filter(Boolean);
+    const elements = [badge, eyebrow, title, subtitle, bullets, btnGroup, metricDock].filter(Boolean);
 
     window.gsap.set(elements, { autoAlpha: 0, y: 28 });
     if (scrollCue) window.gsap.set(scrollCue, { autoAlpha: 0, y: 15 });

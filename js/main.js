@@ -216,22 +216,22 @@ class AitmadApp {
 
   // Animated Stats Counters (Spec 6.4: 1.8s ease-out)
   initCounters() {
-    const statCards = document.querySelectorAll('.stat-card');
-    if (statCards.length === 0) return;
+    const targets = document.querySelectorAll('[data-target]');
+    if (targets.length === 0) return;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const numEl = entry.target.querySelector('[data-target]');
-          if (numEl && !numEl.classList.contains('counted')) {
-            numEl.classList.add('counted');
-            this.runCounter(numEl);
+          const el = entry.target;
+          if (!el.classList.contains('counted')) {
+            el.classList.add('counted');
+            this.runCounter(el);
           }
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -10px 0px' });
 
-    statCards.forEach(c => observer.observe(c));
+    targets.forEach(t => observer.observe(t));
   }
 
 

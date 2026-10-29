@@ -16,16 +16,16 @@
   background-color: var(--pine-900);
   overflow: hidden;
   color: var(--ivory);
-  padding-top: clamp(74px, 10vh, 100px);
-  padding-bottom: clamp(60px, 8vh, 90px);
+  padding-top: 76px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 768px) {
   .hero-section {
     min-height: 100vh;
     min-height: 100dvh;
-    padding-top: 86px;
-    padding-bottom: 30px;
+    padding-top: 66px;
+    padding-bottom: 24px;
     justify-content: center;
   }
 }
@@ -181,18 +181,70 @@
 }
 
 .hero-subtitle {
-  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
-  color: var(--steel-light);
-  line-height: 1.65;
-  margin-bottom: clamp(20px, 3.5vw, 36px);
+  font-size: clamp(0.96rem, 1.8vw, 1.15rem);
+  color: #E2E8F0;
+  line-height: 1.6;
+  margin-bottom: 14px;
   max-width: 620px;
+  font-weight: 400;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 480px) {
   .hero-subtitle {
     font-size: 0.92rem;
-    line-height: 1.6;
-    margin-bottom: 22px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+}
+
+/* Crisp High-Impact Engineering Bullets */
+.hero-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: clamp(20px, 3.5vw, 32px);
+  max-width: 600px;
+}
+
+.hero-bullet-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(0.84rem, 1.4vw, 0.94rem);
+  color: #F8FAFC;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-bullet-item strong {
+  color: var(--copper-300);
+  font-weight: 700;
+}
+
+.hero-bullet-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--red-500);
+  box-shadow: 0 0 8px var(--red-500);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .hero-bullets {
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+  .hero-bullet-item {
+    font-size: 0.8rem;
+    line-height: 1.35;
+    gap: 8px;
+  }
+  .hero-bullet-dot {
+    width: 6px;
+    height: 6px;
   }
 }
 
