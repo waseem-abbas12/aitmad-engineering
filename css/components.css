@@ -1572,12 +1572,14 @@ html[dir="rtl"] @keyframes showcase-marquee-scroll {
 
 @media (max-width: 768px) {
   .bento-grid {
+    grid-template-columns: 1fr;
     gap: 16px;
     margin-top: var(--space-4);
   }
   .bento-card {
     padding: 22px 18px;
     border-radius: 14px;
+    min-height: auto;
   }
   .bento-card-bg {
     opacity: 0.32;
