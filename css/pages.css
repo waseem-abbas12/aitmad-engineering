@@ -68,14 +68,14 @@
 .hero-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(7, 18, 24, 0.12) 0%, rgba(7, 18, 24, 0.38) 65%, rgba(7, 18, 24, 0.62) 100%);
+  background: radial-gradient(circle at 50% 50%, transparent 45%, rgba(7, 18, 24, 0.25) 100%);
   z-index: 2;
   pointer-events: none;
 }
 
 @media (max-width: 768px) {
   .hero-vignette {
-    background: radial-gradient(circle at 50% 40%, rgba(7, 18, 24, 0.18) 0%, rgba(7, 18, 24, 0.42) 65%, rgba(7, 18, 24, 0.65) 100%);
+    display: none !important;
   }
 }
 
@@ -925,15 +925,9 @@ html[dir="rtl"] .since-badge {
    6.8 Construction Pathway Roadmap (Unique Winding Step Highway)
    ========================================================================== */
 .process-pathway-section {
-  background: var(--pine-900);
-  background-image: 
-    radial-gradient(circle at 15% 20%, rgba(238, 28, 37, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(184, 115, 51, 0.08) 0%, transparent 40%),
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 64px 64px, 64px 64px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--ivory);
+  border-top: 1px solid var(--stone);
+  border-bottom: 1px solid var(--stone);
   position: relative;
   overflow: hidden;
   padding-block: clamp(60px, 8vw, 100px);
@@ -959,6 +953,7 @@ html[dir="rtl"] .since-badge {
 .animated-path-flow {
   stroke-dasharray: 20 10;
   animation: path-flow-dash 30s linear infinite;
+  stroke: rgba(238, 28, 37, 0.45);
 }
 
 @keyframes path-flow-dash {
@@ -992,13 +987,11 @@ html[dir="rtl"] .since-badge {
 }
 
 .pathway-card {
-  background: rgba(11, 22, 30, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--white);
+  border: 1px solid var(--stone);
   border-radius: 16px;
   padding: 24px 22px;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
@@ -1021,7 +1014,7 @@ html[dir="rtl"] .since-badge {
 .pathway-card:hover {
   transform: translateY(-8px);
   border-color: rgba(238, 28, 37, 0.6);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 24px rgba(238, 28, 37, 0.2);
+  box-shadow: var(--shadow-hover), 0 0 20px rgba(238, 28, 37, 0.15);
 }
 
 .pathway-card:hover::before {
@@ -1047,7 +1040,7 @@ html[dir="rtl"] .since-badge {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 800;
-  box-shadow: 0 0 16px rgba(238, 28, 37, 0.5);
+  box-shadow: 0 0 16px rgba(238, 28, 37, 0.4);
   position: relative;
 }
 
@@ -1056,7 +1049,7 @@ html[dir="rtl"] .since-badge {
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 1px solid rgba(238, 28, 37, 0.5);
+  border: 1px solid rgba(238, 28, 37, 0.4);
   animation: beacon-pulse-red 2.5s infinite ease-in-out;
 }
 
@@ -1065,9 +1058,9 @@ html[dir="rtl"] .since-badge {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--copper-300);
-  background: rgba(184, 115, 51, 0.12);
-  border: 1px solid rgba(184, 115, 51, 0.3);
+  color: var(--red-600);
+  background: rgba(238, 28, 37, 0.08);
+  border: 1px solid rgba(238, 28, 37, 0.25);
   padding: 3px 10px;
   border-radius: 999px;
 }
@@ -1075,18 +1068,19 @@ html[dir="rtl"] .since-badge {
 .pathway-title {
   font-size: 1.22rem;
   font-weight: 800;
-  color: #FFFFFF !important;
+  color: var(--black-950) !important;
   margin-bottom: 10px;
   letter-spacing: -0.015em;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: none !important;
 }
 
 .pathway-desc {
   font-size: 0.88rem;
-  color: #CBD5E1 !important;
+  color: #334155 !important;
   line-height: 1.6;
   margin-bottom: 16px;
   flex-grow: 1;
+  font-weight: 450;
 }
 
 .pathway-deliverables {
@@ -1095,9 +1089,10 @@ html[dir="rtl"] .since-badge {
   flex-direction: column;
   gap: 6px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--stone);
   font-size: 0.8rem;
-  color: #E2E8F0;
+  color: #1E293B !important;
+  font-weight: 500;
 }
 
 .pathway-deliverables li {
@@ -1105,9 +1100,9 @@ html[dir="rtl"] .since-badge {
   align-items: center;
   gap: 8px;
 }
-  font-size: 0.85rem;
-  color: var(--steel);
-  line-height: 1.5;
+
+.pathway-deliverables li strong {
+  color: var(--red-500) !important;
 }
 
 /* ==========================================================================

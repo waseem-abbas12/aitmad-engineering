@@ -16,7 +16,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color-scheme: only light;
+  color-scheme: light !important;
+  -webkit-color-scheme: light !important;
   background-color: var(--ivory);
   color: var(--ink);
   overflow-x: hidden;
@@ -29,11 +30,19 @@ body {
   line-height: 1.7;
   color: var(--ink);
   background-color: var(--ivory);
+  color-scheme: light !important;
+  -webkit-color-scheme: light !important;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+#main-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
 }
 
 /* RTL Urdu Configuration */
@@ -113,7 +122,7 @@ p:last-child {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Explicit High-Contrast for Light Sections */
+/* Explicit High-Contrast for Light Sections (Safely Scoped) */
 .bg-ivory h1, .bg-ivory h2, .bg-ivory h3,
 .bg-white h1, .bg-white h2, .bg-white h3 {
   color: var(--black-950) !important;
@@ -123,6 +132,33 @@ p:last-child {
 .bg-ivory p, .bg-white p {
   color: #1E293B !important;
   font-weight: 450;
+}
+
+/* Bento Card Text Contrast for Crisp Architectural Cards */
+.bento-card .bento-card-title {
+  color: var(--black-950) !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+}
+
+.bento-card .bento-card-desc {
+  color: #475569 !important;
+  font-weight: 450 !important;
+  text-shadow: none !important;
+}
+
+.bento-card .bento-card-link,
+.bento-card .bento-card-link span {
+  color: var(--red-600) !important;
+  font-weight: 700;
+}
+
+.since-badge .since-badge-num {
+  color: var(--copper-300) !important;
+}
+
+.since-badge .since-badge-lbl {
+  color: var(--steel-light) !important;
 }
 
 a {
@@ -147,10 +183,10 @@ img, svg {
   z-index: 0;
   overflow: hidden;
   background-image: 
-    radial-gradient(circle at 12% 18%, rgba(238, 28, 37, 0.05) 0%, transparent 45%),
-    radial-gradient(circle at 88% 68%, rgba(184, 115, 51, 0.04) 0%, transparent 50%),
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 12% 18%, rgba(238, 28, 37, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 88% 68%, rgba(184, 115, 51, 0.03) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 72px 72px, 72px 72px;
 }
 
@@ -159,11 +195,18 @@ img, svg {
   position: absolute;
   inset: -30%;
   background-image: 
-    radial-gradient(2px 2px at 36px 36px, rgba(238, 28, 37, 0.3), transparent),
-    radial-gradient(2px 2px at 108px 108px, rgba(255, 255, 255, 0.22), transparent);
+    radial-gradient(2px 2px at 36px 36px, rgba(238, 28, 37, 0.25), transparent),
+    radial-gradient(2px 2px at 108px 108px, rgba(255, 255, 255, 0.18), transparent);
   background-size: 144px 144px;
   animation: ambient-3d-drift 80s linear infinite;
-  opacity: 0.7;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  /* Disable fixed heavy animated layer on mobile to eliminate GPU compositor blur/bleed */
+  .global-3d-ambient-grid {
+    display: none !important;
+  }
 }
 
 @keyframes ambient-3d-drift {

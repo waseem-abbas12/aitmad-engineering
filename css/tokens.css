@@ -5,7 +5,7 @@
  */
 
 :root {
-  color-scheme: only light;
+  color-scheme: light !important;
 
   /* Brand Primary: Deep Obsidian & Carbon Black (Sampled directly from official logo) */
   --black-950: #04080B;
@@ -43,9 +43,9 @@
   --graphite: #0F172A;
   --steel: #334155; /* Deeper contrast for light backgrounds */
   --steel-light: #E2E8F0; /* Razor-sharp contrast on dark backgrounds */
-  --stone: #CBD5E1;
-  --stone-light: #F1F5F9;
-  --ivory: #F8F9FA; /* Crisp architectural white background */
+  --stone: #E2E8F0;
+  --stone-light: #F8FAFC;
+  --ivory: #FFFFFF; /* Pure architectural white background */
   --white: #FFFFFF;
 
   /* Transparent Tints & Overlays */
