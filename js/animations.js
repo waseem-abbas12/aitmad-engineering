@@ -40,7 +40,7 @@ export class AnimationEngine {
     const subtitle = heroContent.querySelector('.hero-subtitle');
     const bullets = heroContent.querySelector('.hero-bullets');
     const btnGroup = heroContent.querySelector('.hero-btn-group');
-    const bimCard = document.querySelector('.hero-bim-card');
+    const bimCard = document.querySelector('.hero-project-spotlight, .hero-bim-card');
     const scrollCue = document.querySelector('.hero-scroll-cue');
 
     const elements = [badge, eyebrow, title, subtitle, bullets, btnGroup].filter(Boolean);
