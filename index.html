@@ -150,9 +150,6 @@
             <a href="pages/projects.html" class="nav-link" data-i18n="nav_projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a href="#steel-cost-estimator" class="nav-link" style="color: var(--red-500); font-weight: 700;">Estimator</a>
-          </li>
-          <li class="nav-item">
             <a href="pages/process.html" class="nav-link" data-i18n="nav_process">Process</a>
           </li>
           <li class="nav-item">
@@ -208,7 +205,6 @@
           <li><a href="pages/service-consultancy.html">Design & BIM Consultancy</a></li>
         </ul>
       <li><a href="pages/projects.html" class="mobile-menu-link" data-i18n="nav_projects">Projects</a></li>
-      <li><a href="#steel-cost-estimator" class="mobile-menu-link" style="color: var(--red-500); font-weight: 700;">Cost Estimator ⚡</a></li>
       <li><a href="pages/process.html" class="mobile-menu-link" data-i18n="nav_process">Process</a></li>
       <li><a href="pages/why-aitmad.html" class="mobile-menu-link" data-i18n="nav_why_aitmad">Why Aitmad</a></li>
       <li><a href="pages/contact.html" class="mobile-menu-link" data-i18n="nav_contact">Contact</a></li>
@@ -847,169 +843,7 @@
       </div>
     </section>
 
-    <!-- 6.75 Interactive Steel Cost & Tonnage Estimator (tsptensile Inspired Parametric Tool) -->
-    <section class="section bg-ivory" id="steel-cost-estimator" aria-label="Interactive Steel Cost Estimator" style="border-top: 1px solid var(--stone); border-bottom: 1px solid var(--stone);">
-      <div class="container">
-        <!-- Section Header -->
-        <div style="text-align: center; max-width: 760px; margin-inline: auto; margin-bottom: clamp(32px, 5vw, 56px);">
-          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(238, 28, 37, 0.08); border: 1px solid rgba(238, 28, 37, 0.25); padding: 4px 14px; border-radius: 999px; margin-bottom: 12px;">
-            <span class="hero-pulse-dot" style="background: var(--red-500);"></span>
-            <span style="font-size: 0.78rem; font-weight: 700; color: var(--red-600); text-transform: uppercase; letter-spacing: 0.1em;">Parametric Engineering Estimator</span>
-          </div>
-          <h2 style="color: var(--black-950); font-size: clamp(2rem, 3.8vw, 2.8rem); font-weight: 800; margin-bottom: 14px;">
-            Instant Steel Building & PEB Cost Calculator
-          </h2>
-          <p style="color: var(--steel); font-size: 1.05rem; line-height: 1.6;">
-            Select your facility type, adjust covered area in square feet, and get an immediate ballpark quotation, estimated structural steel tonnage, and project handover timeline.
-          </p>
-        </div>
 
-        <!-- Calculator Root -->
-        <div id="steel-calculator-root">
-          <div class="calc-container">
-            <!-- Left Controls Column -->
-            <div class="calc-controls-col">
-              <!-- Step 1: Building Type -->
-              <div style="margin-bottom: 24px;">
-                <label class="calc-label" style="display: block; margin-bottom: 10px;">
-                  1. Select Building Type
-                </label>
-                <div class="calc-type-grid">
-                  <button type="button" class="calc-type-btn active" data-type="peb-warehouse">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10v11M15 10v11"/></svg>
-                    <span>PEB Warehouse</span>
-                  </button>
-                  <button type="button" class="calc-type-btn" data-type="factory-shed">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6M2 20h20"/></svg>
-                    <span>Industrial Factory Shed</span>
-                  </button>
-                  <button type="button" class="calc-type-btn" data-type="cold-storage">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg>
-                    <span>Cold Storage & Agro</span>
-                  </button>
-                  <button type="button" class="calc-type-btn" data-type="logistics-park">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16M2 7h20M12 2v20M7 7l5 15M17 7l-5 15"/></svg>
-                    <span>Clear-Span Logistics Hub</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Step 2: Covered Area Slider -->
-              <div class="calc-slider-box">
-                <div class="calc-slider-header">
-                  <label class="calc-label" for="calc-area-slider">
-                    2. Covered Area (Square Feet)
-                  </label>
-                  <span class="calc-area-badge" id="calc-area-display">25,000 sq.ft</span>
-                </div>
-                <input type="range" class="calc-range" id="calc-area-slider" min="5000" max="150000" step="1000" value="25000" aria-label="Covered Area Slider">
-                
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
-                  <span style="font-size: 0.75rem; color: #94A3B8; font-weight: 600;">5,000 sq.ft</span>
-                  <div style="display: flex; align-items: center; gap: 8px;">
-                    <span style="font-size: 0.8rem; color: var(--steel); font-weight: 600;">Exact Area:</span>
-                    <input type="number" id="calc-area-input" value="25000" min="1000" max="300000" step="500" style="width: 100px; padding: 4px 8px; border: 1px solid var(--stone); border-radius: 6px; font-weight: 700; text-align: center; color: var(--black-950);">
-                  </div>
-                  <span style="font-size: 0.75rem; color: #94A3B8; font-weight: 600;">150,000+ sq.ft</span>
-                </div>
-
-                <!-- Quick Presets -->
-                <div class="calc-presets-row">
-                  <span style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; color: #64748B;">Quick Select:</span>
-                  <button type="button" class="calc-preset-pill" data-sqft="10000">10,000 sq.ft</button>
-                  <button type="button" class="calc-preset-pill" data-sqft="25000">25,000 sq.ft</button>
-                  <button type="button" class="calc-preset-pill" data-sqft="50000">50,000 sq.ft</button>
-                  <button type="button" class="calc-preset-pill" data-sqft="100000">100,000 sq.ft</button>
-                </div>
-              </div>
-
-              <!-- Step 3 & 4: Eave Height and Crane Support -->
-              <div class="calc-options-grid">
-                <!-- Eave Height -->
-                <div class="calc-pill-group">
-                  <label class="calc-label">3. Eave Height</label>
-                  <button type="button" class="calc-opt-btn" data-height="6m">
-                    <span>6m (20 ft) Standard</span>
-                  </button>
-                  <button type="button" class="calc-opt-btn active" data-height="9m">
-                    <span>9m (30 ft) High Eave</span>
-                  </button>
-                  <button type="button" class="calc-opt-btn" data-height="12m">
-                    <span>12m (40 ft) Extra High</span>
-                  </button>
-                </div>
-
-                <!-- Crane Options -->
-                <div class="calc-pill-group">
-                  <label class="calc-label">4. Overhead Crane</label>
-                  <button type="button" class="calc-opt-btn active" data-crane="none">
-                    <span>No Crane Needed</span>
-                  </button>
-                  <button type="button" class="calc-opt-btn" data-crane="5ton">
-                    <span>5 - 10 Ton EOT Crane</span>
-                  </button>
-                  <button type="button" class="calc-opt-btn" data-crane="20ton">
-                    <span>15 - 30 Ton Heavy Crane</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Output Summary Column -->
-            <div class="calc-summary-col">
-              <div>
-                <div class="calc-summary-header">
-                  <div class="calc-summary-title">Preliminary Engineering Estimate</div>
-                  <div class="calc-price-main" id="calc-total-range">PKR 1.15 – 1.45 Crore</div>
-                  <div class="calc-rate-sub" id="calc-rate-range">PKR 450 – 580 / sq.ft</div>
-                </div>
-
-                <!-- Engineering Metrics Grid -->
-                <div class="calc-metrics-grid">
-                  <div class="calc-metric-card">
-                    <div class="calc-metric-lbl">Est. Steel Tonnage</div>
-                    <div class="calc-metric-val" id="calc-tonnage" data-current-val="0">85 Tons</div>
-                  </div>
-                  <div class="calc-metric-card">
-                    <div class="calc-metric-lbl">Erection Timeline</div>
-                    <div class="calc-metric-val" id="calc-timeline">7 to 9 Weeks</div>
-                  </div>
-                </div>
-
-                <!-- Technical Specification Highlights -->
-                <ul class="calc-specs-list">
-                  <li class="calc-specs-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span><strong>Clear-Span:</strong> <span id="calc-span-feasibility">Up to 60m 100% Column-Free</span></span>
-                  </li>
-                  <li class="calc-specs-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span><strong>Roofing:</strong> <span id="calc-roof-spec">0.50mm Standing Seam 360° Seam</span></span>
-                  </li>
-                  <li class="calc-specs-item">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span><strong>Compliance:</strong> ASTM A572 Grade 50 • Tekla LOD 400</span>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Instant WhatsApp 1-Click BOQ Button with Radar Pulse -->
-              <div>
-                <a href="https://wa.me/924235789000" id="calc-whatsapp-btn" target="_blank" rel="noopener" class="calc-wa-cta" aria-label="Request Official BOQ on WhatsApp">
-                  <div class="wa-icon-glow"></div>
-                  <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.968.828 2.796.828 3.182 0 5.769-2.587 5.769-5.766.001-3.182-2.585-5.781-5.769-5.781zm3.385 8.163c-.145.411-.836.784-1.184.832-.349.05-.79.071-2.285-.547-1.782-.738-2.92-2.56-3.009-2.678-.089-.118-.718-.956-.718-1.82 0-.865.452-1.291.613-1.467.161-.176.353-.22.47-.22.119 0 .237.001.341.006.111.005.259-.042.404.307.149.359.509 1.242.553 1.332.045.09.074.195.015.313-.059.12-.089.194-.176.297-.089.103-.187.23-.267.31-.089.088-.182.184-.078.362.103.178.461.761.99 1.232.68.607 1.254.795 1.432.884.179.088.283.074.388-.045.105-.118.452-.526.572-.705.12-.18.239-.15.401-.09.162.059 1.026.484 1.203.573.177.089.295.133.339.208.045.074.045.43-.1 1.002z"/></svg>
-                  <span>Get Official BOQ on WhatsApp</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <p style="text-align: center; font-size: 0.74rem; color: #94A3B8; margin-top: 10px; margin-bottom: 0;">
-                  ⚡ Instant Response from Senior Structural Estimator within 15 Minutes
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- 6.8 Process (Industrial Engineering Construction Pathway) -->
     <section class="section process-pathway-section" aria-label="Systematic Process">
@@ -1395,7 +1229,5 @@
 
   <!-- Main ES Module -->
   <script type="module" src="js/main.js?v=2"></script>
-  <!-- Interactive Steel Estimator Module -->
-  <script src="js/calculator.js?v=1"></script>
 </body>
 </html>
