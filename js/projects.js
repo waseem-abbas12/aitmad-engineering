@@ -65,7 +65,7 @@ export class ProjectsManager {
               <span class="meta-chip">⚖️ ${p.steelTonnage}</span>
             </div>
             <div class="showcase-card-footer">
-              <span style="font-size: 0.8rem; color: #9CA3AF;">Handover: ${p.year}</span>
+              <span style="font-size: 0.84rem; color: #334155; font-weight: 700;">Handover: ${p.year}</span>
               <span style="color: var(--red-500); font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">Explore Specs →</span>
             </div>
           </div>

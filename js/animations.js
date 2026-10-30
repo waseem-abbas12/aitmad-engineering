@@ -25,6 +25,7 @@ export class AnimationEngine {
     this.initGSAPCounters();
     this.initMagneticCardTilt();
     this.initParallaxScrub();
+    this.initSteelBackgroundParallax();
   }
 
   // 1. Hero Cinematic Entrance Timeline
@@ -212,5 +213,79 @@ export class AnimationEngine {
         }
       });
     });
+  }
+
+  // 6. Smooth Ambient Steel Elements Scroll Parallax (tsptensile inspired)
+  initSteelBackgroundParallax() {
+    if (!this.hasScrollTrigger) return;
+
+    const beams = document.querySelectorAll('.steel-beam-float');
+    const trusses = document.querySelectorAll('.steel-truss-float');
+    const grids = document.querySelectorAll('.steel-grid-float');
+    const struts = document.querySelectorAll('.steel-strut-float');
+
+    if (beams.length) {
+      beams.forEach((beam, idx) => {
+        window.gsap.to(beam, {
+          y: -140 * (idx % 2 === 0 ? 1 : 0.8),
+          rotation: 15 * (idx % 2 === 0 ? 1 : -1),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: beam.closest('section') || 'body',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1.8
+          }
+        });
+      });
+    }
+
+    if (trusses.length) {
+      trusses.forEach((truss, idx) => {
+        window.gsap.to(truss, {
+          y: -180 * (idx % 2 === 0 ? 1 : 0.8),
+          rotation: -10 * (idx % 2 === 0 ? 1 : -1),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: truss.closest('section') || 'body',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 2.2
+          }
+        });
+      });
+    }
+
+    if (grids.length) {
+      grids.forEach(grid => {
+        window.gsap.to(grid, {
+          y: -120,
+          rotation: 30,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: grid.closest('section') || 'body',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1.5
+          }
+        });
+      });
+    }
+
+    if (struts.length) {
+      struts.forEach(strut => {
+        window.gsap.to(strut, {
+          y: -160,
+          rotation: 12,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: strut.closest('section') || 'body',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 2.0
+          }
+        });
+      });
+    }
   }
 }
