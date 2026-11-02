@@ -99,7 +99,7 @@ export class QuoteFormHandler {
         <p style="color: var(--steel); font-size: 0.95rem; line-height: 1.6; max-width: 480px; margin: 0 auto 28px;">
           Thank you for providing your project details. Our Senior Structural Engineering Director is reviewing your dimensional requirements and will reach out with preliminary calculations and a detailed proposal within 24 business hours.
         </p>
-        <a href="https://wa.me/924235789000?text=Hello%20Aitmad%20Engineering,%20I%20just%20submitted%20a%20quote%20request%20on%20your%20website." target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="https://wa.me/923004589192?text=Hello%20Aitmad%20Engineering,%20I%20just%20submitted%20a%20quote%20request%20on%20your%20website." target="_blank" rel="noopener" class="btn btn-primary">
           <span>Speed Up on WhatsApp</span>
         </a>
       </div>

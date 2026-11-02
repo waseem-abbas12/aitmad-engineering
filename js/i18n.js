@@ -14,7 +14,7 @@ export const translations = {
     nav_why_aitmad: "Why Aitmad",
     nav_contact: "Contact",
     nav_quote_btn: "Request a Quote",
-    nav_phone_label: "+92 42 3578 9000",
+    nav_phone_label: "+92 300 4589192",
 
     // Hero
     hero_eyebrow: "Steel Building Specialists",
@@ -159,7 +159,7 @@ export const translations = {
     nav_why_aitmad: "اعتماد کیوں؟",
     nav_contact: "رابطہ کریں",
     nav_quote_btn: "تخمینہ حاصل کریں",
-    nav_phone_label: "042 3578 9000",
+    nav_phone_label: "0300 4589192",
 
     // Hero
     hero_eyebrow: "اسٹیل بلڈنگ کے ماہرین",
