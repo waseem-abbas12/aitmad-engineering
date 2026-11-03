@@ -202,6 +202,7 @@ class AitmadApp {
     if (!accepted) {
       setTimeout(() => {
         banner.classList.add('visible');
+        document.body.classList.add('cookie-banner-active');
       }, 1500);
     }
 
@@ -210,6 +211,7 @@ class AitmadApp {
       acceptBtn.addEventListener('click', () => {
         localStorage.setItem('aitmad_cookie_consent', 'true');
         banner.classList.remove('visible');
+        document.body.classList.remove('cookie-banner-active');
       });
     }
   }

@@ -20,6 +20,33 @@ export class QuoteFormHandler {
         if (group) group.classList.remove('has-error');
       });
     });
+
+    // Instant WhatsApp Quote Bridge (Step 9)
+    const waBridgeBtn = document.getElementById('quote-whatsapp-bridge-btn');
+    if (waBridgeBtn) {
+      waBridgeBtn.addEventListener('click', () => {
+        const name = document.getElementById('contact_name')?.value?.trim() || 'Valued Client';
+        const phone = document.getElementById('contact_phone')?.value?.trim() || 'Not provided';
+        const projectType = document.getElementById('contact_project_type')?.value || 'Industrial Steel Project';
+        const area = document.getElementById('contact_area')?.value?.trim() || 'Not specified';
+        const location = document.getElementById('contact_location')?.value?.trim() || 'Pakistan';
+        const timeline = document.getElementById('contact_timeline')?.value || 'Standard';
+        const msg = document.getElementById('contact_message')?.value?.trim() || 'Preliminary Inquiry';
+
+        const waText = encodeURIComponent(
+          `Hello Aitmad Engineering,\n\nI would like an instant preliminary quote for a steel structure:\n` +
+          `• Client: ${name}\n` +
+          `• Phone: ${phone}\n` +
+          `• Structure Type: ${projectType}\n` +
+          `• Approx Area: ${area}\n` +
+          `• Site Location: ${location}\n` +
+          `• Timeline: ${timeline}\n` +
+          `• Requirements: ${msg}`
+        );
+
+        window.open(`https://wa.me/923004589192?text=${waText}`, '_blank', 'noopener');
+      });
+    }
   }
 
   handleSubmit(e) {
@@ -43,7 +70,7 @@ export class QuoteFormHandler {
       if (!val) {
         isValid = false;
         if (group) group.classList.add('has-error');
-      } else if (field.type === 'email' && !this.isValidEmail(val)) {
+      } else if (field.type === 'email' && val && !this.isValidEmail(val)) {
         isValid = false;
         if (group) group.classList.add('has-error');
       } else if (field.name === 'phone' && !this.isValidPhone(val)) {

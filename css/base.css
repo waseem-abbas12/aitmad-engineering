@@ -45,23 +45,53 @@ body {
   width: 100%;
 }
 
-/* RTL Urdu Configuration */
+/* RTL Urdu Configuration with Optical Scaling (+18%) */
 html[dir="rtl"] {
   direction: rtl;
 }
 
 html[dir="rtl"] body {
   font-family: var(--font-urdu-body);
-  line-height: 1.9;
+  font-size: 1.08rem;
+  line-height: 2.0;
 }
 
-html[dir="rtl"] h1,
-html[dir="rtl"] h2,
-html[dir="rtl"] h3,
+html[dir="rtl"] h1 {
+  font-family: var(--font-urdu-heading) !important;
+  font-size: calc(var(--text-h1) * 1.18) !important;
+  line-height: 1.6 !important;
+}
+
+html[dir="rtl"] h2 {
+  font-family: var(--font-urdu-heading) !important;
+  font-size: calc(var(--text-h2) * 1.16) !important;
+  line-height: 1.6 !important;
+}
+
+html[dir="rtl"] h3 {
+  font-family: var(--font-urdu-heading) !important;
+  font-size: calc(var(--text-h3) * 1.15) !important;
+  line-height: 1.6 !important;
+}
+
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
 html[dir="rtl"] .font-serif,
 html[dir="rtl"] .font-heading {
   font-family: var(--font-urdu-heading) !important;
-  line-height: 1.8;
+  line-height: 1.7;
+}
+
+html[dir="rtl"] p,
+html[dir="rtl"] .hero-subtitle {
+  font-size: 1.08rem;
+  line-height: 2.0;
+}
+
+html[dir="rtl"] .btn {
+  font-size: 0.95rem;
+  letter-spacing: normal;
 }
 
 /* Headings (WCAG High Contrast) */

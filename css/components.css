@@ -281,13 +281,15 @@ html[dir="rtl"] .dropdown-link:hover {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--border-dark);
   color: var(--ivory);
-  padding: 6px 12px;
+  min-height: 44px;
+  padding: 8px 14px;
   border-radius: var(--radius-btn);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   transition: background var(--transition-fast), border-color var(--transition-fast);
 }
@@ -304,18 +306,22 @@ html[dir="rtl"] .dropdown-link:hover {
 }
 
 
-/* Mobile Hamburger Toggle */
+/* Mobile Hamburger Toggle (48x48px WCAG Touch Target) */
 .mobile-nav-toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 10px;
+  border-radius: 8px;
   z-index: 1010;
 }
 
@@ -2013,12 +2019,12 @@ html[dir="rtl"] .accordion-header {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 62px;
+    height: 64px;
     background: rgba(7, 18, 24, 0.96);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
-    z-index: 950;
+    z-index: 990;
     padding: 6px 10px;
     align-items: center;
     justify-content: space-around;
@@ -2028,7 +2034,7 @@ html[dir="rtl"] .accordion-header {
 
   /* Body bottom padding so content and footer are not hidden */
   body {
-    padding-bottom: 64px;
+    padding-bottom: 72px;
   }
 
   /* Hide duplicate floating WhatsApp on mobile as the sticky bottom bar already has a direct WhatsApp action */
@@ -2037,20 +2043,26 @@ html[dir="rtl"] .accordion-header {
   }
 
   .back-to-top {
-    bottom: 74px !important;
+    bottom: 76px !important;
     right: 16px !important;
-    width: 42px !important;
-    height: 42px !important;
-    z-index: 890;
+    width: 44px !important;
+    height: 44px !important;
+    z-index: 950 !important;
+    transition: bottom 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
   }
   html[dir="rtl"] .back-to-top {
     right: auto !important;
     left: 16px !important;
   }
 
+  /* Move back-to-top smoothly above cookie notice when active so they never collide */
+  body.cookie-banner-active .back-to-top {
+    bottom: 155px !important;
+  }
+
   /* Compact Sleek Cookie Notice above mobile bottom bar */
   .cookie-banner {
-    bottom: 68px !important;
+    bottom: 74px !important;
     left: 12px !important;
     right: 12px !important;
     width: auto !important;
@@ -2061,7 +2073,7 @@ html[dir="rtl"] .accordion-header {
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.16) !important;
     border-radius: 12px !important;
-    z-index: 920 !important;
+    z-index: 980 !important;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6) !important;
     flex-direction: row !important;
     align-items: center !important;
@@ -2081,7 +2093,8 @@ html[dir="rtl"] .accordion-header {
   }
 
   .cookie-actions .btn {
-    padding: 6px 12px !important;
+    padding: 8px 14px !important;
+    min-height: 40px !important;
     font-size: 0.75rem !important;
     white-space: nowrap !important;
   }
@@ -2098,7 +2111,8 @@ html[dir="rtl"] .accordion-header {
     letter-spacing: 0.02em;
     text-decoration: none;
     flex: 1;
-    padding: 4px 2px;
+    min-height: 48px;
+    padding: 4px 6px;
     border-radius: 8px;
     transition: color 0.2s ease, transform 0.2s ease;
   }

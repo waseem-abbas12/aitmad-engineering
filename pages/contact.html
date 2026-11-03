@@ -125,7 +125,7 @@
 
     <div class="mobile-menu-footer">
       <a href="tel:+923004589192" style="color: var(--copper-300); font-size: 1.1rem; font-weight: 600; display: flex; align-items: center; gap: 8px;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 0.7 2.81 2 2 0 0 1-0.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-0.45 12.84 12.84 0 0 0 2.81 0.7A2 2 0 0 1 22 16.92z"/></svg>
         +92 300 4589192</a>
       <a href="contact.html" class="btn btn-primary" style="width: 100%;">
         <span data-i18n="nav_quote_btn">Request a Quote</span>
@@ -174,7 +174,7 @@
 
               <div style="display: flex; gap: 16px; align-items: flex-start;">
                 <div style="width: 44px; height: 44px; border-radius: var(--radius-btn); background: var(--pine-100); color: var(--pine-700); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 0.7 2.81 2 2 0 0 1-0.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-0.45 12.84 12.84 0 0 0 2.81 0.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
                 <div>
                   <h4 style="font-size: 1.05rem; margin-bottom: 4px;">Direct Phone & WhatsApp</h4>
@@ -200,9 +200,9 @@
                 <span>Direct WhatsApp Chat</span>
               </a>
 
-              <a href="#" class="btn btn-secondary-light" onclick="alert('Company profile PDF placeholder: Please contact aitmaadengineering@gmail.com for the complete 48-page corporate portfolio dossier.'); return false;">
+              <a id="download-profile-btn" href="mailto:aitmaadengineering@gmail.com?subject=Request%20for%20Official%20Corporate%20Portfolio%20Dossier%20(PDF)&body=Dear%20Aitmad%20Engineering%20Directors,%0A%0APlease%20provide%20your%20official%20corporate%20portfolio%20and%20technical%20credentials%20dossier%20for%20our%20review.%0A%0ACompany%20Name:%0AProject%20Type:%0AContact%20Person:" class="btn btn-secondary-light">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                <span>Download Profile (PDF)</span>
+                <span>Request 48-Page Portfolio (PDF)</span>
               </a>
             </div>
 
@@ -223,26 +223,26 @@
 
             <form id="contact-quote-form" novalidate>
               <!-- Honeypot anti-spam (Spec 7.8) -->
-              <input type="text" name="company_website_hp" class="honeypot-field" tabindex="-1" autocomplete="off">
+              <input type="text" name="company_website_hp" class="honeypot-field" tabindex="-1" autocomplete="off" style="display:none;">
 
               <div class="form-row-2col">
                 <div class="form-group">
                   <label class="form-label" for="contact_name">Full Name <span class="required">*</span></label>
-                  <input type="text" id="contact_name" name="name" class="form-input" placeholder="e.g. Tariq Mansha" required>
+                  <input type="text" id="contact_name" name="name" class="form-input" placeholder="e.g. Tariq Mansha" required autocomplete="name">
                   <span class="form-error-msg">Please enter your full name.</span>
                 </div>
 
                 <div class="form-group">
-                  <label class="form-label" for="contact_phone">Phone Number <span class="required">*</span></label>
-                  <input type="tel" id="contact_phone" name="phone" class="form-input" placeholder="0300-1234567 or +92..." required>
+                  <label class="form-label" for="contact_phone">Phone / WhatsApp Number <span class="required">*</span></label>
+                  <input type="tel" id="contact_phone" name="phone" class="form-input" placeholder="0300-1234567 or +92..." required autocomplete="tel">
                   <span class="form-error-msg">Please enter a valid phone number.</span>
                 </div>
               </div>
 
               <div class="form-row-2col">
                 <div class="form-group">
-                  <label class="form-label" for="contact_email">Corporate Email <span class="required">*</span></label>
-                  <input type="email" id="contact_email" name="email" class="form-input" placeholder="tariq@company.com" required>
+                  <label class="form-label" for="contact_email">Corporate Email</label>
+                  <input type="email" id="contact_email" name="email" class="form-input" placeholder="tariq@company.com" autocomplete="email">
                   <span class="form-error-msg">Please enter a valid corporate email.</span>
                 </div>
 
@@ -262,7 +262,7 @@
                     <option value="Cold Storage">Controlled Atmosphere Cold Storage</option>
                     <option value="Heavy Structural Steel">Heavy Structural Steel / Heavy Trusses</option>
                     <option value="Roofing Retrofit">Standing Seam Roofing / Retrofit</option>
-                    <option value="Design Consultancy">BIM Modeling & Tonnage Optimization</option>
+                    <option value="Design Consultancy">BIM Modeling &amp; Tonnage Optimization</option>
                   </select>
                   <span class="form-error-msg">Please select a project type.</span>
                 </div>
@@ -290,11 +290,9 @@
                 </div>
               </div>
 
-
               <div class="form-group">
-                <label class="form-label" for="contact_message">Project Specifications & Clear Span Requirements <span class="required">*</span></label>
-                <textarea id="contact_message" name="message" class="form-textarea" placeholder="Please mention dimensions (L x W x H), crane tonnage (if any), mezzanine needs, or specific operational requirements..." required></textarea>
-                <span class="form-error-msg">Please provide your building requirements.</span>
+                <label class="form-label" for="contact_message">Project Specifications &amp; Operational Needs (Optional)</label>
+                <textarea id="contact_message" name="message" class="form-textarea" placeholder="Mention desired clear-span (e.g. 40m column-free), eave height, crane capacity, or mezzanine requirements..."></textarea>
               </div>
 
               <div class="form-group" style="margin-top: 8px;">
@@ -303,10 +301,16 @@
                 <span style="font-size: 0.78rem; color: var(--steel);">Accepts PDF, DWG, DXF, or ZIP (Max 25MB)</span>
               </div>
 
-              <div style="margin-top: 24px;">
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                  <span>Submit Quote Request</span>
+              <!-- Dual Conversion Actions: Official Form Submit OR Instant WhatsApp Bridge -->
+              <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; height: 50px;">
+                  <span>Submit for Formal 24h Engineering BOQ</span>
                   <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+
+                <button type="button" id="quote-whatsapp-bridge-btn" class="btn btn-secondary-light" style="width: 100%; justify-content: center; height: 48px; color: #16A34A; border-color: rgba(22, 163, 74, 0.4); font-weight: 700;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.541 1.968.828 2.796.828 3.182 0 5.769-2.587 5.769-5.766.001-3.182-2.585-5.781-5.769-5.781zm3.385 8.163c-.145.411-.836.784-1.184.832-.349.05-.79.071-2.285-.547-1.782-.738-2.92-2.56-3.009-2.678-.089-.118-.718-.956-.718-1.82 0-.865.452-1.291.613-1.467.161-.176.353-.22.47-.22.119 0 .237.001.341.006.111.005.259-.042.404.307.149.359.509 1.242.553 1.332.045.09.074.195.015.313-.059.12-.089.194-.176.297-.089.103-.187.23-.267.31-.089.088-.182.184-.078.362.103.178.461.761.99 1.232.68.607 1.254.795 1.432.884.179.088.283.074.388-.045.105-.118.452-.526.572-.705.12-.18.239-.15.401-.09.162.059 1.026.484 1.203.573.177.089.295.133.339.208.045.074.045.43-.1 1.002z"/></svg>
+                  <span>Send Specs Instantly via WhatsApp</span>
                 </button>
               </div>
 
@@ -339,7 +343,7 @@
   <!-- Mobile Bottom Quick Action Bar -->
   <nav class="mobile-bottom-bar" aria-label="Mobile Bottom Quick Actions">
     <a href="tel:+923004589192" class="mobile-bar-btn" aria-label="Call Aitmad Engineering">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 0.7 2.81 2 2 0 0 1-0.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-0.45 12.84 12.84 0 0 0 2.81 0.7A2 2 0 0 1 22 16.92z"/></svg>
       <span>Call</span>
     </a>
     <a href="https://wa.me/923004589192?text=Hello%20Aitmad%20Engineering,%20I%20would%20like%20to%20discuss%20a%20steel%20building%20project." class="mobile-bar-btn" target="_blank" rel="noopener" aria-label="WhatsApp Us">

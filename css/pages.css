@@ -441,6 +441,14 @@
   }
 }
 
+.hero-keyword-accent {
+  display: inline;
+  color: #FF3B30 !important;
+  -webkit-text-fill-color: #FF3B30 !important;
+  font-weight: 800;
+  text-shadow: 0 0 24px rgba(238, 28, 37, 0.45);
+}
+
 .hero-rotator-wrap {
   display: inline-block;
   position: relative;
