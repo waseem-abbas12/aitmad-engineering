@@ -20,9 +20,7 @@ export const projects = [
     scope: ["Custom Portal Frame", "Polyurethane Insulated Roofing", "Natural Ridge Ventilation", "Anchor Bolt Erection"],
     cover: "assets/projects/project-1-thumb.webp",
     gallery: [
-      "assets/projects/project-1.webp",
-      "assets/projects/project-2.webp",
-      "assets/projects/project-3.webp"
+      "assets/projects/project-1.webp"
     ],
     overview: "Modern agricultural and dairy livestock facility engineered with heavy-duty green-primed steel portal frames, wide clear spans, and high-efficiency thermal roof insulation for harsh summer climates.",
     challenge: "Maintaining continuous natural air circulation while keeping inside temperatures 6°C cooler than ambient heatwave conditions without mechanical HVAC.",
@@ -45,9 +43,7 @@ export const projects = [
     scope: ["PEB Fabrication", "LOD 400 BIM Detailing", "Laser-Screed Heavy Floor", "Dock Leveler Pits"],
     cover: "assets/projects/project-2-thumb.webp",
     gallery: [
-      "assets/projects/project-2.webp",
-      "assets/projects/project-6.webp",
-      "assets/projects/project-10.webp"
+      "assets/projects/project-2.webp"
     ],
     overview: "State-of-the-art clear-span distribution terminal built for multi-tier automated racking systems and 24/7 cross-docking operations.",
     challenge: "Complete elimination of interior columns over a 64-meter width to accommodate 3-tier VNA reach trucks.",
@@ -59,7 +55,7 @@ export const projects = [
     slug: "crescent-textile-weaving-complex",
     title: "Crescent Textile High-Speed Weaving Complex",
     category: "Industrial",
-    location: "Sheikhupura Road, Lahore",
+    location: "Sheikhupura, Punjab",
     area: "220,000 sq. ft.",
     span: "48 m Multi-Span",
     eaveHeight: "9.5 m",
@@ -70,9 +66,7 @@ export const projects = [
     scope: ["Heavy Steel Framing", "Vibration Damping", "Humidification Ducts Support", "Standing Seam Roof"],
     cover: "assets/projects/project-3-thumb.webp",
     gallery: [
-      "assets/projects/project-3.webp",
-      "assets/projects/project-7.webp",
-      "assets/projects/project-11.webp"
+      "assets/projects/project-3.webp"
     ],
     overview: "Massive industrial weaving facility housing 260 high-speed air-jet looms requiring absolute humidity control and structural vibration dampening.",
     challenge: "Heavy dynamic loads from weaving machinery and suspension of high-capacity HVAC ducting.",
@@ -95,9 +89,7 @@ export const projects = [
     scope: ["cGMP Steel Structure", "Walkable Ceiling Truss", "Epoxy Flooring", "Insulated Cladding"],
     cover: "assets/projects/project-4-thumb.webp",
     gallery: [
-      "assets/projects/project-4.webp",
-      "assets/projects/project-8.webp",
-      "assets/projects/project-12.webp"
+      "assets/projects/project-4.webp"
     ],
     overview: "cGMP-compliant pharmaceutical manufacturing building featuring walkable ceiling trusses for HEPA air filtration and sanitary wall cladding.",
     challenge: "Zero dust-collection ledge geometry required by stringent WHO and DRAP pharmaceutical standards.",
@@ -120,9 +112,7 @@ export const projects = [
     scope: ["30-Ton EOT Crane Beams", "Heavy Column Brackets", "Fatigue-Rated Welding", "Corrosion Protection"],
     cover: "assets/projects/project-5-thumb.webp",
     gallery: [
-      "assets/projects/project-5.webp",
-      "assets/projects/project-9.webp",
-      "assets/projects/project-13.webp"
+      "assets/projects/project-5.webp"
     ],
     overview: "Heavy industrial manufacturing workshop equipped with dual 30-ton overhead traveling cranes and high-impact assembly slabs.",
     challenge: "Coastal salt-fog corrosion combined with severe cyclical fatigue loads from continuous crane operations.",
@@ -145,9 +135,7 @@ export const projects = [
     scope: ["Sub-Zero Steel Design", "PIR Sandwich Panels", "Thermal Break Baseplates", "Airtight Seal"],
     cover: "assets/projects/project-6-thumb.webp",
     gallery: [
-      "assets/projects/project-6.webp",
-      "assets/projects/project-1.webp",
-      "assets/projects/project-14.webp"
+      "assets/projects/project-6.webp"
     ],
     overview: "High-capacity citrus and vegetable cold storage terminal operating at -5°C to +4°C with airtight vapor barrier envelope.",
     challenge: "Eliminating thermal bridging through steel foundation anchorages to avoid floor frost heave.",
@@ -170,9 +158,7 @@ export const projects = [
     scope: ["PEB Portal Framing", "Roof Monitor Skylights", "Fire Sprinkler Truss Brackets", "Standing Seam"],
     cover: "assets/projects/project-7-thumb.webp",
     gallery: [
-      "assets/projects/project-7.webp",
-      "assets/projects/project-2.webp",
-      "assets/projects/project-15.webp"
+      "assets/projects/project-7.webp"
     ],
     overview: "High-output corrugator and printing facility with integrated day-lighting systems reducing daytime lighting energy needs by 60%.",
     challenge: "Large continuous open floor area for high-speed corrugator line with strict fire safety water storage requirements.",
@@ -195,9 +181,7 @@ export const projects = [
     scope: ["Chemical-Resistant Coatings", "Bulk Retaining Wall Framing", "Roof Conveyor Supports"],
     cover: "assets/projects/project-8-thumb.webp",
     gallery: [
-      "assets/projects/project-8.webp",
-      "assets/projects/project-3.webp",
-      "assets/projects/project-16.webp"
+      "assets/projects/project-8.webp"
     ],
     overview: "Heavy bulk fertilizer warehouse capable of withstanding lateral thrust pressures from 8-meter high bulk material heaps.",
     challenge: "Extreme chemical dust corrosive atmosphere and heavy conveyor truss suspension.",
@@ -220,9 +204,7 @@ export const projects = [
     scope: ["Furnace Exhaust Framing", "15-Ton Crane Runway", "Thermal Heat Shields"],
     cover: "assets/projects/project-9-thumb.webp",
     gallery: [
-      "assets/projects/project-9.webp",
-      "assets/projects/project-4.webp",
-      "assets/projects/project-17.webp"
+      "assets/projects/project-9.webp"
     ],
     overview: "Aluminum die-casting foundry facility with specialized roof heat dispersion systems and heavy crane beam runways.",
     challenge: "Very high localized ambient thermal temperatures directly above induction furnaces.",
@@ -245,9 +227,7 @@ export const projects = [
     scope: ["Heavy Steel Towers", "Elevator Catwalks", "Grain Conveyor Gallery"],
     cover: "assets/projects/project-10-thumb.webp",
     gallery: [
-      "assets/projects/project-10.webp",
-      "assets/projects/project-5.webp",
-      "assets/projects/project-1.webp"
+      "assets/projects/project-10.webp"
     ],
     overview: "High-throughput grain intake and mechanical distribution building connecting to 50,000-ton concrete storage silos.",
     challenge: "Wind loading on tall, narrow structural towers during severe seasonal dust storms.",
@@ -270,9 +250,7 @@ export const projects = [
     scope: ["PEB Extension", "Existing Wall Tie-In", "Acoustic Insulation"],
     cover: "assets/projects/project-11-thumb.webp",
     gallery: [
-      "assets/projects/project-11.webp",
-      "assets/projects/project-6.webp",
-      "assets/projects/project-2.webp"
+      "assets/projects/project-11.webp"
     ],
     overview: "Seamless expansion of an active spinning plant with precision steel framing erected alongside operational spinning machinery.",
     challenge: "Zero construction vibration or dust infiltration allowed into adjacent operational spinning lines.",
@@ -295,9 +273,7 @@ export const projects = [
     scope: ["Aesthetic Steel Portals", "Glass Curtain Wall Subframe", "Mezzanine Floor"],
     cover: "assets/projects/project-12-thumb.webp",
     gallery: [
-      "assets/projects/project-12.webp",
-      "assets/projects/project-7.webp",
-      "assets/projects/project-3.webp"
+      "assets/projects/project-12.webp"
     ],
     overview: "Modern retail-wholesale trade center blending pre-engineered steel economics with architectural glass facade aesthetics.",
     challenge: "Interfacing sleek architectural glass curtain walling with flexible steel building envelope tolerances.",
@@ -320,9 +296,7 @@ export const projects = [
     scope: ["Hot-Dip Galvanized Lower Columns", "Corrosive Slurry Protection", "Insulated Roof"],
     cover: "assets/projects/project-13-thumb.webp",
     gallery: [
-      "assets/projects/project-13.webp",
-      "assets/projects/project-8.webp",
-      "assets/projects/project-4.webp"
+      "assets/projects/project-13.webp"
     ],
     overview: "State-of-the-art free-stall dairy barn and automated rotary milking center designed for maximum bovine welfare and yield.",
     challenge: "Highly corrosive organic slurry and high humidity causing rapid degradation in standard steel.",
@@ -345,9 +319,7 @@ export const projects = [
     scope: ["Pit-Track Framing", "20-Ton Heavy Crane Rail", "LOD 400 As-Built Modeling"],
     cover: "assets/projects/project-14-thumb.webp",
     gallery: [
-      "assets/projects/project-14.webp",
-      "assets/projects/project-9.webp",
-      "assets/projects/project-5.webp"
+      "assets/projects/project-14.webp"
     ],
     overview: "Heavy industrial rail maintenance shed built over deep inspection pits with high-tonnage overhead crane runways.",
     challenge: "Strict historic site interface and integration with legacy narrow-gauge track networks.",
@@ -370,9 +342,7 @@ export const projects = [
     scope: ["Heavy PEB Frame", "Customs Inspection Bay", "Standing Seam Roofing"],
     cover: "assets/projects/project-15-thumb.webp",
     gallery: [
-      "assets/projects/project-15.webp",
-      "assets/projects/project-10.webp",
-      "assets/projects/project-6.webp"
+      "assets/projects/project-15.webp"
     ],
     overview: "Customs bonded import-export logistics terminal handling containerized cargo transfer and high-value freight warehousing.",
     challenge: "Accelerated construction schedule required before new trade agreement cargo volume surge.",
@@ -395,9 +365,7 @@ export const projects = [
     scope: ["Temperature-Controlled Envelope", "Emergency Gen-Set Framing", "PIR Walls"],
     cover: "assets/projects/project-16-thumb.webp",
     gallery: [
-      "assets/projects/project-16.webp",
-      "assets/projects/project-11.webp",
-      "assets/projects/project-7.webp"
+      "assets/projects/project-16.webp"
     ],
     overview: "Critical national medical cold chain infrastructure operating at continuous -20°C and +4°C temperature regimes.",
     challenge: "Triple-redundant thermal seal integrity and emergency auxiliary generator structural support.",
@@ -420,9 +388,7 @@ export const projects = [
     scope: ["Bulk Wall Framing", "Aeration Floor Duct Interface", "Clear Span PEB"],
     cover: "assets/projects/project-17-thumb.webp",
     gallery: [
-      "assets/projects/project-17.webp",
-      "assets/projects/project-12.webp",
-      "assets/projects/project-8.webp"
+      "assets/projects/project-17.webp"
     ],
     overview: "High-volume agricultural grain storage hangar engineered for heavy grain bulk loading and rapid mechanical truck unloading.",
     challenge: "High dust explosion hazard mitigation and intense grain outward wall pressure.",

@@ -112,8 +112,8 @@ export const translations = {
 
     // Spotlight
     spotlight_eyebrow: "Project Spotlight",
-    spotlight_title: "National Logistics Park & Distribution Hub",
-    spotlight_desc: "A 145,000 sq. ft. clear-span distribution center featuring 64-meter column-free spans, laser-screed FM2 floors, and airtight thermal envelopes.",
+    spotlight_title: "Falcon High-Bay Logistics & Distribution Park",
+    spotlight_desc: "A 160,000 sq. ft. clear-span distribution center in M-3 Industrial City, Faisalabad, featuring 64-meter column-free spans, laser-screed heavy floors, and multi-tier automated racking clearance.",
     read_case_study: "Read the Case Study",
 
     // Testimonials
@@ -256,8 +256,8 @@ export const translations = {
 
     // Spotlight
     spotlight_eyebrow: "نمایاں شاہکار",
-    spotlight_title: "نیشنل لاجسٹکس ڈسٹری بیوشن ٹرمینل",
-    spotlight_desc: "145,000 مربع فٹ پر محیط بغیر درمیانی ستونوں کے 64 میٹر لمبا کوریڈور، جس میں جدید ترین تھرمل انسولیشن نصب ہے۔",
+    spotlight_title: "فالکن ہائی بے لاجسٹکس و ڈسٹری بیوشن پارک",
+    spotlight_desc: "ایم تھری انڈسٹریل سٹی، فیصل آباد میں 160,000 مربع فٹ کا جدید ڈسٹری بیوشن ٹرمینل، 64 میٹر بغیر ستون کا کھلا اسپین اور لیزر اسکریڈ ہیوی فرش۔",
     read_case_study: "کیس اسٹڈی پڑھیں",
 
     // Testimonials
