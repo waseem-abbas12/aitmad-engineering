@@ -57,10 +57,14 @@ app.use((req, res, next) => {
   res.sendFile(path.join(ROOT_DIR, 'index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`\n======================================================`);
-  console.log(`🚀 Aitmaad Engineering CMS Server Running on Port ${PORT}`);
-  console.log(`🌐 Website URL:   http://localhost:${PORT}`);
-  console.log(`🛠️ Admin Portal:  http://localhost:${PORT}/admin`);
-  console.log(`======================================================\n`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n======================================================`);
+    console.log(`🚀 Aitmaad Engineering CMS Server Running on Port ${PORT}`);
+    console.log(`🌐 Website URL:   http://localhost:${PORT}`);
+    console.log(`🛠️ Admin Portal:  http://localhost:${PORT}/admin`);
+    console.log(`======================================================\n`);
+  });
+}
+
+export default app;
