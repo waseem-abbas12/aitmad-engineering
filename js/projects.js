@@ -20,6 +20,20 @@ export class ProjectsManager {
     this.lightboxIndex = 0;
     this.lightboxImages = [];
     this.init();
+    this.fetchLiveProjects();
+  }
+
+  async fetchLiveProjects() {
+    try {
+      const res = await fetch('/api/projects');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && data.projects && data.projects.length > 0) {
+          this.projects = data.projects;
+          this.init();
+        }
+      }
+    } catch (e) {}
   }
 
   init() {

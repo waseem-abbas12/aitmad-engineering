@@ -27,6 +27,7 @@ class AitmaadApp {
     this.initTestimonialSlider();
     this.initAccordions();
     this.initCardTilt();
+    this.initDynamicCMS();
     this.initModules();
   }
 
@@ -434,6 +435,95 @@ class AitmaadApp {
     });
   }
 
+
+  async initDynamicCMS() {
+    try {
+      let content = null;
+      try {
+        const res = await fetch('/api/content');
+        if (res.ok) {
+          const json = await res.json();
+          if (json.success) content = json;
+        }
+      } catch (e) {}
+
+      if (!content) {
+        const isPagesDir = window.location.pathname.includes('/pages/');
+        const jsonPath = isPagesDir ? '../data/site-content.json' : 'data/site-content.json';
+        const res = await fetch(jsonPath);
+        if (res.ok) content = await res.json();
+      }
+
+      if (!content) return;
+
+      // 1. Dynamic Marquee Ticker
+      if (content.clientsMarquee && content.clientsMarquee.length > 0) {
+        const tracks = document.querySelectorAll('.marquee-track');
+        if (tracks.length > 0) {
+          const clientHtml = content.clientsMarquee.map(c => `
+            <div class="client-logo-item"><span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; letter-spacing: 0.08em; color: var(--pine-800);">${c.name}</span></div>
+          `).join('');
+          tracks.forEach(track => {
+            track.innerHTML = clientHtml;
+          });
+        }
+      }
+
+      // 2. Dynamic Hero Content (if on homepage)
+      if (content.heroContent) {
+        const h = content.heroContent;
+        const eyebrow = document.querySelector('.hero-eyebrow-text');
+        if (eyebrow && h.eyebrow) eyebrow.textContent = h.eyebrow;
+
+        const liveBadge = document.querySelector('.live-beacon-pill span:last-child');
+        if (liveBadge && h.liveBadge) liveBadge.textContent = h.liveBadge;
+
+        const sub = document.querySelector('.hero-sub-text');
+        if (sub && h.sub) sub.textContent = h.sub;
+
+        const pBtn = document.querySelector('.hero-actions .btn-primary');
+        if (pBtn && h.primaryBtnText) {
+          const span = pBtn.querySelector('span');
+          if (span) span.textContent = h.primaryBtnText;
+          if (h.primaryBtnLink) pBtn.setAttribute('href', h.primaryBtnLink);
+        }
+        const sBtn = document.querySelector('.hero-actions .btn-outline');
+        if (sBtn && h.secondaryBtnText) {
+          const span = sBtn.querySelector('span');
+          if (span) span.textContent = h.secondaryBtnText;
+          if (h.secondaryBtnLink) sBtn.setAttribute('href', h.secondaryBtnLink);
+        }
+      }
+
+      // 3. Dynamic Company Contact Settings
+      if (content.siteSettings) {
+        const s = content.siteSettings;
+        if (s.phoneRaw) {
+          document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+            a.setAttribute('href', `tel:${s.phoneRaw}`);
+          });
+        }
+        if (s.phone) {
+          document.querySelectorAll('.contact-phone-text').forEach(el => {
+            el.textContent = s.phone;
+          });
+        }
+        if (s.email) {
+          document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+            a.setAttribute('href', `mailto:${s.email}`);
+            a.textContent = s.email;
+          });
+        }
+        if (s.whatsapp) {
+          document.querySelectorAll('a[href*="wa.me"]').forEach(a => {
+            a.setAttribute('href', `https://wa.me/${s.whatsapp}?text=Hello%20Aitmaad%20Engineering`);
+          });
+        }
+      }
+    } catch (err) {
+      console.warn('CMS dynamic binding notice:', err);
+    }
+  }
 
   initModules() {
     // 3D Hero Scene

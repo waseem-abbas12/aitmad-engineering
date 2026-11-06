@@ -1,0 +1,22 @@
+{
+  "name": "aitmad-engineering",
+  "version": "1.0.0",
+  "description": "> **Built on Trust. Engineered in Steel.**  \r > Pakistan's premier corporate engineering web platform for Pre-Engineered Buildings (PEB), structural steel fabrication, high-bay warehouses, and industrial sheds.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/waseem-abbas12/aitmad-engineering/issues"
+  },
+  "homepage": "https://github.com/waseem-abbas12/aitmad-engineering#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.5.0"
+  }
+}

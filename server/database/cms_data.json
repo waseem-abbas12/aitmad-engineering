@@ -1,0 +1,1117 @@
+{
+  "siteSettings": {
+    "companyName": "Aitmaad Engineering",
+    "tagline": "Pre-Engineered Steel Buildings & Industrial Construction Pakistan",
+    "phone": "+92 300 4589192",
+    "phoneRaw": "03004589192",
+    "email": "aitmaadengineering@gmail.com",
+    "address": "First floor, 102 park view, quaid commercial, opposite to Eiffel Tower, Bahria town lahore",
+    "city": "Lahore",
+    "country": "Pakistan",
+    "whatsapp": "923004589192",
+    "pecNumber": "PEC C1 / Verified",
+    "workingHours": "Mon – Sat: 8:00 AM – 6:00 PM"
+  },
+  "heroContent": {
+    "eyebrow": "Steel Building Specialists",
+    "liveBadge": "Pakistan's #1 Certified PEB & Structural Steel Specialists",
+    "titleLead": "Turnkey Pre-Engineered Steel Buildings & ",
+    "titleAccent": "High-Bay Warehouses",
+    "sub": "From Tekla LOD 400 engineering to certified fabrication and rapid nationwide site erection — 100+ delivered facilities across Pakistan.",
+    "bullet1": "Turnkey PEB: Column-Free Spans up to 90m",
+    "bullet2": "Certified Steel: ASTM A572 Grade 50 & AWS Certified",
+    "bullet3": "BIM Precision: In-house Tekla LOD 400 & STAAD Detailing",
+    "primaryBtnText": "Request a Quote",
+    "primaryBtnLink": "pages/contact.html",
+    "secondaryBtnText": "Explore Projects",
+    "secondaryBtnLink": "pages/projects.html"
+  },
+  "metrics": {
+    "years": "10+",
+    "yearsLabel": "Years Proven Experience",
+    "projects": "100+",
+    "projectsLabel": "Nationwide Delivered",
+    "clients": "80+",
+    "clientsLabel": "Corporate Trusts",
+    "areaBuilt": "3.5M+",
+    "areaBuiltLabel": "Sq. Ft. Constructed"
+  },
+  "clientsMarquee": [
+    {
+      "id": "c1",
+      "name": "GREEN APPLE FARMS",
+      "logo": ""
+    },
+    {
+      "id": "c2",
+      "name": "SHAFI TEXCEL GROUP",
+      "logo": ""
+    },
+    {
+      "id": "c3",
+      "name": "GOFY FOOD INDUSTRIES",
+      "logo": ""
+    },
+    {
+      "id": "c4",
+      "name": "SAMSON'S GROUP",
+      "logo": ""
+    },
+    {
+      "id": "c5",
+      "name": "AGUILA ACTIVE (PVT)",
+      "logo": ""
+    },
+    {
+      "id": "c6",
+      "name": "PETROMAN SAFETY INTERNATIONAL",
+      "logo": ""
+    },
+    {
+      "id": "c7",
+      "name": "PAK AFSON ENTERPRISES",
+      "logo": ""
+    },
+    {
+      "id": "c8",
+      "name": "EVERFRESH FARMS (PVT) LTD",
+      "logo": ""
+    },
+    {
+      "id": "c9",
+      "name": "WELDON INSTRUMENT",
+      "logo": ""
+    },
+    {
+      "id": "c10",
+      "name": "FOUR SEASON'S DAIRY FARMS",
+      "logo": ""
+    },
+    {
+      "id": "c11",
+      "name": "COMET SPORTS",
+      "logo": ""
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj_1",
+      "slug": "everfresh-dairy-farms-free-stall-barn",
+      "title": "Everfresh Dairy Farms Free-Stall Barn (Phase 1)",
+      "category": "Agricultural",
+      "location": "Sahiwal, Punjab",
+      "area": "95,000 sq. ft.",
+      "span": "42 m Clear Span",
+      "eaveHeight": "8.5 m",
+      "steelTonnage": "380 Tons",
+      "year": 2026,
+      "duration": "5 Months",
+      "client": "Everfresh Farms (pvt) Ltd",
+      "scope": [
+        "Custom Portal Frame",
+        "Polyurethane Insulated Roofing",
+        "Natural Ridge Ventilation",
+        "Anchor Bolt Erection"
+      ],
+      "cover": "assets/projects/project-1-thumb.webp",
+      "gallery": [
+        "assets/projects/project-1.webp"
+      ],
+      "overview": "Modern agricultural and dairy livestock facility engineered with heavy-duty green-primed steel portal frames, wide clear spans, and high-efficiency natural ridge cooling monitors.",
+      "challenge": "Maintaining continuous natural air circulation while keeping inside temperatures 6°C cooler than ambient heatwave conditions without mechanical HVAC.",
+      "solution": "Engineered high-pitched gable roof frames with continuous automated ridge monitors and double-skin profiled sheeting with thermal insulation.",
+      "result": "Delivered turnkey 14 days ahead of deadline with zero operational downtime for livestock transfer.",
+      "featured": true
+    },
+    {
+      "id": "proj_2",
+      "slug": "falcon-high-bay-logistics-terminal",
+      "title": "Falcon High-Bay Logistics & Distribution Park",
+      "category": "Warehouse",
+      "location": "M-3 Industrial City, Faisalabad",
+      "area": "160,000 sq. ft.",
+      "span": "64 m Clear Span",
+      "eaveHeight": "14.5 m",
+      "steelTonnage": "620 Tons",
+      "year": 2025,
+      "duration": "6 Months",
+      "client": "Falcon Logistics Pakistan",
+      "scope": [
+        "PEB Fabrication",
+        "LOD 400 BIM Detailing",
+        "Laser-Screed Heavy Floor",
+        "Dock Leveler Pits"
+      ],
+      "cover": "assets/projects/project-2-thumb.webp",
+      "gallery": [
+        "assets/projects/project-2.webp"
+      ],
+      "overview": "State-of-the-art clear-span distribution terminal built for multi-tier automated racking systems and 24/7 cross-docking operations.",
+      "challenge": "Complete elimination of interior columns over a 64-meter width to accommodate 3-tier VNA reach trucks.",
+      "solution": "Parametric tapered portal frames fabricated with ASTM A572 Grade 50 high-tensile steel with submerged arc welding.",
+      "result": "Achieved 100% column-free floor space and full FM Global wind-uplift compliance.",
+      "featured": true
+    },
+    {
+      "id": "proj_3",
+      "slug": "crescent-textile-weaving-complex",
+      "title": "Crescent Textile High-Speed Weaving Complex",
+      "category": "Industrial",
+      "location": "Sheikhupura, Punjab",
+      "area": "220,000 sq. ft.",
+      "span": "48 m Multi-Span",
+      "eaveHeight": "9.5 m",
+      "steelTonnage": "850 Tons",
+      "year": 2025,
+      "duration": "7 Months",
+      "client": "Crescent Textile Mills Ltd.",
+      "scope": [
+        "Heavy Steel Framing",
+        "Vibration Damping",
+        "Humidification Ducts Support",
+        "Standing Seam Roof"
+      ],
+      "cover": "assets/projects/project-3-thumb.webp",
+      "gallery": [
+        "assets/projects/project-3.webp"
+      ],
+      "overview": "Massive industrial weaving facility housing 260 high-speed air-jet looms requiring absolute humidity control and structural vibration dampening.",
+      "challenge": "Heavy dynamic loads from weaving machinery and suspension of high-capacity HVAC ducting.",
+      "solution": "Designed reinforced rafter connections and vibration-isolating column footings calculated via STAAD.Pro finite element analysis.",
+      "result": "Operating smoothly at 99.8% structural efficiency with zero resonance issues.",
+      "featured": true
+    },
+    {
+      "id": "proj_4",
+      "slug": "simson-dairies-milking-parlor-shed",
+      "title": "Simson Dairies Modern Milking Parlor & Cow Shed",
+      "category": "Agricultural",
+      "location": "Kasur District, Punjab",
+      "area": "85,000 sq. ft.",
+      "span": "36 m Clear Span",
+      "eaveHeight": "8.0 m",
+      "steelTonnage": "310 Tons",
+      "year": 2025,
+      "duration": "4.5 Months",
+      "client": "Samson's Group",
+      "scope": [
+        "Heavy Steel Portal Framing",
+        "Ridge Ventilation Monitors",
+        "Corrosion-Resistant Coating",
+        "Automated Feeding Corridors"
+      ],
+      "cover": "assets/projects/project-4-thumb.webp",
+      "gallery": [
+        "assets/projects/project-4.webp"
+      ],
+      "overview": "Modern automated milking parlor and livestock housing facility built with precision-aligned steel portal frames and heavy-duty corrosion-resistant finishes.",
+      "challenge": "High ammonia and moisture corrosion protection combined with wide clear-span animal transit corridors.",
+      "solution": "Utilized heavy hot-dip galvanized and epoxy-primed steel sections with continuous mechanical ridge ventilation.",
+      "result": "Successfully commissioned providing comfortable thermal shelter for high-yield dairy cattle.",
+      "featured": true
+    },
+    {
+      "id": "proj_5",
+      "slug": "simson-dairies-structural-steel-barn",
+      "title": "Simson Dairies Heavy Structural Steel Barn & Feed Facility",
+      "category": "Agricultural",
+      "location": "Kasur District, Punjab",
+      "area": "135,000 sq. ft.",
+      "span": "32 m Heavy Span",
+      "eaveHeight": "12.0 m",
+      "steelTonnage": "580 Tons",
+      "year": 2024,
+      "duration": "6 Months",
+      "client": "Samson's Group",
+      "scope": [
+        "Heavy Portal Columns",
+        "Overhead Feed Conveyor Rails",
+        "Corrosion-Proof Purlins",
+        "Rapid Erection"
+      ],
+      "cover": "assets/projects/project-5-thumb.webp",
+      "gallery": [
+        "assets/projects/project-5.webp"
+      ],
+      "overview": "High-clearance agricultural steel framing facility engineered for fodder storage, automated feed distribution, and heavy equipment access.",
+      "challenge": "Severe soil conditions and dynamic loads from overhead automated agricultural equipment.",
+      "solution": "Custom engineered rafter connections and reinforced anchor bolt footings with heavy mobile crane erection.",
+      "result": "Completed on schedule with robust structural integrity and maximum interior utility.",
+      "featured": true
+    },
+    {
+      "id": "proj_6",
+      "slug": "everfresh-dairy-farms-milking-parlor",
+      "title": "Everfresh Dairy Farms High-Ventilation Shed",
+      "category": "Agricultural",
+      "location": "Sahiwal, Punjab",
+      "area": "110,000 sq. ft.",
+      "span": "40 m Clear Span",
+      "eaveHeight": "10.0 m",
+      "steelTonnage": "420 Tons",
+      "year": 2024,
+      "duration": "5 Months",
+      "client": "Everfresh Farms (pvt) Ltd",
+      "scope": [
+        "Open-Sided Portal Frame",
+        "Continuous Roof Monitor",
+        "Insulated Metal Roof",
+        "Heavy Concrete Anchorages"
+      ],
+      "cover": "assets/projects/project-6-thumb.webp",
+      "gallery": [
+        "assets/projects/project-6.webp"
+      ],
+      "overview": "Large-scale dairy cow housing shed engineered with open-sided portal frames, elevated ridge monitors, and insulated standing roof sheeting.",
+      "challenge": "Minimizing heat stress in livestock during extreme summer temperatures exceeding 45°C.",
+      "solution": "Engineered high eave height, aerodynamic roof monitors, and wide eaves providing full shade and natural cross-draft.",
+      "result": "Delivered optimal animal welfare and maximum milk production efficiency.",
+      "featured": true
+    },
+    {
+      "id": "proj_7",
+      "slug": "nishat-corrugated-packaging-plant",
+      "title": "Nishat Corrugated Packaging & Paper Shed",
+      "category": "Industrial",
+      "location": "Chunian Industrial Park",
+      "area": "175,000 sq. ft.",
+      "span": "52 m Clear Span",
+      "eaveHeight": "10.0 m",
+      "steelTonnage": "640 Tons",
+      "year": 2024,
+      "duration": "6 Months",
+      "client": "Aguila Active (Pvt)",
+      "scope": [
+        "PEB Portal Framing",
+        "Roof Monitor Skylights",
+        "Fire Sprinkler Truss Brackets",
+        "Standing Seam"
+      ],
+      "cover": "assets/projects/project-7-thumb.webp",
+      "gallery": [
+        "assets/projects/project-7.webp"
+      ],
+      "overview": "High-output corrugator and printing facility with integrated day-lighting systems reducing daytime lighting energy needs by 60%.",
+      "challenge": "Large continuous open floor area for high-speed corrugator line with strict fire safety water storage requirements.",
+      "solution": "Clear span frames engineered with reinforced rafter nodes supporting high-capacity fire sprinkler network.",
+      "result": "Handed over turnkey 3 weeks ahead of machine import arrival.",
+      "featured": false
+    },
+    {
+      "id": "proj_8",
+      "slug": "engro-chemical-bulk-storage-terminal",
+      "title": "Engro Chemical Fertilizer Bulk Storage Terminal",
+      "category": "Warehouse",
+      "location": "Daharki, Sindh",
+      "area": "190,000 sq. ft.",
+      "span": "58 m Clear Span",
+      "eaveHeight": "12.5 m",
+      "steelTonnage": "790 Tons",
+      "year": 2024,
+      "duration": "7 Months",
+      "client": "Gofy Food Industries",
+      "scope": [
+        "Chemical-Resistant Coatings",
+        "Bulk Retaining Wall Framing",
+        "Roof Conveyor Supports"
+      ],
+      "cover": "assets/projects/project-8-thumb.webp",
+      "gallery": [
+        "assets/projects/project-8.webp"
+      ],
+      "overview": "Heavy bulk fertilizer warehouse capable of withstanding lateral thrust pressures from 8-meter high bulk material heaps.",
+      "challenge": "Extreme chemical dust corrosive atmosphere and heavy conveyor truss suspension.",
+      "solution": "Specially formulated polyurethane protective coating with 280-micron DFT and high-tensile connection bolts.",
+      "result": "Operational with zero structural fatigue through multiple seasonal fertilizer peaks.",
+      "featured": false
+    },
+    {
+      "id": "proj_9",
+      "slug": "auto-parts-die-casting-foundry-shed",
+      "title": "Auto Parts Precision Die-Casting Foundry Shed",
+      "category": "Industrial",
+      "location": "Kot Lakhpat Industrial Area, Lahore",
+      "area": "68,000 sq. ft.",
+      "span": "30 m Span",
+      "eaveHeight": "11.0 m",
+      "steelTonnage": "290 Tons",
+      "year": 2023,
+      "duration": "4 Months",
+      "client": "Weldon Instrument",
+      "scope": [
+        "Furnace Exhaust Framing",
+        "15-Ton Crane Runway",
+        "Thermal Heat Shields"
+      ],
+      "cover": "assets/projects/project-9-thumb.webp",
+      "gallery": [
+        "assets/projects/project-9.webp"
+      ],
+      "overview": "Aluminum die-casting foundry facility with specialized roof heat dispersion systems and heavy crane beam runways.",
+      "challenge": "Very high localized ambient thermal temperatures directly above induction furnaces.",
+      "solution": "Engineered heat-deflector baffle plates and oversized aerodynamic gravity ventilators.",
+      "result": "Optimal operator environment temperature maintained even during peak summer production.",
+      "featured": false
+    },
+    {
+      "id": "proj_10",
+      "slug": "central-grain-silo-headhouse-terminal",
+      "title": "National Grain Silo Headhouse & Distribution Shed",
+      "category": "Agricultural",
+      "location": "Khanewal, Punjab",
+      "area": "82,000 sq. ft.",
+      "span": "38 m Span",
+      "eaveHeight": "15.0 m",
+      "steelTonnage": "420 Tons",
+      "year": 2023,
+      "duration": "5 Months",
+      "client": "Green Apple Farms",
+      "scope": [
+        "Heavy Steel Towers",
+        "Elevator Catwalks",
+        "Grain Conveyor Gallery"
+      ],
+      "cover": "assets/projects/project-10-thumb.webp",
+      "gallery": [
+        "assets/projects/project-10.webp"
+      ],
+      "overview": "High-throughput grain intake and mechanical distribution building connecting to 50,000-ton concrete storage silos.",
+      "challenge": "Wind loading on tall, narrow structural towers during severe seasonal dust storms.",
+      "solution": "Braced structural steel frame engineered to 160 km/h wind velocity rating per UBC-97.",
+      "result": "Protected Pakistan's national grain reserves with zero downtime during storm seasons.",
+      "featured": false
+    },
+    {
+      "id": "proj_11",
+      "slug": "kohinoor-spinning-mill-expansion",
+      "title": "Kohinoor Textile Spinning Mill Expansion",
+      "category": "Industrial",
+      "location": "Rawat Industrial Zone, Islamabad",
+      "area": "140,000 sq. ft.",
+      "span": "45 m Span",
+      "eaveHeight": "8.5 m",
+      "steelTonnage": "510 Tons",
+      "year": 2023,
+      "duration": "5 Months",
+      "client": "Shafi Texcel Group",
+      "scope": [
+        "PEB Extension",
+        "Existing Wall Tie-In",
+        "Acoustic Insulation"
+      ],
+      "cover": "assets/projects/project-11-thumb.webp",
+      "gallery": [
+        "assets/projects/project-11.webp"
+      ],
+      "overview": "Seamless expansion of an active spinning plant with precision steel framing erected alongside operational spinning machinery.",
+      "challenge": "Zero construction vibration or dust infiltration allowed into adjacent operational spinning lines.",
+      "solution": "Modular prefabricated bolted steel assemblies lifted and bolted during scheduled weekend maintenance shifts.",
+      "result": "Zero production hours lost during the entire 5-month expansion period.",
+      "featured": false
+    },
+    {
+      "id": "proj_12",
+      "slug": "commercial-retail-wholesale-steel-hypermarket",
+      "title": "Commercial Wholesale Steel Hypermarket & Terminal",
+      "category": "Commercial",
+      "location": "Ring Road Interchange, Lahore",
+      "area": "98,000 sq. ft.",
+      "span": "48 m Clear Span",
+      "eaveHeight": "10.5 m",
+      "steelTonnage": "370 Tons",
+      "year": 2023,
+      "duration": "5 Months",
+      "client": "PETROMAN SAFETY INTERNATIONAL",
+      "scope": [
+        "Aesthetic Steel Portals",
+        "Glass Curtain Wall Subframe",
+        "Mezzanine Floor"
+      ],
+      "cover": "assets/projects/project-12-thumb.webp",
+      "gallery": [
+        "assets/projects/project-12.webp"
+      ],
+      "overview": "Modern retail-wholesale trade center blending pre-engineered steel economics with architectural glass facade aesthetics.",
+      "challenge": "Interfacing sleek architectural glass curtain walling with flexible steel building envelope tolerances.",
+      "solution": "Engineered slotted deflection clip connections accommodating seismic drift while preserving glass warranty.",
+      "result": "A striking commercial landmark recognized for architectural steel excellence.",
+      "featured": false
+    },
+    {
+      "id": "proj_13",
+      "slug": "punjab-dairies-automated-milking-parlor",
+      "title": "Punjab Dairies Modern Milking Parlor & Cow Barn",
+      "category": "Agricultural",
+      "location": "Kasur District, Punjab",
+      "area": "125,000 sq. ft.",
+      "span": "44 m Clear Span",
+      "eaveHeight": "7.5 m",
+      "steelTonnage": "460 Tons",
+      "year": 2022,
+      "duration": "5 Months",
+      "client": "Punjab Dairies (Pvt.) Ltd.",
+      "scope": [
+        "Hot-Dip Galvanized Lower Columns",
+        "Corrosive Slurry Protection",
+        "Insulated Roof"
+      ],
+      "cover": "assets/projects/project-13-thumb.webp",
+      "gallery": [
+        "assets/projects/project-13.webp"
+      ],
+      "overview": "State-of-the-art free-stall dairy barn and automated rotary milking center designed for maximum bovine welfare and yield.",
+      "challenge": "Highly corrosive organic slurry and high humidity causing rapid degradation in standard steel.",
+      "solution": "Hot-dip galvanized columns up to 2.5m height and stainless steel hardware in all high-contact livestock zones.",
+      "result": "Maintains optimal animal comfort index and exceptional structure durability.",
+      "featured": false
+    },
+    {
+      "id": "proj_14",
+      "slug": "pakistan-railways-maintenance-depot",
+      "title": "Pakistan Railways Locomotive Maintenance Depot",
+      "category": "Institutional",
+      "location": "Mughalpura Workshops, Lahore",
+      "area": "88,000 sq. ft.",
+      "span": "34 m Span",
+      "eaveHeight": "14.0 m",
+      "steelTonnage": "480 Tons",
+      "year": 2022,
+      "duration": "6 Months",
+      "client": "Ministry of Railways",
+      "scope": [
+        "Pit-Track Framing",
+        "20-Ton Heavy Crane Rail",
+        "LOD 400 As-Built Modeling"
+      ],
+      "cover": "assets/projects/project-14-thumb.webp",
+      "gallery": [
+        "assets/projects/project-14.webp"
+      ],
+      "overview": "Heavy industrial rail maintenance shed built over deep inspection pits with high-tonnage overhead crane runways.",
+      "challenge": "Strict historic site interface and integration with legacy narrow-gauge track networks.",
+      "solution": "3D laser-scanned foundation alignment ensuring zero millimeter discrepancy in crane rail elevation.",
+      "result": "Completed to full federal engineering standards and operational for locomotive servicing.",
+      "featured": false
+    },
+    {
+      "id": "proj_15",
+      "slug": "comet-sports-manufacturing-facility",
+      "title": "Comet Sports Production Facility (Main Plant)",
+      "category": "Industrial",
+      "location": "Sialkot, Punjab",
+      "area": "155,000 sq. ft.",
+      "span": "56 m Clear Span",
+      "eaveHeight": "12.0 m",
+      "steelTonnage": "590 Tons",
+      "year": 2024,
+      "duration": "6 Months",
+      "client": "Comet Sports (Pvt.) Ltd.",
+      "scope": [
+        "Clear-Span PEB Frame",
+        "High-Bay Production Bay",
+        "Standing Seam Roofing",
+        "Crane Runway Alignment"
+      ],
+      "cover": "assets/projects/project-15-thumb.webp",
+      "gallery": [
+        "assets/projects/project-15.webp"
+      ],
+      "overview": "World-class export sports goods production terminal engineered with wide clear spans, precision steel rafters, and high-spec industrial lighting corridors.",
+      "challenge": "Executing wide 56-meter clear spans without intermediate columns to allow continuous automated manufacturing machinery layout.",
+      "solution": "High-tensile ASTM A572 Grade 50 steel portal frames fabricated with submerged arc welding and millimeter-accurate bolted connections.",
+      "result": "Delivered turnkey on schedule, achieving optimal floor productivity for international export manufacturing.",
+      "featured": true
+    },
+    {
+      "id": "proj_16",
+      "slug": "comet-sports-export-warehouse",
+      "title": "Comet Sports Export Logistics & Storage Hub",
+      "category": "Warehouse",
+      "location": "Sialkot, Punjab",
+      "area": "92,000 sq. ft.",
+      "span": "42 m Clear Span",
+      "eaveHeight": "11.0 m",
+      "steelTonnage": "380 Tons",
+      "year": 2023,
+      "duration": "4.5 Months",
+      "client": "Comet Sports (Pvt.) Ltd.",
+      "scope": [
+        "Multi-Tier Storage Bays",
+        "Dock Leveler Integration",
+        "PIR Insulated Roof",
+        "Airtight Seal"
+      ],
+      "cover": "assets/projects/project-16-thumb.webp",
+      "gallery": [
+        "assets/projects/project-16.webp"
+      ],
+      "overview": "State-of-the-art export logistics warehouse engineered for finished goods storage, high-density pallet racking, and container cross-docking.",
+      "challenge": "Rapid execution required to meet international export seasonal shipment commitments.",
+      "solution": "Pre-engineered computerized Tekla LOD 400 modeling enabling parallel foundation casting and fast-track steel erection.",
+      "result": "Handed over 20 days ahead of deadline with zero container loading bottlenecks.",
+      "featured": false
+    },
+    {
+      "id": "proj_17",
+      "slug": "comet-sports-clear-span-arena",
+      "title": "Comet Sports Clear-Span Assembly Complex",
+      "category": "Industrial",
+      "location": "Sialkot, Punjab",
+      "area": "115,000 sq. ft.",
+      "span": "50 m Clear Span",
+      "eaveHeight": "11.5 m",
+      "steelTonnage": "470 Tons",
+      "year": 2023,
+      "duration": "5 Months",
+      "client": "Comet Sports (Pvt.) Ltd.",
+      "scope": [
+        "50m Clear Span PEB",
+        "Automated Ridge Ventilation",
+        "Daylight Translucent Panels",
+        "Laser-Screed Floor"
+      ],
+      "cover": "assets/projects/project-17-thumb.webp",
+      "gallery": [
+        "assets/projects/project-17.webp"
+      ],
+      "overview": "Massive clear-span industrial assembly hall engineered with lightweight tapered steel rafters and integrated natural daylighting panels.",
+      "challenge": "Uniform illumination and high ventilation standards required for precision sports ball stitching and quality inspection.",
+      "solution": "Designed high-profile rafters with integrated 15% roof polycarbonate light strips and aerodynamic roof ridge vents.",
+      "result": "Reduced factory daytime lighting power consumption by 40% while maintaining superior structural rigidity.",
+      "featured": false
+    }
+  ],
+  "services": [
+    {
+      "id": "serv_1",
+      "slug": "pre-engineered-buildings",
+      "pageFile": "service-peb.html",
+      "title": "Pre-Engineered Buildings (PEB)",
+      "shortDesc": "Custom-designed high-tensile steel building systems engineered for rapid delivery, cost efficiency and long column-free spans.",
+      "heroDesc": "Aitmaad PEB systems combine cutting-edge parametric design, automated submerged arc welding, and precision CNC fabrication to deliver turnkey industrial facilities in half the time of conventional construction.",
+      "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 21h18M5 21V7l7-4 7 4v14M9 10v11M15 10v11\"/></svg>",
+      "offerings": [
+        "Parametric tapered I-beam primary framing (ASTM A572 Grade 50)",
+        "Cold-formed galvanized Z and C purlins and girts",
+        "Standing seam 360° mechanical lock roof sheeting",
+        "Clear spans up to 90 meters without intermediate columns",
+        "Integrated mezzanine floors and crane runway systems",
+        "Accelerated 60-90 day fabrication turnaround"
+      ],
+      "specs": [
+        {
+          "param": "Clear Span Range",
+          "value": "15 m to 90 m (Unobstructed)"
+        },
+        {
+          "param": "Standard Bay Spacing",
+          "value": "6 m to 10 m (Customizable to 12 m)"
+        },
+        {
+          "param": "Eave Height",
+          "value": "Up to 24 m"
+        },
+        {
+          "param": "Primary Steel Grade",
+          "value": "ASTM A572 Grade 50 (345 MPa Yield)"
+        },
+        {
+          "param": "Crane Capacity",
+          "value": "5 Ton to 50 Ton EOT Overhead Cranes"
+        },
+        {
+          "param": "Standard Finish",
+          "value": "Zinc chromate primer + 2-coat polyurethane finish or hot-dip galvanizing"
+        },
+        {
+          "param": "Design Standards",
+          "value": "AISC 360, MBMA 2010, AWS D1.1, UBC 97 / IBC 2021"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What makes Pre-Engineered Buildings superior to conventional RCC structures?",
+          "a": "PEB systems use high-tensile steel members tapered according to bending moment diagrams, reducing dead weight by up to 30%. They fabricate in controlled factory environments concurrently with foundation work, cutting total project completion time by 40-50% while offering superior earthquake resistance."
+        },
+        {
+          "q": "What is the maximum clear span Aitmaad can fabricate without internal columns?",
+          "a": "We regularly engineer and fabricate clear spans up to 75-90 meters without interior support columns. This provides 100% usable floor area for warehousing, aircraft hangars, and assembly lines."
+        },
+        {
+          "q": "How does Aitmaad ensure waterproofing on PEB roofs?",
+          "a": "We utilize double-locked 360-degree standing seam metal roofing systems with concealed clips. Because fasteners do not penetrate the external roof sheet, thermal expansion does not cause elongation or water leakage."
+        },
+        {
+          "q": "Can Aitmaad integrate heavy overhead cranes into a PEB design?",
+          "a": "Yes. Our engineers design the primary columns with stepped brackets or independent crane runway columns to support electric overhead traveling (EOT) cranes up to 50-ton capacity, fully compliant with CMAA guidelines."
+        },
+        {
+          "q": "What is the typical lifespan and maintenance required for an Aitmaad PEB?",
+          "a": "Engineered to ASTM and AISC standards, our structures have a design service life exceeding 50 years. Periodic gutter cleaning and 10-year surface touch-ups are all that is typically required."
+        }
+      ]
+    },
+    {
+      "id": "serv_2",
+      "slug": "structural-steel-fabrication-erection",
+      "pageFile": "service-structural-steel.html",
+      "title": "Structural Steel Fabrication & Erection",
+      "shortDesc": "Heavy industrial steel structures, pipe racks, heavy trusses, and multi-tier platforms built to AISC and AWS D1.1 standards.",
+      "heroDesc": "From cement and chemical processing plants to power generation infrastructure and multi-story commercial steel frames, Aitmaad provides heavy-gauge fabrication with robotic precision and certified erection crews.",
+      "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 22h16M2 7h20M12 2v20M7 7l5 15M17 7l-5 15\"/></svg>",
+      "offerings": [
+        "Heavy built-up plate girders, box columns, and lattice trusses",
+        "Process industrial pipe racks, conveyor galleries and siloways",
+        "Multi-story composite commercial steel framing",
+        "Ultrasonic (UT), Magnetic Particle (MPI) and radiographic weld testing",
+        "Surface blast cleaning to Sa 2.5 and specialized epoxy coating",
+        "Experienced erection teams with mobile hydraulic crane logistics"
+      ],
+      "specs": [
+        {
+          "param": "Fabrication Monthly Capacity",
+          "value": "1,200 Metric Tons / Month"
+        },
+        {
+          "param": "Plate Thickness Range",
+          "value": "6 mm to 80 mm High-Tensile Steel"
+        },
+        {
+          "param": "Welding Standards",
+          "value": "AWS D1.1 Structural Welding Code"
+        },
+        {
+          "param": "Fastener Grades",
+          "value": "ASTM A325 / A490 High-Strength Friction Grip (HSFG)"
+        },
+        {
+          "param": "Surface Preparation",
+          "value": "Automatic shot-blasting to SSPC-SP 10 / ISO 8501-1 Sa 2.5"
+        },
+        {
+          "param": "Coating Systems",
+          "value": "Zinc-rich epoxy primer, intermediate micaceous iron oxide, aliphatic polyurethane"
+        },
+        {
+          "param": "Inspection Protocol",
+          "value": "100% visual inspection + certified non-destructive testing (NDT)"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What welding certifications do Aitmaad welders possess?",
+          "a": "All Aitmaad shop and field welders are certified to AWS D1.1 in 3G/4G positions. We employ full-time Certified Welding Inspectors (CWI) to verify every joint."
+        },
+        {
+          "q": "How are fabrication tolerances maintained?",
+          "a": "We adhere strictly to AISC Code of Standard Practice (AISC 303). CNC beam-drilling, plasma plate cutting, and laser alignment ensure millimetric bolt hole tolerances and smooth site erection."
+        },
+        {
+          "q": "Do you supply heavy conveyor gantries and pipe racks for process plants?",
+          "a": "Yes. We have fabricated and erected overhead utility bridges, trestles, and pipe racks for leading fertilizer, textile, and chemical manufacturers across Pakistan."
+        },
+        {
+          "q": "What non-destructive testing (NDT) reports do you provide?",
+          "a": "We provide comprehensive Quality Assurance documentation including mill test certificates (MTC), ultrasonic testing (UT) reports for moment weld splices, magnetic particle inspection (MPI), and dry film thickness (DFT) paint logs."
+        },
+        {
+          "q": "Can Aitmaad erect structures in congested or active operating industrial facilities?",
+          "a": "Yes. Our erection methodologies include rigorous HAZOP analysis, sequenced crane lift plans, and night-shift installations to eliminate disruption to active plant operations."
+        }
+      ]
+    },
+    {
+      "id": "serv_3",
+      "slug": "warehouses-cold-storage",
+      "pageFile": "service-warehouses.html",
+      "title": "Warehouses & Cold Storage",
+      "shortDesc": "High-bay logistics distribution centers and temperature-controlled cold storages engineered for maximum cubic storage efficiency.",
+      "heroDesc": "Aitmaad designs and builds turnkey logistics parks, FMCG distribution hubs, and sub-zero controlled-atmosphere cold stores (-40°C to +15°C) with airtight thermal envelope integrity.",
+      "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>",
+      "offerings": [
+        "High-bay racking integration with floor load capacities up to 10 ton/m²",
+        "Laser-screed FM2 flatness industrial floor slab coordination",
+        "Continuous PIR/PU sandwich panel wall and ceiling envelopes",
+        "Thermal break isolators preventing cold transfer to primary steel columns",
+        "Sealed docking bays with hydraulic levelers and industrial sectional doors",
+        "FM Global compliant fire suppression and smoke evacuation design"
+      ],
+      "specs": [
+        {
+          "param": "Temperature Range",
+          "value": "-40°C (Blast Freezers) to +15°C (Pharma Cold Chain)"
+        },
+        {
+          "param": "Clear Stacking Heights",
+          "value": "9 m to 18 m (VNA Rack Friendly)"
+        },
+        {
+          "param": "Insulation Core",
+          "value": "B1 Fire-Rated Polyisocyanurate (PIR) / Polyurethane (PU)"
+        },
+        {
+          "param": "Panel Thicknesses",
+          "value": "50 mm, 80 mm, 100 mm, 120 mm, 150 mm, 200 mm"
+        },
+        {
+          "param": "Floor Loadings",
+          "value": "Uniform distributed loads up to 120 kN/m²"
+        },
+        {
+          "param": "Docking Systems",
+          "value": "Automated hydraulic dock levelers, inflatable shelters, rapid roll doors"
+        },
+        {
+          "param": "Energy Efficiency",
+          "value": "U-values as low as 0.11 W/m²K"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do you prevent thermal bridging in cold storage steel structures?",
+          "a": "We engineer heavy-duty composite thermal isolator pads under baseplates, use non-conductive sleeve fasteners, and install ceiling sandwich panels below the roof steel to eliminate thermal shorts."
+        },
+        {
+          "q": "Can Aitmaad coordinate the laser-screed FM2 floor for VNA reach trucks?",
+          "a": "Yes. For high-density racking, floor flatness is paramount. We design and deliver jointless steel-fiber reinforced concrete slabs meeting TR34 FM2 specifications."
+        },
+        {
+          "q": "What fire safety certifications do your insulated panels carry?",
+          "a": "Our PIR panels are certified to EN 13501-1 Class B-s1,d0 and FM Global approvals, ensuring self-extinguishing performance and low smoke emissions."
+        },
+        {
+          "q": "What is the typical build time for a 100,000 sq. ft. distribution warehouse?",
+          "a": "From approved foundation handover, Aitmaad delivers steel frame, cladding, and docking bays in approximately 120 to 140 days."
+        },
+        {
+          "q": "Do you supply cold room insulated sliding doors and docking shelters?",
+          "a": "Yes, we provide complete airtight dock packages including motorized heated-frame cold room sliding doors and dock levellers."
+        }
+      ]
+    },
+    {
+      "id": "serv_4",
+      "slug": "factories-industrial-sheds",
+      "pageFile": "service-factories.html",
+      "title": "Factories & Industrial Sheds",
+      "shortDesc": "Heavy manufacturing plants, textile mills, auto parts factories, and engineering sheds engineered for demanding industrial operations.",
+      "heroDesc": "Aitmaad specializes in industrial production plants engineered around your assembly line layout, with dynamic vibration control, heavy utility runways, and optimal natural lighting and ventilation.",
+      "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 20V10M12 20V4M6 20v-6M2 20h20\"/></svg>",
+      "offerings": [
+        "Custom machine foundation isolation and trenching coordination",
+        "Dynamic load engineering for punching presses and spinning frames",
+        "Ridge ventilators and polycarbonate skylight strips for daylighting",
+        "Overhead crane runways from 5-ton monorails to 50-ton double-girder EOTs",
+        "Substation, compressor room, and administrative office mezzanine annexes",
+        "NFPA-compliant ventilation and fire emergency egress layout"
+      ],
+      "specs": [
+        {
+          "param": "Span Configurations",
+          "value": "Single-gable, multi-gable, saw-tooth, lean-to"
+        },
+        {
+          "param": "Bay Longitudinal Spacing",
+          "value": "7.5 m, 8 m, 9 m standard"
+        },
+        {
+          "param": "Roof Pitch",
+          "value": "1:10 (standard), 1:20 (custom)"
+        },
+        {
+          "param": "Ventilation Capacity",
+          "value": "Continuous gravity ridge ventilators (300mm to 1200mm throat)"
+        },
+        {
+          "param": "Daylighting Provision",
+          "value": "5% to 8% roof area high-grade UV-stabilized polycarbonate sheets"
+        },
+        {
+          "param": "Vibration Mitigation",
+          "value": "Independent isolation joints and elastomeric damping bearings"
+        },
+        {
+          "param": "Wind Load Rating",
+          "value": "Engineered to 160 km/h wind speeds per Building Code of Pakistan"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you design saw-tooth or continuous ridge ventilation for textile and dyeing sheds?",
+          "a": "Yes. We engineer natural convection systems, including continuous throat ridge monitors and louvers that exhaust hot air without mechanical power."
+        },
+        {
+          "q": "How do you handle heavy loads hanging from roof trusses (e.g., HVAC ducts, cable trays)?",
+          "a": "We calculate all collateral loads during the engineering phase, reinforcing bottom chords and purlins to support up to 50 kg/m² of auxiliary equipment."
+        },
+        {
+          "q": "Can the factory shed be expanded in length or width in the future?",
+          "a": "All Aitmaad end-wall frames can be designed as 'expandable end-walls' with pre-drilled connection points, allowing you to lengthen your facility without cutting existing steel."
+        },
+        {
+          "q": "What corrosion protection is recommended for chemical or textile dye houses?",
+          "a": "We recommend hot-dip galvanized cold-formed secondary members and heavy epoxy-polyamide or polyurethane coatings for primary structural steel."
+        },
+        {
+          "q": "Do you supply mezzanine floors for plant managers and electrical rooms inside the shed?",
+          "a": "Yes, composite steel deck mezzanines with light gauge concrete slabs or chequered plates are standard options."
+        }
+      ]
+    },
+    {
+      "id": "serv_5",
+      "slug": "roofing-cladding-insulation",
+      "pageFile": "service-roofing.html",
+      "title": "Roofing, Cladding & Insulation",
+      "shortDesc": "High-performance standing seam metal roofing, PIR sandwich panels, single-skin profiles, and daylighting systems.",
+      "heroDesc": "The building envelope is your first line of defense against the elements. Aitmaad manufactures and installs leak-proof metal cladding and energy-saving insulation systems that reduce cooling costs by up to 35%.",
+      "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><polyline points=\"9 22 9 12 15 12 15 22\"/></svg>",
+      "offerings": [
+        "Aitmaad-Lok 360° mechanical lock standing seam roof panels",
+        "Trapezoidal single-skin profiles in 0.5mm, 0.6mm, 0.7mm Zincalume/Galvalume",
+        "Continuous-line manufactured PIR and PU sandwich panels",
+        "Fiberglass wool insulation with reinforced white vinyl vapor retarder",
+        "UV-resistant polycarbonate and FRP skylight sheets with matching profiles",
+        "Architectural flashings, curved eaves, downspouts, and valley gutters"
+      ],
+      "specs": [
+        {
+          "param": "Base Metal",
+          "value": "55% Al-Zn Alloy coated Galvalume (AZ150) / Hot-Dip Galvanized (Z275)"
+        },
+        {
+          "param": "Steel Yield Strength",
+          "value": "Grade 80 (550 MPa) for roofing; Grade 50 (345 MPa) for cladding"
+        },
+        {
+          "param": "Paint Finish",
+          "value": "Super Durable Polyester (SDP) / PVDF (Kynar 500) 25-micron exterior"
+        },
+        {
+          "param": "Panel Profiles",
+          "value": "32/200, 35/200, 45/250, Standing Seam 65/400"
+        },
+        {
+          "param": "Insulation R-Value",
+          "value": "R-13 to R-38 depending on panel thickness"
+        },
+        {
+          "param": "Warranty",
+          "value": "Up to 20-year limited warranty against perforation and chalking"
+        },
+        {
+          "param": "Fasteners",
+          "value": "Class 4 corrosion-resistant carbon steel screws with EPDM washers"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between standing seam roofing and screw-down trapezoidal sheets?",
+          "a": "Screw-down sheets have thousands of exposed screws that penetrate the sheet, which can leak over time as thermal movement stretches the holes. Standing seam panels clip together with concealed fasteners and 360-degree mechanical seaming, providing 100% leak-proof reliability."
+        },
+        {
+          "q": "What is Galvalume (Zincalume) and why is it superior to ordinary galvanized steel?",
+          "a": "Galvalume features an alloy coating of 55% aluminum, 43.4% zinc, and 1.6% silicon. It provides up to four times the corrosion resistance of standard hot-dip galvanized steel in harsh industrial atmospheres."
+        },
+        {
+          "q": "Can you re-roof an old, leaking industrial factory without stopping factory operations?",
+          "a": "Yes. Our 'Over-Roofing' technique installs light sub-purlins over your existing asbestos or corrugated sheets, allowing new insulated standing seam roofing to be placed without opening the building to the sky."
+        },
+        {
+          "q": "What insulation thickness is recommended for hot Pakistani summers?",
+          "a": "For general manufacturing, a 50mm glasswool or 50mm PIR panel is effective. For air-conditioned facilities, we recommend 80mm to 100mm PIR panels to reduce HVAC power consumption significantly."
+        },
+        {
+          "q": "Are the skylight panels shatter-proof and UV-resistant?",
+          "a": "We install heavy-duty polycarbonate and FRP sheets co-extruded with UV-blocking barriers that resist yellowing, hail damage, and embrittlement for over 15 years."
+        }
+      ]
+    },
+    {
+      "id": "serv_6",
+      "slug": "design-engineering-consultancy",
+      "pageFile": "service-consultancy.html",
+      "title": "Design, Engineering & Consultancy",
+      "shortDesc": "Value-engineered structural design, 3D BIM modeling, connection design, and peer reviews that optimize steel tonnage without compromising safety.",
+      "heroDesc": "Aitmaad's in-house engineering team utilizes STAAD.Pro, ETABS, and Tekla Structures to deliver optimized, collision-free, and code-compliant steel structural designs that save clients millions in material costs.",
+      "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14\"/></svg>",
+      "offerings": [
+        "Parametric structural analysis using STAAD.Pro and ETABS",
+        "LOD 400 detailing and fabrication spool drawings in Tekla Structures",
+        "Steel tonnage optimization and peer review audits",
+        "Seismic analysis per Building Code of Pakistan (BCP 2021) / UBC 97",
+        "Wind tunnel simulation and dynamic crane impact modeling",
+        "Turnkey bill of quantities (BOQ) and anchor bolt layout plans"
+      ],
+      "specs": [
+        {
+          "param": "Analysis Software",
+          "value": "STAAD.Pro, ETABS, SAP2000, RAM Structural"
+        },
+        {
+          "param": "Detailing Platform",
+          "value": "Tekla Structures (BIM LOD 400), AutoCAD"
+        },
+        {
+          "param": "Building Codes",
+          "value": "AISC 360-16, AISC 341, MBMA 2010, ASCE 7-16, AWS D1.1"
+        },
+        {
+          "param": "Seismic Design",
+          "value": "BCP 2021, UBC 97 Seismic Zones 1 through 4"
+        },
+        {
+          "param": "Average Tonnage Savings",
+          "value": "12% to 22% reduction through tapered plate optimization"
+        },
+        {
+          "param": "Deliverables",
+          "value": "Signed structural calculation reports, anchor bolt plans, fabrication spool drawings, erection markups"
+        },
+        {
+          "param": "Consultancy Scope",
+          "value": "Greenfield industrial master planning to retrofitting audits"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How can Aitmaad's engineering team reduce my project's steel tonnage?",
+          "a": "By utilizing tapered plate girders matching precise moment envelopes instead of heavy standard hot-rolled I-beams, we eliminate wasted steel at low-stress points. This typically yields a 15-20% reduction in total steel tonnage."
+        },
+        {
+          "q": "Do you supply certified structural calculation reports for municipal and DHA/industrial estate approval?",
+          "a": "Yes. Every project includes a signed and stamped structural design calculation report by a registered Professional Engineer (PE) holding Pakistan Engineering Council (PEC) licensing."
+        },
+        {
+          "q": "What is Tekla LOD 400 detailing and why is it important?",
+          "a": "LOD 400 means every plate, stiffener, weld, bolt, and hole is modeled in a 3D digital twin before cutting begins. This guarantees zero clashes on site and eliminates expensive field modifications."
+        },
+        {
+          "q": "Can Aitmaad review an existing steel design from another consultant?",
+          "a": "Yes. We offer independent peer review services to identify over-designed elements, eliminate erection bottlenecks, and verify seismic compliance."
+        },
+        {
+          "q": "How long does the initial engineering design phase take?",
+          "a": "Preliminary GA (General Arrangement) and anchor bolt drawings are typically ready within 7-10 working days after client architectural freeze."
+        }
+      ]
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Aitmaad delivered our 145,000 sq. ft. spinning and manufacturing facility 18 days ahead of schedule. Their standing seam roofing and crane runway tolerances were flawless. In twenty years of building industrial assets, I have rarely seen this degree of engineering precision in Pakistan.",
+      "author": "Mian Tariq Shafi",
+      "designation": "Director of Infrastructure & Supply Chain",
+      "company": "Shafi Texcel Group",
+      "location": "Lahore",
+      "rating": 5,
+      "initials": "TS"
+    },
+    {
+      "id": 2,
+      "quote": "When we expanded our temperature-controlled agro-storage facilities, thermal efficiency was our biggest concern. The Aitmaad team value-engineered the framing in Tekla, reducing total steel weight by 14% while exceeding our rigorous stiffness criteria. Truly built on trust.",
+      "author": "Chaudhry Salman Raza",
+      "designation": "Chief Technical Officer",
+      "company": "Green Apple Farms",
+      "location": "Punjab",
+      "rating": 5,
+      "initials": "SR"
+    },
+    {
+      "id": 3,
+      "quote": "Aitmaad delivered our high-ventilation livestock and milking sheds ahead of schedule. Their natural ridge cooling and insulated roofing have kept our herd comfortable even during peak summer heatwave conditions. Exceptional engineering team.",
+      "author": "Chaudhry Nadeem Akhtar",
+      "designation": "Managing Partner",
+      "company": "Everfresh Farms (pvt) Ltd",
+      "location": "Sahiwal",
+      "rating": 5,
+      "initials": "NA"
+    },
+    {
+      "id": 4,
+      "quote": "We needed heavy clear-span structural steel framing with high corrosion resistance for our modern dairy operation. Aitmaad's connection detailing, high-strength bolting, and on-site crane erection were world-class.",
+      "author": "Mian Kamran Rafiq",
+      "designation": "General Manager Projects",
+      "company": "Samson's Group (Simson Dairies)",
+      "location": "Kasur District",
+      "rating": 5,
+      "initials": "KR"
+    },
+    {
+      "id": 5,
+      "quote": "Aitmaad engineered and erected our clear-span sports manufacturing and export warehouse complex with complete precision. Zero millimeter deviation in portal frame alignments. A partner you can rely on blindly.",
+      "author": "Sheikh Asim Farooq",
+      "designation": "Director of Operations",
+      "company": "Comet Sports (Pvt.) Ltd.",
+      "location": "Sialkot",
+      "rating": 5,
+      "initials": "AF"
+    },
+    {
+      "id": 6,
+      "quote": "Aitmaad's PEB structural execution for our food processing & packaging plant was on point. 100% column-free clear spans, zero leaks through heavy monsoon seasons, and full compliance with international standards.",
+      "author": "Malik Usman Ghani",
+      "designation": "Chief Project Engineer",
+      "company": "Gofy Food Industries",
+      "location": "Gujranwala",
+      "rating": 5,
+      "initials": "UG"
+    },
+    {
+      "id": 7,
+      "quote": "Exceptional crane beam alignments and anchor bolt precision for our distribution center. Highly disciplined on-site safety protocols and zero lost-time incidents throughout erection. A partner you can rely on blindly.",
+      "author": "Khawaja Bilal Ahmed",
+      "designation": "VP Engineering & Operations",
+      "company": "PETROMAN SAFETY INTERNATIONAL",
+      "location": "Karachi",
+      "rating": 5,
+      "initials": "BA"
+    },
+    {
+      "id": 8,
+      "quote": "From initial 3D Tekla BIM modeling to final turnkey commissioning of our surgical instrument fabrication unit, Aitmaad set an unmatched standard in structural steel fabrication and erection in Pakistan.",
+      "author": "Brig. (R) Tariq Mehmood",
+      "designation": "Director of Capital Works",
+      "company": "Weldon Instrument",
+      "location": "Sialkot",
+      "rating": 5,
+      "initials": "TM"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_admin",
+      "username": "admin",
+      "passwordHash": "$2b$10$DDt/fMb6U8aEBZnBWWdL3udlCYdV.zkEpavfsDS0cSuz/cCaOBY52",
+      "role": "superadmin",
+      "name": "Aitmaad Admin"
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "inq_1793989939908",
+      "name": "Chaudhry Bilal Asif",
+      "phone": "+92 300 9988776",
+      "email": "bilal@asiftextiles.com",
+      "projectType": "PEB Warehouse",
+      "dimensions": "100ft x 300ft x 32ft",
+      "location": "Sheikhupura Road, Faisalabad",
+      "message": "Need cost estimation for heavy gantry crane shed.",
+      "createdAt": "2026-11-06T18:32:19.908Z",
+      "status": "new"
+    },
+    {
+      "id": "inq_demo_1",
+      "name": "Muhammad Usman",
+      "phone": "+92 321 4455667",
+      "email": "usman@industrialcorp.pk",
+      "projectType": "peb",
+      "dimensions": "120ft x 250ft x 28ft eave height",
+      "location": "Sundar Industrial Estate, Lahore",
+      "message": "Need turnkey quote for textile warehouse with 10-ton crane beam runway.",
+      "createdAt": "2026-11-06T18:24:06.537Z",
+      "status": "new"
+    }
+  ]
+}

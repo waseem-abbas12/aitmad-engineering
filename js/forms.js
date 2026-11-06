@@ -100,19 +100,29 @@ export class QuoteFormHandler {
 
     // 4. Collect form payload
     const formData = new FormData(this.form);
-    const payload = Object.fromEntries(formData.entries());
+    const payload = {
+      name: formData.get('name') || formData.get('contact_name') || 'Website Inquiry',
+      phone: formData.get('phone') || formData.get('contact_phone') || '',
+      email: formData.get('email') || formData.get('contact_email') || '',
+      projectType: formData.get('project_type') || formData.get('contact_project_type') || 'Industrial PEB',
+      dimensions: formData.get('area') || formData.get('contact_area') || '',
+      location: formData.get('location') || formData.get('contact_location') || '',
+      message: formData.get('message') || formData.get('contact_message') || ''
+    };
 
-    /**
-     * TODO: Connect to your backend API or Formspree endpoint:
-     * Example: fetch("https://formspree.io/f/YOUR_FORM_ID", { method: "POST", body: formData })
-     */
-    setTimeout(() => {
+    fetch('/api/inquiries', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(err => {
+      console.warn('Inquiry API notice:', err);
+    }).finally(() => {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
 
       // 5. Show Success Panel
       this.showSuccess();
-    }, 1200);
+    });
   }
 
   showSuccess() {
