@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - Pages & Sections Specific CSS
+ * Aitmaad Engineering - Pages & Sections Specific CSS
  * Spec: Sections 6, 7, 8
  */
 
@@ -1014,7 +1014,7 @@ html[dir="rtl"] .since-badge {
 }
 
 /* ==========================================================================
-   6.7 Why Aitmad Section (Pine-800 - Clean 3x2 Architectural Cards)
+   6.7 Why Aitmaad Section (Pine-800 - Clean 3x2 Architectural Cards)
    ========================================================================== */
 .why-cards-grid {
   display: grid;
@@ -1115,14 +1115,14 @@ html[dir="rtl"] .since-badge {
   flex-grow: 1;
 }
 
-.why-aitmad-grid {
+.why-aitmaad-grid, .why-aitmad-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-12);
 }
 
 @media (min-width: 1024px) {
-  .why-aitmad-grid {
+  .why-aitmaad-grid, .why-aitmad-grid {
     grid-template-columns: 1fr 1.3fr;
     gap: var(--space-16);
   }

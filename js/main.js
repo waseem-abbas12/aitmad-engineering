@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - Main JavaScript Orchestration
+ * Aitmaad Engineering - Main JavaScript Orchestration
  * Spec: Sections 5, 6, 8, 12
  */
 
@@ -11,7 +11,7 @@ import { testimonials } from '../data/testimonials.js';
 import { AnimationEngine } from './animations.js';
 
 
-class AitmadApp {
+class AitmaadApp {
   constructor() {
     this.initPreloader();
     this.initHeader();
@@ -35,7 +35,7 @@ class AitmadApp {
     const preloader = document.getElementById('site-preloader');
     if (!preloader) return;
 
-    const hasSeen = sessionStorage.getItem('aitmad_preloader_seen');
+    const hasSeen = sessionStorage.getItem('aitmaad_preloader_seen');
     if (hasSeen) {
       preloader.style.display = 'none';
       return;
@@ -43,7 +43,7 @@ class AitmadApp {
 
     setTimeout(() => {
       preloader.classList.add('fade-out');
-      sessionStorage.setItem('aitmad_preloader_seen', 'true');
+      sessionStorage.setItem('aitmaad_preloader_seen', 'true');
       setTimeout(() => {
         preloader.remove();
       }, 600);
@@ -198,7 +198,7 @@ class AitmadApp {
     const banner = document.getElementById('cookie-notice');
     if (!banner) return;
 
-    const accepted = localStorage.getItem('aitmad_cookie_consent');
+    const accepted = localStorage.getItem('aitmaad_cookie_consent');
     if (!accepted) {
       setTimeout(() => {
         banner.classList.add('visible');
@@ -209,7 +209,7 @@ class AitmadApp {
     const acceptBtn = document.getElementById('cookie-accept-btn');
     if (acceptBtn) {
       acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('aitmad_cookie_consent', 'true');
+        localStorage.setItem('aitmaad_cookie_consent', 'true');
         banner.classList.remove('visible');
         document.body.classList.remove('cookie-banner-active');
       });
@@ -308,7 +308,7 @@ class AitmadApp {
     let intervalId = setInterval(rotate, 2800);
 
     // Reset rotation on language switch
-    window.addEventListener('aitmad:langchange', () => {
+    window.addEventListener('aitmaad:langchange', () => {
       clearInterval(intervalId);
       currentIndex = 0;
       const words = getWordList();
@@ -456,5 +456,5 @@ class AitmadApp {
 
 // Instantiate on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
-  window.__AitmadApp = new AitmadApp();
+  window.__AitmaadApp = new AitmaadApp();
 });

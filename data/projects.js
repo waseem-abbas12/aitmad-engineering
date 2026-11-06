@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - Projects Data Model
+ * Aitmaad Engineering - Projects Data Model
  * 17 Real Industrial PEB, Structural Steel & Warehousing Projects
  * Linked to authentic high-resolution site photography
  */
@@ -16,7 +16,7 @@ export const projects = [
     steelTonnage: "380 Tons",
     year: 2026,
     duration: "5 Months",
-    client: "Everfresh Dairy Farms (Pvt.) Ltd.",
+    client: "Everfresh Farms (pvt) Ltd",
     scope: ["Custom Portal Frame", "Polyurethane Insulated Roofing", "Natural Ridge Ventilation", "Anchor Bolt Erection"],
     cover: "assets/projects/project-1-thumb.webp",
     gallery: [
@@ -85,7 +85,7 @@ export const projects = [
     steelTonnage: "310 Tons",
     year: 2025,
     duration: "4.5 Months",
-    client: "Simson Dairies Pakistan",
+    client: "Samson's Group",
     scope: ["Heavy Steel Portal Framing", "Ridge Ventilation Monitors", "Corrosion-Resistant Coating", "Automated Feeding Corridors"],
     cover: "assets/projects/project-4-thumb.webp",
     gallery: [
@@ -108,7 +108,7 @@ export const projects = [
     steelTonnage: "580 Tons",
     year: 2024,
     duration: "6 Months",
-    client: "Simson Dairies Pakistan",
+    client: "Samson's Group",
     scope: ["Heavy Portal Columns", "Overhead Feed Conveyor Rails", "Corrosion-Proof Purlins", "Rapid Erection"],
     cover: "assets/projects/project-5-thumb.webp",
     gallery: [
@@ -131,7 +131,7 @@ export const projects = [
     steelTonnage: "420 Tons",
     year: 2024,
     duration: "5 Months",
-    client: "Everfresh Dairy Farms (Pvt.) Ltd.",
+    client: "Everfresh Farms (pvt) Ltd",
     scope: ["Open-Sided Portal Frame", "Continuous Roof Monitor", "Insulated Metal Roof", "Heavy Concrete Anchorages"],
     cover: "assets/projects/project-6-thumb.webp",
     gallery: [
@@ -154,7 +154,7 @@ export const projects = [
     steelTonnage: "640 Tons",
     year: 2024,
     duration: "6 Months",
-    client: "Nishat Packaging Division",
+    client: "Aguila Active (Pvt)",
     scope: ["PEB Portal Framing", "Roof Monitor Skylights", "Fire Sprinkler Truss Brackets", "Standing Seam"],
     cover: "assets/projects/project-7-thumb.webp",
     gallery: [
@@ -177,7 +177,7 @@ export const projects = [
     steelTonnage: "790 Tons",
     year: 2024,
     duration: "7 Months",
-    client: "Engro Agribusiness Ltd.",
+    client: "Gofy Food Industries",
     scope: ["Chemical-Resistant Coatings", "Bulk Retaining Wall Framing", "Roof Conveyor Supports"],
     cover: "assets/projects/project-8-thumb.webp",
     gallery: [
@@ -200,7 +200,7 @@ export const projects = [
     steelTonnage: "290 Tons",
     year: 2023,
     duration: "4 Months",
-    client: "Precision Auto Engineering Ltd.",
+    client: "Weldon Instrument",
     scope: ["Furnace Exhaust Framing", "15-Ton Crane Runway", "Thermal Heat Shields"],
     cover: "assets/projects/project-9-thumb.webp",
     gallery: [
@@ -223,7 +223,7 @@ export const projects = [
     steelTonnage: "420 Tons",
     year: 2023,
     duration: "5 Months",
-    client: "Punjab Food Storage Authority",
+    client: "Green Apple Farms",
     scope: ["Heavy Steel Towers", "Elevator Catwalks", "Grain Conveyor Gallery"],
     cover: "assets/projects/project-10-thumb.webp",
     gallery: [
@@ -246,7 +246,7 @@ export const projects = [
     steelTonnage: "510 Tons",
     year: 2023,
     duration: "5 Months",
-    client: "Kohinoor Textile Group",
+    client: "Shafi Texcel Group",
     scope: ["PEB Extension", "Existing Wall Tie-In", "Acoustic Insulation"],
     cover: "assets/projects/project-11-thumb.webp",
     gallery: [
@@ -269,7 +269,7 @@ export const projects = [
     steelTonnage: "370 Tons",
     year: 2023,
     duration: "5 Months",
-    client: "Al-Razi Commercial Enterprises",
+    client: "PETROMAN SAFETY INTERNATIONAL",
     scope: ["Aesthetic Steel Portals", "Glass Curtain Wall Subframe", "Mezzanine Floor"],
     cover: "assets/projects/project-12-thumb.webp",
     gallery: [

@@ -1,4 +1,4 @@
-# Aitmad Engineering (اعتماد انجینئرنگ)
+# Aitmaad Engineering (اعتماد انجینئرنگ)
 ### Complete Website Design & Build Documentation
 
 > **Built on Trust. Engineered in Steel.**  
@@ -26,7 +26,7 @@
 │   ├── projects.html           # Filterable gallery & instant search
 │   ├── project.html            # Dynamic project detail template (?slug=...)
 │   ├── process.html            # 6-step engineered execution methodology
-│   ├── why-aitmad.html         # Credentials, PEC C1, AWS welding, 2M+ safe hours
+│   ├── why-aitmaad.html         # Credentials, PEC C1, AWS welding, 2M+ safe hours
 │   ├── contact.html            # 2-column contact & quote request with validation
 │   ├── 404.html                # Custom branded 404 error page
 │   └── privacy.html            # Corporate privacy policy & NDA terms
@@ -105,7 +105,7 @@ Simply append a new object to the `projects` array:
   ],
   overview: "Detailed project description...",
   challenge: "Engineering hurdles solved...",
-  solution: "Aitmad's technical approach...",
+  solution: "Aitmaad's technical approach...",
   result: "Quantifiable project outcomes...",
   featured: true               // Set to true to show in home page featured list
 }
@@ -166,4 +166,4 @@ To connect to **Formspree** or your custom mail endpoint:
 
 ---
 
-© 2026 Aitmad Engineering (Pvt.) Ltd. All Rights Reserved. Engineered for Trust.
+© 2026 Aitmaad Engineering (Pvt.) Ltd. All Rights Reserved. Engineered for Trust.

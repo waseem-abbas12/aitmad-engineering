@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - Projects Grid, Filter, Lightbox & Detail Renderer
+ * Aitmaad Engineering - Projects Grid, Filter, Lightbox & Detail Renderer
  * Spec: Section 6.6, 7.3, 7.4, 11
  */
 
@@ -276,7 +276,7 @@ export class ProjectsManager {
     const nextProject = this.projects[(currentIndex + 1) % this.projects.length];
 
     // Update document title
-    document.title = `${project.title} | Aitmad Engineering`;
+    document.title = `${project.title} | Aitmaad Engineering`;
 
     detailRoot.innerHTML = `
       <section class="page-banner bg-blueprint">

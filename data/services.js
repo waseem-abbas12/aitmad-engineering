@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - Services Data Model
+ * Aitmaad Engineering - Services Data Model
  * Spec: Sections 6.5, 7.2
  */
 
@@ -9,7 +9,7 @@ export const services = [
     pageFile: "service-peb.html",
     title: "Pre-Engineered Buildings (PEB)",
     shortDesc: "Custom-designed high-tensile steel building systems engineered for rapid delivery, cost efficiency and long column-free spans.",
-    heroDesc: "Aitmad PEB systems combine cutting-edge parametric design, automated submerged arc welding, and precision CNC fabrication to deliver turnkey industrial facilities in half the time of conventional construction.",
+    heroDesc: "Aitmaad PEB systems combine cutting-edge parametric design, automated submerged arc welding, and precision CNC fabrication to deliver turnkey industrial facilities in half the time of conventional construction.",
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10v11M15 10v11"/></svg>`,
     offerings: [
       "Parametric tapered I-beam primary framing (ASTM A572 Grade 50)",
@@ -34,19 +34,19 @@ export const services = [
         a: "PEB systems use high-tensile steel members tapered according to bending moment diagrams, reducing dead weight by up to 30%. They fabricate in controlled factory environments concurrently with foundation work, cutting total project completion time by 40-50% while offering superior earthquake resistance."
       },
       {
-        q: "What is the maximum clear span Aitmad can fabricate without internal columns?",
+        q: "What is the maximum clear span Aitmaad can fabricate without internal columns?",
         a: "We regularly engineer and fabricate clear spans up to 75-90 meters without interior support columns. This provides 100% usable floor area for warehousing, aircraft hangars, and assembly lines."
       },
       {
-        q: "How does Aitmad ensure waterproofing on PEB roofs?",
+        q: "How does Aitmaad ensure waterproofing on PEB roofs?",
         a: "We utilize double-locked 360-degree standing seam metal roofing systems with concealed clips. Because fasteners do not penetrate the external roof sheet, thermal expansion does not cause elongation or water leakage."
       },
       {
-        q: "Can Aitmad integrate heavy overhead cranes into a PEB design?",
+        q: "Can Aitmaad integrate heavy overhead cranes into a PEB design?",
         a: "Yes. Our engineers design the primary columns with stepped brackets or independent crane runway columns to support electric overhead traveling (EOT) cranes up to 50-ton capacity, fully compliant with CMAA guidelines."
       },
       {
-        q: "What is the typical lifespan and maintenance required for an Aitmad PEB?",
+        q: "What is the typical lifespan and maintenance required for an Aitmaad PEB?",
         a: "Engineered to ASTM and AISC standards, our structures have a design service life exceeding 50 years. Periodic gutter cleaning and 10-year surface touch-ups are all that is typically required."
       }
     ]
@@ -56,7 +56,7 @@ export const services = [
     pageFile: "service-structural-steel.html",
     title: "Structural Steel Fabrication & Erection",
     shortDesc: "Heavy industrial steel structures, pipe racks, heavy trusses, and multi-tier platforms built to AISC and AWS D1.1 standards.",
-    heroDesc: "From cement and chemical processing plants to power generation infrastructure and multi-story commercial steel frames, Aitmad provides heavy-gauge fabrication with robotic precision and certified erection crews.",
+    heroDesc: "From cement and chemical processing plants to power generation infrastructure and multi-story commercial steel frames, Aitmaad provides heavy-gauge fabrication with robotic precision and certified erection crews.",
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16M2 7h20M12 2v20M7 7l5 15M17 7l-5 15"/></svg>`,
     offerings: [
       "Heavy built-up plate girders, box columns, and lattice trusses",
@@ -77,8 +77,8 @@ export const services = [
     ],
     faqs: [
       {
-        q: "What welding certifications do Aitmad welders possess?",
-        a: "All Aitmad shop and field welders are certified to AWS D1.1 in 3G/4G positions. We employ full-time Certified Welding Inspectors (CWI) to verify every joint."
+        q: "What welding certifications do Aitmaad welders possess?",
+        a: "All Aitmaad shop and field welders are certified to AWS D1.1 in 3G/4G positions. We employ full-time Certified Welding Inspectors (CWI) to verify every joint."
       },
       {
         q: "How are fabrication tolerances maintained?",
@@ -93,7 +93,7 @@ export const services = [
         a: "We provide comprehensive Quality Assurance documentation including mill test certificates (MTC), ultrasonic testing (UT) reports for moment weld splices, magnetic particle inspection (MPI), and dry film thickness (DFT) paint logs."
       },
       {
-        q: "Can Aitmad erect structures in congested or active operating industrial facilities?",
+        q: "Can Aitmaad erect structures in congested or active operating industrial facilities?",
         a: "Yes. Our erection methodologies include rigorous HAZOP analysis, sequenced crane lift plans, and night-shift installations to eliminate disruption to active plant operations."
       }
     ]
@@ -103,7 +103,7 @@ export const services = [
     pageFile: "service-warehouses.html",
     title: "Warehouses & Cold Storage",
     shortDesc: "High-bay logistics distribution centers and temperature-controlled cold storages engineered for maximum cubic storage efficiency.",
-    heroDesc: "Aitmad designs and builds turnkey logistics parks, FMCG distribution hubs, and sub-zero controlled-atmosphere cold stores (-40°C to +15°C) with airtight thermal envelope integrity.",
+    heroDesc: "Aitmaad designs and builds turnkey logistics parks, FMCG distribution hubs, and sub-zero controlled-atmosphere cold stores (-40°C to +15°C) with airtight thermal envelope integrity.",
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
     offerings: [
       "High-bay racking integration with floor load capacities up to 10 ton/m²",
@@ -128,7 +128,7 @@ export const services = [
         a: "We engineer heavy-duty composite thermal isolator pads under baseplates, use non-conductive sleeve fasteners, and install ceiling sandwich panels below the roof steel to eliminate thermal shorts."
       },
       {
-        q: "Can Aitmad coordinate the laser-screed FM2 floor for VNA reach trucks?",
+        q: "Can Aitmaad coordinate the laser-screed FM2 floor for VNA reach trucks?",
         a: "Yes. For high-density racking, floor flatness is paramount. We design and deliver jointless steel-fiber reinforced concrete slabs meeting TR34 FM2 specifications."
       },
       {
@@ -137,7 +137,7 @@ export const services = [
       },
       {
         q: "What is the typical build time for a 100,000 sq. ft. distribution warehouse?",
-        a: "From approved foundation handover, Aitmad delivers steel frame, cladding, and docking bays in approximately 120 to 140 days."
+        a: "From approved foundation handover, Aitmaad delivers steel frame, cladding, and docking bays in approximately 120 to 140 days."
       },
       {
         q: "Do you supply cold room insulated sliding doors and docking shelters?",
@@ -150,7 +150,7 @@ export const services = [
     pageFile: "service-factories.html",
     title: "Factories & Industrial Sheds",
     shortDesc: "Heavy manufacturing plants, textile mills, auto parts factories, and engineering sheds engineered for demanding industrial operations.",
-    heroDesc: "Aitmad specializes in industrial production plants engineered around your assembly line layout, with dynamic vibration control, heavy utility runways, and optimal natural lighting and ventilation.",
+    heroDesc: "Aitmaad specializes in industrial production plants engineered around your assembly line layout, with dynamic vibration control, heavy utility runways, and optimal natural lighting and ventilation.",
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6M2 20h20"/></svg>`,
     offerings: [
       "Custom machine foundation isolation and trenching coordination",
@@ -180,7 +180,7 @@ export const services = [
       },
       {
         q: "Can the factory shed be expanded in length or width in the future?",
-        a: "All Aitmad end-wall frames can be designed as 'expandable end-walls' with pre-drilled connection points, allowing you to lengthen your facility without cutting existing steel."
+        a: "All Aitmaad end-wall frames can be designed as 'expandable end-walls' with pre-drilled connection points, allowing you to lengthen your facility without cutting existing steel."
       },
       {
         q: "What corrosion protection is recommended for chemical or textile dye houses?",
@@ -197,10 +197,10 @@ export const services = [
     pageFile: "service-roofing.html",
     title: "Roofing, Cladding & Insulation",
     shortDesc: "High-performance standing seam metal roofing, PIR sandwich panels, single-skin profiles, and daylighting systems.",
-    heroDesc: "The building envelope is your first line of defense against the elements. Aitmad manufactures and installs leak-proof metal cladding and energy-saving insulation systems that reduce cooling costs by up to 35%.",
+    heroDesc: "The building envelope is your first line of defense against the elements. Aitmaad manufactures and installs leak-proof metal cladding and energy-saving insulation systems that reduce cooling costs by up to 35%.",
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
     offerings: [
-      "Aitmad-Lok 360° mechanical lock standing seam roof panels",
+      "Aitmaad-Lok 360° mechanical lock standing seam roof panels",
       "Trapezoidal single-skin profiles in 0.5mm, 0.6mm, 0.7mm Zincalume/Galvalume",
       "Continuous-line manufactured PIR and PU sandwich panels",
       "Fiberglass wool insulation with reinforced white vinyl vapor retarder",
@@ -244,7 +244,7 @@ export const services = [
     pageFile: "service-consultancy.html",
     title: "Design, Engineering & Consultancy",
     shortDesc: "Value-engineered structural design, 3D BIM modeling, connection design, and peer reviews that optimize steel tonnage without compromising safety.",
-    heroDesc: "Aitmad's in-house engineering team utilizes STAAD.Pro, ETABS, and Tekla Structures to deliver optimized, collision-free, and code-compliant steel structural designs that save clients millions in material costs.",
+    heroDesc: "Aitmaad's in-house engineering team utilizes STAAD.Pro, ETABS, and Tekla Structures to deliver optimized, collision-free, and code-compliant steel structural designs that save clients millions in material costs.",
     icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>`,
     offerings: [
       "Parametric structural analysis using STAAD.Pro and ETABS",
@@ -265,7 +265,7 @@ export const services = [
     ],
     faqs: [
       {
-        q: "How can Aitmad's engineering team reduce my project's steel tonnage?",
+        q: "How can Aitmaad's engineering team reduce my project's steel tonnage?",
         a: "By utilizing tapered plate girders matching precise moment envelopes instead of heavy standard hot-rolled I-beams, we eliminate wasted steel at low-stress points. This typically yields a 15-20% reduction in total steel tonnage."
       },
       {
@@ -277,7 +277,7 @@ export const services = [
         a: "LOD 400 means every plate, stiffener, weld, bolt, and hole is modeled in a 3D digital twin before cutting begins. This guarantees zero clashes on site and eliminates expensive field modifications."
       },
       {
-        q: "Can Aitmad review an existing steel design from another consultant?",
+        q: "Can Aitmaad review an existing steel design from another consultant?",
         a: "Yes. We offer independent peer review services to identify over-designed elements, eliminate erection bottlenecks, and verify seismic compliance."
       },
       {

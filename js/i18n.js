@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - Bilingual (EN / UR) System
+ * Aitmaad Engineering - Bilingual (EN / UR) System
  * Spec: Section 12
  */
 
@@ -11,7 +11,8 @@ export const translations = {
     nav_services: "Services",
     nav_projects: "Projects",
     nav_process: "Process",
-    nav_why_aitmad: "Why Aitmad",
+    nav_why_aitmaad: "Why Aitmaad",
+    nav_why_aitmaad: "Why Aitmaad",
     nav_contact: "Contact",
     nav_quote_btn: "Request a Quote",
     nav_phone_label: "+92 300 4589192",
@@ -42,7 +43,7 @@ export const translations = {
     // About Preview
     about_eyebrow: "Our Heritage & Foundation",
     about_h2: "A Name Clients Rely On For Industrial Steel",
-    about_p1: "Founded on the bedrock of uncompromised engineering integrity, Aitmad Engineering has grown into one of Pakistan's foremost pre-engineered steel construction companies. We build for industrialists whose operations demand millimeter precision.",
+    about_p1: "Founded on the bedrock of uncompromised engineering integrity, Aitmaad Engineering has grown into one of Pakistan's foremost pre-engineered steel construction companies. We build for industrialists whose operations demand millimeter precision.",
     about_p2: "From sprawling textile sheds and computerized logistics hubs to cold storage facilities and high-load crane structures, our in-house engineering and fabrication lines deliver certainty at every stage.",
     about_check_1: "Engineering-Led: In-house STAAD & Tekla LOD 400 design teams",
     about_check_2: "Transparent Pricing: Detailed tonnage BOQ with zero hidden costs",
@@ -76,9 +77,9 @@ export const translations = {
     view_all_projects: "View All Projects",
     view_project: "View Project",
 
-    // Why Aitmad
-    why_eyebrow: "The Aitmad Advantage",
-    why_h2: "Why Leading Industrialists Choose Aitmad",
+    // Why Aitmaad
+    why_eyebrow: "The Aitmaad Advantage",
+    why_h2: "Why Leading Industrialists Choose Aitmaad",
     why_sub: "We understand that industrial buildings are significant capital investments. Here is why Pakistan's top corporations trust us with their critical assets.",
     why_1_title: "Engineering Excellence",
     why_1_desc: "Every structure is designed using STAAD.Pro and detailed to Tekla LOD 400, eliminating on-site conflicts and optimizing steel weight without sacrificing structural safety margins.",
@@ -138,7 +139,7 @@ export const translations = {
     form_submit: "Submit Quote Request",
     form_submitting: "Transmitting Data...",
     form_success_title: "Quote Request Received",
-    form_success_msg: "Thank you for reaching out to Aitmad Engineering. Our senior project engineering director will review your specifications and contact you within 24 business hours.",
+    form_success_msg: "Thank you for reaching out to Aitmaad Engineering. Our senior project engineering director will review your specifications and contact you within 24 business hours.",
 
     // Footer
     footer_tagline: "Built on Trust. Engineered in Steel. Delivering Pakistan's premier pre-engineered buildings and industrial steel infrastructure with 10+ years of engineering excellence.",
@@ -155,7 +156,8 @@ export const translations = {
     nav_services: "خدمات",
     nav_projects: "منصوبہ جات",
     nav_process: "طریقۂ کار",
-    nav_why_aitmad: "اعتماد کیوں؟",
+    nav_why_aitmaad: "اعتماد کیوں؟",
+    nav_why_aitmaad: "اعتماد کیوں؟",
     nav_contact: "رابطہ کریں",
     nav_quote_btn: "تخمینہ حاصل کریں",
     nav_phone_label: "0300 4589192",
@@ -220,7 +222,7 @@ export const translations = {
     view_all_projects: "تمام منصوبے دیکھیں",
     view_project: "منصوبہ ملاحظہ کریں",
 
-    // Why Aitmad
+    // Why Aitmaad
     why_eyebrow: "اعتماد کی خصوصیات",
     why_h2: "صنعتکار اعتماد انجینئرنگ کا انتخاب کیوں کرتے ہیں؟",
     why_sub: "صنعتی عمارتیں کروڑوں روپے کی سرمایہ کاری ہوتی ہیں۔ جانیے کہ پاکستان کی صفِ اول کی کمپنیاں ہم پر کیوں اعتماد کرتی ہیں۔",
@@ -348,7 +350,7 @@ class I18nManager {
     });
 
     // Dispatch event for other modules
-    window.dispatchEvent(new CustomEvent('aitmad:langchange', { detail: { lang } }));
+    window.dispatchEvent(new CustomEvent('aitmaad:langchange', { detail: { lang } }));
   }
 
   toggleLanguage() {

@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - 3D Steel Portal Frame Hero
+ * Aitmaad Engineering - 3D Steel Portal Frame Hero
  * Spec: Section 6.1, 8, 10
  */
 

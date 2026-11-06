@@ -1,5 +1,5 @@
 /**
- * Aitmad Engineering - GSAP & ScrollTrigger Animation Engine
+ * Aitmaad Engineering - GSAP & ScrollTrigger Animation Engine
  * Best-in-class performance, physics-based easing, and magnetic micro-interactions
  */
 
@@ -109,7 +109,7 @@ export class AnimationEngine {
     }
 
     // Section headings & narrative content
-    document.querySelectorAll('.about-preview-grid, .why-aitmad-grid, .why-feature-row').forEach(sec => {
+    document.querySelectorAll('.about-preview-grid, .why-aitmaad-grid, .why-feature-row').forEach(sec => {
       window.gsap.fromTo(sec, 
         { autoAlpha: 0, y: 30 },
         {
