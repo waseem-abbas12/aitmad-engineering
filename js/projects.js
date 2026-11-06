@@ -299,7 +299,7 @@ export class ProjectsManager {
       <section class="section bg-ivory">
         <div class="container">
           <div style="border-radius: var(--radius-card); overflow: hidden; margin-bottom: 48px; max-height: 540px; box-shadow: var(--shadow-card);">
-            <img src="${project.cover}" alt="${project.title}" style="width: 100%; height: 500px; object-fit: cover;">
+            <img src="${resolveAssetPath(project.cover)}" alt="${project.title}" style="width: 100%; height: 500px; object-fit: cover;">
           </div>
 
           <div class="project-detail-layout">
