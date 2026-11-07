@@ -1,26 +1,57 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { defaultCMSData } from './database/default_data.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '../');
-const DB_PATH = path.join(__dirname, 'database', 'cms_data.json');
+
+const isVercel = Boolean(process.env.VERCEL);
+const DB_PATH = isVercel
+  ? path.join('/tmp', 'cms_data.json')
+  : path.join(__dirname, 'database', 'cms_data.json');
+
+let memoryDB = null;
 
 export function getDB() {
-  if (!fs.existsSync(DB_PATH)) {
-    throw new Error('Database not initialized. Please run init_cms.js');
+  if (memoryDB) return memoryDB;
+
+  try {
+    if (fs.existsSync(DB_PATH)) {
+      const raw = fs.readFileSync(DB_PATH, 'utf-8');
+      memoryDB = JSON.parse(raw);
+      return memoryDB;
+    }
+  } catch (err) {
+    console.warn('Fallback to bundled default CMS data:', err.message);
   }
-  const raw = fs.readFileSync(DB_PATH, 'utf-8');
-  return JSON.parse(raw);
+
+  // Clone default bundled data
+  memoryDB = JSON.parse(JSON.stringify(defaultCMSData));
+  try {
+    fs.writeFileSync(DB_PATH, JSON.stringify(memoryDB, null, 2), 'utf-8');
+  } catch (e) {
+    console.warn('Notice writing initial DB:', e.message);
+  }
+
+  return memoryDB;
 }
 
 export function saveDB(data) {
-  fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf-8');
-  syncStaticFiles(data);
+  memoryDB = data;
+  try {
+    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf-8');
+  } catch (e) {
+    console.warn('Could not write DB to disk:', e.message);
+  }
+
+  if (!isVercel) {
+    syncStaticFiles(data);
+  }
 }
 
-// Automatically syncs CMS database to frontend static modules
+// Automatically syncs CMS database to frontend static modules (local/VPS mode)
 export function syncStaticFiles(data) {
   try {
     // 1. Sync data/projects.js
@@ -28,7 +59,7 @@ export function syncStaticFiles(data) {
       const projectsJsPath = path.join(ROOT_DIR, 'data', 'projects.js');
       const projectsClean = data.projects.map(p => {
         const copy = { ...p };
-        delete copy.id; // remove internal cms id
+        delete copy.id;
         return copy;
       });
       const fileContent = `/**

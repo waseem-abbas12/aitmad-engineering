@@ -8,10 +8,15 @@ import { authenticateToken } from '../middleware/auth.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = path.resolve(__dirname, '../../');
-const UPLOADS_DIR = path.join(ROOT_DIR, 'assets', 'uploads');
+const isVercel = Boolean(process.env.VERCEL);
+const UPLOADS_DIR = isVercel ? path.join('/tmp', 'uploads') : path.join(ROOT_DIR, 'assets', 'uploads');
 
-if (!fs.existsSync(UPLOADS_DIR)) {
-  fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+try {
+  if (!fs.existsSync(UPLOADS_DIR)) {
+    fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+  }
+} catch (e) {
+  console.warn('Notice creating uploads directory:', e.message);
 }
 
 const storage = multer.diskStorage({
