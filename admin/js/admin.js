@@ -224,7 +224,7 @@ function renderProjectsTable() {
   tbody.innerHTML = appState.projects.map(p => `
     <tr>
       <td>
-        <img src="../${p.cover}" alt="${p.title}" class="data-table-img" onerror="this.src='../assets/projects/project-1-thumb.webp'">
+        <img src="/${(p.cover || '').replace(/^\.?\/?/, '')}" alt="${p.title}" class="data-table-img" onerror="this.src='/assets/projects/project-1-thumb.webp'">
       </td>
       <td>
         <strong style="color: var(--admin-text-main); font-size: 0.92rem;">${p.title}</strong>
@@ -712,7 +712,7 @@ function renderMediaGrid() {
   const grid = document.getElementById('media-library-grid');
   grid.innerHTML = appState.media.map(m => `
     <div class="media-item">
-      <img src="../${m.url}" alt="${m.name}" class="media-thumb" loading="lazy">
+      <img src="/${(m.url || '').replace(/^\.?\/?/, '')}" alt="${m.name}" class="media-thumb" loading="lazy">
       <div class="media-name" title="${m.name}">${m.name}</div>
       <div style="padding: 6px 8px; display: flex; gap: 4px; justify-content: space-between; background: #f8fafc; border-top: 1px solid var(--admin-border);">
         <button class="btn btn-secondary btn-sm" style="padding: 3px 6px; font-size: 0.72rem;" onclick="copyToClipboard('${m.url}')">Copy URL</button>

@@ -6,12 +6,20 @@
       "destination": "/api/index.js"
     },
     {
+      "source": "/admin/css/(.*)",
+      "destination": "/admin/css/$1"
+    },
+    {
+      "source": "/admin/js/(.*)",
+      "destination": "/admin/js/$1"
+    },
+    {
       "source": "/admin",
       "destination": "/admin/index.html"
     },
     {
-      "source": "/admin/(.*)",
-      "destination": "/admin/$1"
+      "source": "/admin/",
+      "destination": "/admin/index.html"
     }
   ]
 }
