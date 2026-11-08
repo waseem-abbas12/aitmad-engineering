@@ -31,9 +31,9 @@ export const defaultCMSData = {
     "yearsLabel": "Years Proven Experience",
     "projects": "100+",
     "projectsLabel": "Nationwide Delivered",
-    "clients": "80+",
+    "clients": "40+",
     "clientsLabel": "Corporate Trusts",
-    "areaBuilt": "3.5M+",
+    "areaBuilt": "1M+",
     "areaBuiltLabel": "Sq. Ft. Constructed"
   },
   "clientsMarquee": [

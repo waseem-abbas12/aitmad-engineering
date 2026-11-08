@@ -32,7 +32,7 @@ export const translations = {
     hero_stat_years_lbl: "Proven Experience",
     hero_stat_projects: "100+ Projects",
     hero_stat_projects_lbl: "Nationwide Delivered",
-    hero_stat_clients: "80+ Clients",
+    hero_stat_clients: "40+ Clients",
     hero_stat_clients_lbl: "Corporate Trusts",
     stat_completed: "Projects Delivered",
     scroll_down: "Scroll Down",
