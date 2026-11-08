@@ -3,6 +3,8 @@
  * WordPress / Shopify-inspired responsive CMS manager
  */
 
+window.AdminAppLoaded = true;
+
 const API_BASE = '/api';
 let authToken = localStorage.getItem('aitmaad_admin_token') || '';
 let currentUser = null;

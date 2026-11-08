@@ -150,7 +150,7 @@
       "challenge": "Complete elimination of interior columns over a 64-meter width to accommodate 3-tier VNA reach trucks.",
       "solution": "Parametric tapered portal frames fabricated with ASTM A572 Grade 50 high-tensile steel with submerged arc welding.",
       "result": "Achieved 100% column-free floor space and full FM Global wind-uplift compliance.",
-      "featured": true
+      "featured": false
     },
     {
       "id": "proj_3",
@@ -496,13 +496,13 @@
     {
       "id": "proj_15",
       "slug": "comet-sports-manufacturing-facility",
-      "title": "Comet Sports Production Facility (Main Plant)",
+      "title": "Comet Sports Clear-Span Production Facility",
       "category": "Industrial",
       "location": "Sialkot, Punjab",
       "area": "155,000 sq. ft.",
-      "span": "56 m Clear Span",
+      "span": "135 Feet (41.1 m) Clear Span",
       "eaveHeight": "12.0 m",
-      "steelTonnage": "590 Tons",
+      "steelTonnage": "100 Metric Tons",
       "year": 2024,
       "duration": "6 Months",
       "client": "Comet Sports (Pvt.) Ltd.",
@@ -516,10 +516,10 @@
       "gallery": [
         "assets/projects/project-15.webp"
       ],
-      "overview": "World-class export sports goods production terminal engineered with wide clear spans, precision steel rafters, and high-spec industrial lighting corridors.",
-      "challenge": "Executing wide 56-meter clear spans without intermediate columns to allow continuous automated manufacturing machinery layout.",
-      "solution": "High-tensile ASTM A572 Grade 50 steel portal frames fabricated with submerged arc welding and millimeter-accurate bolted connections.",
-      "result": "Delivered turnkey on schedule, achieving optimal floor productivity for international export manufacturing.",
+      "overview": "State-of-the-art export sports manufacturing facility in Sialkot, Punjab, engineered with 135-foot column-free clear spans and 100 metric tons of high-tensile precision pre-engineered steel.",
+      "challenge": "Eliminating intermediate columns across a wide 135-foot span while keeping total steel structural weight under 100 metric tons for optimal material efficiency.",
+      "solution": "Engineered parametric tapered built-up portal frames fabricated with ASTM A572 Grade 50 steel and submerged arc welding.",
+      "result": "Achieved a 100% column-free manufacturing floor delivered in 6 months on schedule.",
       "featured": true
     },
     {

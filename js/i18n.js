@@ -113,8 +113,8 @@ export const translations = {
 
     // Spotlight
     spotlight_eyebrow: "Project Spotlight",
-    spotlight_title: "Falcon High-Bay Logistics & Distribution Park",
-    spotlight_desc: "A 160,000 sq. ft. clear-span distribution center in M-3 Industrial City, Faisalabad, featuring 64-meter column-free spans, laser-screed heavy floors, and multi-tier automated racking clearance.",
+    spotlight_title: "Comet Sports Clear-Span Production Facility",
+    spotlight_desc: "A 155,000 sq. ft. precision pre-engineered manufacturing complex in Sialkot, Punjab, featuring a 135-foot column-free clear span and 100 metric tons of custom-fabricated structural steel.",
     read_case_study: "Read the Case Study",
 
     // Testimonials
@@ -258,8 +258,8 @@ export const translations = {
 
     // Spotlight
     spotlight_eyebrow: "نمایاں شاہکار",
-    spotlight_title: "فالکن ہائی بے لاجسٹکس و ڈسٹری بیوشن پارک",
-    spotlight_desc: "ایم تھری انڈسٹریل سٹی، فیصل آباد میں 160,000 مربع فٹ کا جدید ڈسٹری بیوشن ٹرمینل، 64 میٹر بغیر ستون کا کھلا اسپین اور لیزر اسکریڈ ہیوی فرش۔",
+    spotlight_title: "کومٹ اسپورٹس کلیئر اسپین مینوفیکچرنگ فیسیلٹی",
+    spotlight_desc: "سیالکوٹ میں کومٹ اسپورٹس کی 155,000 مربع فٹ کی جدید انڈسٹریل فیسیلٹی، 135 فٹ کلیئر اسپین اور 100 میٹرک ٹن پریسجن پری انجینئرڈ اسٹیل اسٹرکچر کے ساتھ۔",
     read_case_study: "کیس اسٹڈی پڑھیں",
 
     // Testimonials

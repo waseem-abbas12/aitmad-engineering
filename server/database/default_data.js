@@ -10,14 +10,14 @@ export const defaultCMSData = {
     "country": "Pakistan",
     "whatsapp": "923004589192",
     "pecNumber": "PEC C1 / Verified",
-    "workingHours": "Mon \u2013 Sat: 8:00 AM \u2013 6:00 PM"
+    "workingHours": "Mon – Sat: 8:00 AM – 6:00 PM"
   },
   "heroContent": {
     "eyebrow": "Steel Building Specialists",
     "liveBadge": "Pakistan's #1 Certified PEB & Structural Steel Specialists",
     "titleLead": "Turnkey Pre-Engineered Steel Buildings & ",
     "titleAccent": "High-Bay Warehouses",
-    "sub": "From Tekla LOD 400 engineering to certified fabrication and rapid nationwide site erection \u2014 100+ delivered facilities across Pakistan.",
+    "sub": "From Tekla LOD 400 engineering to certified fabrication and rapid nationwide site erection — 100+ delivered facilities across Pakistan.",
     "bullet1": "Turnkey PEB: Column-Free Spans up to 90m",
     "bullet2": "Certified Steel: ASTM A572 Grade 50 & AWS Certified",
     "bullet3": "BIM Precision: In-house Tekla LOD 400 & STAAD Detailing",
@@ -118,7 +118,7 @@ export const defaultCMSData = {
         "assets/projects/project-1.webp"
       ],
       "overview": "Modern agricultural and dairy livestock facility engineered with heavy-duty green-primed steel portal frames, wide clear spans, and high-efficiency natural ridge cooling monitors.",
-      "challenge": "Maintaining continuous natural air circulation while keeping inside temperatures 6\u00b0C cooler than ambient heatwave conditions without mechanical HVAC.",
+      "challenge": "Maintaining continuous natural air circulation while keeping inside temperatures 6°C cooler than ambient heatwave conditions without mechanical HVAC.",
       "solution": "Engineered high-pitched gable roof frames with continuous automated ridge monitors and double-skin profiled sheeting with thermal insulation.",
       "result": "Delivered turnkey 14 days ahead of deadline with zero operational downtime for livestock transfer.",
       "featured": true
@@ -150,7 +150,7 @@ export const defaultCMSData = {
       "challenge": "Complete elimination of interior columns over a 64-meter width to accommodate 3-tier VNA reach trucks.",
       "solution": "Parametric tapered portal frames fabricated with ASTM A572 Grade 50 high-tensile steel with submerged arc welding.",
       "result": "Achieved 100% column-free floor space and full FM Global wind-uplift compliance.",
-      "featured": true
+      "featured": false
     },
     {
       "id": "proj_3",
@@ -263,7 +263,7 @@ export const defaultCMSData = {
         "assets/projects/project-6.webp"
       ],
       "overview": "Large-scale dairy cow housing shed engineered with open-sided portal frames, elevated ridge monitors, and insulated standing roof sheeting.",
-      "challenge": "Minimizing heat stress in livestock during extreme summer temperatures exceeding 45\u00b0C.",
+      "challenge": "Minimizing heat stress in livestock during extreme summer temperatures exceeding 45°C.",
       "solution": "Engineered high eave height, aerodynamic roof monitors, and wide eaves providing full shade and natural cross-draft.",
       "result": "Delivered optimal animal welfare and maximum milk production efficiency.",
       "featured": true
@@ -496,13 +496,13 @@ export const defaultCMSData = {
     {
       "id": "proj_15",
       "slug": "comet-sports-manufacturing-facility",
-      "title": "Comet Sports Production Facility (Main Plant)",
+      "title": "Comet Sports Clear-Span Production Facility",
       "category": "Industrial",
       "location": "Sialkot, Punjab",
       "area": "155,000 sq. ft.",
-      "span": "56 m Clear Span",
+      "span": "135 Feet (41.1 m) Clear Span",
       "eaveHeight": "12.0 m",
-      "steelTonnage": "590 Tons",
+      "steelTonnage": "100 Metric Tons",
       "year": 2024,
       "duration": "6 Months",
       "client": "Comet Sports (Pvt.) Ltd.",
@@ -516,10 +516,10 @@ export const defaultCMSData = {
       "gallery": [
         "assets/projects/project-15.webp"
       ],
-      "overview": "World-class export sports goods production terminal engineered with wide clear spans, precision steel rafters, and high-spec industrial lighting corridors.",
-      "challenge": "Executing wide 56-meter clear spans without intermediate columns to allow continuous automated manufacturing machinery layout.",
-      "solution": "High-tensile ASTM A572 Grade 50 steel portal frames fabricated with submerged arc welding and millimeter-accurate bolted connections.",
-      "result": "Delivered turnkey on schedule, achieving optimal floor productivity for international export manufacturing.",
+      "overview": "State-of-the-art export sports manufacturing facility in Sialkot, Punjab, engineered with 135-foot column-free clear spans and 100 metric tons of high-tensile precision pre-engineered steel.",
+      "challenge": "Eliminating intermediate columns across a wide 135-foot span while keeping total steel structural weight under 100 metric tons for optimal material efficiency.",
+      "solution": "Engineered parametric tapered built-up portal frames fabricated with ASTM A572 Grade 50 steel and submerged arc welding.",
+      "result": "Achieved a 100% column-free manufacturing floor delivered in 6 months on schedule.",
       "featured": true
     },
     {
@@ -593,7 +593,7 @@ export const defaultCMSData = {
       "offerings": [
         "Parametric tapered I-beam primary framing (ASTM A572 Grade 50)",
         "Cold-formed galvanized Z and C purlins and girts",
-        "Standing seam 360\u00b0 mechanical lock roof sheeting",
+        "Standing seam 360° mechanical lock roof sheeting",
         "Clear spans up to 90 meters without intermediate columns",
         "Integrated mezzanine floors and crane runway systems",
         "Accelerated 60-90 day fabrication turnaround"
@@ -726,10 +726,10 @@ export const defaultCMSData = {
       "pageFile": "service-warehouses.html",
       "title": "Warehouses & Cold Storage",
       "shortDesc": "High-bay logistics distribution centers and temperature-controlled cold storages engineered for maximum cubic storage efficiency.",
-      "heroDesc": "Aitmaad designs and builds turnkey logistics parks, FMCG distribution hubs, and sub-zero controlled-atmosphere cold stores (-40\u00b0C to +15\u00b0C) with airtight thermal envelope integrity.",
+      "heroDesc": "Aitmaad designs and builds turnkey logistics parks, FMCG distribution hubs, and sub-zero controlled-atmosphere cold stores (-40°C to +15°C) with airtight thermal envelope integrity.",
       "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/><polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"/><line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"/></svg>",
       "offerings": [
-        "High-bay racking integration with floor load capacities up to 10 ton/m\u00b2",
+        "High-bay racking integration with floor load capacities up to 10 ton/m²",
         "Laser-screed FM2 flatness industrial floor slab coordination",
         "Continuous PIR/PU sandwich panel wall and ceiling envelopes",
         "Thermal break isolators preventing cold transfer to primary steel columns",
@@ -739,7 +739,7 @@ export const defaultCMSData = {
       "specs": [
         {
           "param": "Temperature Range",
-          "value": "-40\u00b0C (Blast Freezers) to +15\u00b0C (Pharma Cold Chain)"
+          "value": "-40°C (Blast Freezers) to +15°C (Pharma Cold Chain)"
         },
         {
           "param": "Clear Stacking Heights",
@@ -755,7 +755,7 @@ export const defaultCMSData = {
         },
         {
           "param": "Floor Loadings",
-          "value": "Uniform distributed loads up to 120 kN/m\u00b2"
+          "value": "Uniform distributed loads up to 120 kN/m²"
         },
         {
           "param": "Docking Systems",
@@ -763,7 +763,7 @@ export const defaultCMSData = {
         },
         {
           "param": "Energy Efficiency",
-          "value": "U-values as low as 0.11 W/m\u00b2K"
+          "value": "U-values as low as 0.11 W/m²K"
         }
       ],
       "faqs": [
@@ -842,7 +842,7 @@ export const defaultCMSData = {
         },
         {
           "q": "How do you handle heavy loads hanging from roof trusses (e.g., HVAC ducts, cable trays)?",
-          "a": "We calculate all collateral loads during the engineering phase, reinforcing bottom chords and purlins to support up to 50 kg/m\u00b2 of auxiliary equipment."
+          "a": "We calculate all collateral loads during the engineering phase, reinforcing bottom chords and purlins to support up to 50 kg/m² of auxiliary equipment."
         },
         {
           "q": "Can the factory shed be expanded in length or width in the future?",
@@ -867,7 +867,7 @@ export const defaultCMSData = {
       "heroDesc": "The building envelope is your first line of defense against the elements. Aitmaad manufactures and installs leak-proof metal cladding and energy-saving insulation systems that reduce cooling costs by up to 35%.",
       "icon": "<svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/><polyline points=\"9 22 9 12 15 12 15 22\"/></svg>",
       "offerings": [
-        "Aitmaad-Lok 360\u00b0 mechanical lock standing seam roof panels",
+        "Aitmaad-Lok 360° mechanical lock standing seam roof panels",
         "Trapezoidal single-skin profiles in 0.5mm, 0.6mm, 0.7mm Zincalume/Galvalume",
         "Continuous-line manufactured PIR and PU sandwich panels",
         "Fiberglass wool insulation with reinforced white vinyl vapor retarder",
