@@ -14,10 +14,16 @@ let currentTargetUploadInput = null;
 let appState = {
   projects: [],
   services: [],
+  categories: [],
+  navigation: [],
   testimonials: [],
   clients: [],
   inquiries: [],
   content: {},
+  branding: {},
+  spotlight: {},
+  footer: {},
+  socialLinks: {},
   media: []
 };
 
@@ -163,10 +169,15 @@ window.switchTab = function(tabName) {
     'overview': 'Dashboard Overview',
     'projects': 'Projects Portfolio Manager',
     'services': 'Services Manager',
+    'categories': 'Categories & Taxonomies',
+    'spotlight': 'Spotlight Section Banner',
     'testimonials': 'Client Testimonials',
     'clients': 'Marquee Client Brands',
     'media': 'Media Library & Uploads',
-    'site-content': 'Hero Section, Buttons & Site Settings',
+    'branding': 'Logo, Favicon & Brand Identity',
+    'site-content': 'Hero Section, Buttons & Stats',
+    'navigation': 'Header Navigation Menu Links',
+    'footer': 'Footer Info & Social Media Links',
     'inquiries': 'Customer Quotes & Inquiries Inbox',
     'settings': 'Admin Security & Password'
   };
@@ -178,6 +189,8 @@ async function loadAllData() {
   await Promise.all([
     loadProjects(),
     loadServices(),
+    loadCategories(),
+    loadNavigation(),
     loadTestimonials(),
     loadClients(),
     loadContent(),
@@ -526,8 +539,55 @@ async function loadContent() {
     const m = data.metrics || {};
     document.getElementById('metric-years').value = m.years || '10+';
     document.getElementById('metric-projects').value = m.projects || '100+';
-    document.getElementById('metric-clients').value = m.clients || '80+';
-    document.getElementById('metric-area').value = m.areaBuilt || '3.5M+';
+    document.getElementById('metric-clients').value = m.clients || '40+';
+    document.getElementById('metric-area').value = m.areaBuilt || '1M+';
+
+    // Populate Branding Form
+    const b = data.branding || {};
+    appState.branding = b;
+    if (document.getElementById('brand-site-name')) {
+      document.getElementById('brand-site-name').value = b.siteName || 'Aitmaad Engineering';
+      document.getElementById('brand-tagline').value = b.tagline || '';
+      document.getElementById('brand-logo').value = b.logo || 'assets/logo.svg';
+      document.getElementById('brand-favicon').value = b.favicon || 'assets/logo.svg';
+      document.getElementById('brand-topbar').value = b.topbarAnnouncement || '';
+      document.getElementById('brand-header-btn-text').value = b.headerCtaText || 'Request a Quote';
+      document.getElementById('brand-header-btn-link').value = b.headerCtaLink || 'pages/contact.html';
+    }
+
+    // Populate Spotlight Form
+    const sp = data.spotlight || {};
+    appState.spotlight = sp;
+    if (document.getElementById('spotlight-title')) {
+      document.getElementById('spotlight-eyebrow').value = sp.eyebrow || 'Project Spotlight';
+      document.getElementById('spotlight-title').value = sp.title || '';
+      document.getElementById('spotlight-desc').value = sp.desc || '';
+      document.getElementById('spotlight-bg').value = sp.bgImage || 'assets/projects/project-15.webp';
+      document.getElementById('spotlight-span-val').value = sp.clearSpanVal || '135';
+      document.getElementById('spotlight-span-unit').value = sp.clearSpanUnit || 'Feet Clear Span';
+      document.getElementById('spotlight-weight-val').value = sp.weightVal || '100';
+      document.getElementById('spotlight-weight-unit').value = sp.weightUnit || 'Tons Steel Weight';
+      document.getElementById('spotlight-area-val').value = sp.areaVal || '155000';
+      document.getElementById('spotlight-area-unit').value = sp.areaUnit || 'Sq. Ft. Area';
+      document.getElementById('spotlight-btn-text').value = sp.ctaText || 'Read the Case Study';
+      document.getElementById('spotlight-btn-link').value = sp.ctaLink || 'pages/project.html?slug=comet-sports-manufacturing-facility';
+    }
+
+    // Populate Footer & Social Links Form
+    const ft = data.footer || {};
+    const soc = data.socialLinks || {};
+    appState.footer = ft;
+    appState.socialLinks = soc;
+    if (document.getElementById('footer-copyright')) {
+      document.getElementById('footer-about-brief').value = ft.aboutBrief || '';
+      document.getElementById('footer-copyright').value = ft.copyrightNotice || '';
+      document.getElementById('footer-pec-badge').value = ft.pecNotice || '';
+      document.getElementById('social-whatsapp').value = soc.whatsapp || '';
+      document.getElementById('social-linkedin').value = soc.linkedin || '';
+      document.getElementById('social-facebook').value = soc.facebook || '';
+      document.getElementById('social-instagram').value = soc.instagram || '';
+      document.getElementById('social-youtube').value = soc.youtube || '';
+    }
   }
 }
 
@@ -614,6 +674,92 @@ function bindForms() {
       showToast(res.message || 'Error changing password', 'error');
     }
   });
+
+  // Branding Form Submit
+  const brandingForm = document.getElementById('branding-form');
+  if (brandingForm) {
+    brandingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        siteName: document.getElementById('brand-site-name').value.trim(),
+        tagline: document.getElementById('brand-tagline').value.trim(),
+        logo: document.getElementById('brand-logo').value.trim(),
+        favicon: document.getElementById('brand-favicon').value.trim(),
+        topbarAnnouncement: document.getElementById('brand-topbar').value.trim(),
+        headerCtaText: document.getElementById('brand-header-btn-text').value.trim(),
+        headerCtaLink: document.getElementById('brand-header-btn-link').value.trim()
+      };
+      const res = await apiRequest('/content/branding', 'PUT', payload);
+      if (res.success) {
+        showToast('Logo & brand identity updated successfully!');
+      } else {
+        showToast('Error saving branding', 'error');
+      }
+    });
+  }
+
+  // Spotlight Form Submit
+  const spotlightForm = document.getElementById('spotlight-form');
+  if (spotlightForm) {
+    spotlightForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        eyebrow: document.getElementById('spotlight-eyebrow').value.trim(),
+        title: document.getElementById('spotlight-title').value.trim(),
+        desc: document.getElementById('spotlight-desc').value.trim(),
+        bgImage: document.getElementById('spotlight-bg').value.trim(),
+        clearSpanVal: document.getElementById('spotlight-span-val').value.trim(),
+        clearSpanUnit: document.getElementById('spotlight-span-unit').value.trim(),
+        weightVal: document.getElementById('spotlight-weight-val').value.trim(),
+        weightUnit: document.getElementById('spotlight-weight-unit').value.trim(),
+        areaVal: document.getElementById('spotlight-area-val').value.trim(),
+        areaUnit: document.getElementById('spotlight-area-unit').value.trim(),
+        ctaText: document.getElementById('spotlight-btn-text').value.trim(),
+        ctaLink: document.getElementById('spotlight-btn-link').value.trim()
+      };
+      const res = await apiRequest('/content/spotlight', 'PUT', payload);
+      if (res.success) {
+        showToast('Spotlight banner updated successfully!');
+      } else {
+        showToast('Error saving spotlight', 'error');
+      }
+    });
+  }
+
+  // Footer & Social Links Form Submit
+  const footerForm = document.getElementById('footer-form');
+  if (footerForm) {
+    footerForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const footerPayload = {
+        aboutBrief: document.getElementById('footer-about-brief').value.trim(),
+        copyrightNotice: document.getElementById('footer-copyright').value.trim(),
+        pecNotice: document.getElementById('footer-pec-badge').value.trim()
+      };
+      const socialPayload = {
+        whatsapp: document.getElementById('social-whatsapp').value.trim(),
+        linkedin: document.getElementById('social-linkedin').value.trim(),
+        facebook: document.getElementById('social-facebook').value.trim(),
+        instagram: document.getElementById('social-instagram').value.trim(),
+        youtube: document.getElementById('social-youtube').value.trim()
+      };
+      await apiRequest('/content/footer', 'PUT', footerPayload);
+      await apiRequest('/content/social-links', 'PUT', socialPayload);
+      showToast('Footer & Social profiles updated successfully!');
+    });
+  }
+
+  // Save Category Button
+  const btnSaveCat = document.getElementById('btn-save-category');
+  if (btnSaveCat) {
+    btnSaveCat.addEventListener('click', saveCategory);
+  }
+
+  // Save Nav Button
+  const btnSaveNav = document.getElementById('btn-save-nav');
+  if (btnSaveNav) {
+    btnSaveNav.addEventListener('click', saveNav);
+  }
 }
 
 // 9. Inquiries Inbox
@@ -829,3 +975,190 @@ function updateDashboardKPIs() {
   document.getElementById('kpi-clients-count').textContent = appState.clients.length;
   document.getElementById('kpi-testimonials-count').textContent = appState.testimonials.length;
 }
+
+// 12. Categories (Taxonomies) Management
+async function loadCategories() {
+  const data = await apiRequest('/content');
+  if (data.success && data.categories) {
+    appState.categories = data.categories;
+    renderCategoriesTable();
+    populateCategoryDropdown();
+  }
+}
+
+function renderCategoriesTable() {
+  const tbody = document.getElementById('categories-table-body');
+  if (!tbody) return;
+  tbody.innerHTML = appState.categories.map(cat => `
+    <tr>
+      <td><strong>${cat.name}</strong></td>
+      <td><code>${cat.slug}</code></td>
+      <td style="color: var(--admin-text-muted); font-size: 0.85rem;">${cat.description || '—'}</td>
+      <td>
+        <div style="display: flex; gap: 6px;">
+          <button class="btn btn-secondary btn-sm" onclick="editCategory('${cat.id}')">Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteCategory('${cat.id}')">Delete</button>
+        </div>
+      </td>
+    </tr>
+  `).join('') || '<tr><td colspan="4" style="text-align: center; color: var(--admin-text-muted);">No categories added yet</td></tr>';
+}
+
+function populateCategoryDropdown() {
+  const select = document.getElementById('proj-category');
+  if (!select || !appState.categories.length) return;
+  const currentVal = select.value;
+  select.innerHTML = appState.categories.map(c => `
+    <option value="${c.name}">${c.name}</option>
+  `).join('');
+  if (currentVal) select.value = currentVal;
+}
+
+window.openCategoryModal = function() {
+  document.getElementById('cat-id').value = '';
+  document.getElementById('cat-name').value = '';
+  document.getElementById('cat-slug').value = '';
+  document.getElementById('cat-desc').value = '';
+  document.getElementById('category-modal-title').textContent = 'Add Category';
+  openModal('modal-category');
+};
+
+window.editCategory = function(id) {
+  const cat = appState.categories.find(c => c.id === id);
+  if (!cat) return;
+  document.getElementById('cat-id').value = cat.id;
+  document.getElementById('cat-name').value = cat.name;
+  document.getElementById('cat-slug').value = cat.slug;
+  document.getElementById('cat-desc').value = cat.description || '';
+  document.getElementById('category-modal-title').textContent = 'Edit Category';
+  openModal('modal-category');
+};
+
+async function saveCategory() {
+  const id = document.getElementById('cat-id').value;
+  const name = document.getElementById('cat-name').value.trim();
+  const slug = document.getElementById('cat-slug').value.trim() || name.toLowerCase().replace(/\s+/g, '-');
+  const desc = document.getElementById('cat-desc').value.trim();
+
+  if (!name) {
+    showToast('Category name is required', 'error');
+    return;
+  }
+
+  let updatedList = [...appState.categories];
+  if (id) {
+    updatedList = updatedList.map(c => c.id === id ? { ...c, name, slug, description: desc } : c);
+  } else {
+    updatedList.push({ id: 'cat-' + Date.now(), name, slug, description: desc });
+  }
+
+  const res = await apiRequest('/content/categories', 'PUT', updatedList);
+  if (res.success) {
+    showToast('Category saved successfully!');
+    closeModal('modal-category');
+    appState.categories = updatedList;
+    renderCategoriesTable();
+    populateCategoryDropdown();
+  } else {
+    showToast('Failed to save category', 'error');
+  }
+}
+
+window.deleteCategory = async function(id) {
+  if (!confirm('Are you sure you want to delete this category?')) return;
+  const updatedList = appState.categories.filter(c => c.id !== id);
+  const res = await apiRequest('/content/categories', 'PUT', updatedList);
+  if (res.success) {
+    showToast('Category deleted');
+    appState.categories = updatedList;
+    renderCategoriesTable();
+    populateCategoryDropdown();
+  }
+};
+
+// 13. Navigation Links Management
+async function loadNavigation() {
+  const data = await apiRequest('/content');
+  if (data.success && data.navigation) {
+    appState.navigation = data.navigation;
+    renderNavigationTable();
+  }
+}
+
+function renderNavigationTable() {
+  const tbody = document.getElementById('navigation-table-body');
+  if (!tbody) return;
+  tbody.innerHTML = appState.navigation.map((item, idx) => `
+    <tr>
+      <td><strong>${item.label}</strong></td>
+      <td><code>${item.url}</code></td>
+      <td><span class="badge badge-blue">${item.target || '_self'}</span></td>
+      <td>
+        <div style="display: flex; gap: 6px;">
+          <button class="btn btn-secondary btn-sm" onclick="editNav('${item.id}')">Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteNav('${item.id}')">Delete</button>
+        </div>
+      </td>
+    </tr>
+  `).join('') || '<tr><td colspan="4" style="text-align: center; color: var(--admin-text-muted);">No navigation links added yet</td></tr>';
+}
+
+window.openNavModal = function() {
+  document.getElementById('nav-item-id').value = '';
+  document.getElementById('nav-item-label').value = '';
+  document.getElementById('nav-item-url').value = '';
+  document.getElementById('nav-item-target').value = '_self';
+  document.getElementById('nav-modal-title').textContent = 'Add Menu Link';
+  openModal('modal-nav');
+};
+
+window.editNav = function(id) {
+  const item = appState.navigation.find(n => n.id === id);
+  if (!item) return;
+  document.getElementById('nav-item-id').value = item.id;
+  document.getElementById('nav-item-label').value = item.label;
+  document.getElementById('nav-item-url').value = item.url;
+  document.getElementById('nav-item-target').value = item.target || '_self';
+  document.getElementById('nav-modal-title').textContent = 'Edit Menu Link';
+  openModal('modal-nav');
+};
+
+async function saveNav() {
+  const id = document.getElementById('nav-item-id').value;
+  const label = document.getElementById('nav-item-label').value.trim();
+  const url = document.getElementById('nav-item-url').value.trim();
+  const target = document.getElementById('nav-item-target').value;
+
+  if (!label || !url) {
+    showToast('Label and URL are required', 'error');
+    return;
+  }
+
+  let updatedList = [...appState.navigation];
+  if (id) {
+    updatedList = updatedList.map(n => n.id === id ? { ...n, label, url, target } : n);
+  } else {
+    updatedList.push({ id: 'nav-' + Date.now(), label, url, target });
+  }
+
+  const res = await apiRequest('/content/navigation', 'PUT', updatedList);
+  if (res.success) {
+    showToast('Navigation link saved!');
+    closeModal('modal-nav');
+    appState.navigation = updatedList;
+    renderNavigationTable();
+  } else {
+    showToast('Failed to save navigation', 'error');
+  }
+}
+
+window.deleteNav = async function(id) {
+  if (!confirm('Remove this link from header navigation?')) return;
+  const updatedList = appState.navigation.filter(n => n.id !== id);
+  const res = await apiRequest('/content/navigation', 'PUT', updatedList);
+  if (res.success) {
+    showToast('Link removed from navigation');
+    appState.navigation = updatedList;
+    renderNavigationTable();
+  }
+};

@@ -1170,5 +1170,111 @@ export const defaultCMSData = {
       "name": "Comet Sports",
       "sector": "Sports Goods Export"
     }
-  ]
+  ],
+  "branding": {
+    "siteName": "Aitmaad Engineering",
+    "tagline": "Pre-Engineered Steel Buildings & Industrial Construction",
+    "logo": "assets/logo.svg",
+    "logoDark": "assets/logo.svg",
+    "favicon": "assets/logo.svg",
+    "topbarAnnouncement": "PEC C1 Verified Industrial Steel Specialists • Turnkey PEB Nationwide",
+    "headerCtaText": "Request a Quote",
+    "headerCtaLink": "pages/contact.html"
+  },
+  "navigation": [
+    {
+      "id": "nav-1",
+      "label": "Services",
+      "url": "index.html#services",
+      "target": "_self"
+    },
+    {
+      "id": "nav-2",
+      "label": "Projects",
+      "url": "pages/projects.html",
+      "target": "_self"
+    },
+    {
+      "id": "nav-3",
+      "label": "About Us",
+      "url": "pages/about.html",
+      "target": "_self"
+    },
+    {
+      "id": "nav-4",
+      "label": "Why Aitmaad",
+      "url": "pages/why-aitmaad.html",
+      "target": "_self"
+    },
+    {
+      "id": "nav-5",
+      "label": "Engineering & BIM",
+      "url": "pages/process.html",
+      "target": "_self"
+    },
+    {
+      "id": "nav-6",
+      "label": "Contact",
+      "url": "pages/contact.html",
+      "target": "_self"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Industrial",
+      "slug": "industrial",
+      "description": "Manufacturing facilities, assembly plants, and heavy fabrication workshops."
+    },
+    {
+      "id": "cat-2",
+      "name": "Warehouse",
+      "slug": "warehouse",
+      "description": "High-bay logistics distribution hubs, automated racking centers, and storage facilities."
+    },
+    {
+      "id": "cat-3",
+      "name": "Agricultural",
+      "slug": "agricultural",
+      "description": "Automated dairy barns, cold stores, livestock housing, and agro processing sheds."
+    },
+    {
+      "id": "cat-4",
+      "name": "Commercial",
+      "slug": "commercial",
+      "description": "Multi-story steel buildings, commercial plazas, shopping outlets, and corporate offices."
+    },
+    {
+      "id": "cat-5",
+      "name": "Institutional",
+      "slug": "institutional",
+      "description": "Educational complexes, stadiums, hangars, and government infrastructure."
+    }
+  ],
+  "spotlight": {
+    "eyebrow": "Project Spotlight",
+    "title": "Comet Sports Clear-Span Production Facility",
+    "desc": "A 155,000 sq. ft. precision pre-engineered manufacturing complex in Sialkot, Punjab, featuring a 135-foot column-free clear span and 100 metric tons of custom-fabricated structural steel.",
+    "bgImage": "assets/projects/project-15.webp",
+    "clearSpanVal": "135",
+    "clearSpanUnit": "Feet",
+    "weightVal": "100",
+    "weightUnit": "Tons",
+    "areaVal": "155000",
+    "areaUnit": "Sq. Ft.",
+    "ctaText": "Read the Case Study",
+    "ctaLink": "pages/project.html?slug=comet-sports-manufacturing-facility"
+  },
+  "socialLinks": {
+    "facebook": "https://facebook.com/aitmaadengineering",
+    "linkedin": "https://linkedin.com/company/aitmaad-engineering",
+    "instagram": "https://instagram.com/aitmaadengineering",
+    "whatsapp": "https://wa.me/923004589192",
+    "youtube": "https://youtube.com/@aitmaadengineering"
+  },
+  "footer": {
+    "aboutBrief": "Pakistan's premier turnkey pre-engineered steel buildings (PEB) and high-tolerance structural steel engineering contractor.",
+    "copyrightNotice": "© 2026 Aitmaad Engineering (Pvt.) Ltd. All Rights Reserved. Engineered with precision in Pakistan.",
+    "pecNotice": "PEC C1 Accredited • ISO 9001:2015 Compliant"
+  }
 };
