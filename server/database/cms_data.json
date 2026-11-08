@@ -1113,5 +1113,62 @@
       "createdAt": "2026-11-06T18:24:06.537Z",
       "status": "new"
     }
+  ],
+  "clients": [
+    {
+      "id": "c1",
+      "name": "Green Apple Farms",
+      "sector": "Agriculture and Dairy"
+    },
+    {
+      "id": "c2",
+      "name": "Shafi Texcel Group",
+      "sector": "Textile and Manufacturing"
+    },
+    {
+      "id": "c3",
+      "name": "Gofy Food Industries",
+      "sector": "Food Processing"
+    },
+    {
+      "id": "c4",
+      "name": "Samson's Group",
+      "sector": "Industrial Conglomerate"
+    },
+    {
+      "id": "c5",
+      "name": "Aguila Active (Pvt)",
+      "sector": "Apparel and Export"
+    },
+    {
+      "id": "c6",
+      "name": "PETROMAN SAFETY INTERNATIONAL",
+      "sector": "Safety and Industrial Gear"
+    },
+    {
+      "id": "c7",
+      "name": "Pak Afson Enterprises",
+      "sector": "Industrial Logistics"
+    },
+    {
+      "id": "c8",
+      "name": "Everfresh Farms (pvt) Ltd",
+      "sector": "Dairy and Cold Chain"
+    },
+    {
+      "id": "c9",
+      "name": "Weldon Instrument",
+      "sector": "Surgical and Precision Engineering"
+    },
+    {
+      "id": "c10",
+      "name": "Four Season's Dairy Farms",
+      "sector": "Livestock and Agro"
+    },
+    {
+      "id": "c11",
+      "name": "Comet Sports",
+      "sector": "Sports Goods Export"
+    }
   ]
 }
